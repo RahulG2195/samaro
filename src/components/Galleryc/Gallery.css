@@ -1,3 +1,6 @@
+.gallery{
+  margin: 20px auto;
+}
 .gallery-grid-even {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

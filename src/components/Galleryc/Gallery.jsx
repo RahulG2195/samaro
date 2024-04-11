@@ -2,7 +2,7 @@ import React from 'react';
 import "./Gallery.css";
 
 
-const Gallery = () => {
+const Galleryc = () => {
     return (
         <section className='gallery'>
             <div className="container">
@@ -55,4 +55,4 @@ const Gallery = () => {
     )
 }
 
-export default Gallery;
+export default Galleryc;

@@ -13,9 +13,7 @@ export default function Home() {
 
     return (
         <main>
-            <Topbar></Topbar>
-            <Header></Header>
-            <Footer></Footer>
+            
         </main>
     );
 }

@@ -1,0 +1,28 @@
+.section_heaing{
+	margin: 40px 0;
+}
+
+.section_heaing h1{
+    position: relative;
+	font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.section_heaing h1::after{
+	position: absolute;
+	content: '';
+	display: block;
+	border: 2px solid darkred;
+	width: 16%;
+/*    top: 100%;*/
+	bottom: -10px;
+    left: 25%;
+}
+
+.inner-head-office{
+	background-color: #CA373C;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}

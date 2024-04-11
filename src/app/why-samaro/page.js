@@ -21,8 +21,6 @@ export default function Home() {
 
     return (
         <main>
-            <Topbar></Topbar>
-            <Header></Header>
             <About></About>
             <Vision></Vision>
             <Mission></Mission>
@@ -34,7 +32,6 @@ export default function Home() {
             <div className="mb-5">
                 <CallToAction></CallToAction>
             </div>
-            <Footer></Footer>
         </main>
     );
 }
