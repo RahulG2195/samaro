@@ -1,0 +1,25 @@
+/* Commercial -2 */
+
+.commercial-2 {
+  padding-top: 100px;
+  position: relative;
+}
+
+.commercial-2::before {
+  content: "Residential";
+  position: absolute;
+  top: -67px;
+  font-weight: 800;
+  right: 0;
+  color: #e6e9ec;
+  z-index: -1;
+  font-size: 160px;
+}
+
+.commercial-2 .col-lg-10 {
+  border-top-left-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+  overflow: hidden;
+}
+
+/* Commercial -2 */

@@ -1,0 +1,30 @@
+/* Design */
+.design img {
+  height: 350px;
+}
+
+.design .sub-heading {
+  font-weight: 300 !important;
+}
+
+.design .sub-heading span {
+  font-weight: 600;
+}
+
+.design .col-lg-4 {
+  overflow: hidden;
+}
+
+.design-img {
+  transition: all 0.3s ease-in-out;
+  object-fit: cover;
+}
+
+.design-img:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.design .no-gap {
+  gap: 0 !important;
+}

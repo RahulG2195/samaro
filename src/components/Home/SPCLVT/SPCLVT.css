@@ -1,0 +1,53 @@
+/* SPC-LVT   */
+.spc-lvt {
+  padding-bottom: 130px !important;
+}
+
+.spc-lvt .sub-heading {
+  position: relative;
+  z-index: 2;
+}
+
+.spc-lvt .sub-heading::after {
+  content: "Samaro";
+  position: absolute;
+  top: -110px;
+  left: 0;
+  color: #9da8b541;
+  z-index: -4;
+  font-size: 160px;
+}
+
+.images-wrapper {
+  display: flex;
+  position: relative;
+}
+.images-wrapper .img,
+.images-wrapper .img-2 {
+  width: 60%;
+  z-index: 1;
+}
+
+.images-wrapper .img-2 {
+  position: absolute;
+  left: 45%;
+  top: 100px;
+  z-index: 0;
+}
+
+.qualities {
+  background-color: var(--primary);
+  border-radius: 30px;
+}
+.qualities span {
+  font-size: 16px;
+  font-weight: 300;
+  word-break: keep-all;
+}
+
+.qualities img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+/* SPC-LVT   */

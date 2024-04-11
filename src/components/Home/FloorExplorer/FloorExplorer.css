@@ -1,0 +1,61 @@
+
+/* Explorer */
+.explorer {
+  position: relative;
+  padding: 0px 0;
+  margin-bottom: 100px;
+}
+.explorer h2 {
+  font-weight: 300;
+}
+
+.explorer .row {
+  align-items: center;
+}
+.explorer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 90%;
+  height: 100%;
+  left: 0;
+  background: var(--navy);
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+  z-index: -1;
+}
+
+.explorer h3,
+.explorer h2,
+.explorer p {
+  color: var(--light);
+}
+
+.explorer .samaro-ply {
+  position: relative;
+  top: 100px;
+}
+.explorer .samaro-tab {
+  position: relative;
+  top: 100px;
+  right: 120px;
+}
+.explorer .content {
+  position: relative;
+  top: 0px;
+  right: 100px;
+}
+.explorer .heading {
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 7px;
+}
+.explorer p {
+  font-weight: 200;
+}
+
+.explorer .button {
+  font-size: 14px;
+  font-weight: 300;
+}
+/* Explorer */

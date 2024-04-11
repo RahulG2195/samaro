@@ -1,0 +1,42 @@
+.benefits .benefits-boxes {
+  padding: 10px;
+}
+.benefits.why-samaro h2 {
+  font-weight: 900 !important;
+  margin-bottom: 10px;
+  font-size: 60px;
+}
+
+.benefits-boxes img {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 30px !important;
+}
+.benefits-boxes h3 {
+  font-size: 20px;
+}
+.benefits-boxes {
+  padding-top: 150px !important;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+}
+
+.benefits {
+  padding-block: 50px;
+}
+.benefits .benefits-boxes.navy-bg {
+  background-color: var(--navy);
+  color: var(--light);
+}
+.benefits .benefits-boxes.primary-bg {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.benefits-boxes ol {
+  padding-left: 0;
+  display: flex;
+  gap: 5px;
+  flex-direction: column !important;
+}

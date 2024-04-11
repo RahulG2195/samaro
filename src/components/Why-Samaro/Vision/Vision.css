@@ -1,0 +1,15 @@
+.vision-text {
+  padding: 50px;
+  padding-left: 80px;
+  border: 5px solid var(--navy);
+  border-right: 0;
+  border-top-left-radius: 150px;
+  border-bottom-left-radius: 150px;
+}
+.vision-image {
+}
+
+.vision h2 {
+  font-size: 40px;
+  font-weight: 800;
+}

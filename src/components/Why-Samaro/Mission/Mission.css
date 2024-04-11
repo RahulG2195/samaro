@@ -1,0 +1,15 @@
+.mission-text {
+  padding: 50px;
+  padding-right: 80px;
+  border: 5px solid var(--navy);
+  border-left: 0 !important;
+  border-top-right-radius: 150px;
+  border-bottom-right-radius: 150px;
+}
+.mission-image {
+}
+
+.mission h2 {
+  font-size: 40px;
+  font-weight: 800;
+}

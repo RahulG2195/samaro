@@ -1,0 +1,90 @@
+
+/* Footer */
+
+.footer-headings {
+  font-weight: 300;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.footer-links a {
+  color: var(--light) !important;
+  font-weight: 200;
+}
+.custom-footer a,
+.custom-footer p {
+  color: var(--light);
+}
+
+.custom-footer .mail img,
+.custom-footer .phone img {
+  width: 20px;
+}
+.custom-footer {
+  position: relative;
+}
+.custom-footer .line {
+  height: 1px;
+  width: 100%;
+  background-color: #ffffff;
+}
+.custom-footer .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-footer .logo img {
+  width: 150px;
+}
+
+.Benifitsleft {
+  position: absolute !important;
+  top: -20px;
+  padding: 78px;
+}
+.backgroundCorner {
+  width: 696px;
+}
+
+.BenifitsRight img {
+  height: 500px;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.newsletter button {
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  color: #ffffff;
+  border-radius: 20px;
+  background-color: var(--primary);
+  opacity: 0;
+  transition: 0.5s ease-in-out all;
+}
+.newsletter:hover button {
+  opacity: 1;
+}
+.newsletter input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+.newsletter input::placeholder {
+  font-size: 14px;
+}
+
+/* Footer */
+
+
