@@ -1,5 +1,6 @@
 import React from "react";
 import "./Banner.css";
+import Link from "next/link";
 
 const Banner = () => {
     return (
@@ -8,11 +9,11 @@ const Banner = () => {
                 <div className="row g-4 pt-4">
                     <div className="col-lg-7 mx-auto">
                         <h2 className="heading">
-                            Premium vinyl, <span>SPC, & LVT</span> flooring of
+                            Premium vinyl, <span className="spn"><Link href='/spcProducts'>SPC,</Link>  & <Link href='/spcProducts'>LVT</Link></span> flooring of
                             &nbsp;
                             <span>superior<br /> quality.</span>
                         </h2>
-                        <a href="#" className="button d-inline-block mt-3">
+                        <a href="#" className="button d-inline-block mt-3 px-3">
                             Discover all our floors
                         </a>
                     </div>

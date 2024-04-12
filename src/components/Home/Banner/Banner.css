@@ -13,6 +13,12 @@
 }
 .hero .heading span {
   font-weight: 600;
+  
+}
+.hero .heading .spn a{
+  color: inherit !important;
+  text-decoration: none !important;
+  
 }
 
 /* Hero */

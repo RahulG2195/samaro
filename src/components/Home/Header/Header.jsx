@@ -29,8 +29,12 @@ const Header = () => {
                             <li className="nav-item">
                                 <NavLink href="/why-samaro">Why Samaro</NavLink>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item position-relative prdcts">
                                 <NavLink href="/product">Product</NavLink>
+                                <ul className="text-center prdctDrop position-absolute">
+                                    <li><Link href="/spcProducts"><p className="darkBlue">SPC</p></Link></li>
+                                    <li><Link href="/lvtProducts"><p className="darkBlue">LVT</p></Link></li>
+                                </ul>
                             </li>
                             <li className="nav-item">
                                 <NavLink href="inspiration">
@@ -48,7 +52,7 @@ const Header = () => {
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className="nav-link" href="/Career">
+                                <NavLink className="nav-link" href="#">
                                     Career
                                 </NavLink>
                             </li>

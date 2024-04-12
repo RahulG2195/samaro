@@ -1,0 +1,92 @@
+input[type="checkbox"] {
+  border-radius: 100% !important;
+  cursor: pointer;
+  box-shadow: none !important;
+  border: 1px solid red !important;
+}
+
+input[type="checkbox"]:checked {
+  background-color: red;
+  outline: none !important;
+}
+
+.custom-range-input {
+  box-shadow: none;
+}
+
+.custom-range-input::-webkit-slider-thumb {
+  background-color: red;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.custom-range-input::-moz-range-thumb {
+  background-color: red;
+  width: 15px !important;
+  height: 15px !important;
+
+}
+
+.custom-range-input::-webkit-slider-runnable-track {
+  background-color: #0A2647;
+  height: 4px;
+}
+
+.custom-range-input::-moz-range-progress {
+  background-color: red;
+}
+
+
+/* Products.css */
+
+.prdctSearch {
+  border-radius:10px !important;
+  border: 3px solid #C5363B;
+/* width: 70%; */
+}
+
+.prdctSearch::placeholder {
+  font-size: 10px;
+}
+.search-bar.prdctSearch {
+  background-image: url('/assets/images/products/Group 27712.svg'); 
+  background-size: 15px; 
+  background-position: right 10px center; 
+  background-repeat: no-repeat; 
+  padding-right: 30px; 
+}
+.shwinterior{
+  outline: 1px solid #C5363B;
+  box-shadow: none !important;
+}
+.shwinterior:checked{
+  background-color: #C5363B;
+}
+
+.productCard{
+background-color: #F5F5F5;  
+border-radius:10px ;
+border: none;
+}
+
+.prdctName{
+  font-size: small;
+  color: var(--navy);
+  /* text-align: center !important; */
+}
+.onHoverimage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.productCard:hover .onHoverimage {
+  display: block;
+
+}
+
+
+.hidethis{
+  display: none !important;
+}

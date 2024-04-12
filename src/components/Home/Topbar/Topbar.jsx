@@ -20,10 +20,10 @@ const Topbar = () => {
                                         <a href="tel:">91-8079545115</a>
                                     </div>
                                 </div>
-                                <div className="social-media">
+                                <div className="social-media align-items-center">
                                     <div className="logo">
                                         <Link href="#">
-                                            <img src="/assets/images/logo/Samaro on.png" alt="" />
+                                            <p className='text-white'>Samaro on</p>
                                         </Link>
                                     </div>
                                     <div className="social-media-inner">

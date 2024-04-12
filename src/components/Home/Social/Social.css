@@ -19,6 +19,15 @@
   grid-column: span 2; /* Make the item span 2 columns */
 }
 
+.gallerytext{
+  font-size: 60px !important;
+  color: #0A2647;
+  opacity: 60%;
+  letter-spacing: 12px;
+  margin: 0;
+  font-weight: 300;
+}
+
 @media (max-width: 768px) {
   .social-grid {
     grid-template-columns: 1fr; /* Single column layout */

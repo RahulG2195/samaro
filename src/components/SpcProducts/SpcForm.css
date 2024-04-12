@@ -1,0 +1,21 @@
+.guidHeading {
+    letter-spacing: 5px;
+}
+
+.spcformheading p {
+    color: var(--text);
+}
+
+.spcform input {
+    border-bottom: 2px solid var(--navy) !important;
+    border-radius: 0 !important;
+}
+
+.spcform input::placeholder {
+    color: var(--text);
+}
+
+.submitbtn:hover {
+    background-color: #DC3545 !important;
+    color: white !important;
+}

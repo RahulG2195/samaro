@@ -1,0 +1,96 @@
+.woodCollection {
+    position: relative;
+    padding-top: 24.25%; /* Aspect ratio 16:9 for responsiveness */
+  }
+  .marginY{
+    margin: 6rem 0;
+  }
+  .woodText{
+    left: -4vw;
+    bottom: 0;
+  }
+  .background-image1 {
+    background-image: url('/assets/images/products/Rectangle 9638.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: -1%;
+    width: 90%;
+    height: 400px;
+  }
+  
+  .overlay-image {
+    /* height: ;
+    width: ; */
+    position: absolute;
+    top: 9%;
+    left: 1%;
+  }
+  .overlay-image .col{
+    height: auto;
+    width: 20vw;
+  }
+  
+  .overlay-image1 img{
+    height:  100%;
+    width: 100%;
+    object-fit: cover;
+
+  }
+  
+  .image-size {
+    max-width: 100%; /* Ensures the image does not exceed its container width */
+    max-height:100%; /* Set the maximum height of the image */
+  }
+  
+  .woodimage{
+    position: absolute;
+    top: -13%;
+    right: 10%;
+  }
+  .woodimage img{
+    width: 29vw;
+  }
+
+
+
+  .background-image2 {
+    background-image: url('/assets/images/products/Rectangle 9637.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 10.3% !important;
+    width: 90%;
+    height: 400px;
+  }
+  .woodimage2{
+    position: absolute;
+    top:  -4%;
+    right: 60%;
+  }
+  .woodimage2 img{
+    width: 30vw;
+  }
+
+
+  .overlay-image2 {
+    /* height: ;
+    width: ; */
+    position: absolute;
+    top: 9%;
+    left: 40%;
+  }
+  .overlay-image2 .col{
+    height: auto;
+    width: 20vw;
+  }
+  .StoneText{
+    left: 26vw;
+    bottom: 0;
+  }
+
+  /* Media query for responsiveness */
+ 
+  

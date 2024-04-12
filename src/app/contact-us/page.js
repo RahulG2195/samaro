@@ -14,10 +14,10 @@ export default function Home() {
 
     return (
         <main>
-            <Topbar></Topbar>
-            <Header></Header>
+            {/* <Topbar></Topbar> */}
+            {/* <Header></Header> */}
             <About></About>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </main>
     );
 }
