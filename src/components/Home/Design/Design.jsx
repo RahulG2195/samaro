@@ -16,17 +16,17 @@ const Design = () => {
             <div className="container-fluid px-lg-5">
                 <div className="row g-lg-0 g-3">
                     <div className="col-lg-4">
-                        <Link href='/'>
+                        <Link href='/product'>
                             <img className='design-img' src="/assets/images/home/design/1.png" alt="" />
                         </Link>
                     </div>
                     <div className="col-lg-4">
-                        <Link href='/'>
+                        <Link href='/product'>
                             <img className='design-img' src="/assets/images/home/design/2.png" alt="" />
                         </Link>
                     </div>
                     <div className="col-lg-4">
-                        <Link href='/'>
+                        <Link href='/product'>
                             <img className='design-img' src="/assets/images/home/design/1.png" alt="" />
                         </Link>
                     </div>

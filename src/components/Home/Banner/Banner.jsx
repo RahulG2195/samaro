@@ -13,9 +13,9 @@ const Banner = () => {
                             &nbsp;
                             <span>superior<br /> quality.</span>
                         </h2>
-                        <a href="#" className="button d-inline-block mt-3 px-3">
+                        <Link href="/product" className="button d-inline-block mt-3 px-3">
                             Discover all our floors
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

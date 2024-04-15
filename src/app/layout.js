@@ -6,6 +6,8 @@ import Topbar from "@/components/Home/Topbar/Topbar";
 import Footer from "@/components/Home/Footer/Footer";
 import Header from "@/components/Home/Header/Header";
 import "./globals.css";
+import '@fortawesome/fontawesome-free/css/all.css';
+
 
 const inter = Inter({ subsets: ["latin"] });
 

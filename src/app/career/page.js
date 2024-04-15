@@ -1,33 +1,16 @@
-import SubBanner from '@/Components/SubBanner/SubBanner';
-import '../contact.css';
+import Career from '@/components/Career/Career'
+import Form from '@/components/InquiryForm/Form'
+import React from 'react'
 
-export default function page() {
+const page = () => {
     return (
         <>
-        <SubBanner/>
-        <section className="getintouch">
-            <div className="container">
-                <div className="section_heaing mx-auto text-center">
-                    <h1>Get In Touch With Us</h1>
-                </div>
+            <div>
+    
+                <Career></Career>
             </div>
-            <div className="head_office"> 
-                <div className="container">
-                    <div className="inner-head-office">
-                        <div className="row">
-                            <div className="col-md-4">
-                                <div className="office_heading">
-                                    <h3 className="text-Capitalize"> Head office</h3>
-                                    <address>loremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem</address>
-                                </div>
-                            </div>
-                            <div className="col-md-4"></div>
-                            <div className="col-md-4"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         </>
-    );
+    )
 }
+
+export default page

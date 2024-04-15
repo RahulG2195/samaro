@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Footer.css";
+import Form from '@/components/InquiryForm/Form';
 const Footer = () => {
     return (
         <>
@@ -70,6 +71,13 @@ const Footer = () => {
                 <p className='text-navy mb-0'>
                     Copyright © 2023 Samaro | Powered by Crezvatic PVT. LTD.
                 </p>
+            </div>
+            <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <Form></Form>
+                    </div>
+                </div>
             </div>
         </>
     )

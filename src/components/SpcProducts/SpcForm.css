@@ -9,6 +9,8 @@
 .spcform input {
     border-bottom: 2px solid var(--navy) !important;
     border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 .spcform input::placeholder {
