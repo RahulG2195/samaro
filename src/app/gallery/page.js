@@ -14,10 +14,7 @@ export default function Home() {
 
     return (
         <main>
-            <Topbar></Topbar>
-            <Header></Header>
             <Gallery></Gallery>
-            <Footer></Footer>
         </main>
     );
 }

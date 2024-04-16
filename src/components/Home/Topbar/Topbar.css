@@ -1,7 +1,13 @@
 .topbar {
   background-color: #c5363b;
-  padding: 10px 0;
+  /* padding: 10px 0; */
   color: #ffffff;
+  font-weight: 200 !important;
+  font-size: 12px !important;
+}
+
+.phone img{
+  width: 15px !important;
 }
 
 .topbar .logo {
@@ -39,7 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 25px;
+  /* gap: 25px; */
 }
 .social-media .img {
   width: 20px;
@@ -64,5 +70,3 @@
   border-bottom-right-radius: 100px !important;
 }
 
-.inner-row-two {
-}

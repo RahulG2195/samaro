@@ -4,7 +4,7 @@ import "./Topbar.css";
 const Topbar = () => {
     return (
         <div>
-            <div className="topbar">
+            <div className="topbar py-2">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4"></div>
@@ -12,24 +12,24 @@ const Topbar = () => {
                             <div className="topbar-wrapper">
                                 <div className="contact-details">
                                     <div className="mail">
-                                        <img src="/assets/images/home/topbar/mail.png" alt="" />
+                                        <img src="/assets/images/home/topbar/mail.png" alt="err" />
                                         <a href="mailto:">info@samaro.in</a>
                                     </div>
                                     <div className="phone">
-                                        <img src="/assets/images/home/topbar/phone.png" alt="" />
+                                        <img src="/assets/images/home/topbar/phone.png" alt="err"  />
                                         <a href="tel:">91-8079545115</a>
                                     </div>
                                 </div>
                                 <div className="social-media align-items-center">
-                                    <div className="logo">
+                                    <div className="logo text-center">
                                         <Link href="#">
-                                            <p className='text-white'>Samaro on</p>
+                                            <span className='text-white '>SAMARO ON</span>
                                         </Link>
                                     </div>
-                                    <div className="social-media-inner">
+                                    <div className="social-media-inner gap-3">
                                         <div className="facebook">
                                             <Link href="#">
-                                                <img className="img" src="/assets/images/social-media/fb.png" alt="" />
+                                                <img className="img " src="/assets/images/social-media/fb.png" alt="" />
                                             </Link>
                                         </div>
                                         <div className="isntagram">

@@ -5,6 +5,8 @@
 
 .design .sub-heading {
   font-weight: 300 !important;
+  letter-spacing: 2px;
+  color: #0A2647;
 }
 
 .design .sub-heading span {
@@ -21,8 +23,8 @@
 }
 
 .design-img:hover {
-  transform: scale(1.2);
-  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+  transition: all 0.4s ease-in-out;
 }
 
 .design .no-gap {

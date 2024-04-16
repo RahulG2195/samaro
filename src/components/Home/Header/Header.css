@@ -56,15 +56,22 @@
 }
 /* Header */
 .prdctDrop{
-  /* left: -20%; */
-  width: 100%;
+  right: -55%;
+  /* width: 100%; */
+  z-index: 1;
+  opacity: 0;
+  /* display: none; */
+}
+.drop1{
+  right: -20% !important;
+  /* width: 100%; */
   z-index: 1;
   opacity: 0;
   /* display: none; */
 }
 .prdctDrop p {
   margin-top: -10px !important;
-  text-align: left !important;
+  text-align: center !important;
   /* margin-bottom: 10px !important; */
   transition: all 0.5s ease-in-out;
 }
@@ -73,11 +80,15 @@
   margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
+.prdctDrop p:hover{
+  color: #ca373c;
+  font-weight: 500;
+}
 .prdcts:hover .prdctDrop{
-  display: block;
+display: block;
 background-color: white;
 border-bottom-left-radius: 20px;
 border-bottom-right-radius: 20px;
-width: 100%;
+width:max-content;
 opacity: 1;
 }

@@ -33,3 +33,23 @@
 }
 
 /* Commercial */
+@media (max-width: 768px) {
+  .commercial::before {
+    font-size: 100px ;
+    top: -80px;
+  }
+ 
+  .commericial-heading {
+    margin-bottom: -50px;
+    text-align: center !important;
+}
+}
+
+@media (max-width: 576px) {
+  .commercial::before {
+    font-size: 50px !important;
+    top: -100px !important;
+  }
+  
+}
+  

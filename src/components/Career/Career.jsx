@@ -7,7 +7,7 @@ const Career = () => {
     return (
         <div className='mb-5'>
 
-<Form></Form>
+
 
             <Image
                 src="/assets/images/career/creer_banner.png"

@@ -10,6 +10,13 @@
 .hero .heading {
   color: var(--light);
   font-weight: 200;
+ 
+}
+.textcont{
+  position: absolute;
+  right: 0;
+  bottom: 15%;
+
 }
 .hero .heading span {
   font-weight: 600;

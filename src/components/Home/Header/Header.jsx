@@ -31,15 +31,17 @@ const Header = () => {
                             </li>
                             <li className="nav-item position-relative prdcts">
                                 <NavLink href="/product">Product</NavLink>
-                                <ul className="text-center prdctDrop position-absolute">
+                                <ul className=" prdctDrop drop1 px-5 position-absolute">
                                     <li><Link href="/spcProducts"><p className="darkBlue">SPC</p></Link></li>
                                     <li><Link href="/lvtProducts"><p className="darkBlue">LVT</p></Link></li>
                                 </ul>
                             </li>
-                            <li className="nav-item">
-                                <NavLink href="inspiration">
-                                    Inspiration
-                                </NavLink>
+                            <li className="nav-item position-relative prdcts">
+                                <NavLink href="inspiration" className="lnk"> Inspiration</NavLink>
+                                <ul className=" prdctDrop px-5 position-absolute">
+                                    <li><Link href="/gallery"><p className="darkBlue">Gallery</p></Link></li>
+                                    <li><Link href="/lvtProducts"><p className="darkBlue">Find your match</p></Link></li>
+                                </ul>
                             </li>
                             <li className="nav-item">
                                 <NavLink className="nav-link" href="/newsletter">
@@ -50,10 +52,9 @@ const Header = () => {
                                 <NavLink className="nav-link" href="/contact-us">
                                     Contact Us
                                 </NavLink>
-                            </li>
-                            
+                            </li>                           
                             <li className="nav-item">
-                                <NavLink className="nav-link" href="career">
+                                <NavLink className="nav-link" href="/career">
                                     Career
                                 </NavLink>
                             </li>
