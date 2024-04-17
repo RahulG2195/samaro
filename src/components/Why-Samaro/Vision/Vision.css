@@ -1,15 +1,49 @@
 .vision-text {
   padding: 50px;
   padding-left: 80px;
-  border: 5px solid var(--navy);
+  border: 3px solid var(--navy);
   border-right: 0;
   border-top-left-radius: 150px;
   border-bottom-left-radius: 150px;
 }
-.vision-image {
-}
+
+
 
 .vision h2 {
-  font-size: 40px;
+
+  font-size: 45px;
   font-weight: 800;
+}
+
+@media (max-width:600px) {
+  .vision-image img{
+    width: 10% !important;
+    position: absolute;
+    left: 10%;
+ 
+}
+  .vision-text h2 {
+    position: absolute;
+    letter-spacing: 15px;
+    top: -30% !important;
+    right: 0%;
+    opacity: 40%;
+    font-size: 50px;
+  }
+
+  .vision-text {
+    padding: 0 !important;
+  }
+
+  .vision-text p {
+    font-size: 10px;
+    padding-left: 46px !important;
+    padding-right: 10px !important;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 0 !important;
+    text-align: right;
+  }
+
+
 }

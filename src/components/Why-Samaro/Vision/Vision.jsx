@@ -7,15 +7,15 @@ const Vision = () => {
             <div className="row justify-content-end ">
                 <div className="col-lg-10">
                     <div className="row g-5 align-items-center ">
-                        <div className="col-lg-2">
+                        <div className="col-lg-2 col-md-4 mx-auto">
                             <div className="vision-image">
                                 <img src="/assets/images/why-samaro/vision-mission/vision.png" alt="" />
                             </div>
                         </div>
-                        <div className="col-lg-10">
-                            <div className="vision-text">
+                        <div className="col-lg-10 ">
+                            <div className="vision-text position-relative">
                                 <h2 className='text-navy'>Vision</h2>
-                                <p className='mt-4 text-navy'>
+                                <p className='mt-4 text-navy fw-semibold'>
                                     With over 50 years of manufacturing expertise in the plastic processing industry, Samaro Global Industries has emerged as a develop in the SPC and LVT flooring sector since our inception in 2019. Our unwavering commitment to innovation, quality, and sustainability has propelled us to become India's largest SPC and LVT manufacturer within just three years, a remarkable feat underscored by our state-of-the-art manufacturing facility in Gujarat boasting an annual installed capacity of over 15 million square meters.
                                 </p>
                             </div>

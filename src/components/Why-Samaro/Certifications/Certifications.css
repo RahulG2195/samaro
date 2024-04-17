@@ -18,13 +18,15 @@
   position: relative;
 }
 .certifications::before {
-  content: "certficates";
+  content: "certfications";
   text-transform: uppercase !important;
   position: absolute;
   top: 70px;
   font-weight: 800;
   left: 50px;
-  color: #e6e9ec;
+  color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #e6e9ec;
   z-index: 1;
   font-size: 100px;
 }

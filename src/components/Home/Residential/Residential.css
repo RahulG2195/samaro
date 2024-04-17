@@ -8,10 +8,12 @@
 .commercial-2::before {
   content: "Residential";
   position: absolute;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #e6e9ec;
   top: -67px;
   font-weight: 800;
   right: 0;
-  color: #e6e9ec;
+  color: transparent;
   z-index: -1;
   font-size: 160px;
 }
@@ -26,16 +28,26 @@
 @media (max-width: 768px) {
   .commercial-2::before {
     font-size: 100px ;
-    /* top: -80px; */
+    top: -50px;
   }
  
- 
+}
+
+@media (max-width:600px) {
+  .carousel-inner{
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+  }
+  
 }
 
 @media (max-width: 576px) {
   .commercial-2::before {
     font-size: 50px !important;
-    top: -00px !important;
+    top:40px !important;
+  }
+  .commercial-2{
+    margin: 0 !important;
   }
   
 }

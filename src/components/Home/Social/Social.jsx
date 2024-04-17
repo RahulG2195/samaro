@@ -4,7 +4,7 @@ import "./Social.css";
 const Social = () => {
     return (
         <section className="social">
-            <div className="container">
+            <div className="container mt-5">
                 <h2 className="text-center">let's get <span>social</span></h2>
                 <div className='text-center'>
                 <i class="fa-brands fa-instagram mx-4"></i><span>@SAMAROFLORRING</span>

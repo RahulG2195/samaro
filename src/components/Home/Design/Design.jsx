@@ -10,7 +10,7 @@ const Design = () => {
                 <div className="row mx-auto">
                     <div className="col-lg-3"></div>
                     <div className="col-lg-6">
-                        <h2 className="sub-heading ">DESIGN RANGE IN <span>SPC </span></h2>
+                        <h2 className="sub-heading ">DESIGN RANGE IN <span>SPC & LVT</span></h2>
                     </div>
                 </div>
             </div>

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Header from "@/components/Home/Header/Header";
 import Footer from "@/components/Home/Footer/Footer";
 import Products from "@/components/Product/products";
+import SpcBanner from "@/components/SpcProducts/SpcBanner";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <main>
             {/* <Topbar></Topbar> */}
             {/* <Header></Header> */}
+            {/* <SpcBanner></SpcBanner> */}
             <Products></Products>
             {/* <Footer></Footer> */}
         </main>

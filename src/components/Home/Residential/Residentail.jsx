@@ -6,8 +6,8 @@ const Residentail = () => {
         <section className="commercial-2 mt-5">
             <div className="row justify-content-end">
                 <div className="col-lg-10">
-                    <div id="carouselExampleFade2" className="carousel slide carousel-fade h-100">
-                        <div className="carousel-inner">
+                    <div id="carouselExampleFade2 " className="carousel slide carousel-fade h-100">
+                        <div className="carousel-inner mb-5 pb-5">
                             <div className="carousel-item active">
                                 <img src="/assets/images/home/commercial/2.jpg" className="d-block w-100" alt="..." />
                             </div>

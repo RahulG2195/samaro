@@ -20,11 +20,13 @@
 
 .commercial::before {
   content: "Commercial";
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #e6e9ec;
   position: absolute;
   top: -170px;
   font-weight: 800;
   left: 0;
-  color: #e6e9ec;
+  color: transparent;
   z-index: -1;
   font-size: 160px;
 }

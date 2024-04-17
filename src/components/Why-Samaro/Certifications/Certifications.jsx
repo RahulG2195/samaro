@@ -7,7 +7,7 @@ const Certifications = () => {
             <div className="container">
                 <div className="row justify-content-center ">
                     <div className="col-lg-10">
-                        <div className="certifications-grid">
+                        <div className="certifications-grid gap-5">
                             <div className="certificate-image">
                                 <img src="/assets/images/why-samaro/certifications/1.png" alt="" />
                             </div>

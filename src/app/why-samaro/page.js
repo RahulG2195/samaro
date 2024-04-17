@@ -13,6 +13,7 @@ import Certifications from "@/components/Why-Samaro/Certifications/Certification
 import Vision from "@/components/Why-Samaro/Vision/Vision";
 import Mission from "@/components/Why-Samaro/Mission/Mission";
 import Design from "@/components/Why-Samaro/Design/Design";
+import Banner from "@/components/Why-Samaro/Banner/Banner";
 
 export default function Home() {
     useEffect(() => {
@@ -23,6 +24,7 @@ export default function Home() {
         <main>
             {/* <Topbar></Topbar> */}
             {/* <Header></Header> */}
+            <Banner></Banner>
             <About></About>
             <Vision></Vision>
             <Mission></Mission>

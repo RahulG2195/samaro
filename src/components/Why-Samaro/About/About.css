@@ -1,5 +1,4 @@
-.about {
-}
+
 
 .about .logo {
   width: 200px;
@@ -12,4 +11,19 @@
 }
 .about .company-history {
   font-weight: 300;
+}
+@media (max-width:600px) {
+  .about .row .col-lg-7    {
+    padding: 0 !important;
+  }
+  .company-history{
+    font-size: 10px ;
+  }
+  .about .tagline{
+    letter-spacing: 0 !important;
+    padding: 0 !important;
+  }
+  .headline{
+    padding: 0 !important;
+  }
 }

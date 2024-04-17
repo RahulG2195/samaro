@@ -5,10 +5,10 @@ const Benefits = () => {
     return (
         <section className="benefits position-relative">
 
-            <div className="my-3">
+            <div className="mt-3">
 
                 <div className="row align-items-center justify-content-between ms-5 benifitscont">
-                    <div className="col-lg-6 col-md-8 position-relative px-5 my-5 beniInnerCont">
+                    <div className="col-lg-6 col-md-12 position-relative px-5 mt-5  beniInnerCont">
                         <h2 className="text-navy benifitsHeading px-5">
                             Unlock Many Benefits <br />
                             with Click-N-Lock® Tiles

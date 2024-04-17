@@ -58,7 +58,14 @@
 .qualities .row img{
 width: 25px;
 }
-
+.onImgtext{
+  top: 50%;
+  left: 15%;
+}
+.onImgtext2{
+  top: 26%;
+  left: 30%;
+}
 @media (max-width: 768px) {
   .spc-lvt .sub-heading::after {
     font-size: 100px ;
@@ -90,5 +97,18 @@ width: 25px;
  width: 25px !important;
   }
   
+}
+@media (max-width:426px) {
+  .onImgtext{
+    top: 50%;
+    left: 7%;
+  }
+  .onImgtext2{
+    top: 26%;
+    left: 20%;
+  }
+  .onImgtext a, .onImgtext2 a{
+    padding: 2px !important;
+  }
 }
 /* SPC-LVT   */
