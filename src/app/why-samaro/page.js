@@ -33,7 +33,7 @@ export default function Home() {
             <Certifications></Certifications>
             <Dimensions></Dimensions>
             <Download></Download>
-            <div className="mb-5">
+            <div className="mb-5 pb-5">
                 <CallToAction></CallToAction>
             </div>
             {/* <Footer></Footer> */}

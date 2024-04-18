@@ -51,6 +51,10 @@
   display: none;
 }
 
+.mobilebutton:hover{
+color: white !important;
+}
+
 /* property-inspection */
 @media (max-width:991px) {
   .property-inspection .image-box img {
@@ -117,10 +121,11 @@
   .mobilebutton{
     position: relative;
     top: 77%;
-    color: red !important;
-    border-color: red;
+    color:#CA373C !important;
+    border-color: #CA373C;
     font-size: 12px !important;
     padding: 0 15px !important;
+    margin: 20px 0 !important;
   }
 
   .property-inspection .image-box img {
