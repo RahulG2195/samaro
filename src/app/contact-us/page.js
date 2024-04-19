@@ -4,7 +4,7 @@ import '../contact.css';
 export default function page() {
     return (
         <>
-        <SubBanner/>
+        <SubBanner></SubBanner>
         <section className="getintouch">
             <div className="container">
                 <div className="section_heaing mx-auto text-center">
