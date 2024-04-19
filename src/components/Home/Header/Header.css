@@ -107,3 +107,17 @@ border-bottom-right-radius: 20px;
 width:max-content;
 opacity: 1;
 }
+
+@media (max-width:990px) {
+  .drop1 {
+    right: 15% !important;
+    /* width: 100%; */
+    z-index: 1;
+    opacity: 1 !important;
+    /* display: none; */
+    top: 14px;
+    display: flex;
+    gap: 20px;
+}
+  
+}
