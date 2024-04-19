@@ -1,5 +1,5 @@
 import SubBanner from '../../Components/SubBanner/SubBanner';
-import SubBanner from '@/Components/SubBanner/SubBanner';
+// import SubBanner from '@/Components/SubBanner/SubBanner';
 import '../contact.css';
 
 export default function page() {
