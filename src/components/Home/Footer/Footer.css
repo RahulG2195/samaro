@@ -86,6 +86,14 @@
   font-size: 14px;
 }
 
+.btn-close{
+    align-self: end;
+    color: white !important;
+}
+.modal-content{
+  background-color: transparent !important;
+  border: none !important;
+}
 /* Footer */
 @media (max-width:768px) {
   .ordr3{

@@ -68,4 +68,10 @@
 .social h2 span {
   color: var(--primary);
 }
+
+@media (max-width:600px) {
+  .instagram{
+    width: 50% !important;
+  }
+}
 /* Social */

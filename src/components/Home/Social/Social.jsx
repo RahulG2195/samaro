@@ -7,7 +7,8 @@ const Social = () => {
             <div className="container mt-5">
                 <h2 className="text-center">let's get <span>social</span></h2>
                 <div className='text-center'>
-                <i class="fa-brands fa-instagram mx-4"></i><span>@SAMAROFLORRING</span>
+                {/* <i class="fa-brands fa-instagram mx-4"></i><span>@SAMAROFLORRING</span> */}
+                <a href="https://www.instagram.com/samaroflooring?igsh=amowMmMyeHU1eXVh" target="_blank"><img src="/assets/images/home/social/Group 28501.svg" alt="err" className='w-25 instagram my-2++*' /></a>
                 </div>
                 <div className="row justify-content-center mt-5">
                     <div className="col-lg-10 col-md-12 col-sm-12 col-12">
