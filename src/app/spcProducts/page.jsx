@@ -26,7 +26,7 @@ const page = () => {
             <Broucher></Broucher>
             <SpcPage></SpcPage>
             <InstallationSteps></InstallationSteps>
-            <div className="my-5">
+            <div className="mb-5 pb-5">
             <CallToAction></CallToAction></div>
             {/* <Footer></Footer> */}
         </>
