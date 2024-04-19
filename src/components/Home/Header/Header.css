@@ -119,6 +119,7 @@ opacity: 1;
 .mobileoptions{
   display: block;
   font-size: 15px;
+  margin-left: 12px !important;
 }
   
 }
