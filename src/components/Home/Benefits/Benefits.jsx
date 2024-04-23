@@ -22,7 +22,7 @@ const Benefits = () => {
                         </div>
 
                         <div className="column-wrapper px-5">
-                            <div className="row g-3 mt-1">
+                            <div className="row g-5 mt-1 respBenifitrow">
                                 <div className="col-lg-2 col-md-2 col-sm-2 col-4 text-center">
                                     <div className="image">
                                         <img src="/assets/images/home/benefits/benefits/weather.png" alt="" />
@@ -98,7 +98,7 @@ const Benefits = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-4">
+                    <div className="col-lg-6 col-md-6">
                         <img src="/assets/images/home/benefits/1.png" className="rightside-image" alt="" />
                     </div>
                 </div>

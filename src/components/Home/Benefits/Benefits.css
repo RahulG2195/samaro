@@ -59,6 +59,17 @@
   display: none;
 }
 
+@media screen and (max-width: 1313px) and (min-width: 990px) {
+.beniInnerCont, .benifitscont .column-wrapper{
+  padding: 0 !important;
+}
+.benifitscont .column-wrapper{
+  padding-bottom: 20px !important;
+  padding-right: 10px !important;
+}
+
+
+}
 @media (max-width:990px) {
   .benifitscont{
     margin: 0 !important;
