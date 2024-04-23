@@ -14,7 +14,7 @@ const Mission = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="col-lg-2 col-md-4 mx-auto">
+                        <div className="col-lg-2 col-md-4 col-sm-4 mx-auto">
                             <div className="mission-image">
                                 <img src="/assets/images/why-samaro/vision-mission/mission.png" alt="" />
                             </div>

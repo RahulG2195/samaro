@@ -5,15 +5,15 @@ const Benefits = () => {
     return (
         <section className='benefits why-samaro'>
             <div className="container">
-                <h2 className='text-navy text-center '>Benefits</h2>
+                <h2 className='text-navy text-center mb-5'>Benefits</h2>
                 <div className="row g-5 ">
-                    <div className="col-lg-3">
-                        <div className="benefits-boxes h-100 primary-bg">
+                    <div className="col-lg-3 col-md-6 col-sm-6">
+                        <div className="benefits-boxes h-100 primary-bg ">
                             <img src="/assets/images/why-samaro/benefits/manufacturing.png" alt="" />
-                            <h3 className='mt-2'>
+                            <h3 className='mt-2 text-center'>
                                 Manufacturing
                             </h3>
-                            <ol>
+                            <ol >
                                 <li>1. Blend materials for durability</li>
                                 <li>2. Layer vinyl for stability.</li>
                                 <li>3. Add texture for realism.</li>
@@ -22,13 +22,13 @@ const Benefits = () => {
                             </ol>
                         </div>
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-md-6 col-sm-6">
                         <div className="benefits-boxes h-100 navy-bg">
                             <img src="/assets/images/why-samaro/benefits/product-performance.png" alt="" />
-                            <h3 className='mt-2'>
+                            <h3 className='mt-2 text-center'>
                                 Product Performance
                             </h3>
-                            <ol>
+                            <ol >
                                 <li>1. Resilience: Withstands scratches and impacts.</li>
                                 <li>2. Water Resistance: Ideal for moisture-prone areas.</li>
                                 <li>3. Stability: Maintains shape in different temperatures. </li>
@@ -37,13 +37,13 @@ const Benefits = () => {
                             </ol>
                         </div>
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-md-6 col-sm-6">
                         <div className="benefits-boxes h-100 primary-bg">
                             <img src="/assets/images/why-samaro/benefits/quality-assurance.png" alt="" />
-                            <h3 className='mt-2'>
+                            <h3 className='mt-2 text-center'>
                                 Quality Assurance
                             </h3>
-                            <ol>
+                            <ol >
                                 <li>1. Standards Compliance: Meets quality benchmarks.</li>
                                 <li>2. Material Inspection: Rigorously checks raw materials.</li>
                                 <li>3. Production Oversight: Constant monitoring during manufacturing.</li>
@@ -52,13 +52,13 @@ const Benefits = () => {
                             </ol>
                         </div>
                     </div>
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-md-6 col-sm-6">
                         <div className="benefits-boxes h-100 navy-bg">
                             <img src="/assets/images/why-samaro/benefits/innovating.png" alt="" />
-                            <h3 className='mt-2'>
+                            <h3 className='mt-2 text-center'>
                                 Quality Assurance
                             </h3>
-                            <ol>
+                            <ol >
                                 <li>1. Standards Compliance: Meets quality benchmarks.</li>
                                 <li>2. Material Inspection: Rigorously checks raw materials.</li>
                                 <li>3. Production Oversight: Constant monitoring during manufacturing.</li>

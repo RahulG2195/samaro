@@ -4,7 +4,7 @@ import './Collection.css'
 const Collection = () => {
     return (
         <>
-            <div className='my-5'>
+            <div className='my-5 respCont2'>
             <div className="container">
                 <p className='passiontext fs-4'>Choose by <span className='fw-semibold'>collection</span></p>
             </div>
@@ -12,7 +12,7 @@ const Collection = () => {
                 <div className='background-image1'></div>
                 <div className=' woodimage'>
                     <img src="/assets/images/products/Group 28508.png" alt="" className='' />
-                    <span className='position-absolute fs-1 fw-semibold text-danger woodText '>Collection 1</span>
+                    <span className='position-absolute fs-1 fw-semibol text-danger woodText '>Wood</span>
                 </div>
                 <div className=' '>
                     <div className='overlay-image row row-cols-md-3 row-cols-sm-2 row-cols-xs-1'>
@@ -37,7 +37,7 @@ const Collection = () => {
                 <div className=' woodimage2'>
                     <img src="/assets/images/products/Group 28522.png" alt="" className='' />
                 </div>
-                <span className='position-absolute fs-1 fw-semibold text-danger StoneText '>Collection 1</span>
+                {/* <span className='position-absolute fs-1 fw-semibold text-danger StoneText '>Collection 1</span> */}
 
                 <div className=' '>
                     <div className='overlay-image2 row row-cols-md-3 row-cols-sm-2 row-cols-xs-1'>
@@ -62,7 +62,7 @@ const Collection = () => {
                 <div className='background-image1'></div>
                 <div className=' woodimage'>
                     <img src="/assets/images/products/Group 28523@2x.png" alt="" className='' />
-                    <span className='position-absolute fs-1 fw-semibold text-danger woodText '>Collection 1</span>
+                    {/* <span className='position-absolute fs-1 fw-semibold text-danger woodText '>Collection 1</span> */}
                 </div>
                 <div className=' '>
                     <div className='overlay-image row row-cols-md-3 row-cols-sm-2 row-cols-xs-1'>

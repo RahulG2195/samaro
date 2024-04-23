@@ -23,12 +23,13 @@ const SpcPage = () => {
     ];
     return (
         <>
-            <div className="pe-5 ps-3">
+            <div className="pe-5 ps-3 position-relative prdctContainer">
                 <div className="row">
                     {/* Filters */}
                     <div className="col-md-2 ">
                         <Filters
                             hide='hidethis'
+                            inSPC='hamInSPC'
                         />
                     </div>
                     <div className="col-md-10">
@@ -36,6 +37,7 @@ const SpcPage = () => {
 
                             {/* Search Bar and Options */}
                         </div>
+                        <p className='py-3 text-navy d-lg-none'>Choose Your <strong className='fw-medium'>product</strong></p>
                         <div className="row row-cols-md-3 row-cols-sm-3 row-cols-xs-1 row-cols-lg-3 row-cols-xl-5">
                             {productsArr.map((product, index) => (
                                 <div key={index} className="col-6 mb-4">

@@ -1,6 +1,7 @@
 import React from 'react';
 import Filters from './Filters';
 import ProductCard from './ProductCard';
+import './Filters.css'
 
 const Products = () => {
     const productsArr = [
@@ -21,28 +22,28 @@ const Products = () => {
     ];
 
     return (
-        <div className="pe-5 ps-3">
+        <div className="pe-5 ps-3 prdctContainer">
             <div className="row">
                 {/* Filters */}
-                <div className="col-md-2 ">
+                <div className="col-lg-2 col-md-3">
                     <Filters />
                 </div>
-                <div className="col-md-10">
-                    <div className="row align-items-center">
-                        <div className="col-md-2 mb-3 md-0">
-                            <p className="fw-bold fs-5 darkBlue">SAMARO FLOORS</p>
-                            <span className="small">11 of 79 floors shown</span>
+                <div className="col-lg-10 col-md-9 ">
+                    <div className="row align-items-center ">
+                        <div className="col-md-3 md-0 mt-2">
+                            <p className="fw-bold fs-5 samFloor m-0">SAMARO FLOORS</p>
+                            <span className="small shownCount">11 of 79 floors shown</span>
                         </div>
                         {/* Search Bar and Options */}
-                        <div className="col-md-9">
-                            <div className="input-group px-3">
+                        <div className="col-md-9 samSearchResp">
+                            <div className="input-group px-3 p-md-0 ">
                                 <input type="text" className="form-control search-bar prdctSearch px-2 py-0" placeholder="Search your floor" />
                                 <div className="input-group-append">
                                     <div className="input-group-text bg-transparent border-0">
                                         <i className="bi bi-search"></i>
                                     </div>
                                 </div>
-                                <div className="input-group-append">
+                                <div className="input-group-append interiorcheck">
                                     <div className="form-check">
                                         <input className="mx-1 form-check-input" type="checkbox" />
                                         <label className="darkBlue">Show interior pictures</label>
@@ -66,6 +67,7 @@ const Products = () => {
 
                 </div>
             </div>
+            
         </div>
     );
 }

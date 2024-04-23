@@ -30,10 +30,14 @@ const Header = () => {
                                 <NavLink href="/why-samaro">Why Samaro</NavLink>
                             </li>
                             <li className="nav-item position-relative prdcts">
-                                <NavLink href="/product">Product</NavLink>
+                                <NavLink className="prdctHeading" href="/product">Product</NavLink>
                                 <ul className=" prdctDrop drop1 px-5 position-absolute">
                                     <li><Link href="/spcProducts"><p className="darkBlue">SPC</p></Link></li>
                                     <li><Link href="/lvtProducts"><p className="darkBlue">LVT</p></Link></li>
+                                </ul>
+                                <ul className="mobileoptions">
+                                    <li><Link href="/spcProducts">SPC</Link></li>
+                                    <li><Link href="/lvtProducts">LVT</Link></li>
                                 </ul>
                             </li>
                             <li className="nav-item position-relative prdcts">
@@ -41,6 +45,10 @@ const Header = () => {
                                 <ul className=" prdctDrop px-5 position-absolute">
                                     <li><Link href="/gallery"><p className="darkBlue">Gallery</p></Link></li>
                                     <li><Link href="/lvtProducts"><p className="darkBlue">Find your match</p></Link></li>
+                                </ul>
+                                <ul className="mobileoptions">
+                                    <li><Link href="/gallery">Gallery</Link></li>
+                                    <li><Link href="/gallery">Find your match</Link></li>
                                 </ul>
                             </li>
                             <li className="nav-item">

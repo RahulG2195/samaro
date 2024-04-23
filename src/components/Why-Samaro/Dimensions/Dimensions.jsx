@@ -5,12 +5,12 @@ const Dimensions = () => {
     return (
         <section className='dimensions'>
             <div className="row">
-                <div className="col-lg-10 bg-navy text-white " >
+                <div className="col-lg-10 col-md-10 bg-navy text-white " >
                     <div className="row align-items-center inner-row-one">
-                        <div className="col-lg-5">
+                        <div className="col-lg-5 ">
                             <img src="/assets/images/why-samaro/dimensions/1.png" alt="" />
                         </div>
-                        <div className="col-lg-7 p-5">
+                        <div className="col-lg-7 p-5 respPlanktxt">
                             <h3>
                                 Our Popular Plank Sizes
                             </h3>
@@ -22,17 +22,25 @@ const Dimensions = () => {
                 </div>
             </div>
             <div className="row justify-content-end mt-5">
-                <div className="col-lg-10 bg-red text-white " >
+                <div className="col-lg-10 col-md-8 bg-red text-white " >
                     <div className="row align-items-center inner-row-two">
-                        <div className="col-lg-7 p-5">
+                        <div className="col-lg-7 p-5 text-end odr1 respPlanktxt">
                             <h3>
-                                Plank Thickness and Wear Layer
+                                Plank Thickness & Wear Layer
                             </h3>
-                            <p className='text-white'>
+                            <p className='text-white '>
                                 Optimal strength, style blend: Plank Thickness, Wear Layer perfection awaits.
                             </p>
+                            <div className='thickness'>
+                                <img src="/assets/images/why-samaro/dimensions/Group 28285.svg" alt="err" style={{ width: '40%' }} />
+                                <span className='small mx-3'>LVT: 1.5mm to 3mm</span>
+                                <img src="/assets/images/why-samaro/dimensions/Group 28287.svg" alt="err" style={{ width: '50%' }} />
+                                <span className='small mx-3'>SPC: 3.5mm to 8mm</span>
+                                <img src="/assets/images/why-samaro/dimensions/Group 28289.svg" alt="err" style={{ width: '60%' }} />
+                                <span className='small mx-3 wl'>WEAR LAYER: 0.1mm to 0.7mm</span>
+                            </div>
                         </div>
-                        <div className="col-lg-5">
+                        <div className="col-lg-5 odr2">
                             <img src="/assets/images/why-samaro/dimensions/2.png" alt="" />
                         </div>
                     </div>

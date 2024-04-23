@@ -28,11 +28,11 @@ const Commercial = () => {
                             </div>
                             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                                 data-bs-slide="prev">
-                                <i className="fa-solid fa-chevron-left carousel-control-prev-icon"></i>
+                                <i className="fa-solid fa-chevron-lef carousel-control-prev-icon"></i>
                             </button>
                             <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
                                 data-bs-slide="next">
-                                <i className="fa-solid fa-chevron-left carousel-control-next-icon"></i>
+                                <i className="fa-solid fa-chevron-lef carousel-control-next-icon"></i>
                             </button>
                         </div>
                     </div>

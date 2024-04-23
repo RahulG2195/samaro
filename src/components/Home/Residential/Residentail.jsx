@@ -1,36 +1,36 @@
 import React from 'react';
-import "./Residential.css"
+import "./Residential.css";
 
-const Residentail = () => {
+const Residential = () => {
     return (
         <section className="commercial-2 mt-5">
             <div className="row justify-content-end">
                 <div className="col-lg-10">
-                    <div id="carouselExampleFade2 " className="carousel slide carousel-fade h-100">
+                    <div id="carouselExampleFade2" className="carousel slide carousel-fade h-100" data-bs-ride="carousel">
                         <div className="carousel-inner mb-5 pb-5">
                             <div className="carousel-item active">
-                                <img src="/assets/images/home/commercial/2.jpg" className="d-block w-100" alt="..." />
-                            </div>
-                            <div className="carousel-item">
                                 <img src="/assets/images/home/commercial/1.jpg" className="d-block w-100" alt="..." />
                             </div>
                             <div className="carousel-item">
                                 <img src="/assets/images/home/commercial/2.jpg" className="d-block w-100" alt="..." />
                             </div>
+                            <div className="carousel-item" >
+                                <img src="/assets/images/home/commercial/1.jpg" className="d-block w-100" alt="..."  />
+                            </div>
                         </div>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2"
-                            data-bs-slide="prev">
-                            <i className="fa-solid fa-chevron-left carousel-control-prev-icon"></i>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
                         </button>
-                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2"
-                            data-bs-slide="next">
-                            <i className="fa-solid fa-chevron-left carousel-control-next-icon"></i>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
                         </button>
                     </div>
                 </div>
             </div>
         </section>
-    )
+    );
 }
 
-export default Residentail;
+export default Residential;

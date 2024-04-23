@@ -35,8 +35,23 @@
 }
 
 .benefits-boxes ol {
-  padding-left: 0;
+  padding-left: 10px !important;
   display: flex;
   gap: 5px;
   flex-direction: column !important;
+  font-size: 13px;
+  font-weight: 200;
+}
+
+@media (max-width:600px) {
+  .benefits-boxes {
+    padding-top: 30px !important;
+    border-radius: 25px;
+}
+.benefits-boxes h3 {
+  margin: 30px 0;
+}
+.benefits-boxes ol li{
+line-height: 3;
+}
 }
