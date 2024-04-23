@@ -1,10 +1,8 @@
 import Filters from '@/components/Product/Filters'
 import ProductCard from '@/components/Product/ProductCard'
 import Products from '@/components/Product/Products'
-import "@/components/Home/Social/Social.css";
-
-
-import React from 'react'
+// import "@/components/Home/Social/Social.css";
+import Inspiration from '@/components/Home/Social/Inspiration';
 
 const SpcPage = () => {
     const productsArr = [
@@ -55,35 +53,7 @@ const SpcPage = () => {
 
                     </div>
                 </div>
-                <section className="social pb-0">
-                    <div className="">
-                        <div className="row justify-content-center mt-">
-                            <div className="col-lg-10">
-                        <h1 className=' gallerytext'><span className='fw-medium'>INSPIRATIONAL</span> GALLERY</h1>
-
-                                <div className="social-grid">
-                                    <div className="image">
-                                        <img src="/assets/images/home/social/1.png" alt="" />
-                                    </div>
-                                    <div className="image">
-                                        <img src="/assets/images/home/social/1.png" alt="" />
-                                    </div>
-                                    <div className="image">
-                                        <img src="/assets/images/home/social/1.png" alt="" />
-                                    </div>
-
-                                    <div className="image col-span-2">
-                                        <img src="/assets/images/home/social/1.png" alt="" />
-                                    </div>
-
-                                    <div className="image">
-                                        <img src="/assets/images/home/social/1.png" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <Inspiration />
             </div>
         </>
     )
