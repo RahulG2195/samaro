@@ -1,21 +1,31 @@
 import React from "react";
 import "./Banner.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const Banner = () => {
     return (
-        <section className="hero">
-            <div className="container">
-                <div className="row g-4 pt-4">
-                    <div className="col-lg-7 textcont">
-                        <h2 className="heading">
-                            Premium vinyl, <span className="spn"><Link href='/spcProducts'>SPC,</Link>  & <Link href='/spcProducts'>LVT</Link></span> flooring of
-                            &nbsp;
-                            <span>superior quality.</span>
+        <section className="hero ">
+            <div className="position-relative">
+                <Image
+                    src="/assets/images/home/banner/Group 28041.png"
+                    alt="Description of the image"
+                    width={100}
+                    height={100}
+                    layout="responsive"
+                    objectFit="cover"
+                    priority={true}
+                    loading="eager"
+                />
+                <div className=" HomebannertextCont position-absolute">
+
+                    <div className="txt fw-semibold">
+                        <h2 className="heading w-75">
+                            Premium vinyl, <strong className="fw-bold"><Link href={'/#'}>SPC,</Link> & <Link href={'/#'}>LVT</Link></strong> flooring of <strong className="fw-bold">superior quality</strong>.
                         </h2>
-                        <Link href="/product" className="button d-inline-block px-3 py-0">
+                        <a href="#" className="discoverBtn button d-inline-block mt-3 px-3 py-1">
                             Discover all our floors
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -69,9 +69,9 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-            <div className='copyright py-4 bg-white text-center'>
+            <div className='copyright py-2 bg-white text-center'>
                 <p className='text-navy mb-0 small'>
-                    Copyright © 2023 Samaro | Powered by Crezvatic PVT. LTD.
+                    Copyright © 2023 Samaro | <a href="https://crezvatic.com/" target="_blank">Powered by Crezvatic PVT. LTD.</a>
                 </p>
             </div>
             <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -33,7 +33,7 @@
 
 .explorer .samaro-ply {
   position: relative;
-  
+  top: 10px;
 }
 .explorer .samaro-tab {
   position: relative;

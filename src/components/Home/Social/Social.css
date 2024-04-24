@@ -49,6 +49,10 @@
   .image:nth-child(5) {
     grid-column: 1 / 2;
   }
+  .instagramimg{
+    padding: 0 !important;
+    margin: 0 !important;
+  }
 }
 
 

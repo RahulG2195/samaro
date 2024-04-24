@@ -5,8 +5,8 @@ const Social = () => {
     return (
         <section className="social">
             <div className="container mt-5">
-                <h2 className="text-center">let's get <span>social</span></h2>
-                <div className='text-center'>
+                <h2 className="text-center ">let's get <span>social</span></h2>
+                <div className='text-start ps-5 ms-5 instagramimg'>
                 {/* <i class="fa-brands fa-instagram mx-4"></i><span>@SAMAROFLORRING</span> */}
                 <a href="https://www.instagram.com/samaroflooring?igsh=amowMmMyeHU1eXVh" target="_blank"><img src="/assets/images/home/social/Group 28501.svg" alt="err" className='w-25 instagram my-2++*' /></a>
                 </div>

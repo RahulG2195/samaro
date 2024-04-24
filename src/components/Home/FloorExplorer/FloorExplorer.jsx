@@ -19,7 +19,7 @@ const FloorExplorer = () => {
                 <img className="samaro-tab" src="/assets/images/home/floor-explorer/1.png" alt="" />
               </div>
               <div className="col-lg-4 col-md-4 col-sm-4 ">
-                <div className="content ">
+                <div className="content text-center">
                   <h3 className="respHeading2"><span>FLOOR</span>EXPLORER</h3>
                   <p className=" respCption">
                     Choosing a floor is a big life decision. So we're here to
