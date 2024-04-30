@@ -1,5 +1,5 @@
 // import SubBanner from '../../Components/SubBanner/SubBanner';
-import SubBanner from '@/Components/SubBanner/SubBanner';
+import SubBanner from '@/components/Contactbanner/Banner';
 import '../contact.css';
 import SpcForm from '@/components/SpcProducts/SpcForm';
 import Link from 'next/link';
