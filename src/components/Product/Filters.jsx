@@ -55,7 +55,7 @@ const Filters = ({ hide, inSPC }) => {
                             </div>
                         </div>
 
-                        {/* <div className='border-bottom border-danger py-2'>
+                        <div className='border-bottom border-danger py-2'>
                             <p className='pb-2 darkBlue'>Choose Your <strong className='fw-medium'>Types</strong></p>
                             <div>
                                 <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Wood</label>
@@ -141,7 +141,7 @@ const Filters = ({ hide, inSPC }) => {
                                 <p className='small darkBlue '>0.1 mm</p>
                                 <p className='small darkBlue'>0.7 mm</p>
                             </div>
-                        </div> */}
+                        </div>
 
                     </div>
 
