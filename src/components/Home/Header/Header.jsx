@@ -44,7 +44,7 @@ const Header = () => {
                                 <NavLink href="inspiration" className="lnk"> Inspiration</NavLink>
                                 <ul className=" prdctDrop px-5 position-absolute">
                                     <li><Link href="/gallery"><p className="darkBlue">Gallery</p></Link></li>
-                                    <li><Link href="/lvtProducts"><p className="darkBlue">Find your match</p></Link></li>
+                                    <li><Link href="/FindYourMatch"><p className="darkBlue">Find your match</p></Link></li>
                                 </ul>
                                 <ul className="mobileoptions">
                                     <li><Link href="/gallery">Gallery</Link></li>
