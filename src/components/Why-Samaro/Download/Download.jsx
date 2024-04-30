@@ -28,7 +28,7 @@ const Download = ({useRed}) => {
                         <p className=" respCption pe-3 my-4">
                             Check out our Download Center to easily find all our PDFs and resources about our flooring products.
                         </p>
-                        <a href="/downloadCenter" className="button py-1 px-3 mb-4 respCption small">BROCHURE & DOWNLOAD CENTER</a>
+                        <a href="/downloadCenter" className={`${useRed} ? 'redimg' : button py-1 px-3 mb-4 respCption small`}>BROCHURE & DOWNLOAD CENTER</a>
                     </div>
                 </div>
             </div>

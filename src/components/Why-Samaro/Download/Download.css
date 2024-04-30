@@ -2,6 +2,11 @@
 .download-img {
   position: relative;
 }
+
+.redimg:hover{
+background-color: #0A2647 !important;
+}
+
 .download-img .text {
   position: absolute;
   color: var(--light);

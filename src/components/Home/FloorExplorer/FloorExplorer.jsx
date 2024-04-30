@@ -21,7 +21,7 @@ const FloorExplorer = () => {
               <div className="col-lg-4 col-md-4 col-sm-4 ">
                 <div className="content text-center">
                   <h3 className="respHeading2"><span>FLOOR</span>EXPLORER</h3>
-                  <p className=" respCption">
+                  <p className=" respCption my-3">
                     Choosing a floor is a big life decision. So we're here to
                     help! FloorExplorer guides you to the perfect floor for your
                     home.
