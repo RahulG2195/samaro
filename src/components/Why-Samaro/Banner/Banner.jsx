@@ -5,8 +5,8 @@ import './whySmbanner.css'
 const Banner = () => {
     return (
         <section className='banner bg-black why-samaro position-relative'>
-            
-            <Image
+
+            {/* <Image
                 src="/assets/images/why-samaro/dimensions/Mask Group 109.png"
                 alt="Description of the image"
                 width={100}
@@ -15,11 +15,15 @@ const Banner = () => {
                 objectFit="cover"
                 priority={true}
                 loading="eager"
-            />
+            /> */}
+            <video autoPlay muted loop className='w-100 '>
+                <source src="assets/images/why-samaro/Samaro- Building Lifestyle_Slow.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
             <div className=' whyBannerTxt w-50'>
                 <p className=' m-0 text-center fw-semibold'>ABOUT SAMARO</p>
                 <p className=' m-0 text-end fw-semibold'>STEP INTO NEW DESIGN</p>
-                </div>
+            </div>
         </section>
     )
 }

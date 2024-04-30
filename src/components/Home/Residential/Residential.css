@@ -26,6 +26,10 @@
   border-bottom-left-radius: 10px !important;
   overflow: hidden;
 }
+.homepageCarousel{
+  background-color: #C5363B;
+  border-radius: 50%;
+}
 
 /* Commercial -2 */
 @media (max-width: 768px) {

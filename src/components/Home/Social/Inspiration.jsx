@@ -1,17 +1,18 @@
+
 import React from 'react'
 import "@/components/Home/Social/Social.css";
 const Inspiration = () => {
   return (
     <>
-      <section className="social">
-        <div className="">
-          <div className="row justify-content-center mt-5">
-            <div className="col-lg-10">
+      <section className="social mb-5 d-flex justify-content-center">
+        <div className=" ">
+          <div className="row mt-5 ">
+            <div className="col-lg-12">
               <h1 className=' gallerytext'><span className='fw-medium'>INSPIRATIONAL</span> GALLERY</h1>
 
               <div className="social-grid">
                 <div className="image">
-                  <img src="/assets/images/home/social/1.png" alt="" />
+                  <img src="/assets/images/home/social/Mask Group 201.png" alt="" />
                 </div>
                 <div className="image">
                   <img src="/assets/images/home/social/1.png" alt="" />
@@ -21,7 +22,7 @@ const Inspiration = () => {
                 </div>
 
                 <div className="image col-span-2">
-                  <img src="/assets/images/home/social/1.png" alt="" />
+                  <img src="/assets/images/home/social/Mask Group 200.png" alt="" />
                 </div>
 
                 <div className="image">

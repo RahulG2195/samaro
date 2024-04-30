@@ -22,7 +22,7 @@
     color: var(--text);
 }
 
-.spcform input, .spcform textarea {
+.popform input, .popform textarea {
     border-bottom: 2px solid white !important;
     border-radius: 0 !important;
     outline: none !important;
@@ -30,7 +30,7 @@
     background-color: transparent;
 }
 
-.spcform input::placeholder, .spcform textarea::placeholder {
+.popform input::placeholder, .popform textarea::placeholder {
     color: white;
 }
 

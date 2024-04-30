@@ -22,7 +22,7 @@ const Form = () => {
 
                 <div className=' col-md-12 popup'>
                     <h1 className='my-5 fw-bold'>GET IN TOUCH</h1>
-                    <form className='spcform'>
+                    <form className='popform'>
                         <div className="mb-3">
                             <input type="text" className="form-control border-0 " placeholder="Name" />
                         </div>

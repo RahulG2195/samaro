@@ -21,14 +21,17 @@ const Design = () => {
                             <img className='design-img' src="/assets/images/home/design/1.png" alt="" />
                         </Link>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-4 position-relative">
                         <Link href='/product'>
                             <img className='design-img' src="/assets/images/home/design/2.png" alt="" />
+                            <span className='text-danger fw-semibold position-absolute ' style={{ left: '0' }}>COMING SOON*</span>
+                        
                         </Link>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-4 position-relative">
                         <Link href='/product'>
-                            <img className='design-img' src="/assets/images/home/design/1.png" alt="" />
+                            <img className='design-img' src="/assets/images/home/design/Component 20 – 3.png" alt="" />
+                            <span className='text-danger fw-semibold position-absolute' style={{ left: '0' }}>COMING SOON*</span>
                         </Link>
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+
 .download-img {
   position: relative;
 }
@@ -11,7 +12,23 @@
   font-weight: 400;
   transform: translate(-50%, -50%);
 }
-
+.samply{
+  top: 15%;
+  left: 5%;
+}
+.dwnldTXTAbout h3{
+  letter-spacing: 10px;
+  font-weight: 200;
+}
+.dwnldTXTAbout, .dwnldTXTAbout p{
+  color: #FFFFFF;
+  text-align: start;
+  
+}
+.dwnldTXTAbout{
+  top: 20%;
+  right: 10%;
+}
 @media (max-width:600px) {
   .download .row{
     gap: 19px !important;

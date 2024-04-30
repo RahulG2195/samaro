@@ -19,13 +19,13 @@ const Banner = () => {
                 />
                 <div className=" HomebannertextCont position-absolute">
 
-                    <div className="txt fw-semibold">
-                        <h2 className="heading w-75">
-                            Premium vinyl, <strong className="fw-bold"><Link href={'/#'}>SPC,</Link> & <Link href={'/#'}>LVT</Link></strong> flooring of <strong className="fw-bold">superior quality</strong>.
+                    <div className="txt ">
+                        <h2 className="heading w-75 fw-normal">
+                            Premium Quality <strong className="fw-bold"><Link href={'/#'}>SPC,</Link> & <Link href={'/#'}>LVT</Link></strong> flooring .
                         </h2>
-                        <a href="#" className="discoverBtn button d-inline-block mt-3 px-3 py-1">
+                        <Link href="/product" className="discoverBtn button d-inline-block mt-3 px-3 py-1">
                             Discover all our floors
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

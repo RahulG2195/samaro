@@ -122,7 +122,7 @@ p a:hover {
 }
 
 /* Color */
-.text-primary {
+.text-darkred {
   color: var(--primary) !important;
 }
 .text-white {

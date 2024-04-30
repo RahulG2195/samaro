@@ -11,6 +11,8 @@ import Commercial from "@/components/Home/Commercial/Commercial";
 import Residentail from "@/components/Home/Residential/Residentail";
 import CallToAction from "@/components/Home/CallToAction/CallToAction";
 import FloorExplorer from "@/components/Home/FloorExplorer/FloorExplorer";
+import FollowMore from "@/components/Home/FollowMore/FollowMore";
+import SpcForm from "@/components/SpcProducts/SpcForm";
 
 
 export default function Home() {
@@ -25,8 +27,11 @@ export default function Home() {
             <FloorExplorer />
             <Commercial />
             <Residentail />
-            <CallToAction />
+            <SpcForm></SpcForm>
+            {/* <CallToAction /> */}
             <Social />
+            <FollowMore />
+        
         </main>
     );
 }

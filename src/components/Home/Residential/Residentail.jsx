@@ -5,25 +5,23 @@ const Residential = () => {
     return (
         <section className="commercial-2 mt-5">
             <div className="row justify-content-end">
-                <div className="col-lg-10">
+                <div className="col-lg-11">
                     <div id="carouselExampleFade2" className="carousel slide carousel-fade h-100" data-bs-ride="carousel">
                         <div className="carousel-inner mb-5 pb-5">
                             <div className="carousel-item active">
-                                <img src="/assets/images/home/commercial/1.jpg" className="d-block w-100" alt="..." />
+                                <img src="/assets/images/home/commercial/Mask Group 12.png" className="d-block w-100" alt="..." />
                             </div>
                             <div className="carousel-item">
-                                <img src="/assets/images/home/commercial/2.jpg" className="d-block w-100" alt="..." />
+                                <img src="/assets/images/home/commercial/Mask Group 128.png" className="d-block w-100" alt="..." />
                             </div>
-                            <div className="carousel-item" >
-                                <img src="/assets/images/home/commercial/1.jpg" className="d-block w-100" alt="..."  />
-                            </div>
+                           
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="carousel-control-prev-icon homepageCarousel" aria-hidden="true"></span>
                             <span className="visually-hidden">Previous</span>
                         </button>
                         <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="carousel-control-next-icon homepageCarousel" aria-hidden="true"></span>
                             <span className="visually-hidden">Next</span>
                         </button>
                     </div>

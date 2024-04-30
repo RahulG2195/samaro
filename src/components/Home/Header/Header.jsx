@@ -31,24 +31,26 @@ const Header = () => {
                             </li>
                             <li className="nav-item position-relative prdcts">
                                 <NavLink className="prdctHeading" href="/product">Product</NavLink>
-                                <ul className=" prdctDrop drop1 px-5 position-absolute">
+                                {/* <ul className=" prdctDrop drop1 px-5 position-absolute">
                                     <li><Link href="/spcProducts"><p className="darkBlue">SPC</p></Link></li>
                                     <li><Link href="/lvtProducts"><p className="darkBlue">LVT</p></Link></li>
                                 </ul>
                                 <ul className="mobileoptions">
                                     <li><Link href="/spcProducts">SPC</Link></li>
                                     <li><Link href="/lvtProducts">LVT</Link></li>
-                                </ul>
+                                </ul> */}
                             </li>
-                            <li className="nav-item position-relative prdcts">
-                                <NavLink href="inspiration" className="lnk"> Inspiration</NavLink>
-                                <ul className=" prdctDrop px-5 position-absolute">
+                            <li className="nav-item position-relative prdcts ">
+                                <NavLink href="/gallery" className="lnk"> Inspiration</NavLink>
+                                <ul className=" prdctDrop px-4 position-absolute">
                                     <li><Link href="/gallery"><p className="darkBlue">Gallery</p></Link></li>
-                                    <li><Link href="/lvtProducts"><p className="darkBlue">Find your match</p></Link></li>
+                                    <li><Link href="/lvtProducts"><p className="darkBlue">Find your ideal floor</p></Link></li>
+                                    <li><Link href="/downloadCenter"><p className="darkBlue">Download center</p></Link></li>
                                 </ul>
                                 <ul className="mobileoptions">
                                     <li><Link href="/gallery">Gallery</Link></li>
-                                    <li><Link href="/gallery">Find your match</Link></li>
+                                    <li><Link href="/lvtProducts"><p className="darkBlue">Find your ideal floor</p></Link></li>
+                                    <li><Link href="/downloadCenter"><p className="darkBlue">Download center</p></Link></li>
                                 </ul>
                             </li>
                             <li className="nav-item">
@@ -61,11 +63,11 @@ const Header = () => {
                                     Contact Us
                                 </NavLink>
                             </li>                           
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <NavLink className="nav-link" href="/career">
                                     Career
                                 </NavLink>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
