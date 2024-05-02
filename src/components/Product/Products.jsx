@@ -144,8 +144,8 @@ const Products = () => {
             description: "SPC | SICILIAN | 502"
         },
         {
-            frontImage: "/assets/images/products/Images Web/SPC WEBP/SERIES 2- SICILIAN/503 - Tulip tree WITHOUT INSTALLATION.webp",
-            onHoverImage: "/assets/images/products/Images Web/SPC WEBP/SERIES 2- SICILIAN/503 - tulip tree INSTALLATION.webp",
+            frontImage: "/assets/images/products/Images Web/SPC WEBP/SERIES 2- SICILIAN/503 - Tulip tree INSTALLATION.webp",
+            onHoverImage: "/assets/images/products/Images Web/SPC WEBP/SERIES 2- SICILIAN/503 - tulip tree WITHOUT INSTALLATION.webp",
             title: "Tulip tree",
             description: "SPC | SICILIAN | 503"
         },
