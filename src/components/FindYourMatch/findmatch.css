@@ -106,7 +106,7 @@ input[type="radio"] {
 
 /* Styles for the image container */
 .steps1_img {
-  border-radius: 50%; /* Adjust as needed */
+  border-radius: 10px; /* Adjust as needed */
   overflow: hidden;
   cursor: pointer;
   position: relative; /* Needed for checkmark icon positioning */
