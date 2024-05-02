@@ -46,7 +46,7 @@ const Header = () => {
                                 </div>
                                 <ul className=" prdctDrop px-4 position-absolute">
                                     <li><Link href="/gallery"><p className="darkBlue">Gallery</p></Link></li>
-                                    <li><Link href="/lvtProducts"><p className="darkBlue">Find your ideal floor</p></Link></li>
+                                    <li><Link href="/FindYourMatch"><p className="darkBlue">Find your ideal floor</p></Link></li>
                                     <li><Link href="/downloadCenter"><p className="darkBlue">Download center</p></Link></li>
                                 </ul>
                                 <ul className="mobileoptions">
