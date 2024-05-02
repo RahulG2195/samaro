@@ -26,10 +26,10 @@ const StepTwo = () => {
           {
             stepTwo.map(data => (
               <div className='col-lg col-md-3 col-sm-2 col-6 mx-auto'>
-                <div className='steps1-main text-center'>
-                  <div className='inner_step1 text-center'>
+                <div className='steps1-main' id={`type${data.id}`}>
+                  <div className='inner_step1'>
                     <label htmlFor={data.id} className='stepslabel'>
-                    <div className='steps1_img'>
+                    <div className='steps1_img type_img'>
                       <img src={`assets/images/Step/StepTwo/${data.image}`} className='img-fluid' alt='img1' />
                     </div>
                     <div className='steps1_name d-flex justify-content-between pt-md-2 px-2'>

@@ -4,7 +4,7 @@ import '@/components/FindYourMatch/findmatch.css';
 import StepPoints from '@/components/FindYourMatch/StepPoints';
 import StepOne from '@/components/FindYourMatch/StepOne';
 import StepTwo from '@/components/FindYourMatch/StepTwo';
-import StepThree from '@/components/StepForm/StepThree/StepThree';
+import StepThree from '@/components/FindYourMatch/StepThree';
 import StepFour from '@/components/FindYourMatch/StepFour';
 import { useRouter } from 'next/navigation';
 
@@ -14,7 +14,7 @@ const steps = [
   { title: 'Continue', Page: <StepOne /> },
   { title: 'Continue', Page: <StepTwo /> },
   { title: 'Continue', Page: <StepThree /> },
-  // { title: 'Submit', Page: <StepFour /> },
+  { title: 'Submit', Page: <StepFour /> },
 ];
 const page = () => {
 
