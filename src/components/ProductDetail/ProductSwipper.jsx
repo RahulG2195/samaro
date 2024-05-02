@@ -65,11 +65,11 @@ const ProductSwipper = ({ images }) => {
           </Swiper> */}
         </div>
         <div className='col-sm-8 col-md-8 col-lg-8 position-relative'>
-          <div class="navigation-arrows d-flex flex-row">
+          <div className="navigation-arrows d-flex flex-row">
 
-            <div class="swiper-button-prev"></div>
+            <div className="swiper-button-prev"></div>
 
-            <div class="swiper-button-next"></div>
+            <div className="swiper-button-next"></div>
           </div>
           <Swiper
             style={{

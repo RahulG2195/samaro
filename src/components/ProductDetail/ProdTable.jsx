@@ -30,7 +30,7 @@ const ProdTable = () => {
   ]
   return (
     <>
-    <table class="table table-borderless prodtable mb-md-5 mt-md-4 my-2">
+    <table className="table table-borderless prodtable mb-md-5 mt-md-4 my-2">
       <tbody>
       {
         Dimensions.map(val => (

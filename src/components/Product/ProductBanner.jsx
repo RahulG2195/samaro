@@ -7,14 +7,15 @@ const ProductBanner = () => {
         <div>
             <div className='position-relative'>
                 <Image
-                    src="/assets/images/products/Group 28040.png"
+                    src="/assets/images/products/Group 29177.png"
                     alt="Description of the image"
                     width={100}
                     height={100}
                     layout="responsive"
-                    objectFit="cover"
+                    objectFit="contain"
                     priority={true}
                     loading="eager"
+                    
                 />
 
                 <div className=' position-absolute spcBrotext'>

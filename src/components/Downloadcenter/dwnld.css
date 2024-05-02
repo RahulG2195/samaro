@@ -30,11 +30,12 @@
 
 /* Download cont swippers */
 
-
-.brochureCont .swiper-button-prev,
-.brochureCont .swiper-button-next {
-    top: 5% !important;
+.brochureCont .swiper{
+    overflow-y: visible;
+    overflow-x: clip;
 }
+
+
 
 .brochureCont .swiper-button-prev:after,
 .brochureCont .swiper-button-next:after {
@@ -44,19 +45,38 @@
 
 }
 
-.brochureCont .swiper-button-prev,
-.brochureCont .swiper-button-next {
+.brochureCont .swiper-button-prev, .brochureCont .swiper-button-next {
     background-color: #CA373C;
     border-radius: 100%;
     padding: 20px !important;
     opacity: 80%;
-    
-
+    position: absolute;
+    top:-15% !important;
+    /* right: 75px; */
+    /* z-index: 88888888; */
 }
+
+
+/* Newsletter swiper navigation arrows position */
+
+
+
+
+.NewsletterSwiper .swiper-button-prev, .NewsletterSwiper .swiper-button-next {
+ 
+    top:-10% !important;
+  
+}
+
+
+
+
+/* newsletter end */
+
 
 .swiper-button-prev, .swiper-rtl .swiper-button-next {
     left: var(--navigation-sides-offset, 9) !important;
-    right:7% !important;
+    right:6% !important;
 }
 
 .brochureCont .swiper-button-next {

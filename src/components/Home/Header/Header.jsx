@@ -40,8 +40,10 @@ const Header = () => {
                                     <li><Link href="/lvtProducts">LVT</Link></li>
                                 </ul> */}
                             </li>
-                            <li className="nav-item position-relative prdcts ">
+                            <li className="nav-item position-relative prdcts">
+                                <div className="inspi">
                                 <NavLink href="/gallery" className="lnk"> Inspiration</NavLink>
+                                </div>
                                 <ul className=" prdctDrop px-4 position-absolute">
                                     <li><Link href="/gallery"><p className="darkBlue">Gallery</p></Link></li>
                                     <li><Link href="/lvtProducts"><p className="darkBlue">Find your ideal floor</p></Link></li>

@@ -99,12 +99,12 @@ const Home = () => {
               </div>
               <div className='prod_feat_point'>
                 <ul>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Lifetime warranty </li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Compatible with floor heating </li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> 4 grooves</li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Underlay attached </li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Water resistant </li>
-                  <li><i class="fa fa-check" aria-hidden="true"></i> Class 33</li>
+                  <li><i className="fa fa-check" aria-hidden="true"></i> Lifetime warranty </li>
+                  <li><i className="fa fa-check" aria-hidden="true"></i> Compatible with floor heating </li>
+                  <li><i className="fa fa-check" aria-hidden="true"></i> 4 grooves</li>
+                  <li><i className="fa fa-check" aria-hidden="true"></i> Underlay attached </li>
+                  <li><i className="fa fa-check" aria-hidden="true"></i> Water resistant </li>
+                  <li><i className="fa fa-check" aria-hidden="true"></i> Class 33</li>
                 </ul>
               </div>
               <div className='notSureLinks'>

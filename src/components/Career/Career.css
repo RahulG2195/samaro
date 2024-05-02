@@ -8,7 +8,7 @@
 
 .careerform input{
     border: none;
-    border-bottom:1px solid #243D71 !important ;
+    border-bottom: 2px solid #243D71 !important ;
     color: #243D71;
     box-shadow: none !important;
     border-radius:0 !important ;
@@ -45,8 +45,13 @@
 }
 
 .Csubmitbtn:hover {
-    background-color: #CA373C;
+    background-color: #CA373C !important;
     color: white !important;
+}
+
+.careerCont .react-tel-input .form-control {
+
+    width: 100%;
 }
 
 @media (max-width:768px) {

@@ -31,7 +31,7 @@ const Benefits = () => {
             <div className="mt-3">
 
                 <div className="row align-items-center justify-content-between ms-5 benifitscont">
-                    <div className="col-lg-6 col-md-12 position-relative px-5 mt-5  beniInnerCont">
+                    <div className="col-lg-6 col-md-12 position-relative px-5  beniInnerCont">
                         <h2 className="text-navy benifitsHeading px-5">
                             Unlock Many Benefits <br />
                             with Click-N-Lock® Tiles
@@ -45,7 +45,7 @@ const Benefits = () => {
                         </div>
 
                         <div className="column-wrapper px-5">
-                            <div className="row g-5 mt-1 respBenifitrow">
+                            <div className="row g-5 mt-1 respBenifitrow ">
                                 <div className="col-lg-2 col-md-2 col-sm-2 col-4 text-center">
                                     <div className="image">
                                         <img src="/assets/images/home/benefits/benefits/weather.png" alt="" />
@@ -123,7 +123,7 @@ const Benefits = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-6">
+                    <div className="col-lg-6 col-md-6 ">
                         <Swiper
                             effect={'fade'}
                             modules={[EffectFade, Autoplay]}
@@ -131,7 +131,7 @@ const Benefits = () => {
                             spaceBetween={0}
                             loop={true}
                             autoplay={{
-                                delay: 1500,
+                                delay: 1000,
                                 disableOnInteraction: false,
                             }}
                             className="mySwiper"
