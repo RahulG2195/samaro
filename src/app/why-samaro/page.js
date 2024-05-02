@@ -14,6 +14,7 @@ import Vision from "@/components/Why-Samaro/Vision/Vision";
 import Mission from "@/components/Why-Samaro/Mission/Mission";
 import Design from "@/components/Why-Samaro/Design/Design";
 import Banner from "@/components/Why-Samaro/Banner/Banner";
+import SpcForm from "@/components/SpcProducts/SpcForm";
 
 export default function Home() {
     useEffect(() => {
@@ -27,14 +28,15 @@ export default function Home() {
             <Banner></Banner>
             <About></About>
             <Vision></Vision>
-            <Mission></Mission>
+            {/* <Mission></Mission> */}
             <Design></Design>
             <Benefits></Benefits>
             <Certifications></Certifications>
             <Dimensions></Dimensions>
             <Download></Download>
             <div className="mb-5 pb-5">
-                <CallToAction></CallToAction>
+                {/* <CallToAction></CallToAction> */}
+                <SpcForm></SpcForm>
             </div>
             {/* <Footer></Footer> */}
         </main>

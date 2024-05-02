@@ -1,7 +1,30 @@
 import React from 'react';
 import "./Benefits.css";
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import { EffectFade, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import Link from 'next/link';
 
 const Benefits = () => {
+    const benifitsARR = [
+        {
+            url: "/assets/images/home/benefits/1.png",
+            alt: 'err'
+        },
+        {
+            url: "/assets/images/home/benefits/Mask Group 22.png",
+            alt: 'err'
+        },
+        {
+            url: "/assets/images/home/benefits/1.png",
+            alt: 'err'
+        },
+        {
+            url: "/assets/images/home/benefits/Mask Group 22.png",
+            alt: 'err'
+        },
+    ]
     return (
         <section className="benefits position-relative">
 
@@ -13,7 +36,7 @@ const Benefits = () => {
                             Unlock Many Benefits <br />
                             with Click-N-Lock® Tiles
                         </h2>
-                        <img src="/assets/images/home/benefits/Mask Group 22.png" alt="" className='upperimage'/>
+                        <img src="/assets/images/home/benefits/Mask Group 22.png" alt="" className='upperimage' />
                         <div className="topcorner">
                             <img src="/assets/images/home/benefits/Group 27837.svg" alt="err" />
                         </div>
@@ -22,7 +45,7 @@ const Benefits = () => {
                         </div>
 
                         <div className="column-wrapper px-5">
-                            <div className="row g-3 mt-1">
+                            <div className="row g-5 mt-1 respBenifitrow">
                                 <div className="col-lg-2 col-md-2 col-sm-2 col-4 text-center">
                                     <div className="image">
                                         <img src="/assets/images/home/benefits/benefits/weather.png" alt="" />
@@ -90,16 +113,39 @@ const Benefits = () => {
                                     <span className="text-navy text small fw-semibold">DURABILITY</span>
                                 </div>
                                 <div className="col-lg-2 col-md-2 col-sm-2 col-4 text-center">
+                                   <Link href={'/why-samaro'}>
                                     <div className="image">
-                                        <img src="/assets/images/home/benefits/benefits/durability.png" alt="" />
+                                        <img src="/assets/images/home/benefits/benefits/Group 28770.svg" alt="" />
                                     </div>
                                     <span className="text-navy text small fw-semibold">Know Now</span>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-4">
-                        <img src="/assets/images/home/benefits/1.png" className="rightside-image" alt="" />
+                    <div className="col-lg-6 col-md-6">
+                        <Swiper
+                            effect={'fade'}
+                            modules={[EffectFade, Autoplay]}
+                            slidesPerView={1}
+                            spaceBetween={0}
+                            loop={true}
+                            autoplay={{
+                                delay: 1500,
+                                disableOnInteraction: false,
+                            }}
+                            className="mySwiper"
+                        >
+                            {benifitsARR.map((item, index) => (
+                                <div className="col-lg-6 col-md-6">
+                                    <SwiperSlide key={index}>
+
+                                        <img src={item.url} className="rightside-image" alt={item.alt} />
+
+                                    </SwiperSlide>
+                                </div>
+                            ))}
+                        </Swiper>
                     </div>
                 </div>
             </div>

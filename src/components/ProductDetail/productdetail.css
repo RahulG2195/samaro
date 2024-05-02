@@ -88,17 +88,17 @@ i {
 }
 
 .productdetail_slider {
-  max-height: 460px;
+  /* max-height: 460px; */
   height: 100%;
   overflow: hidden;
 }
 
-.swiper-nav-div .swiper-slide {
+/* .swiper-nav-div .swiper-slide {
   width: 100px !important;
   height: 100px;
   text-align: center;
   margin: 10px auto;
-}
+} */
 
 .prod_name_lg {
   margin: 0 0 15px 0;

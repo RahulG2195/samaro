@@ -16,7 +16,7 @@ const Topbar = () => {
                                         <a href="mailto:">info@samaro.in</a>
                                     </div>
                                     <div className="phone">
-                                        <img src="/assets/images/home/topbar/phone.png" alt="err"  />
+                                        <img src="/assets/images/home/topbar/phone.png" alt="err" />
                                         <a href="tel:">91-8079545115</a>
                                     </div>
                                 </div>
@@ -32,19 +32,20 @@ const Topbar = () => {
                                                 <img className="img " src="/assets/images/social-media/fb.png" alt="" />
                                             </Link>
                                         </div>
-                                        <div className="isntagram">
-                                            <Link href="#">
-                                                <img className="img" src="/assets/images/social-media/instagram.png" alt="" />
+                                        <div className="youtube">
+                                            <Link href="">
+                                                <img className="img" src="/assets/images/social-media/yt.png" alt="" />
                                             </Link>
                                         </div>
+
                                         <div className="x">
                                             <Link href="">
                                                 <img className="img" src="/assets/images/social-media/x.png" alt="" />
                                             </Link>
                                         </div>
-                                        <div className="youtube">
-                                            <Link href="">
-                                                <img className="img" src="/assets/images/social-media/yt.png" alt="" />
+                                        <div className="isntagram">
+                                            <Link href="#">
+                                                <img className="img" src="/assets/images/social-media/instagram.png" alt="" />
                                             </Link>
                                         </div>
                                     </div>

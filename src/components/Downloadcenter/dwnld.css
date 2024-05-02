@@ -1,0 +1,64 @@
+
+.brochureCont h1{
+    width: 90%;
+}
+.dwnldcenterHeading .dwnldcenterFilters button {
+    /* background-color: transparent !important; */
+    border: 3px solid;
+}
+
+.dwnldcard {
+    width: 100%;
+    border: none !important;
+}
+
+.dwnldcard .card-body .card-text {
+    font-size: 13px;
+    color: var(--navy);
+}
+
+
+
+.Downloadbtn {
+    background-color: transparent;
+}
+
+.Downloadbtn:hover {
+    background-color: #CA373C;
+    color: white !important;
+}
+
+/* Download cont swippers */
+
+
+.brochureCont .swiper-button-prev,
+.brochureCont .swiper-button-next {
+    top: 5% !important;
+}
+
+.brochureCont .swiper-button-prev:after,
+.brochureCont .swiper-button-next:after {
+    font-size: 15px !important;
+    color: #FFFF;
+    font-weight: 900;
+
+}
+
+.brochureCont .swiper-button-prev,
+.brochureCont .swiper-button-next {
+    background-color: #CA373C;
+    border-radius: 100%;
+    padding: 20px !important;
+    opacity: 80%;
+    
+
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: var(--navigation-sides-offset, 9) !important;
+    right:7% !important;
+}
+
+.brochureCont .swiper-button-next {
+    right: 1%;
+}

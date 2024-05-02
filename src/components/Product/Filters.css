@@ -139,7 +139,7 @@ border: none;
   .hamburger-menu {
     display: block;
     position: absolute;
-    top: 75px;
+    bottom: 0px;
     right: 10px;
     z-index: 1000;
   }
@@ -178,5 +178,9 @@ border: none;
 }
 .samSearchResp{
   margin: 10px 0 !important;
+}
+.hamburger-menu{
+  bottom: 4.5rem !important;
+  /* display: none !important; */
 }
 }

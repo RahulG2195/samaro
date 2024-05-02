@@ -89,10 +89,10 @@ const Home = () => {
       <section className='product-data_sec mt-md-5 mt-2'>
         <div className='container'>
           <div className='row'>
-            <div className='col-md-6 productdetail_slider'>
+            <div className='col-md-6 '>
               <ProductSwipper images={images}/>
             </div>
-            <div className='col-md-6 my-md-4 my-2'>
+            <div className='col-md-6 my-sm-5 my-2 prodDetailTXT'>
               <div className='prod_name_lg'>
                 <h2>Pure ok honey</h2>
                 <span>VINYL | CIRO | AVHBU40360</span>

@@ -6,17 +6,31 @@
     position: relative;
 }
 
-.headingCont::before {
+.careerform input{
+    border: none;
+    border-bottom:1px solid #243D71 !important ;
+    color: #243D71;
+    box-shadow: none !important;
+    border-radius:0 !important ;
+}
+.career input:focus{
+    box-shadow: none !important;
+
+}
+.whyus h4{
+    color: #243D71 !important;
+}
+
+/* .headingCont::before {
     content: "";
     position: absolute;
     top: 120%;
     left: 21%;
     width: 200px;
     height: 3px;
-    /* Adjust the height of the underline as needed */
     background-color: #CA373C;
-    /* Adjust the color of the underline as needed */
-}
+
+} */
 
 
 

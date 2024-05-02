@@ -3,9 +3,9 @@ import "./SPCLVT.css"
 import Link from 'next/link'
 const Spclvt = () => {
     return (
-        <section className="section spc-lvt pb-5">
+        <section className="mt-5 spc-lvt">
             <div className="container">
-                <div className="row g-4 align-items-center">
+                <div className="row g-4 align-items-end">
                     <div className="col-lg-6 ">
                         <div className="content px-lg-5 w-75">
                             <h2 className="sub-heading fw-bold navyBlue ">
@@ -47,7 +47,7 @@ const Spclvt = () => {
                                 <div className='text-center position-absolute onImgtext text-white'>
                                     <span className=' border-3 border-bottom px-2 fs-2 px-4 fw-semibold'>SPC</span>
                                     <p className='m-0 text-white small'>Click & Lock</p>
-                                    <Link href="/spcProducts" className='rounded-pill border border-2 fw-semibold small px-5 text-white '>Know more </Link>
+                                    <Link href="/product" className='button rounded-pill border border-2 fw-semibold small px-5 text-white py-1'>Know more </Link>
                                 </div>
                             </div>
                             <div className="img-2">
@@ -55,7 +55,7 @@ const Spclvt = () => {
                                 <div className='text-center position-absolute onImgtext2 text-white'>
                                     <span className=' border-3 border-bottom px-2 fs-2 px-4 fw-semibold'>LVT</span>
                                     <p className='m-0 text-white small'>Glue down</p>
-                                    <Link href='/lvtProducts' className='rounded-pill border border-2 fw-semibold small px-5 text-white'>Know more </Link>
+                                    <Link href='/product' className='button rounded-pill border border-2 fw-semibold small px-5 text-white py-1'>Know more </Link>
                                 </div>
                             </div>
                         </div>

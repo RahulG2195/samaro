@@ -1,9 +1,17 @@
 import React from 'react'
 import "./CallToAction.css"
-import Form from '@/components/InquiryForm/Form'
+import SpcForm from '@/components/SpcProducts/SpcForm'
 const CallToAction = () => {
     return (
+
+<>
+
+<SpcForm></SpcForm>
+
+
+
         <section className="property-inspection">
+            
             <div className="image">
                 <img src="/assets/images/home/property-inspection/3.png" className="mobile-image my-5" alt="" />
                 <img src="/assets/images/home/property-inspection/1.png" className="desktop-image " alt="" />
@@ -37,6 +45,7 @@ const CallToAction = () => {
             
 
         </section>
+        </>
     )
 }
 

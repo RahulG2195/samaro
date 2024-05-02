@@ -1,6 +1,9 @@
 .guidHeading {
     letter-spacing: 5px;
 }
+.hideguide{
+    display: none;
+}
 
 .spcformheading p {
     color: var(--text);
@@ -19,5 +22,25 @@
 
 .submitbtn:hover {
     background-color: #DC3545 !important;
-    color: white !important;
+    color: #0A2647 !important;
+}
+.spcform input, .spcform textarea {
+    border-bottom: 2px solid #0A2647 !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: transparent;
+}
+.callBTN:hover{
+    background-color: #0A2647;
+    color: #FFFF !important;
+}
+.callBTN{
+    border:2px solid #0A2647 !important;
+    color: #0A2647 !important;
+}
+.spcform .form-check-input:checked {
+    background-color: #DC3545 !important;
+  color: #DC3545 !important;
+
 }

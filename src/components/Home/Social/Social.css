@@ -2,7 +2,7 @@
 
 .social {
   padding-top: 50px;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 
 .social-grid {
@@ -13,10 +13,10 @@
 
 /* .image {
   width: 100%;
-} */
+}  */
 
 .col-span-2 {
-  grid-column: span 2; /* Make the item span 2 columns */
+  grid-column: span 2; 
 }
 
 .gallerytext{
@@ -27,6 +27,16 @@
   margin: 0;
   font-weight: 300;
 }
+
+.instaid{
+  letter-spacing: 5px;
+  border-bottom: 1px solid #0A2647;
+  color:#0A2647;
+}
+.instabio{
+font-size: 8px;
+}
+
 
 @media (max-width: 768px) {
   .social-grid {
@@ -48,6 +58,10 @@
   }
   .image:nth-child(5) {
     grid-column: 1 / 2;
+  }
+  .instagramimg{
+    padding: 0 !important;
+    margin: 0 !important;
   }
 }
 

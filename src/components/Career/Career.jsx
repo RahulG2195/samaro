@@ -5,11 +5,11 @@ import Form from '../InquiryForm/Form'
 
 const Career = () => {
     return (
-        <div className='mb-5'>
+        <div className='mt-5 pt-5'>
 
 
 
-            <Image
+            {/* <Image
                 src="/assets/images/career/creer_banner.png"
                 alt="Description of the image"
                 width={100}
@@ -18,33 +18,34 @@ const Career = () => {
                 objectFit="cover"
                 priority={true}
                 loading="eager"
-            />
+            /> */}
+
             <div className='headingCont text-center my-5'>
-                <h1 className=' fw-semibold  careerHeading my-4'>If we have any openings we will contact you!</h1>  
+                <h1 className=' careerHeading my-4 fw-bold'><u className='border-3 border-danger border-bottom '>Career</u></h1>
+            </div>
+            <div className='text-center whyus'>
+                <h4>Why join us ?</h4>
+                <p className='w-25 mx-auto small'>Fusce placerat pretium mauris, vel sollicitudin elit lacinia vitae. Quisque sit amet nisi erat.</p>
             </div>
             <div className="container">
                 <div className="row justify-content-center">
-                    <div className="col-md-6">
+                    <div className="col-md-6 careerform">
                         <form >
                             <div className="mb-3">
-                                <label htmlFor="name" className="form-label px-2 fw-medium career_form_lable">Name<span className='text-danger fw-bold'>*</span></label>
-                                <input type="text" className="form-control border-3 border-danger rounded-pill" id="name" placeholder="Name" required />
+                                {/* <label htmlFor="name" className="form-label px-2 fw-medium career_form_lable">Name<span className='text-danger fw-bold'>*</span></label> */}
+                                <input type="text" className="form-control " id="name" placeholder="Name" required />
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="email" className="form-label px-2 fw-medium career_form_lable">Email<span className='text-danger fw-bold'>*</span></label>
-                                <input type="email" className="form-control border-3 border-danger rounded-pill" id="email" placeholder="Email" required />
+                                {/* <label htmlFor="email" className="form-label px-2 fw-medium career_form_lable">Email<span className='text-danger fw-bold'>*</span></label> */}
+                                <input type="email" className="form-control " id="email" placeholder="Email" required />
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="phone" className="form-label px-2 fw-medium career_form_lable">Phone Number<span className='text-danger fw-bold'>*</span></label>
-                                <input type="tel" className="form-control border-3 border-danger rounded-pill" id="phone" placeholder="Phone Number" required />
-                            </div>
-                            <div className="mb-3 w-50">
-                                <label htmlFor="resume" className="form-label px-2 fw-medium career_form_lable">Resume<span className='text-danger fw-bold'>*</span></label>
-                                <input type="file" className="small form-control  border-3 border-danger rounded-pill" id="resume" title="Upload resume" required />
+                                {/* <label htmlFor="phone" className="form-label px-2 fw-medium career_form_lable">Phone Number<span className='text-danger fw-bold'>*</span></label> */}
+                                <input type="tel" className="form-control " id="phone" placeholder="Phone Number" required />
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="message" className="form-label px-2 fw-medium career_form_lable">Message</label>
-                                <textarea className="form-control border-danger rounded-4" id="message" rows="4" placeholder="message" ></textarea>
+                                {/* <label htmlFor="message" className="form-label px-2 fw-medium career_form_lable">Message</label> */}
+                                <input className="form-control " id="message" rows="4" placeholder="Position" ></input>
                             </div>
                             <div className='d-flex justify-content-center'>
                                 <button type="submit" className="btn Csubmitbtn text-danger border-2 border-danger fw-semibold  rounded-pill py-0 px-5 ">Submit</button>
@@ -54,7 +55,7 @@ const Career = () => {
                     </div>
                 </div>
             </div>
-            <div className='my-5'>
+            {/* <div className='my-5'>
                 <Image
                     src="/assets/images/career/Group 28568.png"
                     alt="Description of the image"
@@ -65,8 +66,8 @@ const Career = () => {
                     priority={true}
                     loading="eager"
                 />
-            </div>
-           
+            </div> */}
+
         </div>
     )
 }

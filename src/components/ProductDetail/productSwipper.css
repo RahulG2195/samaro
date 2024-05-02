@@ -1,0 +1,129 @@
+.mySwiper .swiper-wrapper {
+    transform: rotate(90deg) !important;
+}
+
+.detailSwipper .mySwiper {
+    overflow: visible;
+    padding: 36%;
+
+}
+
+.detailSwipper .mySwiper .swiper-wrapper {
+    position: absolute;
+    top: 42%;
+    left: -5%;
+}
+
+.detailSwipper .mySwiper .swiper-slide-active img {
+    border: 2px solid #C5363B;
+}
+
+.detailSwipper .mySwiper .sliderchild {
+    /* width: auto !important; */
+    border-radius: 10px !important;
+}
+
+.detailSwipper .mySwiper .sliderchild img {
+    /* width: 100% !important; */
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.swiper-button-next {
+    position: absolute;
+    top: 100%;
+    left: -21%;
+}
+
+.swiper-button-prev {
+    position: absolute;
+    top: 14px;
+    left: -21%;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    color: red;
+    transform: rotate(90deg);
+    font-size: 28px;
+    font-weight: 900;
+}
+
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    color: red;
+    transform: rotate(270deg);
+    font-size: 28px;
+    font-weight: 900;
+}
+
+@media (max-width:1200px) {
+    .swiper-button-next {
+        position: absolute;
+        top: 105%;
+        left: -22%;
+    }
+
+    .swiper-button-prev {
+        position: absolute;
+        top: 10px;
+        left: -22%;
+    }
+}
+
+@media (max-width:1024px) {
+    .swiper-button-next {
+        position: absolute;
+        top: 105%;
+        left: -22%;
+    }
+
+    .swiper-button-prev {
+        position: absolute;
+        top: 10px;
+        left: -22%;
+    }
+
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-next:after,
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+        font-size: 15px;
+    }
+
+    .detailSwipper .mySwiper .swiper-slide {
+        /* width: 50px !important; */
+    }
+
+    .topSliderRes {
+        /* width: 200px !important; */
+    }
+
+
+
+}
+
+@media (max-width:576px) {
+    
+    .detailSwipper .mySwiper .swiper-wrapper {
+        transform: rotate(0deg) !important;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+    }
+    .detailSwipper .mySwiper .sliderchild {
+        width: 15% !important;
+        margin: 10px auto !important;
+        padding-left: 10px;
+    }
+    .prodDetailTXT{
+        margin: 0 !important;
+    }
+
+    .detailSwipper .mySwiper {
+        padding: 11%;
+    }
+}

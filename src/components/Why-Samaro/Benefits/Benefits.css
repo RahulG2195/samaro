@@ -1,3 +1,13 @@
+.whysam-benifits{
+
+  background-image: url('/assets/images/why-samaro/Path 97423.svg');
+  background-repeat: no-repeat;
+  background-size:100%;
+  height: 104vh;
+ 
+
+
+}
 .benefits .benefits-boxes {
   padding: 10px;
 }
@@ -17,13 +27,13 @@
   font-size: 20px;
 }
 .benefits-boxes {
-  padding-top: 150px !important;
+  /* padding-top: 150px !important; */
   border-top-left-radius: 150px;
   border-top-right-radius: 150px;
 }
 
 .benefits {
-  padding-block: 50px;
+  padding-bottom: 50px;
 }
 .benefits .benefits-boxes.navy-bg {
   background-color: var(--navy);
@@ -39,7 +49,7 @@
   display: flex;
   gap: 5px;
   flex-direction: column !important;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 200;
 }
 

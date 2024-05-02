@@ -3,26 +3,58 @@ import "./Vision.css";
 
 const Vision = () => {
     return (
-        <section className='vision mt-5'>
-            <div className="row justify-content-end ">
-                <div className="col-lg-10">
-                    <div className="row g-5 align-items-center position-relative ">
-                        <div className="col-lg-2 col-md-4 col-sm-4 mx-auto">
-                            <div className="vision-image">
-                                <img src="/assets/images/why-samaro/vision-mission/vision.png" alt="" />
-                            </div>
-                        </div>
-                        <div className="col-lg-10 ">
-                            <div className="vision-text position-relative">
-                                <h2 className='text-navy'>Vision</h2>
-                                <p className='mt-4 text-navy fw-semibold'>
-                                With over 50 years of manufacturing expertise in the plastic processing industry, Samaro Global Industries has emerged as a develop in the SPC and LVT flooring sector since our inception in 2019. Our unwavering commitment to innovation, quality, and sustainability has propelled us to become India's largest SPC and LVT manufacturer within just three years, a remarkable feat underscored by our state-of-the-art manufacturing facility in Gujarat boasting an annual installed capacity of over 15 million square meters.                                </p>
+        <>
+            {/* <div className='vision-mission-cont'> */}
+                <section className='vision mt-5 mx-5'>
+
+                    <div className="row g-2 align-items-center justify-content-end position-relative ">
+                        <div className="col-lg-12 ">
+                            <div className="vision-text position-relative row align-items-center justify-content-evenly">
+                                <div className="col-lg-2 col-md-2 col-sm-2">
+                                    <div className="vision-image p-4">
+                                        <img src="/assets/images/why-samaro/vision-mission/vision.png" alt="" />
+                                    </div>
+                                </div>
+                                <div className='col-md-9'>
+                                    <h2 className='text-darkred'>Vision</h2>
+                              
+                                    <p className='p-0 m-1 text-navy fw-normal'>- Revolutionizing the flooring industry with innovation and sustainability.</p>
+                                    <p className='p-0 m-1 text-navy fw-normal'>-Offering high-quality SPC and LVT flooring solutions. (Luxurt Vinyl Tile) flooring sector.</p>
+                                    <p className='p-0 m-1 text-navy fw-normal'>-Inspiring and enhancing living spaces globally. </p>
+                                    <p className='p-0 m-1 text-navy fw-normal'>-Setting new standards in flooring excellence. </p>
+                                    <p className='p-0 m-1 text-navy fw-normal'>-Making a positive impact on homes and environments worldwide.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                {/* </section> */}
+
+
+                {/* <section className='mission'> */}
+
+                    <div className="row g-2 align-items-center position-relative">
+                        <div className="col-lg-12">
+                            <div className="mission-text position-relative row align-items-center justify-content-evenly">
+                                <div className='col-md-9'>
+                                    <h2 className='text-darkred'>Mission</h2>
+
+                                    <p className='m-1 text-navy fw-normal'>-Leading the flooring industry with continuous innovation, quality standards, and sustainability at Samaro Global Industries. </p>
+                                    <p className='m-1 text-navy fw-normal'>-Exceeding customer expectations through a diverse range of premium flooring products and unparalleled service and support.(Luxurt Vinyl Tile) flooring sector.</p>
+                                    <p className='m-1 text-navy fw-normal'>-Utilizing expertise and state-of-the-art manufacturing to create beautiful, durable, and environmentally-friendly flooring solutions.</p>
+                                    <p className='m-1 text-navy fw-normal'>-Transforming spaces and enriching lives with our commitment to excellence.</p>
+                                </div>
+                                <div className="col-lg-2 col-md-2 col-sm-2">
+                                    <div className="mission-image p-4">
+                                        <img src="/assets/images/why-samaro/vision-mission/mission.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            {/* </div> */}
+        </>
     )
 }
 

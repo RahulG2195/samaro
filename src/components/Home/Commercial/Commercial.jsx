@@ -6,33 +6,31 @@ const Commercial = () => {
         <>
             <section className="commericial-heading">
                 <div className="container">
-                    <h2 className="heading">Spaces</h2>
+                    <h2 className="heading fw-bold">Spaces</h2>
                 </div>
             </section>
 
             <section className="commercial mt-5">
                 <div className="container"></div>
                 <div className="row">
-                    <div className="col-lg-10">
+                    <div className="col-lg-11">
                         <div id="carouselExampleFade" className="carousel slide carousel-fade">
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
                                     <img src="/assets/images/home/commercial/1.jpg" className="d-block w-100" />
                                 </div>
                                 <div className="carousel-item">
-                                    <img src="/assets/images/home/commercial/2.jpg" className="d-block w-100" />
+                                    <img src="/assets/images/home/commercial/Mask Group 127.png" className="d-block w-100" />
                                 </div>
-                                <div className="carousel-item">
-                                    <img src="/assets/images/home/commercial/1.jpg" className="d-block w-100" />
-                                </div>
+                               
                             </div>
-                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                            <button className="carousel-control-prev " type="button" data-bs-target="#carouselExampleFade"
                                 data-bs-slide="prev">
-                                <i className="fa-solid fa-chevron-lef carousel-control-prev-icon"></i>
+                                <i className="fa-solid fa-chevron-lef carousel-control-prev-icon homepageCarousel"></i>
                             </button>
-                            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                            <button className="carousel-control-next " type="button" data-bs-target="#carouselExampleFade"
                                 data-bs-slide="next">
-                                <i className="fa-solid fa-chevron-lef carousel-control-next-icon"></i>
+                                <i className="fa-solid fa-chevron-lef carousel-control-next-icon homepageCarousel"></i>
                             </button>
                         </div>
                     </div>
