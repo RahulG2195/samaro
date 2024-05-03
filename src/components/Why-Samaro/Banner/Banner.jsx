@@ -4,7 +4,7 @@ import './whySmbanner.css'
 
 const Banner = () => {
     return (
-        <section className='banner bg-black why-samaro position-relative'>
+        <section className='banner why-samaro position-relative'>
 
             {/* <Image
                 src="/assets/images/why-samaro/dimensions/Mask Group 109.png"

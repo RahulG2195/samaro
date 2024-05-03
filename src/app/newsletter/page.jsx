@@ -4,9 +4,9 @@ import React from 'react'
 const page = () => {
   return (
    <>
-   {/* <Newsletter></Newsletter> */}
+   <Newsletter></Newsletter>
 
-  <h1 className='my-5'>under construction</h1>
+  {/* <h1 className='my-5'>under construction</h1> */}
    </>
   )
 }
