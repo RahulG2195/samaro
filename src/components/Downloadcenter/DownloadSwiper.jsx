@@ -16,22 +16,14 @@ const DownloadSwiper = ({ title, cardData,active }) => {
   return (
     <div className='container brochureCont position-relative mb-5'>
       <h1 className='fw-bold text-navy border-bottom border-danger border-4 mb-4'>{title}</h1>
-      <div className='d-flex justify-content-end'> 
-        <span className="swiper-button-prev"></span>
-        <span className="swiper-button-next"></span>
-      </div>
       <div className={`col-12 col-lg-12`}>
         <Swiper
-          loop={true}
           onSwiper={setThumbsSwiper}
           spaceBetween={40}
           slidesPerView={1}
           freeMode={true}
           modules={[FreeMode, Navigation, Thumbs]}
-          navigation={{
-            prevEl: '.swiper-button-prev ',
-            nextEl: '.swiper-button-next',
-          }}
+          navigation={true}
           className={`mySwiper`}
           breakpoints={{ // Adjust slidesPerView based on screen size range
             300: { slidesPerView: 2 },

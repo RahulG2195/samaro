@@ -27,6 +27,26 @@
     top: 50%;
     transform: translate(-50%, -50%);
 }
+/* New launch card section  */
+
+.newlaunchCard .card{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.newlaunchCard .card .cardBody p{
+    font-size: 12px ;
+}
+.newlaunchCard .card .cardBody p, .newlaunchCard .card .cardBody h5{
+   color: #174c89;
+}
+ .newlaunchCard .cardCont{
+    right: 5%;
+ }
+
+
+
+
+
+
 
 @media (max-width:768px) {
     .respNews{

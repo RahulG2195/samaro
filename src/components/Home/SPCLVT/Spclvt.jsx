@@ -5,13 +5,13 @@ const Spclvt = () => {
     return (
         <section className="mt-5 spc-lvt">
             <div className="container">
-                <div className="row g-4 align-items-end">
+                <div className="row g-4 align-items-end justify-content-between">
                     <div className="col-lg-6 ">
                         <div className="content px-lg-5 w-75">
                             <h2 className="sub-heading fw-bold navyBlue ">
                                 Build a happy home with a Samaro floor
                             </h2>
-                            <p className="mt-4 text-navy small">
+                            <p className="mt-4 text-navy">
                                 Be inspired by our floors and create a home filled with
                                 happiness. We are certain that together, we will be able to
                                 bring your unique vision to life, one plank at a time, for a

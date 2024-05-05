@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import '@/components/FindYourMatch/findmatch.css';
+import Link from 'next/link';
 const StepOutput = () => {
   return (
     <>
@@ -27,7 +28,7 @@ const StepOutput = () => {
                 <h5>Out of 256 flooring solutions, we've selected 1 floors that suit your project.</h5>
               </div>
               <div className='step_next_button'>
-                <button className='btn step_button discoverBtn'> Discover all our floors</button>
+                <Link href={'./productdetail'}><button className='btn step_button discoverBtn'> Discover all our floors</button></Link>
               </div>
             </div>
             <div className='col-md-5 order-md-1 order-0'>

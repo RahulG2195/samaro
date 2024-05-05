@@ -46,13 +46,13 @@
 
 .topcorner {
   position: absolute;
-  top: -12%;
-  left: -2%;
+  top: -18%;
+  left: 4%;
 }
 .bottomcorner {
   position: absolute;
-  bottom: -5%;
-  right: -5%;
+  bottom: -13%;
+  right: 0%;
 }
 
 .upperimage{

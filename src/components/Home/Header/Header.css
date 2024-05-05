@@ -71,17 +71,17 @@ button:focus:not(:focus-visible) {
 }
 /* Header */
 .prdctDrop{
-  right: -55%;
-  /* width: 100%; */
-  z-index: 1;
+  right: -50%;
+  z-index: -1;
   opacity: 0;
+  width: max-content;
   /* display: none; */
 }
 .drop1{
   right: -20% !important;
   /* width: 100%; */
   z-index: 1;
-  opacity: 0;
+  opacity: 1;
   /* display: none; */
 }
 .prdctDrop p {
@@ -104,8 +104,8 @@ display: block;
 background-color: white;
 border-bottom-left-radius: 20px;
 border-bottom-right-radius: 20px;
-width:max-content;
 opacity: 1;
+z-index: 1;
 }
 
 .mobileoptions{

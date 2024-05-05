@@ -1,11 +1,19 @@
+'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import './Career.css'
-import Form from '../InquiryForm/Form'
+// import Form from '../InquiryForm/Form'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 const Career = () => {
+    const [phone, setPhone] = useState('');
+
+    const handlePhoneChange = (value) => {
+        setPhone(value);
+    };
     return (
-        <div className='mt-5 pt-5'>
+        <div className='mt-5 pt-5 careerCont'>
 
 
 
@@ -39,9 +47,16 @@ const Career = () => {
                                 {/* <label htmlFor="email" className="form-label px-2 fw-medium career_form_lable">Email<span className='text-danger fw-bold'>*</span></label> */}
                                 <input type="email" className="form-control " id="email" placeholder="Email" required />
                             </div>
-                            <div className="mb-3">
+                            <div className="mb-3 ">
                                 {/* <label htmlFor="phone" className="form-label px-2 fw-medium career_form_lable">Phone Number<span className='text-danger fw-bold'>*</span></label> */}
-                                <input type="tel" className="form-control " id="phone" placeholder="Phone Number" required />
+                                {/* country code drop  */}
+                                <div className="">
+                                    <PhoneInput
+                                        country={'in'}
+                                        value={phone}
+                                        onChange={handlePhoneChange}
+                                    />
+                                </div>
                             </div>
                             <div className="mb-3">
                                 {/* <label htmlFor="message" className="form-label px-2 fw-medium career_form_lable">Message</label> */}

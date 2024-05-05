@@ -1,7 +1,13 @@
-import React from 'react'
-import './SpcForm.css'
 
-const SpcForm = ({hideguide, contactformcol}) => {
+'use client'
+import React, { useState } from 'react'
+import './SpcForm.css'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+
+const SpcForm = ({ hideguide, contactformcol }) => {
+    const [phone, setPhone] = useState("");
+
     return (
         <>
             <div className='row container mx-auto py-5 justify-content-between align-items-center'>
@@ -13,7 +19,7 @@ const SpcForm = ({hideguide, contactformcol}) => {
                     </span>
                 </div>
 
-                <div className={`${contactformcol ?'col-md-10':'col-md-6'}` }>
+                <div className={`${contactformcol ? 'col-md-10' : 'col-md-6'}`}>
                     <form className='spcform'>
                         <div className="mb-3">
                             <input type="text" className="form-control border-0 " placeholder="Name" />
@@ -25,8 +31,14 @@ const SpcForm = ({hideguide, contactformcol}) => {
                             </div>
                             <div className="mb-3 mobileSbmtResp col-md-6 col-lg-6 col-sm-6">
                                 {/* country code drop  */}
-                                <div className="d-flex align-items-center">+91
-                                    <input type="tel" className=" form-control border-0" placeholder="Mobile" /></div>
+                                <div className="d-flex align-items-end gap-2 ">
+                                    <PhoneInput
+                                        country={'in'}
+                                        value={phone}
+                                        onChange={phone => setPhone(phone)}
+
+                                    />
+                                </div>
                             </div>
                         </div>
 
@@ -51,7 +63,7 @@ const SpcForm = ({hideguide, contactformcol}) => {
                             </div>
 
                             <div className="my-3">
-                                <textarea type="text" className="form-control border-0 " placeholder="Your Message" />
+                                <textarea type="text" className="form-control border-0 text-danger" placeholder="Your Message" />
                             </div>
                             <div className='d-flex justify-content-center'>
                                 <p type="submit" className=" callBTN btn px-5 py-0 rounded-pill fw-semibold">Get a free call</p>

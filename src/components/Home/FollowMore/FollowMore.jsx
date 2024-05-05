@@ -19,7 +19,7 @@ const FollowMore = () => {
                     </div>
                     <div className="x">
                         <Link href="#">
-                            <img className="img " src="/assets/images/social-media/image 205.png" alt="" />
+                            <img className="img " src="/assets/images/social-media/Path 98762.svg" alt="" />
                         </Link>
                     </div>
 

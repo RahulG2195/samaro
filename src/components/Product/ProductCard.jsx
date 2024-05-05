@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import './Filters.css'
 
 const ProductCard = ({ frontImage, onHoverImage, title, description }) => {
     return (
@@ -13,10 +14,10 @@ const ProductCard = ({ frontImage, onHoverImage, title, description }) => {
                 </Link>
 
                 <Link href={'/productdetail'}>
-                    {/* <div className="card-body p-0 pb-1 text-center">
+                    <div className="card-body p-0 pb-1 text-center">
                     <span className="fw-semibold  prdctName ">{title}</span>
                     <p className='small darkBlue'>{description}</p>
-                </div> */}
+                </div>
                 </Link>
             </div>
         </>

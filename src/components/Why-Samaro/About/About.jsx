@@ -2,10 +2,10 @@ import React from 'react'
 import "./About.css"
 const About = () => {
     return (
-        <section className='about bg-navy py-5'>
+        <section className='about bg-navy '>
             <div className="container">
                 <div className="container">
-                    <div className="row g-5 align-items-center">
+                    <div className="row g-5 align-items-center py-5">
                         <div className="col-lg-5 headline text-center">
                             <p className='text-white tagline '>
                                 The beautiful <span className='fw-bold'>
