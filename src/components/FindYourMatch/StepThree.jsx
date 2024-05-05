@@ -89,27 +89,26 @@ const StepThree = () => {
         <div className='row'>
           {
             ColourArr.map(data => (
-              <div className='col-md-2 col-4 col-xs-6 my-md-3'>
+              <div className='col-md-2 col-4 col-xs-6 my-md-3 my-2'>
                 <div className='steps1-main text-center'>
-                  <div class="inner_step1 text-center">
-                    <label for={data.id} class="stepslabel">
-                      <div class="steps1_img">
+                  <div className="inner_step1 text-center">
+                    <label for={data.id} className="stepslabel">
+                      <div className="steps1_img">
+                      <input
+                          type="radio"
+                          name="floortype"
+                          className="form-check-input clrStepRadioBtn"
+                          id={data.id}
+                        />
                         <img
                           src={`assets/images/Step/StepThree/${data.image}`}
-                          class="img-fluid step1_img_radio"
+                          className="img-fluid clrImg"
                           alt={`Step ${data.name}`}
                           data-id={data.id}
                         />
-                        <span class="check-icon hidden">&#10004;</span> </div>
-                      <div class="steps1_name d-flex justify-content-between pt-md-2 px-2">
-                        {/* <p><strong>{{ data.name }}</strong></p> */}
-                        <input
-                          type="radio"
-                          name="floortype"
-                          class="form-check-input clrStepRadioBtn hidden"
-                          id={data.id}
-                        />
-                      </div>
+                        {/* <span className="check-icon">&#10004;</span>  */}
+                        
+                        </div>
                     </label>
                   </div>
                 </div>

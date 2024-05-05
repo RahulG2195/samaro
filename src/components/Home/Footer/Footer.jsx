@@ -74,11 +74,11 @@ const Footer = () => {
                     Copyright © 2023 Samaro | <a href="https://crezvatic.com/" target="_blank">Powered by Crezvatic PVT. LTD.</a>
                 </p>
             </div>
-            <div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content ">
+            <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content ">
                         <button type="button" className="btn-close p-0" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <div class="modal-body p-0">
+                        <div className="modal-body p-0">
                             <Form></Form>
                         </div>
                     </div>

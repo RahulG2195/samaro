@@ -30,7 +30,7 @@ const Design = () => {
   ]
   return (
     <>
-    <table class="table table-borderless Design mb-md-5 mt-md-4 my-2">
+    <table className="table table-borderless Design mb-md-5 mt-md-4 my-2">
       <tbody>
       {
         Design.map(val => (

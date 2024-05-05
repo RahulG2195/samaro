@@ -5,8 +5,8 @@ import Image from 'next/image'
 const DownloadCenterCard = ({imgurl ,title, date, author,}) => {
     return (
         <>
-            <div class="card dwnldcard">
-                {/* <img src="..." class="card-img-top" alt="..."/> */}
+            <div className="card dwnldcard">
+                {/* <img src="..." className="card-img-top" alt="..."/> */}
                 <Image
                     src={imgurl}
                     alt="err"
@@ -17,8 +17,8 @@ const DownloadCenterCard = ({imgurl ,title, date, author,}) => {
                     priority={true}
                     loading="eager"
                 />
-                <div class="card-body text-center lh-1 m-0 px-0  ">
-                    <span class="card-text fw-medium">{title}</span>
+                <div className="card-body text-center lh-1 m-0 px-0  ">
+                    <span className="card-text fw-medium">{title}</span>
                     <p className='small pt-2'>{date}| By {author}</p>
                     <button className='Downloadbtn text-danger border-danger rounded-pill py-2 me-2 fw-semibold w-100'>Download</button>
                 </div>

@@ -32,9 +32,9 @@ const StepTwo = () => {
                     <div className='steps1_img type_img'>
                       <img src={`assets/images/Step/StepTwo/${data.image}`} className='img-fluid' alt='img1' />
                     </div>
-                    <div className='steps1_name d-flex justify-content-between pt-md-2 px-2'>
+                    <div className='steps1_name d-flex justify-content-between pt-md-2 px-2 step2'>
                       <p><strong>{data.name}</strong></p>
-                      <input type='checkbox' name='floortype' className='form-check-input' id={data.id}/>
+                      <input type='radio' name='floortype' className='form-check-input' id={data.id}/>
                     </div>
                     </label>
                   </div>
