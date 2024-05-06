@@ -18,9 +18,9 @@ const StepOutput = () => {
               </div>
               <div className='prod_pointer'>
                 <ul>
-                  <li><i class="fa-solid fa-check"></i> Budget Friendly</li>
-                  <li><i class="fa-solid fa-check"></i> Scratch & Stain resistant</li>
-                  <li><i class="fa-solid fa-check"></i> Exceptional level of realism</li>
+                  <li><i className="fa-solid fa-check"></i> Budget Friendly</li>
+                  <li><i className="fa-solid fa-check"></i> Scratch & Stain resistant</li>
+                  <li><i className="fa-solid fa-check"></i> Exceptional level of realism</li>
                 </ul>
               </div>
               <div className='prod_count'>
