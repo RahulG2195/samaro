@@ -7,9 +7,7 @@
     color: white;
     font-size: 30px;
 }
-.why-samaro img{
-    opacity: 0.7;
-}
+
 
 @media (max-width:768px) {
     .whyBannerTxt {

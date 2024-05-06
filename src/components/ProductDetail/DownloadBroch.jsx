@@ -9,8 +9,8 @@ const DownloadBroch = () => {
           <div className='sec_heading_Left my-2 my-md-4'>
             <h1 className='section_heading'>Download <strong>Brochure</strong></h1>
           </div>
-          <div className='row'>
-            <div className='col-md col-sm-6 p-2'>
+          <div className='row '>
+            <div className='col-md col-sm-6 px-3'>
               <div className='brochure_imgdiv'>
                 <Link href=''>
                   <Image
@@ -24,7 +24,7 @@ const DownloadBroch = () => {
                   </Link>
               </div>
             </div>
-            <div className='col-md col-sm-6 p-2'>
+            <div className='col-md col-sm-6 px-3'>
               <div className='brochure_imgdiv'>
                  <Link href=''>
                   <Image
@@ -38,7 +38,7 @@ const DownloadBroch = () => {
                   </Link>
               </div>
             </div>
-            <div className='col-md col-sm-6 p-2'>
+            <div className='col-md col-sm-6 px-3'>
               <div className='brochure_imgdiv'>
                  <Link href=''>
                   <Image
@@ -52,7 +52,7 @@ const DownloadBroch = () => {
                   </Link>
               </div>
             </div>
-            <div className='col-md col-sm-6 p-2'>
+            <div className='col-md col-sm-6 px-3'>
               <div className='brochure_imgdiv'>
                  <Link href=''>
                   <Image
@@ -66,7 +66,7 @@ const DownloadBroch = () => {
                   </Link>
               </div>
             </div>
-            <div className='col-md col-sm-6 p-2'>
+            <div className='col-md col-sm-6 px-3'>
               <div className='brochure_imgdiv'>
                  <Link href=''>
                   <Image

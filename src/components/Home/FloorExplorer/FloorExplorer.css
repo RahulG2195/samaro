@@ -20,8 +20,8 @@
   height: 75%;
   left: 0;
   background: var(--navy);
-  border-top-right-radius: 200px;
-  border-bottom-right-radius: 200px;
+  border-top-right-radius: 100vw;
+  border-bottom-right-radius:100vw;
   z-index: -1;
 }
 

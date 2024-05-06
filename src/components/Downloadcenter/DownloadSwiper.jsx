@@ -15,7 +15,7 @@ const DownloadSwiper = ({ title, cardData,active }) => {
 
   return (
     <div className='container brochureCont position-relative mb-5'>
-      <h1 className='fw-bold text-navy border-bottom border-danger border-4 mb-4'>{title}</h1>
+      <h1 className='fw-bold text-navy border-bottom border-danger border-4 mb-4 px-5'>{title}</h1>
       <div className={`col-12 col-lg-12`}>
         <Swiper
           onSwiper={setThumbsSwiper}
@@ -24,21 +24,19 @@ const DownloadSwiper = ({ title, cardData,active }) => {
           freeMode={true}
           modules={[FreeMode, Navigation, Thumbs]}
           navigation={true}
-          className={`mySwiper`}
+          className={`mySwiper px-5 mx-5`}
           breakpoints={{ // Adjust slidesPerView based on screen size range
             300: { slidesPerView: 2 },
             576: { slidesPerView: 2 },
             768: { slidesPerView: 3 },
-            992: { slidesPerView: 6 },
+            992: { slidesPerView: 3 },
           }}
         >
           {cardData.map((card, index) => (
-            <SwiperSlide key={index} className='sliderchild'>
+            <SwiperSlide key={index} className='sliderchild '>
               <DownloadCenterCard
                 imgurl={card.imgurl}
-                title={card.title}
-                date={card.date}
-                author={card.author}
+               
               />
             </SwiperSlide>
           ))}

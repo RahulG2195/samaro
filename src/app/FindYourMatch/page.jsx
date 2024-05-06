@@ -48,13 +48,13 @@ const router = useRouter();
               {steps[currentStep].Page}
               {currentStep < steps.length - 1 && (
                 <div className='step_next_button'>
-                  <button className='btn step_button' onClick={nextStep}> {steps[currentStep].title}  <i className="fa-solid fa-chevron-right"></i></button>
+                  <button className='btn border-3 border-danger rounded-pill step_button' onClick={nextStep}> {steps[currentStep].title}  <i className="fa-solid fa-chevron-right"></i></button>
                 </div>
               )}
               {/* {currentStep > 0 && <button onClick={prevStep}>Previous</button>} */}
               {currentStep === steps.length - 1 && (
                 <div className='step_next_button'>
-                  <button className='btn step_button' onClick={() => handleFormSubmit(/* form data */)}> Submit <i className="fa-solid fa-chevron-right"></i></button>
+                  <button className='btn border-3 border-danger rounded-pill' onClick={() => handleFormSubmit(/* form data */)}> Submit <i className="fa-solid fa-chevron-right"></i></button>
                 </div>
               )}
 

@@ -14,7 +14,7 @@ import ProductSwipper from '@/components/ProductDetail/ProductSwipper';
 import '@/components/ProductDetail/productdetail.css';
 
 const Home = () => {
-  
+
   const prod_features = [
     {
       'key': '1',
@@ -84,56 +84,152 @@ const Home = () => {
       alt: 'large image'
     },
   ]
+
+
+  // data for product details table 
+  // ####################Description table data #########################
+  const descriptionData = [
+    {
+      description: 'Lorem ipsum dolor sit amet.',
+      standardTest: 'Lorem'
+    },
+    {
+      description: 'Lorem ipsum dolor sit amet.',
+      standardTest: 'Lorem'
+    },
+    {
+      description: 'Lorem ipsum',
+      standardTest: 'Lorem'
+    },
+    {
+      description: 'Lorem ipsum',
+      standardTest: 'Lorem'
+    },
+    {
+      description: 'Lorem ipsum',
+      standardTest: 'Lorem'
+    },
+    {
+      description: 'Lorem ipsum',
+      standardTest: 'Lorem'
+    },
+    {
+      description: 'Lorem ipsum',
+      standardTest: 'Lorem'
+    },
+    {
+      description: 'Lorem ipsum',
+      standardTest: 'Lorem'
+    },
+    {
+      description: 'Lorem ipsum',
+      standardTest: 'Lorem'
+    },
+    {
+      description: 'Lorem ipsum',
+      standardTest: 'Lorem'
+    }
+  ];
+  // ############################# Specification tables data ####################
+  const specificationData = [
+    {
+      specification: 'Lorem ipsum dolor sit amet.',
+      Tiles: 'Lorem'
+    },
+    {
+      specification: 'Lorem ipsum dolor sit amet.',
+      Tiles: 'Lorem'
+    },
+    {
+      specification: 'Lorem ipsum dolor sit amet.',
+      Tiles: 'Lorem'
+    },
+    {
+      specification: 'Lorem ipsum dolor sit amet.',
+      Tiles: 'Lorem'
+    },
+    {
+      specification: 'Lorem ipsum dolor sit amet.',
+      Tiles: 'Lorem'
+    },
+    {
+      specification: 'Lorem ipsum dolor sit amet.',
+      Tiles: 'Lorem'
+    },
+
+
+  ];
   return (
     <>
       <section className='product-data_sec mt-md-5 mt-2'>
         <div className='container'>
-          <div className='row'>
-            <div className='col-md-6 '>
-              <ProductSwipper images={images}/>
+          <div className='row justify-content-end '>
+            <div className='col-md-5 position-relative'>
+              <ProductSwipper images={images} />
             </div>
-            <div className='col-md-6 my-sm-5 my-2 prodDetailTXT'>
+            <div className='col-md-5 prodDetailTXT'>
               <div className='prod_name_lg'>
                 <h2>Pure ok honey</h2>
                 <span>VINYL | CIRO | AVHBU40360</span>
               </div>
-              <div className='prod_feat_point'>
-                <ul>
-                  <li><i className="fa fa-check" aria-hidden="true"></i> Lifetime warranty </li>
-                  <li><i className="fa fa-check" aria-hidden="true"></i> Compatible with floor heating </li>
-                  <li><i className="fa fa-check" aria-hidden="true"></i> 4 grooves</li>
-                  <li><i className="fa fa-check" aria-hidden="true"></i> Underlay attached </li>
-                  <li><i className="fa fa-check" aria-hidden="true"></i> Water resistant </li>
-                  <li><i className="fa fa-check" aria-hidden="true"></i> Class 33</li>
-                </ul>
-              </div>
-              <div className='notSureLinks'>
-                <p>Not sure if this floor fits your style and needs?</p>
-                <ul>
-                  <li>
-                    <Link href='#' className='view_room_icon d-flex'>
-                      <img src='/assets/images/icons/eye.png' alt='eye' className='prod_icon' />
-                      <p>View in your room</p>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href='#' className='view_room_icon d-flex'>
-                      <img src='/assets/images/icons/eye.png' alt='eye' className='prod_icon' />
-                      <p>Get your body inspection</p>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href='#' className='view_room_icon d-flex'>
-                      <img src='/assets/images/icons/eye.png' alt='eye' className='prod_icon' />
-                      <p>Technical Support</p>
-                    </Link>
-                  </li>
-                </ul>
+              {/*####################################### product description table ######################################## */}
+              <div className='DescriptionTable'>
+                <div className='d-flex gap-1'>
+                  <div>
+                    <div>
+                      <p className='bg-danger m-0 text-center py-2 text-white fw-semibold'>DESCRIPTION</p>
+                      {descriptionData.map((row, index) => (
+                        <p key={index} className='border-bottom border-dark-subtle m-0'>{row.description}</p>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <p className='bg-danger m-0 text-center py-2 text-white px-2 fw-semibold'>STANDARD TEST</p>
+                    <div style={{ backgroundColor: '#E0E1E3' }}>
+                      {descriptionData.map((row, index) => (
+                        <p key={index} className='border-bottom border-dark-subtle m-0 px-2'>{row.standardTest}</p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+
+                {/*################################## product description table end ############################################*/}
+
+                {/*################################## Products specification table ##########################################*/}
+
+                <div className='d-flex gap-1 mt-4'>
+                  <div>
+                    <div>
+                      <p className='bg-danger m-0 text-center py-2 text-white fw-semibold'>SPECIFICATIONS</p>
+                      {specificationData.map((row, index) => (
+                        <p key={index} className='border-bottom border-dark-subtle m-0'>{row.specification}</p>
+                      ))}
+                    </div>
+                  </div>
+                  <div style={{ maxWidth: '35%' }}>
+                    <p className='bg-danger m-0 text-center  text-white fw-semibold longTxtTiles'>SAMARO LAMINATE PERFORMANCE TILES</p>
+                    <div style={{ backgroundColor: '#E0E1E3' }}>
+                      {specificationData.map((row, index) => (
+                        <p key={index} className='border-bottom border-dark-subtle m-0 px-2'>{row.Tiles}</p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+                {/*#################################### Products specification table  ############################################*/}
+
+
               </div>
             </div>
           </div>
         </div>
-      </section>
+
+        {/* ################# product details section ################### */}
+      </section >
       <section className='productDetail_data my-md-5 my-2'>
         <div className='container'>
           <div className='sec_head'>
@@ -153,7 +249,7 @@ const Home = () => {
             <div className='col-md-5'>
               <div className='dimension'>
                 <div className='inner_sub_head'>
-                  <h4>Dimensions</h4>
+                  <h4 className='m-0'>Dimensions</h4>
                   <ProdTable />
                 </div>
               </div>

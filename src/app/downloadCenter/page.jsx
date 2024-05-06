@@ -17,57 +17,57 @@ const page = () => {
     {
       imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
       title: 'Seven tips to help you get better flooring design & Concept',
-      date: 'November 11,2023',
-      author: 'Anand Kashyap'
+      date: 'November 11,2023 |',
+      author: 'By Anand Kashyap'
     },
     {
       imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
       title: 'Seven tips to help you get better flooring design & Concept',
-      date: 'November 11,2023',
-      author: 'Anand Kashyap'
+      date: 'November 11,2023 |',
+      author: 'By Anand Kashyap'
     },
     {
       imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
       title: 'Seven tips to help you get better flooring design & Concept',
-      date: 'November 11,2023',
-      author: 'Anand Kashyap'
+      date: 'November 11,2023 |',
+      author: 'By Anand Kashyap'
     },
-    {
-      imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
-      title: 'Seven tips to help you get better flooring design & Concept',
-      date: 'November 11,2023',
-      author: 'Anand Kashyap'
-    },
-    {
-      imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
-      title: 'Seven tips to help you get better flooring design & Concept',
-      date: 'November 11,2023',
-      author: 'Anand Kashyap'
-    },
-    {
-      imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
-      title: 'Seven tips to help you get better flooring design & Concept',
-      date: 'November 11,2023',
-      author: 'Anand Kashyap'
-    },
-    {
-      imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
-      title: 'Seven tips to help you get better flooring design & Concept',
-      date: 'November 11,2023',
-      author: 'Anand Kashyap'
-    },
-    {
-      imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
-      title: 'Seven tips to help you get better flooring design & Concept',
-      date: 'November 11,2023',
-      author: 'Anand Kashyap'
-    },
-    {
-      imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
-      title: 'Seven tips to help you get better flooring design & Concept',
-      date: 'November 11,2023',
-      author: 'Anand Kashyap'
-    },
+    // {
+    //   imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
+    //   title: 'Seven tips to help you get better flooring design & Concept',
+    //   date: 'November 11,2023',
+    //   author: 'Anand Kashyap'
+    // },
+    // {
+    //   imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
+    //   title: 'Seven tips to help you get better flooring design & Concept',
+    //   date: 'November 11,2023',
+    //   author: 'Anand Kashyap'
+    // },
+    // {
+    //   imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
+    //   title: 'Seven tips to help you get better flooring design & Concept',
+    //   date: 'November 11,2023',
+    //   author: 'Anand Kashyap'
+    // },
+    // {
+    //   imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
+    //   title: 'Seven tips to help you get better flooring design & Concept',
+    //   date: 'November 11,2023',
+    //   author: 'Anand Kashyap'
+    // },
+    // {
+    //   imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
+    //   title: 'Seven tips to help you get better flooring design & Concept',
+    //   date: 'November 11,2023',
+    //   author: 'Anand Kashyap'
+    // },
+    // {
+    //   imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
+    //   title: 'Seven tips to help you get better flooring design & Concept',
+    //   date: 'November 11,2023',
+    //   author: 'Anand Kashyap'
+    // },
   ]
   return (
 

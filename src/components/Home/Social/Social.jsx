@@ -18,6 +18,7 @@ const Social = () => {
                 </div>
                 {/* <div className="row justify-content-center"> */}
                     {/* <div className="col-lg-12 col-md-12 col-sm-12 col-12"> */}
+                    <a href="https://www.instagram.com/samaroflooring?igsh=amowMmMyeHU1eXVh" target="_blank">
                         <div className="d-flex justify-content-center gap-5">
                             <div className="image">
                                 <img src="/assets/images/home/social/1.png" alt="" />
@@ -31,7 +32,9 @@ const Social = () => {
                             <div className="image">
                                 <img src="/assets/images/home/social/1.png" alt="" />
                             </div>
+                           
                         </div>
+                        </a>
                     {/* </div> */}
                 {/* </div> */}
             </div>

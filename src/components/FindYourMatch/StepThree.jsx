@@ -83,8 +83,8 @@ const StepThree = () => {
     <>
       <div className='col-md-9 mx-auto'>
         <div className='match_heading text-center'>
-          <h1>I’d like my floor to look like…</h1>
-          <p>Select one or more rooms below.</p>
+          <h1>I'd like my floor to look like…</h1>
+          <p className='py-2'>Select one or more rooms below.</p>
         </div>
         <div className='row'>
           {

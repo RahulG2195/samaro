@@ -70,12 +70,12 @@
   color: #ffffff;
   border-radius: 20px;
   background-color: var(--primary);
-  opacity: 0;
+  /* opacity: 0; */
   transition: 0.5s ease-in-out all;
 }
-.newsletter:hover button {
+/* .newsletter:hover button {
   opacity: 1;
-}
+} */
 .newsletter input {
   background: transparent;
   border: none;

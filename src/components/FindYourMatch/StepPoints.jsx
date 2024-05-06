@@ -6,7 +6,7 @@ const StepPoints = () => {
       <div className='col-md-9 mx-auto'>
         <div className='match_heading text-center'>
           <h1>Find the ideal floor for your project</h1>
-          <p>With so many options to choose from, choosing the perfect floor for your project is no easy feat. Luckily, our FloorExplorer is here to help: just answer a few simple questions and you’ll get an overview of the floors that best fit your needs and style. Ready?</p>
+          <p className='py-3'>With so many options to choose from, choosing the perfect floor for your project is no easy feat. Luckily, our FloorExplorer is here to help: just answer a few simple questions and you'll get an overview of the floors that best fit your needs and style. Ready?</p>
         </div>
         <div className='row'>
           <div className='col-md-3 col-6 col-xs-12'>

@@ -19,7 +19,7 @@ const DownloadCenterCard = ({ imgurl, title, date, author, WatchNowButton }) => 
                 />
                 <div className="card-body text-center lh-1 m-0 px-0  ">
                     <span className="card-text fw-medium">{title}</span>
-                    <p className='small pt-2'>{date}| By {author}</p>
+                    <p className='small pt-2'>{date} {author}</p>
                     {WatchNowButton ? (<button className='Downloadbtn text-danger border-danger rounded-pill py-1 me-2 fw-semibold px-4'>Watch Now</button>) :
                         (<button className='Downloadbtn text-danger border-danger rounded-pill py-1 me-2 fw-semibold px-4'>Download</button>)}
                 </div>

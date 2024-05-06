@@ -17,8 +17,8 @@ const ProductSwipper = ({ images }) => {
 
   return (
     <>
-      <div className='row detailSwipper'>
-        <div className={`col-sm-4 col-md-4 col-lg-4 ${(deviceWidth >= 600) ? '' : 'order-1'}`}>
+      <div className='container row detailSwipper position-relative'>
+        <div className={`rhsSwiper col-sm-2 col-md-2 col-lg-2 ${(deviceWidth >= 600) ? '' : 'order-1'}`}>
           <Swiper
             loop={true}
             onSwiper={setThumbsSwiper}
@@ -64,7 +64,7 @@ const ProductSwipper = ({ images }) => {
             }
           </Swiper> */}
         </div>
-        <div className='col-sm-8 col-md-8 col-lg-8 position-relative'>
+        <div className='col-sm-8 col-md-8 col-lg-12 position-relative'>
           <div className="navigation-arrows d-flex flex-row">
 
             <div className="swiper-button-prev"></div>

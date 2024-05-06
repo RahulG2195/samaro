@@ -4,14 +4,14 @@
 
 .detailSwipper .mySwiper {
     overflow: visible;
-    padding: 36%;
+    /* padding: %; */
 
 }
 
-.detailSwipper .mySwiper .swiper-wrapper {
+.detailSwipper .rhsSwiper {
     position: absolute;
-    top: 42%;
-    left: -5%;
+    top: 8% !important;
+    left:-25% !important;
 }
 
 .detailSwipper .mySwiper .swiper-slide-active img {
@@ -27,6 +27,7 @@
     /* width: 100% !important; */
     overflow: hidden;
     border-radius: 10px !important;
+    transform: rotate(-90deg);
 }
 
 .swiper-button-next {
@@ -94,13 +95,7 @@
         font-size: 15px;
     }
 
-    .detailSwipper .mySwiper .swiper-slide {
-        /* width: 50px !important; */
-    }
-
-    .topSliderRes {
-        /* width: 200px !important; */
-    }
+    
 
 
 
@@ -115,7 +110,7 @@
         right: 0%;
     }
     .detailSwipper .mySwiper .sliderchild {
-        width: 15% !important;
+        /* width: 15% !important; */
         margin: 10px auto !important;
         padding-left: 10px;
     }

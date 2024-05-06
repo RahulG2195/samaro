@@ -32,9 +32,9 @@ const ProductBanner = () => {
 
             </div>
 
-            <section>
+            {/* <section>
                 <div >
-                    <div className="row align-items-center bannerbottom py-3">
+                    <div className="row align-items-center bannerbottom py-3 ">
                         <div className="col-md-4 text-center text-md-end mb-3 mb-md-0">
                             <p className='passiontext'>A passion for timeless</p>
                             <p className='passiontext'>beauty</p>
@@ -46,7 +46,7 @@ const ProductBanner = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     )
 }

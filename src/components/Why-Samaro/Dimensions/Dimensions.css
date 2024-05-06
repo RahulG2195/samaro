@@ -8,20 +8,16 @@
 .dimensions .bg-navy {
   border:3px solid #0A2647 ;
   background-color: transparent !important;
-  border-top-right-radius: 150px;
-  border-bottom-right-radius: 150px;
+  border-top-right-radius: 100vw;
+  border-bottom-right-radius: 100vw;
 }
-.pplrplank, .pplrplank p{
-  /* color: #0A2647 !important; */
-}
-.plnkThick{
-  /* color: #CA373C !important; */
-}
+
+
 .dimensions .bg-red {
   border:3px solid #CA373C ;
   background-color: transparent !important;
-  border-top-left-radius: 150px;
-  border-bottom-left-radius: 150px;
+  border-top-left-radius: 100vw;
+  border-bottom-left-radius: 100vw;
 }
 
 .dimensions::before {

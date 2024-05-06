@@ -32,20 +32,24 @@ const Topbar = () => {
                                                 <img className="img " src="/assets/images/social-media/fb.png" alt="" />
                                             </Link>
                                         </div>
-                                        <div className="youtube">
-                                            <Link href="">
-                                                <img className="img" src="/assets/images/social-media/yt.png" alt="" />
+                                        <div className="isntagram">
+                                            <Link href="#">
+                                                <img className="img" src="/assets/images/social-media/instagram.png" alt="" />
                                             </Link>
                                         </div>
-
                                         <div className="x">
                                             <Link href="">
                                                 <img className="img" src="/assets/images/social-media/x.png" alt="" />
                                             </Link>
                                         </div>
-                                        <div className="isntagram">
+                                        <div className="linkedin">
                                             <Link href="#">
-                                                <img className="img" src="/assets/images/social-media/instagram.png" alt="" />
+                                                <img className="img" src="/assets/images/social-media/Group 29179.svg" alt="" />
+                                            </Link>
+                                        </div>
+                                        <div className="youtube">
+                                            <Link href="">
+                                                <img className="img" src="/assets/images/social-media/yt.png" alt="" />
                                             </Link>
                                         </div>
                                     </div>

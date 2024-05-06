@@ -5,10 +5,11 @@ const Vision = () => {
     return (
         <>
             {/* <div className='vision-mission-cont'> */}
-                <section className='vision mt-5 mx-5'>
-
-                    <div className="row g-2 align-items-center justify-content-end position-relative ">
-                        <div className="col-lg-12 ">
+            <section className='vision mt-5 mx-5 position-relative '>
+                <img src="/assets/images/why-samaro/Group 28873.svg" alt="" className='' />
+                <div className=' position-absolute top-0'>
+                    <div className="row g-2 align-items-center position-relative ps-5 ms-5 mt-4 ">
+                        <div className="col-lg-12">
                             <div className="vision-text position-relative row align-items-center justify-content-evenly">
                                 <div className="col-lg-2 col-md-2 col-sm-2">
                                     <div className="vision-image p-4">
@@ -17,7 +18,7 @@ const Vision = () => {
                                 </div>
                                 <div className='col-md-9'>
                                     <h2 className='text-darkred'>Vision</h2>
-                              
+
                                     <p className='p-0 m-1 text-navy fw-normal'>- Revolutionizing the flooring industry with innovation and sustainability.</p>
                                     <p className='p-0 m-1 text-navy fw-normal'>-Offering high-quality SPC and LVT flooring solutions. (Luxurt Vinyl Tile) flooring sector.</p>
                                     <p className='p-0 m-1 text-navy fw-normal'>-Inspiring and enhancing living spaces globally. </p>
@@ -27,14 +28,14 @@ const Vision = () => {
                             </div>
                         </div>
                     </div>
-                {/* </section> */}
+                    {/* </section> */}
 
 
-                {/* <section className='mission'> */}
+                    {/* <section className='mission'> */}
 
-                    <div className="row g-2 align-items-center position-relative">
+                    <div className="row g-2 align-items-center position-relative mt-5  px-5">
                         <div className="col-lg-12">
-                            <div className="mission-text position-relative row align-items-center justify-content-evenly">
+                            <div className="mission-text position-relative row align-items-center justify-content-end">
                                 <div className='col-md-9'>
                                     <h2 className='text-darkred'>Mission</h2>
 
@@ -52,7 +53,8 @@ const Vision = () => {
                         </div>
 
                     </div>
-                </section>
+                </div>
+            </section>
             {/* </div> */}
         </>
     )

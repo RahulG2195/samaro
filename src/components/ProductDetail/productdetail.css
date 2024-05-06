@@ -51,7 +51,7 @@ i {
   font-size: 15px;
 }
 
-.prodtable>tbody>tr,
+
 .Design>tbody>tr {
   border-bottom: 1px solid #ca373c;
 }
@@ -148,6 +148,15 @@ i {
   top: 35%
 }
 
+
+/* product details table section */
+.DescriptionTable p{
+  font-size: 12px;
+}
+
+.longTxtTiles{
+  font-size: 11px !important;
+}
 
 @media (max-width:600px) {
   .common_sec {

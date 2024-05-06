@@ -5,7 +5,7 @@ const Spclvt = () => {
     return (
         <section className="mt-5 spc-lvt">
             <div className="container">
-                <div className="row g-4 align-items-end justify-content-between">
+                <div className="row g-4 align-items-end justify-content-start gap-5">
                     <div className="col-lg-6 ">
                         <div className="content px-lg-5 w-75">
                             <h2 className="sub-heading fw-bold navyBlue ">

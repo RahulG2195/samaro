@@ -123,7 +123,7 @@ const Benefits = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6 col-md-6 ">
+                    <div className="col-lg-6 col-md-6 ps-5">
                         <Swiper
                             effect={'fade'}
                             modules={[EffectFade, Autoplay]}
