@@ -33,7 +33,7 @@ const Vision = () => {
 
                     {/* <section className='mission'> */}
 
-                    <div className="row g-2 align-items-center mt-5  px-5">
+                    <div className="row g-2 align-items-center mt-4 px-5">
                         <div className="col-lg-12">
                             <div className="mission-text row align-items-center justify-content-end">
                                 <div className='col-md-9 col-9'>
