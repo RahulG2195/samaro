@@ -17,7 +17,7 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 
 const options = {
     loop: true,
-    margin: 10,
+    margin: 20,
     nav: true,
     navText: ['<img src="assets/images/icons/left.svg" />', '<img src="assets/images/icons/right.svg" />'],
     dots: false,
@@ -77,7 +77,8 @@ const SimilarProd = ({ Title1, Title2 }) => {
             nav={true}
             dots={false}
             animateIn={true}
-            {...options}
+            // {...options}
+            
           >
             {productsArr.map((product, index) => (
                 <ProductCard
