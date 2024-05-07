@@ -77,7 +77,7 @@ const SimilarProd = ({ Title1, Title2 }) => {
             nav={true}
             dots={false}
             animateIn={true}
-            // {...options}
+            {...options}
             
           >
             {productsArr.map((product, index) => (
