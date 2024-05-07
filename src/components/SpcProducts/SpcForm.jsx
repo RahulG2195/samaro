@@ -10,15 +10,15 @@ const SpcForm = ({ hideguide, contactformcol }) => {
 
     return (
         <>
-            <div className='row container mx-auto py-5 justify-content-between align-items-center'>
+            <div className='row container mx-auto py-5 justify-content-between align-items-center getintouchformCont'>
                 <div className={`col-md-4 ${hideguide ? 'hideguide' : ''}`}>
                     <span className='spcformheading'>
-                        <p className='fs-5 guidHeading '>LET US GUIDE YOU</p>
+                        <p className='fs-5 guidHeading letsGuideYou'>LET US GUIDE YOU</p>
                         <p className='fs-5 guidHeading subH fw-normal py-2'>TO YOUR PERFECT SPC FLOOR</p>
-                        <p className='fw-medium txt'>Choosing the perfect floor is not easy, but we would love to help you with the challenge. Together we will find a vinyl floor that fits your home perfectly.</p>
+                        <p className='fw-medium txt guid-para'>Choosing the perfect floor is not easy, but we would love to help you with the challenge. Together we will find a vinyl floor that fits your home perfectly.</p>
                     </span>
                 </div>
-
+                <span className='getinTouch text-center fs-1 fw-bold '>GET IN TOUCH</span>
                 <div className={`${contactformcol ? 'col-md-10' : 'col-md-6'}`}>
                     <form className='spcform'>
                         <div className="mb-3">

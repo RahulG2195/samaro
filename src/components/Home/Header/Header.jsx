@@ -51,8 +51,8 @@ const Header = () => {
                                 </ul>
                                 <ul className="mobileoptions">
                                     <li><Link href="/gallery">Gallery</Link></li>
-                                    <li><Link href="/lvtProducts"><p className="darkBlue">Find your ideal floor</p></Link></li>
-                                    <li><Link href="/downloadCenter"><p className="darkBlue">Download center</p></Link></li>
+                                    <li><Link href="/FindYourMatch"><p className="darkBlue m-0">Find your ideal floor</p></Link></li>
+                                    <li><Link href="/downloadCenter"><p className="darkBlue m-0">Download center</p></Link></li>
                                 </ul>
                             </li>
                             <li className="nav-item">

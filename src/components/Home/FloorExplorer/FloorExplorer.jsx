@@ -4,13 +4,13 @@ import "./FloorExplorer.css"
 const FloorExplorer = () => {
   return (
     <section className="explorer">
-      <div className=" ">
+      <div className="">
         <div className="row my-2 ">
 
           <div className="col-lg-11 col-md-12">
             <div className="row">
-              <h2 className="text-white py-3 my-2 text-center fw-semibold respHeading1">
-                How to choose my perfect floor?
+              <h2 className="text-white py-3 my-2 text-center fw-normal respHeading1">
+                How to choose my <strong className='fw-semibold'>perfect floor</strong>?
               </h2>
               <div className="col-lg-4 col-md-4 col-sm-4">
                 <img className="samaro-ply" src="/assets/images/home/floor-explorer/2.png" alt="" />

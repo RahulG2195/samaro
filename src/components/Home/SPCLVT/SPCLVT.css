@@ -87,6 +87,16 @@
     width: 100% !important;
     text-align: center;
   }
+  .spc-lvt .container .row>* {
+    padding: 0 !important;
+  
+  }
+  .qualities {
+    background-color: var(--primary);
+    border-radius: 0 !important;
+    width: 100% !important;
+
+  }
 
 }
 
@@ -103,6 +113,12 @@
 }
 
 @media (max-width:600px) {
+  .waterResistText, .installTxt{
+    display: none !important;
+  }
+  .spc-lvt .container .row{
+    gap: 0 !important;
+  }
   .qualities .d-flex span {
     font-size: 12px !important;
   }
@@ -116,12 +132,16 @@
 @media (max-width:426px) {
   .onImgtext {
     top: 50%;
-    left: 7%;
+    left: 10%;
+  
+  }
+  .onImgtext .button, .onImgtext2 .button{
+    padding: 0 5px !important;
   }
 
   .onImgtext2 {
     top: 26%;
-    left: 20%;
+    left: 30%;
   }
 
   .onImgtext a,

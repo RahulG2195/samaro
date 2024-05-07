@@ -37,15 +37,31 @@
 font-size: 8px;
 }
 
+.social .image {
+  height: 200px;
+}
+.social .image img {
+  height: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+}
+.social h2 {
+  color: var(--navy);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.social h2 span {
+  color: var(--primary);
+}
 
 @media (max-width: 768px) {
   .social-grid {
-    display: grid;
+    display: grid !important;
     grid-template-columns: 1fr; /* Single column layout */
   }
 
   .image:nth-child(1) {
-    grid-column: 1 / 2;
+    grid-column: 1 / 2 ;
   }
   .image:nth-child(2) {
     grid-column: 1 / 2;
@@ -66,26 +82,12 @@ font-size: 8px;
 }
 
 
-.social .image {
-  height: 200px;
-}
-.social .image img {
-  height: 100%;
-  border-radius: 30px;
-  object-fit: cover;
-}
-.social h2 {
-  color: var(--navy);
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.social h2 span {
-  color: var(--primary);
-}
 
 @media (max-width:600px) {
-  .instagram{
-    width: 50% !important;
+  .social{
+padding: 0px !important;
   }
 }
-/* Social */
+/* inspiration gallery */
+
+

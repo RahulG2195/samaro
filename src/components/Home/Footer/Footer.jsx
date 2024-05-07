@@ -6,13 +6,13 @@ const Footer = () => {
         <>
             <footer className="custom-footer bg-navy text-light pb-3">
                 <div className="row g-4 align-items-center">
-                    <div className="col-5">
+                    <div className="col-3 col-lg-5 col-md-5">
                         <div className="line"></div>
                     </div>
-                    <div className="col-2 logo">
+                    <div className="col-6 col-lg-2 col-md-2 logo">
                         <img className="" src="/assets/images/logo/logo.png" alt="" />
                     </div>
-                    <div className="col-5">
+                    <div className="col-3 col-lg-5 col-md-5">
                         <div className="line"></div>
                     </div>
                 </div>

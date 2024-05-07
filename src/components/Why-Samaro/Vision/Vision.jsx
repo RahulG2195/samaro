@@ -16,7 +16,7 @@ const Vision = () => {
                                         <img src="/assets/images/why-samaro/vision-mission/vision.png" alt="" />
                                     </div>
                                 </div>
-                                <div className='col-md-9'>
+                                <div className='col-md-9 col-9'>
                                     <h2 className='text-darkred'>Vision</h2>
 
                                     <p className='p-0 m-1 text-navy fw-normal'>- Revolutionizing the flooring industry with innovation and sustainability.</p>
@@ -33,10 +33,10 @@ const Vision = () => {
 
                     {/* <section className='mission'> */}
 
-                    <div className="row g-2 align-items-center position-relative mt-5  px-5">
+                    <div className="row g-2 align-items-center mt-5  px-5">
                         <div className="col-lg-12">
-                            <div className="mission-text position-relative row align-items-center justify-content-end">
-                                <div className='col-md-9'>
+                            <div className="mission-text row align-items-center justify-content-end">
+                                <div className='col-md-9 col-9'>
                                     <h2 className='text-darkred'>Mission</h2>
 
                                     <p className='m-1 text-navy fw-normal'>-Leading the flooring industry with continuous innovation, quality standards, and sustainability at Samaro Global Industries. </p>

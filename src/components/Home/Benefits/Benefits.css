@@ -109,6 +109,13 @@
   .benifitsHeading{
     font-size: large !important;
   }
+  .benefits .column-wrapper{
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  .topcorner, .bottomcorner{
+    display: none !important;
+  }
 }
 
 /* Benefits */

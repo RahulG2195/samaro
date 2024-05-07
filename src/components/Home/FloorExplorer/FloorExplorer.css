@@ -97,6 +97,7 @@
     left: 40%;
     top: 50%;
     transform: translate(-50%, -0%);
+    margin-top:20px ;
   }
   .respHeading1{
     font-size: 18px !important;

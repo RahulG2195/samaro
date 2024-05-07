@@ -12,6 +12,12 @@
 .about .company-history {
   font-weight: 300;
 }
+
+@media (max-width:768px) {
+  .about .headline, .about .company-history {
+    text-align: center !important;
+  }
+}
 @media (max-width:600px) {
   .about .row .col-lg-7    {
     padding: 0 !important;

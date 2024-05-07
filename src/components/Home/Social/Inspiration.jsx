@@ -2,6 +2,7 @@
 import React from 'react'
 import "@/components/Home/Social/Social.css";
 const Inspiration = () => {
+  
   return (
     <>
       <section className="social mb-5 d-flex justify-content-center">
@@ -12,21 +13,21 @@ const Inspiration = () => {
 
               <div className="social-grid">
                 <div className="image">
-                  <img src="/assets/images/home/social/Mask Group 201.png" alt="" />
+                  <img src="/assets/images/gallery/px-conversions/1 (1).webp" alt="" />
                 </div>
                 <div className="image">
-                  <img src="/assets/images/home/social/1.png" alt="" />
+                  <img src="/assets/images/gallery/px-conversions/1 (2).webp" alt="" />
                 </div>
                 <div className="image">
-                  <img src="/assets/images/home/social/1.png" alt="" />
+                  <img src="/assets/images/gallery/px-conversions/1 (3).webp" alt="" />
                 </div>
 
                 <div className="image col-span-2">
-                  <img src="/assets/images/home/social/Mask Group 200.png" alt="" />
+                  <img src="/assets/images/gallery/px-conversions/1 (4).webp" alt="" />
                 </div>
 
                 <div className="image">
-                  <img src="/assets/images/home/social/1.png" alt="" />
+                  <img src="/assets/images/gallery/px-conversions/1 (5).webp" alt="" />
                 </div>
               </div>
             </div>

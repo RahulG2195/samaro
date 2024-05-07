@@ -31,7 +31,7 @@ const Design = () => {
                     <div className="col-lg-4 position-relative">
                         <Link href='/product'>
                             <img className='design-img' src="/assets/images/home/design/Component 20 – 3.png" alt="" />
-                            <span className='text-danger fw-semibold position-absolute py-2' style={{ left: '0' }}>COMING SOON*</span>
+                            <span className='text-danger fw-semibold position-absolute py-2 commingSoon' style={{ left: '0' }}>COMING SOON*</span>
                         </Link>
                     </div>
                 </div>

@@ -24,17 +24,17 @@ const Spclvt = () => {
                         </div>
                         <div className="qualities px-4 mt-4 ">
                             <div className="d-flex flex-wrap justify-content-evenly  " >
-                                <div className="d-flex align-items-center gap-2 text-white">
+                                <div className="d-flex align-items-center gap-2 text-white installTxt">
                                     <img src="/assets/images/home/spc-lvt/icons/1.png" alt="" />
-                                    <span>Easy to install</span>
+                                    <span className=''>Easy to install</span>
                                 </div>
                                 <div className="d-flex align-items-center gap-2 text-white">
                                     <img src="/assets/images/home/spc-lvt/icons/2.png" alt="" />
                                     <span>Natural look & feel</span>
                                 </div>
-                                <div className="d-flex align-items-center gap-2 text-white">
+                                <div className="d-flex align-items-center gap-2 text-white waterResistText">
                                     <img src="/assets/images/home/spc-lvt/icons/3.png" alt="" />
-                                    <span>100% Water-Resistant</span>
+                                    <span className=''>100% Water-Resistant</span>
                                 </div>
                             </div>
                         </div>

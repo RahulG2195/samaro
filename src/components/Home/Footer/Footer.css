@@ -107,6 +107,8 @@
   }
   .ordr1{
     order: 1 !important;
+    padding-top: 20px;
+    justify-content: center !important;
   }
   .ordr3 p{
     font-size: 12px;

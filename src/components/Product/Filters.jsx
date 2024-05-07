@@ -46,7 +46,7 @@ const Filters = ({ hide, inSPC }) => {
                 <div className=" py-4 FilterToggle ">
                     <div className='px-1 py-4  '>
                         <div className={` border-bottom border-danger py-2 chk`}>
-                            <p className='pb-2 darkBlue'>Choose Your <strong className='fw-medium'>product</strong></p>
+                            <p className='pb-2 darkBlue m-0'>Choose Your <strong className='fw-medium'>product</strong></p>
                             <div className={`${hide} chk`}>
                                 <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>SPC</label>
                             </div>
@@ -54,9 +54,30 @@ const Filters = ({ hide, inSPC }) => {
                                 <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>LVT</label>
                             </div>
                         </div>
+                        <div className={` border-bottom border-danger py-2 chk`}>
+                            <p className='pb-2 darkBlue m-0'>Choose Your <strong className='fw-medium'>Catlogue</strong></p>
+                            <div className={`${hide} chk`}>
+                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>All</label>
+                            </div>
+                            <div className={`${hide}`}>
+                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Sicilian</label>
+                            </div>
+                            <div className={`${hide}`}>
+                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Tuscany</label>
+                            </div>
+                            <div className={`${hide}`}>
+                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>LVT 1</label>
+                            </div>
+                            <div className={`${hide}`}>
+                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>LVT 2</label>
+                            </div>
+                            <div className={`${hide}`}>
+                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Others</label>
+                            </div>
+                        </div>
 
                         <div className='border-bottom border-danger py-2'>
-                            <p className='pb-2 darkBlue'>Choose Your <strong className='fw-medium'>Types</strong></p>
+                            <p className='pb-2 darkBlue m-0'>Choose Your <strong className='fw-medium'>Types</strong></p>
                             <div>
                                 <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Wood</label>
                             </div>
@@ -98,7 +119,7 @@ const Filters = ({ hide, inSPC }) => {
                             </div>
                         </div>
                         <div className='border-bottom border-danger py-2'>
-                            <p className='pb-2 darkBlue'>Choose Your <strong className='fw-medium'>place</strong></p>
+                            <p className='pb-2 darkBlue m-0'>Choose Your <strong className='fw-medium'>place</strong></p>
                             <div>
                                 <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Bathroom</label>
                             </div>
