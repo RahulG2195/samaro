@@ -90,11 +90,11 @@ const Home = () => {
   // ####################Description table data #########################
   const descriptionData = [
     {
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'Lorem ipsum ',
       standardTest: 'Lorem'
     },
     {
-      description: 'Lorem ipsum dolor sit amet.',
+      description: 'Lorem ipsum ',
       standardTest: 'Lorem'
     },
     {
@@ -133,27 +133,27 @@ const Home = () => {
   // ############################# Specification tables data ####################
   const specificationData = [
     {
-      specification: 'Lorem ipsum dolor sit amet.',
+      specification: 'Lorem ipsum dolor.',
       Tiles: 'Lorem'
     },
     {
-      specification: 'Lorem ipsum dolor sit amet.',
+      specification: 'Lorem ipsum dolor',
       Tiles: 'Lorem'
     },
     {
-      specification: 'Lorem ipsum dolor sit amet.',
+      specification: 'Lorem ipsum dolor',
       Tiles: 'Lorem'
     },
     {
-      specification: 'Lorem ipsum dolor sit amet.',
+      specification: 'Lorem ipsum dolor',
       Tiles: 'Lorem'
     },
     {
-      specification: 'Lorem ipsum dolor sit amet.',
+      specification: 'Lorem ipsum dolor',
       Tiles: 'Lorem'
     },
     {
-      specification: 'Lorem ipsum dolor sit amet.',
+      specification: 'Lorem ipsum dolor',
       Tiles: 'Lorem'
     },
 
@@ -164,10 +164,10 @@ const Home = () => {
       <section className='product-data_sec mt-md-5 mt-2'>
         <div className='container'>
           <div className='row justify-content-end '>
-            <div className='col-md-5 position-relative'>
+            <div className='col-md-6 col-12 col-xl-5 position-relative '>
               <ProductSwipper images={images} />
             </div>
-            <div className='col-md-5 prodDetailTXT'>
+            <div className='col-md-6 col-12 col-xl-5 prodDetailTXT'>
               <div className='prod_name_lg'>
                 <h2>Pure ok honey</h2>
                 <span>VINYL | CIRO | AVHBU40360</span>
@@ -175,7 +175,7 @@ const Home = () => {
               {/*####################################### product description table ######################################## */}
               <div className='DescriptionTable'>
                 <div className='d-flex gap-1'>
-                  <div>
+                  <div className='w-100'>
                     <div>
                       <p className='bg-danger m-0 text-center py-2 text-white fw-semibold'>DESCRIPTION</p>
                       {descriptionData.map((row, index) => (
@@ -183,7 +183,7 @@ const Home = () => {
                       ))}
                     </div>
                   </div>
-                  <div>
+                  <div className='w-100'>
                     <p className='bg-danger m-0 text-center py-2 text-white px-2 fw-semibold'>STANDARD TEST</p>
                     <div style={{ backgroundColor: '#E0E1E3' }}>
                       {descriptionData.map((row, index) => (
@@ -199,7 +199,7 @@ const Home = () => {
                 {/*################################## Products specification table ##########################################*/}
 
                 <div className='d-flex gap-1 mt-4'>
-                  <div>
+                  <div className='w-100'> 
                     <div>
                       <p className='bg-danger m-0 text-center py-2 text-white fw-semibold'>SPECIFICATIONS</p>
                       {specificationData.map((row, index) => (
@@ -207,8 +207,8 @@ const Home = () => {
                       ))}
                     </div>
                   </div>
-                  <div style={{ maxWidth: '35%' }}>
-                    <p className='bg-danger m-0 text-center  text-white fw-semibold longTxtTiles'>SAMARO LAMINATE PERFORMANCE TILES</p>
+                  <div className='w-100'>
+                    <p className='bg-danger m-0 text-center  text-white fw-semibold longTxtTiles '>SAMARO LAMINATE PERFORMANCE TILES</p>
                     <div style={{ backgroundColor: '#E0E1E3' }}>
                       {specificationData.map((row, index) => (
                         <p key={index} className='border-bottom border-dark-subtle m-0 px-2'>{row.Tiles}</p>
@@ -238,7 +238,7 @@ const Home = () => {
           <div className='row'>
             <div className='col-md-7'>
               <div className='inner_sub_head'>
-                <h4>Product features</h4>
+                <h4 className='fw-semibold text-navy'>Product features</h4>
               </div>
               {
                 prod_features.map(val => (
@@ -249,13 +249,13 @@ const Home = () => {
             <div className='col-md-5'>
               <div className='dimension'>
                 <div className='inner_sub_head'>
-                  <h4 className='m-0'>Dimensions</h4>
+                  <h4 className='m-0 fw-semibold text-navy'>Dimensions</h4>
                   <ProdTable />
                 </div>
               </div>
               <div className='Design'>
                 <div className='inner_sub_head'>
-                  <h4>Design</h4>
+                  <h4 className='fw-semibold text-navy'>Design</h4>
                   <Design />
                 </div>
               </div>
@@ -263,10 +263,11 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className='inspectionBanner my-md-5'>
-        <div className='inspection_heading d-md-flex py-md-5 mx-auto text-center justify-content-center'>
+      <section className='inspectionBanner '>
+        <div className='inspection_heading d-md-flex py-md-3 mx-auto text-center justify-content-center align-items-center'>
           <h2 className='text-white propInspec'>Get your Property Inspection</h2>
-          <button className='freecallbtn'>Get A Free call</button>
+          {/* <button className='freecallbtn'>Get A Free call</button> */}
+          <p  className="mobilebutton button mt-3 fw-semibold" data-bs-toggle="modal" data-bs-target="#exampleModal">Get A Free Call</p>
         </div>
       </section>
       {/* download brochue section  */}

@@ -25,15 +25,15 @@ const Spclvt = () => {
                         <div className="qualities px-4 mt-4 ">
                             <div className="d-flex flex-wrap justify-content-evenly  " >
                                 <div className="d-flex align-items-center gap-2 text-white installTxt">
-                                    <img src="/assets/images/home/spc-lvt/icons/1.png" alt="" />
+                                    <img src="/assets/images/home/spc-lvt/icons/Group 29194.svg" alt="" />
                                     <span className=''>Easy to install</span>
                                 </div>
                                 <div className="d-flex align-items-center gap-2 text-white">
                                     <img src="/assets/images/home/spc-lvt/icons/2.png" alt="" />
                                     <span>Natural look & feel</span>
                                 </div>
-                                <div className="d-flex align-items-center gap-2 text-white waterResistText">
-                                    <img src="/assets/images/home/spc-lvt/icons/3.png" alt="" />
+                                <div className="d-flex align-items-center gap-2 text-white waterResistText waterDrop">
+                                    <img src="/assets/images/home/spc-lvt/icons/Group 29195.svg" alt="" />
                                     <span className=''>100% Water-Resistant</span>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@ const Spclvt = () => {
                                 <div className='text-center position-absolute onImgtext text-white'>
                                     <span className=' border-3 border-bottom px-2 fs-2 px-4 fw-semibold'>SPC</span>
                                     <p className='m-0 text-white small'>Click & Lock</p>
-                                    <Link href="/product" className='button rounded-pill border border-2 fw-semibold small px-5 text-white py-1'>Know more </Link>
+                                    <Link href="/product" className='discoverBtn button d-inline-block mt-3 px-3 py-1'>Know more </Link>
                                 </div>
                             </div>
                             <div className="img-2">
@@ -55,7 +55,7 @@ const Spclvt = () => {
                                 <div className='text-center position-absolute onImgtext2 text-white'>
                                     <span className=' border-3 border-bottom px-2 fs-2 px-4 fw-semibold'>LVT</span>
                                     <p className='m-0 text-white small'>Glue down</p>
-                                    <Link href='/product' className='button rounded-pill border border-2 fw-semibold small px-5 text-white py-1'>Know more </Link>
+                                    <Link href='/product' className='discoverBtn button d-inline-block mt-3 px-3 py-1'>Know more </Link>
                                 </div>
                             </div>
                         </div>

@@ -28,7 +28,7 @@ const StepOutput = () => {
                 <h5>Out of 256 flooring solutions, we've selected 1 floors that suit your project.</h5>
               </div>
               <div className='step_next_button'>
-                <Link href={'./productdetail'}><button className='btn step_button discoverBtn'> Discover all our floors</button></Link>
+                <Link href={'./productdetail'}><button className='btn step_button discoverBtn py-1 px-4'> Discover all our floors</button></Link>
               </div>
             </div>
             <div className='col-md-5 order-md-1 order-0'>

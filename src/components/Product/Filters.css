@@ -47,7 +47,7 @@ input[type="checkbox"]:checked {
 }
 
 .prdctSearch {
-  border-radius:10px !important;
+  border-radius:50px !important;
   border: 3px solid #C5363B;
 /* width: 70%; */
 }
@@ -145,7 +145,7 @@ border: none;
   .hamburger-menu {
     display: block;
     position: absolute;
-    bottom: 0px;
+    /* bottom: 0px; */
     right: 10px;
     z-index: 1000;
   }
@@ -186,7 +186,7 @@ border: none;
   margin: 10px 0 !important;
 }
 .hamburger-menu{
-  bottom: 4.5rem !important;
+  top: 0px !important;
   /* display: none !important; */
 }
 }

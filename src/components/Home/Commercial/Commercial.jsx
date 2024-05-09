@@ -24,13 +24,14 @@ const Commercial = () => {
                                 </div>
                                
                             </div>
-                            <button className="carousel-control-prev " type="button" data-bs-target="#carouselExampleFade"
+                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                                 data-bs-slide="prev">
-                                <i className="fa-solid fa-chevron-lef carousel-control-prev-icon homepageCarousel"></i>
+                                {/* <i className="fa-solid fa-chevron-lef carousel-control-prev-icon homepageCarousel"></i> */}
+                                <img src="/assets/images/home/commercial/Group 29040.svg" alt="" className='w-25'/>
                             </button>
                             <button className="carousel-control-next " type="button" data-bs-target="#carouselExampleFade"
                                 data-bs-slide="next">
-                                <i className="fa-solid fa-chevron-lef carousel-control-next-icon homepageCarousel"></i>
+                        <img src="/assets/images/home/commercial/Group 29039.svg" alt="" className='w-25'/>
                             </button>
                         </div>
                     </div>

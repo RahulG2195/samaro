@@ -28,7 +28,10 @@
 }
 .homepageCarousel{
   background-color: #C5363B;
+  padding: 14px 18px;
   border-radius: 50%;
+  color: #fff;
+  font-size: 15px;
 }
 
 /* Commercial -2 */
@@ -49,6 +52,14 @@
 }
 
 @media (max-width: 576px) {
+
+  .homepageCarousel{
+    background-color: #C5363B;
+    padding: 5px 4px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 15px;
+  }
   .commercial-2::before {
     font-size: 50px !important;
     top:0px !important;

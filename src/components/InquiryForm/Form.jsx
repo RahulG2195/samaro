@@ -10,18 +10,18 @@ const Form = () => {
         
             <div className='container inquiryformcont d-flex flex-column align-items-center' id='inquiryForm' >
                 <div className='col-md-12'>
-                    <h1 className='fw-bold'>Knock, Knock,</h1>
-                    <p>Step into joy with beautiful floors.</p>
-                    <p className='mt-4 '><i className="fa fa-map-marker" aria-hidden="true"></i> 213-215, Hubtown Solaris, N. S. Phadake Marg, Andheri(East), Mumbai-400069, India.</p>
+                    <h1 className='fw-bold text-white'>Knock, Knock,</h1>
+                    <p className='text-white'>Step into joy with beautiful floors.</p>
+                    <p className='mt-4 text-white'><i className="fa fa-map-marker" aria-hidden="true"></i> 213-215, Hubtown Solaris, N. S. Phadake Marg, Andheri(East), Mumbai-400069, India.</p>
                     <p>
-                        <span className='me-3'><i className="fa fa-envelope " aria-hidden="true"></i> info@samaro.in</span>
-                        <span><i className="fa fa-mobile" aria-hidden="true"></i> +91-809754115</span>
+                        <span className='me-3 text-white'><i className="fa fa-envelope " aria-hidden="true"></i> info@samaro.in</span>
+                        <span><i className="fa fa-mobile text-white" aria-hidden="true"></i> +91-809754115</span>
                     </p>
                 </div>
 
 
                 <div className=' col-md-12 popup'>
-                    <h1 className='my-5 fw-bold'>GET IN TOUCH</h1>
+                    <h1 className='my-5 fw-bold text-white'>GET IN TOUCH</h1>
                     <form className='popform'>
                         <div className="mb-3">
                             <input type="text" className="form-control border-0 " placeholder="Name" />

@@ -112,6 +112,7 @@ z-index: 1;
   display: none;
 }
 
+
 @media (max-width:990px) {
   .prdctDrop{
     display: none !important;
@@ -121,5 +122,12 @@ z-index: 1;
   font-size: 15px;
   /* margin-left: 15px !important; */
 }
-  
+.nav-link.active::after {
+  content: none !important;
+ 
+}
+.nav-link.active {
+  color: #ca373c !important;
+ font-weight: 800;
+}
 }

@@ -7,17 +7,19 @@ const Banner = () => {
     return (
         <section className="hero ">
             <div className="position-relative">
-                <div className="homepageHeroBanner">
+                <div className="homepageHeroBanner" >
+                  
                 <Image
-                    src="/assets/images/home/banner/Group 28041.png"
+                    src="/assets/images/home/banner/Mask Group 320.png"
+                    // src=''
                     alt="Description of the image"
                     width={100}
-                    height={75}
+                    height={100}
                     layout="responsive"
                     objectFit="cover"
                     priority={true}
                     loading="eager"
-
+                    
                 />
                 </div>
                 <div className=" HomebannertextCont position-absolute">

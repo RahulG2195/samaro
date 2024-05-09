@@ -3,27 +3,37 @@ import "./Download.css";
 import Link from 'next/link';
 const Download = ({ useRed }) => {
     return (
-
         <>
-
             <div className='my-5 row downlodbackground '>
                 <div className=' col-lg-10 col-md-12 position-relative'>
                     {useRed && (
-                        <img
-                            src="/assets/images/why-samaro/downloads/Group 29181.svg"
-                            alt=""
-                        />
+                        <div>
+                            <img
+                                src="/assets/images/why-samaro/downloads/Group 29181.svg"
+                                alt="" className='deskDwnldimg'
+                            />
+                            <img
+                                src="/assets/images/why-samaro/downloads/Group 29191.svg"
+                                alt="" className='mobileDwnldimg '
+                            />
+                        </div>
                     )}
                     {!useRed && (
+                        <div>
                         <img
                             src="/assets/images/why-samaro/downloads/Group 29183.svg"
-                            alt=""
+                            alt="" className='deskDwnldimg'
                         />
+                         <img
+                                src="/assets/images/why-samaro/downloads/Group 29192.svg"
+                                alt="" className='mobileDwnldimg '
+                            />
+                        </div>
                     )}
-                    <div className="col-lg-4 col-md-4 col-sm-4 samply position-absolute">
+                    <div className="col-lg-4 col-md-4 col-sm-2 col-8 samply position-absolute">
                         <img className="" src="/assets/images/home/floor-explorer/2.png" alt="" />
                     </div>
-                    <div className="dwnldTXTAbout  col-lg-4 position-absolute pt-4">
+                    <div className="dwnldTXTAbout  col-lg-4 col-md-4 col-8 position-absolute pt-4">
                         <h3 className="respHeading2">Download Center</h3>
                         <p className=" respCption pe-3 my-4">
                             Check out our Download Center to easily find all our PDFs and resources about our flooring products.
@@ -32,10 +42,6 @@ const Download = ({ useRed }) => {
                     </div>
                 </div>
             </div>
-
-
-
-
         </>
     )
 }

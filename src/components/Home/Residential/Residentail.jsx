@@ -17,11 +17,11 @@ const Residential = () => {
                            
                         </div>
                         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon homepageCarousel" aria-hidden="true"></span>
+                        <img src="/assets/images/home/commercial/Group 29040.svg" alt="" className='w-25'/>
                             <span className="visually-hidden">Previous</span>
                         </button>
                         <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2" data-bs-slide="next">
-                            <span className="carousel-control-next-icon homepageCarousel" aria-hidden="true"></span>
+                        <img src="/assets/images/home/commercial/Group 29039.svg" alt="" className='w-25'/>
                             <span className="visually-hidden">Next</span>
                         </button>
                     </div>

@@ -93,12 +93,7 @@ i {
   overflow: hidden;
 }
 
-/* .swiper-nav-div .swiper-slide {
-  width: 100px !important;
-  height: 100px;
-  text-align: center;
-  margin: 10px auto;
-} */
+
 
 .prod_name_lg {
   margin: 0 0 15px 0;
@@ -150,15 +145,57 @@ i {
 
 
 /* product details table section */
-.DescriptionTable p{
+.DescriptionTable p {
   font-size: 12px;
 }
 
-.longTxtTiles{
+.longTxtTiles {
   font-size: 11px !important;
+}
+.brochure_imgdiv{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+
+.MainSLdr .swiper-pagination-bullet {
+  background-color: #ca373c;
+  /* Change to your desired color */
+}
+
+/* Owl nav of similar products  */
+.similarprod .owl-nav img {
+  width: 41%;
+  vertical-align: auto;
+}
+
+@media (max-width:768px) {
+  .longTxtTiles {
+    font-size: 9.8px !important;
+    padding: 2px 0;
+  }
+
+  .product-data_sec .row {
+    margin: 0 !important;
+  }
+
+  /* Download broc */
+  .downbroch_Sec .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-size: 20px;
+    color: #ca373c;
+    font-weight: 900;
+  }
 }
 
 @media (max-width:600px) {
+
+  .prod_name_lg {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .DescriptionTable p {
+    font-size: 10px;
+  }
+
   .common_sec {
     margin: 45px 0 0 0;
   }

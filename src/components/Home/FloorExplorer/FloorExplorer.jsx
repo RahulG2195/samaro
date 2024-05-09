@@ -7,7 +7,7 @@ const FloorExplorer = () => {
       <div className="">
         <div className="row my-2 ">
 
-          <div className="col-lg-11 col-md-12">
+          <div className="col-lg-11 col-md-12 ">
             <div className="row">
               <h2 className="text-white py-3 my-2 text-center fw-normal respHeading1">
                 How to choose my <strong className='fw-semibold'>perfect floor</strong>?
@@ -26,7 +26,7 @@ const FloorExplorer = () => {
                     help! FloorExplorer guides you to the perfect floor for your
                     home.
                   </p>
-                  <a href="#" className="button py-0 px-3 mb-4 respCption">START THE FLOOREXPLORER</a>
+                  <a href="#" className=" button d-inline-block mt-3 px-3 py-1 respCption">START THE FLOOREXPLORER</a>
                 </div>
               </div>
             </div>

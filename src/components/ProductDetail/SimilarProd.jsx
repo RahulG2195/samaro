@@ -25,16 +25,16 @@ const options = {
     autoplayHoverPause: true,
   responsive: {
     0: {
-      items: 1,
-      nav: false,
+      items: 2,
+      nav: true,
     },
     400: {
       items: 2,
-      nav: false,
+      nav: true,
     },
     600: {
       items: 2,
-      nav: false,
+      nav: true,
     },
     700: {
       items: 4,
@@ -46,19 +46,19 @@ const options = {
 };
 
 const productsArr = [
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
-  { frontImage: "assets/images/products/Group 28396.png", onHoverImage: "assets/images/products/Group 28395.png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  { frontImage: "/assets/images/products/Images Web/LVT WEBP/SAM 0002 Dark.webp", onHoverImage:"assets/images/products/Group 28395 (2).png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  { frontImage: "/assets/images/products/Images Web/LVT WEBP/SAM 0002 Dark.webp", onHoverImage:"assets/images/products/Group 28395 (2).png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  { frontImage: "/assets/images/products/Images Web/LVT WEBP/SAM 0002 Dark.webp", onHoverImage:"assets/images/products/Group 28395 (2).png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  { frontImage: "/assets/images/products/Images Web/LVT WEBP/SAM 0002 Dark.webp", onHoverImage:"assets/images/products/Group 28395 (2).png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  { frontImage: "/assets/images/products/Images Web/LVT WEBP/SAM 0002 Dark.webp", onHoverImage:"assets/images/products/Group 28395 (2).png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  { frontImage: "/assets/images/products/Images Web/LVT WEBP/SAM 0002 Dark.webp", onHoverImage:"assets/images/products/Group 28395 (2).png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  { frontImage: "/assets/images/products/Images Web/LVT WEBP/SAM 0002 Dark.webp", onHoverImage:"assets/images/products/Group 28395 (2).png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  { frontImage: "/assets/images/products/Images Web/LVT WEBP/SAM 0002 Dark.webp", onHoverImage:"assets/images/products/Group 28395 (2).png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  { frontImage: "/assets/images/products/Images Web/LVT WEBP/SAM 0002 Dark.webp", onHoverImage:"assets/images/products/Group 28395 (2).png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  { frontImage: "/assets/images/products/Images Web/LVT WEBP/SAM 0002 Dark.webp", onHoverImage:"assets/images/products/Group 28395 (2).png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  { frontImage: "/assets/images/products/Images Web/LVT WEBP/SAM 0002 Dark.webp", onHoverImage:"assets/images/products/Group 28395 (2).png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  { frontImage: "/assets/images/products/Images Web/LVT WEBP/SAM 0002 Dark.webp", onHoverImage:"assets/images/products/Group 28395 (2).png", title: "Pure oak honey", description: "VINYL | CRIO | AVHBU40360" },
+  
   // Adjust paths as necessary for additional products
 ];
 const SimilarProd = ({ Title1, Title2 }) => {

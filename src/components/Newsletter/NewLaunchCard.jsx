@@ -5,10 +5,10 @@ const NewLaunchCard = () => {
     return (
         <>
             <div className='row my-5 align-items-center newlaunchCard'>
-                <div className='col-md-8 '>
+                <div className='col-md-8 col-12'>
                     <img src="/assets/images/Newletter/Mask Group 265.png" alt="err" />
                 </div>
-                <div className='col-md-4 cardCont position-absolute'>
+                <div className='col-md-4 col-12 cardCont position-absolute'>
                     <div className='card px-4 py-5 rounded-4'>
                         <div className="cardBody py-3">
                             <h5 className=''>Get to know our SPC Collection</h5>

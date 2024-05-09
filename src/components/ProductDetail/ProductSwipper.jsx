@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import { FreeMode, Navigation, Thumbs, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination'
 import 'swiper/css/thumbs';
 import './productSwipper.css'
 
@@ -17,7 +18,8 @@ const ProductSwipper = ({ images }) => {
 
   return (
     <>
-      <div className='container row detailSwipper position-relative'>
+      <div className='container row detailSwipper position-relative justify-content-end'>
+        {/* multiimages left side  slider  */}
         <div className={`rhsSwiper col-sm-2 col-md-2 col-lg-2 ${(deviceWidth >= 600) ? '' : 'order-1'}`}>
           <Swiper
             loop={true}
@@ -25,8 +27,9 @@ const ProductSwipper = ({ images }) => {
             spaceBetween={10}
             slidesPerView={1}
             freeMode={true}
+            
             watchSlidesProgress={true}
-            modules={[FreeMode, Navigation, Thumbs]}
+            modules={[FreeMode, Navigation, Thumbs, Pagination]}
             className={`mySwiper `}
           >
             {
@@ -37,34 +40,10 @@ const ProductSwipper = ({ images }) => {
               ))
             }
           </Swiper>
-
-
-
-          {/* <Swiper
-            onSwiper={setThumbsSwiper}
-            loop={true}
-            spaceBetween={20}
-          //   navigation= {{
-          //     nextEl: '.swiper-button-next',
-          //     prevEl: '.swiper-button-prev',
-          //  }}
-          // slidesPerView={1}
-            freeMode={true}
-            // navigation={true}
-            watchSlidesProgress={true}
-            modules={[FreeMode, Navigation, Thumbs]}
-            className={`mySwiper swiper-nav-div ${(deviceWidth >= 600) ? 'swiper-vertica' : ''}`}
-          >
-            {
-              images.map(image => (
-                <SwiperSlide className='sliderchild'>
-                  <img src={image.url} alt={image.alt} />
-                </SwiperSlide>
-              ))
-            }
-          </Swiper> */}
+   
+   {/* Main slider  */}
         </div>
-        <div className='col-sm-8 col-md-8 col-lg-12 position-relative'>
+        <div className='col-sm-12 col-md-12 col-lg-12 position-relative MainSLdr'>
           <div className="navigation-arrows d-flex flex-row">
 
             <div className="swiper-button-prev"></div>
@@ -72,20 +51,20 @@ const ProductSwipper = ({ images }) => {
             <div className="swiper-button-next"></div>
           </div>
           <Swiper
-            style={{
-              '--swiper-navigation-color': '#fff',
-              '--swiper-pagination-color': '#fff',
-            }}
+            slidesPerView={1}
             loop={true}
+            // navigation={true}
             navigation={{
               prevEl: '.swiper-button-prev',
               nextEl: '.swiper-button-next',
             }}
             spaceBetween={10}
             thumbs={{ swiper: thumbsSwiper }}
-            modules={[FreeMode, Navigation, Thumbs]}
+            modules={[FreeMode, Navigation, Thumbs, Pagination]}
+            pagination={{ clickable: true }}
+           
             className="mySwiper2 topSliderRes"
-          >
+            >
 
 
             {

@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import NewLaunchCard from '../Newsletter/NewLaunchCard';
 import Newsletter from '../Newsletter/Newsletter';
+import'./Newsletter.css'
 
 const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -29,18 +30,19 @@ const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }
                     <div>
                         <Swiper
                             onSwiper={setThumbsSwiper}
-                            spaceBetween={40}
+                            spaceBetween={0}
                             slidesPerView={1}
                             freeMode={true}
                             modules={[FreeMode, Navigation, Thumbs]}
                             navigation={true}
                             className={`mySwiper`}
-                            breakpoints={{ // Adjust slidesPerView based on screen size range
-                                300: { slidesPerView: 2 },
-                                576: { slidesPerView: 2 },
-                                768: { slidesPerView: 3 },
-                                992: { slidesPerView: 6 },
+                            breakpoints={{
+                                300: { slidesPerView: 2, spaceBetween: 10 },
+                                576: { slidesPerView: 2, spaceBetween: 10 },
+                                768: { slidesPerView: 3, spaceBetween: 10 },
+                                992: { slidesPerView: 6, spaceBetween: 10 },
                             }}
+                            
                         >
                             {cardData.map((card, index) => (
                                 <SwiperSlide key={index} className='sliderchild'>
@@ -76,11 +78,11 @@ const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }
                         modules={[FreeMode, Navigation, Thumbs]}
                         navigation={true}
                         className={`mySwiper`}
-                        breakpoints={{ // Adjust slidesPerView based on screen size range
-                            300: { slidesPerView: 2 },
-                            576: { slidesPerView: 2 },
-                            768: { slidesPerView: 3 },
-                            992: { slidesPerView: 6 },
+                        breakpoints={{
+                            300: { slidesPerView: 2, spaceBetween: 10 },
+                            576: { slidesPerView: 2, spaceBetween: 10 },
+                            768: { slidesPerView: 3, spaceBetween: 10 },
+                            992: { slidesPerView: 6, spaceBetween: 10 },
                         }}
                     >
                         {cardData.map((card, index) => (

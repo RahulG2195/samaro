@@ -7,7 +7,7 @@ const Dimensions = () => {
             <div className="row">
                 <div className="col-lg-10 col-md-10 bg-navy text-white " >
                     <div className="row align-items-center inner-row-one">
-                        <div className="col-lg-5  ">
+                        <div className="col-lg-5 col-md-8 col-12 ">
                             <img src="/assets/images/why-samaro/dimensions/1.png" alt="" />
                         </div>
                         <div className="col-lg-7 p-5 respPlanktxt pplrplank text-navy">
@@ -15,8 +15,7 @@ const Dimensions = () => {
                                 Our Popular Plank Sizes
                             </h3>
                             <p className='text-navy'>
-                                "Discover a world of possibilities with our popular plank sizes, carefully curated to cater to diverse tastes and design preferences. From versatile widths to exquisite lengths, our selection ensures the perfect fit for every space, creating a seamless blend of style and functionality. Choose excellence; choose from our range of sought-after plank sizes that redefine flooring standards."
-                            </p>
+                            Explore endless possibilities with our popular plank sizes, curated for diverse tastes. From versatile widths to exquisite lengths, our selection ensures the perfect fit, seamlessly blending style and functionality. Transform your space with excellence as you choose from our acclaimed plank sizes, setting new standards in flooring.                            </p>
                         </div>
                     </div>
                 </div>
@@ -29,8 +28,7 @@ const Dimensions = () => {
                                 Plank Thickness & Wear Layer
                             </h3>
                             <p className='text-navy '>
-                                Optimal strength, style blend: Plank Thickness, Wear Layer perfection awaits.
-                            </p>
+                            Discover the Perfect Balance of Optimal strength and Style                            </p>
                             <div className='thickness text-navy'>
                                 <img src="/assets/images/why-samaro/dimensions/Group 28285.svg" alt="err" style={{ width: '40%' }} />
                                 <span className='small mx-3'>LVT: 1.5mm to 3mm</span>
@@ -40,7 +38,7 @@ const Dimensions = () => {
                                 <span className='small mx-3 wl'>WEAR LAYER: 0.1mm to 0.7mm</span>
                             </div>
                         </div>
-                        <div className="col-lg-5 odr2">
+                        <div className="col-lg-5  col-md-8 col-12 odr2">
                             <img src="/assets/images/why-samaro/dimensions/2.png" alt="" />
                         </div>
                     </div>

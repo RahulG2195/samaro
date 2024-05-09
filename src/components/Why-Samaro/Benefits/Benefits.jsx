@@ -3,14 +3,16 @@ import "./Benefits.css";
 
 const Benefits = () => {
     return (
-        <section className='benefits why-samaro'>
-            <div className="container ">
+        <section className='benefits samcontResp why-samaro position-relative mt-5 pt-5'>
+            <div className="container px-5">
                 <h2 className='text-navy text-center mb-5'>Benefits</h2>
-                <div className='position-relative'>
-                    <img src="/assets/images/why-samaro/Path 97423.svg" alt="" />
-                    <div className="row whysam-benifits  pt-5 w-100 position-absolute top-0">
-                        <div className="col-lg-3 col-md-6 col-sm-6 pt-5">
-                            <div className="benefits-boxes ">
+                <div className='position-relative col-12' >
+                    <img src="/assets/images/why-samaro/Path 97423.svg" alt="" className='whysamBenifitsDeskbg' />
+                    <img src="/assets/images/why-samaro/Path 98155.svg" alt="" className='whysamBenifitsMblbg' />
+
+                    <div className="row px-0 whysam-benifits pt-5 w-100 position-absolute top-0">
+                        <div className="col-lg-3 col-md-3 col-sm-3 col-md-pt-1 pt-5">
+                            <div className="benefits-boxes manfactResp">
                                 <img src=" /assets/images/why-samaro/Group 28879.svg" alt="" className='mt-4' />
                                 <div className='d-flex flex-column align-items-center text-darkred'>
                                     <h3 className='mb-4 text-center'>
@@ -26,8 +28,8 @@ const Benefits = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6 col-sm-6 pt-5 mt-5">
-                            <div className="benefits-boxes h-100 text-navy">
+                        <div className="col-lg-3 col-md-3 col-sm-3  pt-5 mt-5 performanceResp">
+                            <div className="benefits-boxes h-100 text-navy ">
                                 <img src=" /assets/images/why-samaro/Group 28880.svg" alt="" />
                                 <h3 className='my-4 text-center'>
                                     Product Performance
@@ -41,7 +43,7 @@ const Benefits = () => {
                                 </ol>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6 col-sm-6 ">
+                        <div className="col-lg-3 col-md-3 col-sm-3 ">
                             <div className="benefits-boxes h-100 text-darkred">
                                 <img src=" /assets/images/why-samaro/Group 28877.svg" alt="" />
                                 <h3 className='my-4  text-center'>
@@ -56,7 +58,7 @@ const Benefits = () => {
                                 </ol>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-6 col-sm-6 pt-5 mt-5">
+                        <div className="col-lg-3 col-md-3 col-sm-3 pt-5 mt-3 inovativeREsp">
                             <div className="benefits-boxes h-100 text-navy">
                                 <img src=" /assets/images/why-samaro/Group 28883.svg" alt="" />
                                 <h3 className='my-4 text-center'>

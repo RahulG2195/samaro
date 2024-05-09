@@ -34,6 +34,18 @@
 }
 
 @media (max-width:768px) {
+  .dimensions .bg-navy {
+    border:0px solid #0A2647 ;
+
+  }
+  
+  
+  .dimensions .bg-red {
+    border:0px solid #CA373C ;
+  
+  }
+
+
   .certifications-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);

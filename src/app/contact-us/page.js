@@ -19,26 +19,29 @@ export default function page() {
                     </div>
                 </div>
                 <div className="container ">
-                    <div className=" row justify-content-evenly align-items-center">
+                    <div className=" row justify-content-center align-items-end">
                         <div className=" col-md-3">
+                            <div className='contact-deskresp w-75'>
+                                <Image
+                                    src="/assets/images/career/Image 357.png"
+                                    alt="Description of the image"
+                                    width={100}
+                                    height={100}
+                                    layout="responsive"
+                                    objectFit="cover"
+                                    priority={true}
+                                    loading="eager"
 
-                            <Image
-                                src="/assets/images/career/Image 357.png"
-                                alt="Description of the image"
-                                width={100}
-                                height={100}
-                                layout="responsive"
-                                objectFit="cover"
-                                priority={true}
-                                loading="eager"
-                            />
-
+                                />
+                            </div>
+                           
 
                         </div>
                         <div className='col-md-7'>
                             <SpcForm
                                 hideguide={'hideguide'}
                                 contactformcol={'contactform-col'}
+                                pb={'py-0'}
                             ></SpcForm>
                         </div>
                     </div>
@@ -47,7 +50,9 @@ export default function page() {
                     </div>
 
                     <Career></Career>
+                    <div className='pt-4'>
                     <Social></Social>
+                    </div>
                 </div>
             </section>
 

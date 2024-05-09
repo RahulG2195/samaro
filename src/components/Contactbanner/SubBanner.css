@@ -1,7 +1,4 @@
 
-.sub-banner{
-	position: relative;
-}
 .contact-us-bannerTXT{
     position:absolute;
     top: 50%;
@@ -18,7 +15,7 @@
     /* text-transform: capitalize; */
 }
 
-.sub-banner-heading::after{
+/* .sub-banner-heading::after{
 	content: '';
 	background-color: #FFFF;
     width: 74px;
@@ -28,7 +25,7 @@
     top: 75%;
     left: 5px;
 
-}
+} */
 .breadcrump{
 	/* position: absolute;
     right: 38%;
@@ -37,4 +34,38 @@
     font-weight: 600;
     font-size: 18px;
 
+}
+@media (max-width:768px) {
+	.contact-deskresp{
+		display:none !important ;
+	}
+	.contact-mblresp{
+		display: block ;
+	}
+    .contact-us-bannerTXT{
+        position:absolute;
+        top: 40% !important;
+       
+    } 
+    .contact-us-bannerTXT h1{
+    font-size: 30px;
+    } 
+
+}
+
+@media (max-width:425px) {
+    .contact-us-bannerTXT{
+        position:absolute;
+        top: 30% !important;
+        left: 5%;
+       
+    } 
+    .contact-us-bannerTXT h1{
+        font-size: 20px;
+        font-weight: 500;
+        }
+        .breadcrump{
+            font-size: 15px;
+            font-weight: 500;
+        }
 }

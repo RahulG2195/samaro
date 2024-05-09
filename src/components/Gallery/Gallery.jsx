@@ -54,7 +54,7 @@ const Gallery = () => {
                 <div className="grid">
                     {Images.map((img, index) => (
                         <div key={index} className="grid-item">
-                            <div className="card new_div">
+                            <div className="card border-0 new_div">
                                 <img src={img.imgUrl} alt="" />
                                 {/* <Image
                                 id="myImg"

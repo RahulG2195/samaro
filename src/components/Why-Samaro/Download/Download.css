@@ -34,11 +34,50 @@ background-color: #0A2647 !important;
   top: 20%;
   right: 10%;
 }
-@media (max-width:600px) {
-  .download .row{
-    gap: 19px !important;
+.mobileDwnldimg{
+  display: none;
+}
+
+@media (max-width:1276px) {
+  .dwnldTXTAbout{
+    top: 0;
   }
-  .download .download-img p{
-    font-size: 12px !important;
+  .dwnldTXTAbout .respCption{
+    margin: 9px !important;
+  }
+  .dwnldTXTAbout h3{
+    font-size: 15px;
+  }
+  .dwnldTXTAbout p{
+    font-size: 15px;
+    padding: 0 !important;
+    text-align: center !important;
   }
 }
+@media (max-width:600px) {
+  .deskDwnldimg{
+    display: none ;
+  }
+  .mobileDwnldimg{
+    display: block;
+  }
+  .samply{
+    top: 50%;
+    left: 19%;
+  }
+  .dwnldTXTAbout {
+    top: 5%;
+    left: 20%;
+    text-align: center;
+}
+.dwnldTXTAbout h3{
+  font-size: 25px !important;
+}
+.dwnldTXTAbout p{
+  font-size: 12px;
+  padding: 0 !important;
+  text-align: center !important;
+  margin-bottom: 20px !important ;
+}
+}
+

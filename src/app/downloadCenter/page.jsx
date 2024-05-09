@@ -15,19 +15,19 @@ const page = () => {
 
   const cardData = [
     {
-      imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
+      imgurl: '/assets/images/brochure/Brochure.png',
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
       author: 'By Anand Kashyap'
     },
     {
-      imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
+      imgurl: '/assets/images/brochure/Brochure.png',
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
       author: 'By Anand Kashyap'
     },
     {
-      imgurl: '/assets/images/Newletter/samaro_spc_flooring_lookbook_front-1.png',
+      imgurl: '/assets/images/brochure/Brochure.png',
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
       author: 'By Anand Kashyap'
@@ -74,7 +74,7 @@ const page = () => {
     <section className='py-5'>
       <div className='text-center dwnldcenterHeading'>
         <h2 className='fw-bold text-navy'>Download center</h2>
-        <div className='dwnldcenterFilters my-4'>
+        <div className='dwnldcenterFilters my-4 d-flex justify-content-center flex-wrap gap-2'>
           <button onClick={() => setActiveCategory('All')} 
           className={`btn text-danger border-danger rounded-pill py-0 px-4 me-2 fw-semibold ${activeCategory === 'All' && 'bg-danger text-white'}`}>All</button>
 

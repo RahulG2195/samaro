@@ -1,13 +1,14 @@
-.whysam-benifits{
+.whysam-benifits {
 
   /* background-image: url('/assets/images/why-samaro/Path 97423.svg'); */
   background-repeat: no-repeat;
-  background-size:100%;
+  background-size: 100%;
   height: 104vh;
- 
+
 
 
 }
+
 /* .benefits .benefits-boxes {
   padding: 10px;
 } */
@@ -23,9 +24,11 @@
   display: block;
   margin-bottom: 30px !important;
 }
+
 .benefits-boxes h3 {
   font-size: 20px;
 }
+
 .benefits-boxes {
   /* padding-top: 150px !important; */
   border-top-left-radius: 150px;
@@ -39,6 +42,7 @@
   background-color: var(--navy);
   color: var(--light);
 }
+
 .benefits .benefits-boxes.primary-bg {
   background-color: var(--primary);
   color: var(--light);
@@ -52,16 +56,130 @@
   font-size: 15px;
   font-weight: 200;
 }
+.whysamBenifitsMblbg{
+  display: none;
+}
+
+@media (max-width:1400px) {
+
+  .whysam-benifits .col,
+  .whysam-benifits {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+
+@media (max-width:1200px) {
+  .whysam-benifits ol {
+    padding-left: 0px !important;
+    font-size: 12px !important;
+  }
+
+  .whysam-benifits h3 {
+    margin: 5px 0 !important;
+  }
+
+  .benefits-boxes img {
+    margin-bottom: 5px !important;
+  }
+}
+
+@media (max-width:992px) {
+/* 
+  .samcontResp .container,
+  .samcontResp .container-md,
+  .samcontResp .container-sm {
+    max-width: 958px;
+  } */
+
+  .whysam-benifits h3 {
+    font-size: 14px;
+    font-weight: 800 !important;
+  }
+
+  .whysam-benifits .col-lg-3 {
+    /* padding-top: 0 !important; */
+    margin-top: 10px !important;
+  }
+
+  .benefits-boxes img {
+    width: 20%;
+  }
+}
+
+@media (max-width:768px) {
+  .whysam-benifits ol {
+    font-size: 10px !important;
+  }
+
+  .inovativeREsp,
+  .performanceResp {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+}
 
 @media (max-width:600px) {
   .benefits-boxes {
     padding-top: 30px !important;
     border-radius: 25px;
+  }
+
+  .benefits-boxes h3 {
+    margin: 30px 0;
+    font-size: 25px;
+  }
+
+  .benefits-boxes ol li {
+    line-height: 3;
+  }
+
+  .whysamBenifitsDeskbg {
+    display: none;
+  }
+  .whysamBenifitsMblbg{
+    display: block;
+  }
+
+  .whysam-benifits ol {
+    font-size: 18px !important;
+  }
+
+  .manfactResp {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  .benefits-boxes {
+    padding-top: 30px !important;
+    border-radius: 25px;
+    margin-top: 5%;
 }
-.benefits-boxes h3 {
-  margin: 30px 0;
 }
-.benefits-boxes ol li{
-line-height: 3;
+
+@media (max-width:425px) {
+  .whysam-benifits ol {
+    font-size: 15px !important;
+  }
+  .benefits-boxes h3 {
+    margin: 30px 0;
+    font-size: 12px;
+  }
+  .benefits-boxes {
+   
+    margin-top: 20%;
+}
+}
+@media (max-width:375px) {
+  .whysam-benifits ol {
+    font-size: 12px !important;
+  }
+  .benefits-boxes h3 {
+    margin: 30px 0;
+    font-size: 15px;
+  }
+  .benefits-boxes {
+   
+    margin-top: 15%;
 }
 }

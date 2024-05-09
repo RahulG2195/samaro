@@ -182,7 +182,7 @@ const Newsletter = () => {
 
             <div className='text-center dwnldcenterHeading'>
                 <h2 className='fw-bold text-navy'>Newsletter</h2>
-                <div className='dwnldcenterFilters my-4'>
+                <div className='dwnldcenterFilters my-4 d-flex gap-2 flex-wrap justify-content-center   '>
                     <button onClick={() => setActiveCategory('All')}
                         className={`btn text-danger border-danger rounded-pill py-0 px-4 me-2 fw-semibold ${activeCategory === 'All' && 'bg-danger text-white'}`}>All</button>
 

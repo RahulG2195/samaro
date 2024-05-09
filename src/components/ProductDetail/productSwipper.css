@@ -11,7 +11,7 @@
 .detailSwipper .rhsSwiper {
     position: absolute;
     top: 8% !important;
-    left:-25% !important;
+    left: -24% !important;
 }
 
 .detailSwipper .mySwiper .swiper-slide-active img {
@@ -30,20 +30,20 @@
     transform: rotate(-90deg);
 }
 
-.swiper-button-next {
+.detailSwipper .swiper-button-next {
     position: absolute;
     top: 100%;
-    left: -22%;
+    left: -21%;
 }
 
-.swiper-button-prev {
+.detailSwipper .swiper-button-prev {
     position: absolute;
     top: 14px;
     left: -22%;
 }
 
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
+.detailSwipper .swiper-button-prev:after,
+.detailSwipper .swiper-rtl .swiper-button-next:after {
     content: 'prev';
     color: red;
     transform: rotate(90deg);
@@ -52,8 +52,8 @@
 }
 
 
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-next:after {
+.detailSwipper .swiper-button-next:after,
+.detailSwipper .swiper-rtl .swiper-button-next:after {
     content: 'prev';
     color: red;
     transform: rotate(270deg);
@@ -62,13 +62,13 @@
 }
 
 @media (max-width:1200px) {
-    .swiper-button-next {
+    .detailSwipper .swiper-button-next {
         position: absolute;
         top: 105%;
-        left: -22%;
+        left: -21%;
     }
 
-    .swiper-button-prev {
+    .detailSwipper .swiper-button-prev {
         position: absolute;
         top: 10px;
         left: -22%;
@@ -76,49 +76,80 @@
 }
 
 @media (max-width:1024px) {
-    .swiper-button-next {
-        position: absolute;
-        top: 105%;
-        left: -22%;
+
+    .detailSwipper .swiper-button-prev:after,
+    .detailSwipper .swiper-rtl .swiper-button-next:after,
+    .detailSwipper .swiper-button-next:after,
+    .detailSwipper .swiper-rtl .swiper-button-next:after {
+     
+        transform: rotate(0deg);
+      
+    }
+    .detailSwipper .swiper-button-next:after,
+    .detailSwipper .swiper-rtl .swiper-button-next:after {
+        transform: rotate(180deg);
+
+    }
+    .detailSwipper .swiper-button-next {
+        position: relative;
+        top: 0%;
+        left: 50%;
     }
 
-    .swiper-button-prev {
-        position: absolute;
-        top: 10px;
-        left: -22%;
+    .detailSwipper .swiper-button-prev {
+        position: relative;
+        top: 0px;
+        left: -50%;
+    }
+    .navigation-arrows{
+        
+        position: relative;
+        top: 50%;
+        transform: translateY(50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .swiper-button-next:after,
-    .swiper-rtl .swiper-button-next:after,
-    .swiper-button-prev:after,
-    .swiper-rtl .swiper-button-next:after {
-        font-size: 15px;
-    }
 
     
+}
 
 
 
+
+
+
+@media (max-width:992px) {
+    .detailSwipper .mySwiper .swiper-wrapper {
+        display: none;
+    }
+
+    .detailSwipper {
+        justify-content: center !important;
+    }
 }
 
 @media (max-width:576px) {
-    
-    .detailSwipper .mySwiper .swiper-wrapper {
-        transform: rotate(0deg) !important;
-        position: absolute;
-        top: 0%;
-        right: 0%;
-    }
+
     .detailSwipper .mySwiper .sliderchild {
         /* width: 15% !important; */
         margin: 10px auto !important;
         padding-left: 10px;
     }
-    .prodDetailTXT{
+
+    .prodDetailTXT {
         margin: 0 !important;
     }
 
     .detailSwipper .mySwiper {
         padding: 11%;
     }
+}
+
+@media (max-width:600px) {
+    .detailSwipper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+    }
+    
 }

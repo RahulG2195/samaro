@@ -42,19 +42,21 @@ const Header = () => {
                             </li>
                             <li className="nav-item position-relative prdcts">
                                 <div className="inspi">
-                                <NavLink href="/gallery" className="lnk"> Inspiration</NavLink>
+                                    <NavLink href="/gallery" className="lnk"> Inspiration</NavLink>
                                 </div>
                                 <ul className=" prdctDrop px-4 position-absolute">
                                     <li><Link href="/gallery"><p className="darkBlue">Gallery</p></Link></li>
                                     <li><Link href="/FindYourMatch"><p className="darkBlue">Find your ideal floor</p></Link></li>
                                     <li><Link href="/downloadCenter"><p className="darkBlue">Download center</p></Link></li>
                                 </ul>
-                                <ul className="mobileoptions">
-                                    <li><Link href="/gallery">Gallery</Link></li>
-                                    <li><Link href="/FindYourMatch"><p className="darkBlue m-0">Find your ideal floor</p></Link></li>
-                                    <li><Link href="/downloadCenter"><p className="darkBlue m-0">Download center</p></Link></li>
-                                </ul>
+
                             </li>
+                            <span className="mobileoptions" >
+                              
+                                <li className="nav-ite"><NavLink className="nav-link" href="/gallery">Gallery</NavLink></li>
+                                <li className="nav-ite"><NavLink className="nav-link" href="/FindYourMatch">Find your ideal floor</NavLink></li>
+                                <li className="nav-ite"><NavLink className="nav-link" href="/downloadCenter">Download center</NavLink></li>
+                            </span>
                             <li className="nav-item">
                                 <NavLink className="nav-link" href="/newsletter">
                                     Newsletter
@@ -64,7 +66,7 @@ const Header = () => {
                                 <NavLink className="nav-link" href="/contact-us">
                                     Contact Us
                                 </NavLink>
-                            </li>                           
+                            </li>
                             {/* <li className="nav-item">
                                 <NavLink className="nav-link" href="/career">
                                     Career

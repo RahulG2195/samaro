@@ -5,12 +5,12 @@ import './SpcForm.css'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
 
-const SpcForm = ({ hideguide, contactformcol }) => {
+const SpcForm = ({ hideguide, contactformcol, pb }) => {
     const [phone, setPhone] = useState("");
 
     return (
         <>
-            <div className='row container mx-auto py-5 justify-content-between align-items-center getintouchformCont'>
+            <div className={`spcFormCont row container mx-auto ${pb ? 'pb-0' : 'py-5 '} justify-content-evenly align-items-center getintouchformCont`}>
                 <div className={`col-md-4 ${hideguide ? 'hideguide' : ''}`}>
                     <span className='spcformheading'>
                         <p className='fs-5 guidHeading letsGuideYou'>LET US GUIDE YOU</p>
@@ -42,7 +42,7 @@ const SpcForm = ({ hideguide, contactformcol }) => {
                             </div>
                         </div>
 
-                        <div className='row my-4 '>
+                        <div className={`row my-4 ${pb ? 'mb-0' : 'my-4 '}`}>
                             <p>Select any one</p>
 
                             <div className='col-md-6 slct1 my-2'>

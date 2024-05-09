@@ -1,7 +1,7 @@
-
-.brochureCont h1{
+.brochureCont h1 {
     width: 90%;
 }
+
 .dwnldcenterHeading .dwnldcenterFilters button {
     /* background-color: transparent !important; */
     border: 3px solid;
@@ -10,6 +10,7 @@
 .dwnldcard {
     width: 100%;
     border: none !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .dwnldcard .card-body .card-text {
@@ -30,7 +31,7 @@
 
 /* Download cont swippers */
 
-.brochureCont .swiper{
+.brochureCont .swiper {
     overflow-y: visible;
     overflow-x: clip;
 }
@@ -45,13 +46,14 @@
 
 }
 
-.brochureCont .swiper-button-prev, .brochureCont .swiper-button-next {
+.brochureCont .swiper-button-prev,
+.brochureCont .swiper-button-next {
     background-color: #CA373C;
     border-radius: 100%;
     padding: 20px !important;
     opacity: 80%;
     position: absolute;
-    top:-15% !important;
+    top: -15% !important;
     /* right: 75px; */
     /* z-index: 88888888; */
 }
@@ -62,10 +64,11 @@
 
 
 
-.NewsletterSwiper .swiper-button-prev, .NewsletterSwiper .swiper-button-next {
- 
-    top:-10% !important;
-  
+.NewsletterSwiper .swiper-button-prev,
+.NewsletterSwiper .swiper-button-next {
+
+    top: -10% !important;
+
 }
 
 
@@ -74,11 +77,53 @@
 /* newsletter end */
 
 
-.swiper-button-prev, .swiper-rtl .swiper-button-next {
+.brochureCont .swiper-button-prev,
+.brochureCont .swiper-rtl .swiper-button-next {
     left: var(--navigation-sides-offset, 9) !important;
-    right:6% !important;
+    right: 6% !important;
 }
 
 .brochureCont .swiper-button-next {
     right: 1%;
+}
+
+@media (max-width:1024px) {
+
+    .brochureCont .swiper-button-prev:after,
+    .brochureCont .swiper-button-next:after {
+        font-size: 8px !important;
+
+    }
+
+    .brochureCont .swiper-button-prev,
+    .brochureCont .swiper-button-next {
+        background-color: #CA373C;
+        border-radius: 50%;
+        padding:0px 5px !important;
+        height: 30px !important;
+
+        /* top: -10% !important; */
+    }
+
+    .brochureCont .swiper-button-prev,
+    .brochureCont .swiper-rtl .swiper-button-next {
+        left: var(--navigation-sides-offset, 9) !important;
+        right: 10% !important;
+    }
+}
+
+@media (max-width:425px) {
+    .dwnldcard .Downloadbtn {
+        padding-left: .5rem !important;
+        padding-right: .5rem !important;
+    }
+}
+
+@media (max-width:600px) {
+
+    .brochureCont .swiper-button-prev,
+    .brochureCont .swiper-rtl .swiper-button-next {
+        left: var(--navigation-sides-offset, 9) !important;
+        right: 17% !important;
+    }
 }

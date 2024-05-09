@@ -34,7 +34,7 @@
   color:#0A2647;
 }
 .instabio{
-font-size: 8px;
+font-size: 12px;
 }
 
 .social .image {
@@ -43,7 +43,7 @@ font-size: 8px;
 .social .image img {
   height: 100%;
   border-radius: 30px;
-  object-fit: cover;
+  object-fit: fill;
 }
 .social h2 {
   color: var(--navy);
@@ -90,4 +90,10 @@ padding: 0px !important;
 }
 /* inspiration gallery */
 
-
+@media (max-width:600px) {
+  .gallerytext{
+    letter-spacing: 0px !important;
+    font-size: 40px !important;
+    text-align: center;
+  }
+}

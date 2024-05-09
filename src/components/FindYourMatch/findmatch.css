@@ -128,18 +128,22 @@
     color: #DC3545;
 }
 @media (max-width: 600px) {
+  .discoverBtn{
+    margin: 0 auto;
+  }
   .prev_step {
     position: absolute;
     cursor: pointer;
     left: 8%;
     top: auto;
-    bottom: 2%;
+    bottom: 3%;
     background: #DF878A;
-    padding: 14px 18px;
+    padding: 10px 13px;
     border-radius: 50%;
     color: #fff;
-    font-size: 22px;
+    font-size: 11px;
 }
+
 }
 @media (max-width: 480px) {
   .steps_name p{

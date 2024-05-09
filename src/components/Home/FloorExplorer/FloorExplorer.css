@@ -1,10 +1,10 @@
-
 /* Explorer */
 .explorer {
   position: relative;
   padding: 0px 0;
   margin-bottom: 100px;
 }
+
 .explorer h2 {
   font-weight: 300;
 }
@@ -12,6 +12,7 @@
 .explorer .row {
   align-items: center;
 }
+
 .explorer::before {
   content: "";
   position: absolute;
@@ -21,7 +22,7 @@
   left: 0;
   background: var(--navy);
   border-top-right-radius: 100vw;
-  border-bottom-right-radius:100vw;
+  border-bottom-right-radius: 100vw;
   z-index: -1;
 }
 
@@ -35,21 +36,25 @@
   position: relative;
   top: 10px;
 }
+
 .explorer .samaro-tab {
   position: relative;
   top: -20px;
   right: 120px;
 }
+
 .explorer .content {
   position: relative;
   top: -60px;
   right: 100px;
 }
+
 .explorer .respHeading2 {
   /* font-size: 30px; */
   font-weight: 300;
   letter-spacing: 7px;
 }
+
 .explorer p {
   font-weight: 200;
   font-size: 15px;
@@ -59,18 +64,38 @@
   font-size: 14px;
   font-weight: 300;
 }
+.explorer .samaro-ply {
+  position: relative;
+  top: -12px;
+  left: 20px;
+}
 /* Explorer */
 
+@media (min-width:1496px) {
+  /* .explorer .respHeading1 {
+    position: relative !important;
+    top: 50px !important;
+  } */
+  .explorer .content {
+    position: relative;
+    top: -100px;
+    right: 100px;
+  }
+
+}
+
 @media (max-width:768px) {
-  
-  .respHeading1{
+
+  .respHeading1 {
     font-size: 18px !important;
     text-align: start !important;
   }
-  .respHeading2{
+
+  .respHeading2 {
     font-size: 18px !important;
   }
-  .respCption{
+
+  .respCption {
     font-size: 10px !important;
   }
 
@@ -83,7 +108,8 @@
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
   }
-  .samaro-ply{
+
+  .samaro-ply {
     width: 50%;
     position: relative;
     left: 50%;
@@ -91,24 +117,27 @@
     transform: translate(-50%, -0%);
   }
 
-  .samaro-tab{
+  .samaro-tab {
     width: 75%;
     position: relative;
     left: 40%;
     top: 50%;
     transform: translate(-50%, -0%);
-    margin-top:20px ;
+    margin-top: 20px;
   }
-  .respHeading1{
+
+  .respHeading1 {
     font-size: 18px !important;
     text-align: center !important;
   }
-  .respHeading2{
-    text-align: center !important; 
+
+  .respHeading2 {
+    text-align: center !important;
   }
+
   .explorer .content {
     position: relative;
     top: 0px;
     right: 0px;
-}
+  }
 }

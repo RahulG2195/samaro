@@ -44,7 +44,7 @@ const Filters = ({ hide, inSPC }) => {
 
             <Collapse in={isOpen || isMediumOrLarger}>
                 <div className=" py-4 FilterToggle ">
-                    <div className='px-1 py-4  '>
+                    <div className='px-1 pb-4  '>
                         <div className={` border-bottom border-danger py-2 chk`}>
                             <p className='pb-2 darkBlue m-0'>Choose Your <strong className='fw-medium'>product</strong></p>
                             <div className={`${hide} chk`}>

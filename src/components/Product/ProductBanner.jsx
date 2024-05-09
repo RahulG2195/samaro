@@ -15,16 +15,29 @@ const ProductBanner = () => {
                     objectFit="contain"
                     priority={true}
                     loading="eager"
+                    className='prdctdeskbanner'
+                    
+                />
+                <Image
+                    src="/assets/images/products/Group 29096.png"
+                    alt="Description of the image"
+                    width={100}
+                    height={100}
+                    layout="responsive"
+                    objectFit="contain"
+                    priority={true}
+                    loading="eager"
+                    className='prdctmobilebanner'
                     
                 />
 
                 <div className=' position-absolute spcBrotext'>
-                    <p className='text-white fs-3 fw-semibold m-1'>Premium quality <strong className='fw-bold text-danger'>SPC</strong> flooring.</p>
+                    <p className='text-white prdbannerresp fw-semibold m-1'>Premium quality <strong className='fw-bold text-danger'>SPC</strong> flooring.</p>
                     <a href="/downloadCenter" className="button py-1 px-3 mb-4 respCption small">BROCHURE & DOWNLOAD CENTER</a>
                 </div>
 
                 <div className=' position-absolute lvtBrotext'>
-                    <p className='text-white fs-3 fw-semibold m-1'>High-quality <strong className='fw-bold text-navy'>LVT</strong> flooring.</p>
+                    <p className='text-white fw-semibold m-1'>High-quality <strong className='fw-bold text-navy'>LVT</strong> flooring.</p>
                     <a href="/downloadCenter" className="button py-1 px-3 mb-4 respCption small">BROCHURE & DOWNLOAD CENTER</a>
 
                 </div>

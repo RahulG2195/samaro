@@ -24,13 +24,13 @@ const DownloadSwiper = ({ title, cardData,active }) => {
           freeMode={true}
           modules={[FreeMode, Navigation, Thumbs]}
           navigation={true}
-          className={`mySwiper px-5 mx-5`}
-          breakpoints={{ // Adjust slidesPerView based on screen size range
-            300: { slidesPerView: 2 },
-            576: { slidesPerView: 2 },
-            768: { slidesPerView: 3 },
-            992: { slidesPerView: 3 },
-          }}
+          className={`mySwiper px-lg-5 mx-lg-5`}
+        breakpoints={{
+                                300: { slidesPerView: 2, spaceBetween: 10 },
+                                576: { slidesPerView: 2, spaceBetween: 10 },
+                                768: { slidesPerView: 3, spaceBetween: 40 },
+                                992: { slidesPerView: 3, spaceBetween: 40 },
+                            }}
         >
           {cardData.map((card, index) => (
             <SwiperSlide key={index} className='sliderchild '>

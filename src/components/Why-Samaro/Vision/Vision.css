@@ -1,21 +1,6 @@
-/* .vision{
-  background-image: url('/assets/images/why-samaro/Group 28873.svg');
-  background-repeat: no-repeat;
-  background-size:contain;
-  
-} */
-
-/* .vision-text { */
-  /* padding-bottom: 30px; */
-  /* padding-left: 80px; */
-  /* border: 3px solid var(--navy);
-  border-right: 0;
-  border-top-left-radius: 150px;
-  border-bottom-left-radius: 150px; */
-
-/* } */
-
-
+.vissionmissionCont {
+  top: 0%
+}
 
 .vision h2 {
 
@@ -23,27 +8,299 @@
   font-weight: 800;
 }
 
-
-
-
-
 .mission h2 {
   /* font-size: 40px; */
   font-weight: 800;
 }
 
+@media (max-width: 1430px) {
+  .vissionsectionResp {
+    margin-top: 1px !important;
+  }
+
+  .vision h2,
+  .mission h2 {
+
+    font-size: 40px !important;
+
+  }
+
+}
+
+@media (max-width:1423px) {
+
+  .vissionsectionResp p,
+  .missionSectionResp p {
+    font-size: 12px !important;
+  }
+
+  .missionSectionResp {
+    margin-top: 10px !important;
+  }
+
+  .vissionsectionResp {
+    padding: 0 !important;
+  }
+
+  .missionCont {
+    margin: 5px !important;
+  }
+
+}
+
+@media (max-width:1148px) {
+
+  .vision h2,
+  .mission h2 {
+
+    font-size: 30px !important;
+  }
+
+  .vissionsectionResp p,
+  .missionSectionResp p {
+    font-size: 10px !important;
+
+  }
+}
+
+@media (max-width:981px) {
+
+  .vision h2,
+  .mission h2 {
+
+    font-size: 20px !important;
+  }
+
+  .vissionsectionResp p,
+  .missionSectionResp p {
+    font-size: 10px !important;
+
+  }
+}
+
+@media (max-width:917px) and (min-width:768px) {
+
+  .vision h2,
+  .mission h2 {
+
+    font-size: 15px !important;
+  }
+
+  .vissionsectionResp p,
+  .missionSectionResp p {
+    font-size: 8px !important;
+  }
+
+  .missionCont {
+    padding: 0 !important;
+
+  }
+}
+
+.vissionsectionResp {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+@media (max-width:768px) {
+  .mission-image {
+    position: absolute !important;
+    top: 50%;
+
+  }
+
+  .vision .image1 {
+    display: none;
+  }
+
+  .vision .image2 {
+    display: block !important;
+  }
+
+  .vision h2,
+  .mission h2 {
+
+    font-size: 42px !important;
+  }
+
+  .vissionsectionResp p,
+  .missionSectionResp p {
+    font-size: 15px !important;
+  }
+
+  .vision-image {
+    position: absolute;
+    width: 20%;
+    top: -53%;
+    right: 60px;
+
+  }
+
+  .missionCont {
+    margin: 0 !important;
+    padding-top: 35px;
+  }
+
+  .vissionsectionResp {
+    padding-top: 15px !important;
+  }
+}
+
+@media (max-width:718px) {
+
+
+  .vision h2,
+  .mission h2 {
+
+    font-size: 30px !important;
+  }
+
+  .vissionsectionResp p,
+  .missionSectionResp p {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width:679px) {
+
+  .vision h2,
+  .mission h2 {
+
+    font-size: 25px !important;
+  }
+
+  .vissionsectionResp p,
+  .missionSectionResp p {
+    font-size: 12px !important;
+  }
+
+  .vissionmissionCont {
+    top: 10%;
+  }
+
+  .missionCont {
+    padding-top: 30px;
+  }
+
+  .vissionsectionResp {
+    padding-top: 0px !important;
+  }
+
+}
+
 @media (max-width:600px) {
+  .vissionmissionCont {
+    top: 5%;
+  }
+
+  .vision h2,
+  .mission h2 {
+
+    font-size: 20px !important;
+  }
+
+  .vissionsectionResp p,
+  .missionSectionResp p {
+    font-size: 10px !important;
+  }
+
+  .missionCont {
+    padding-right: 0rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .vision {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 424px) {
+  /* .missionCont {
+    padding-top: 0px !important;
+  } */
+
+  .vissionmissionCont {
+    top: 10%;
+  }
+
+  .vision h2,
+  .mission h2 {
+
+    font-size: 35px !important;
+  }
+
+  .vissionsectionResp p,
+  .missionSectionResp p {
+    font-size: 9px !important;
+    margin: 0 !important;
+  }
+
+  .visionH2 {
+    position: absolute;
+    top: -78px;
+    right: 45%;
+  }
+
+  .missionH2 {
+    position: absolute;
+    bottom: 45%;
+    left: 37px;
+  }
+}
+
+@media (max-width:375px) {
+  .missionCont {
+    padding-top: 1px;
+  }
+
+  .vissionmissionCont {
+    top: 0%;
+  }
+
+  .missionH2 {
+    bottom: 50%;
+  }
+
+  .visionH2 {
+    top: -40px;
+  }
+
+  .visionH2 {
+    letter-spacing: 5px;
+    top: -45px;
+    color: #0A2647 !important;
+    opacity: 40%;
+
+  }
+
+  .missionH2 {
+    letter-spacing: 5px;
+    bottom: 47%;
+    color: #0A2647 !important;
+    opacity: 40%;
+  }
+  .mission-image{
+    position: absolute;
+  top: 30%;
+  width: 25%;
+  left: 60%;
+  }
+}
+
+/* @media (max-width:600px) {
   .mission-text {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     margin-right: 10px !important;
   }
-  .mission-image img{
-      width: 10% !important;
-      position: absolute;
-      right: 17% !important;
-      top: 5% !important;
-   
+
+  .mission-image img {
+    width: 10% !important;
+    position: absolute;
+    right: 17% !important;
+    top: 5% !important;
+
   }
 
   .mission-text h2 {
@@ -81,16 +338,17 @@
     border-bottom-left-radius: 50px;
     margin-left: 10px !important;
     padding: 0 !important;
-    margin-bottom:25px ;
+    margin-bottom: 25px;
   }
 
-  .vision-image img{
+  .vision-image img {
     width: 10% !important;
     position: absolute;
     left: 17%;
     top: 60px;
- 
-}
+
+  }
+
   .vision-text h2 {
     position: absolute;
     letter-spacing: 12px;
@@ -113,4 +371,4 @@
   }
 
 
-}
+} */

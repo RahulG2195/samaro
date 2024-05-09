@@ -48,7 +48,7 @@ const Footer = () => {
                                     Mumbai-400069, India.
                                 </p>
                             </div>
-                            <div className="contact-details d-flex gap-5 mt-3">
+                            <div className="contact-details d-flex gap-5 mt-2 mb-3">
                                 <div className="mail">
                                     <img src="/assets/images/home/topbar/mail.png" alt="" />
                                     <a href="mailto:">info@samaro.in</a>
@@ -58,9 +58,9 @@ const Footer = () => {
                                     <a href="tel:">91-8079545115</a>
                                 </div>
                             </div>
-                            <div className="newsletter">
-                                <input type="text" className="input" placeholder="Enter your email Id for Newsletter" />
-                                <button>Submit</button>
+                            <div className="newsletter flex-wrap justify-content-start gap-2 mt-3">
+                                <input type="text" className="border-white border-2 rounded-pill px-5" placeholder="Enter your email Id for Newsletter" style={{ backgroundColor: 'inherit' }}/>
+                                <button className='btn border-2 border-white rounded-pill'>Submit</button>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-4 col-sm-6 col-6 ps-5 mt-0  ordr1">
@@ -74,6 +74,9 @@ const Footer = () => {
                     Copyright © 2023 Samaro | <a href="https://crezvatic.com/" target="_blank">Powered by Crezvatic PVT. LTD.</a>
                 </p>
             </div>
+
+
+            {/* popup form */}
             <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content ">
