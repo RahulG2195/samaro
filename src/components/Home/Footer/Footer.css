@@ -118,7 +118,7 @@
     font-size: 12px !important;
   }
   .contact-details{
-    justify-content: space-between !important;
+    justify-content: space-evenly !important;
   }
 }
 

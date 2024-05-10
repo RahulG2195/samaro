@@ -7,7 +7,7 @@ const Inspiration = () => {
     <>
   <section className="social mb-5 d-flex justify-content-center">
     <div className="container">
-      <div className="row mt-5">
+      <div className="row mt-">
         <div className="col-lg-12">
           <h1 className='gallerytext'><span className='fw-medium'>INSPIRATIONAL</span> GALLERY</h1>
 

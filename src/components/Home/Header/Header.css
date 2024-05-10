@@ -16,9 +16,10 @@ button:focus:not(:focus-visible) {
   background-position: center;
   background-size: 100%;
 }
+
 .nav-link {
   font-weight: 350;
-  padding: 5px 15px !important ;
+  padding: 5px 15px !important;
 }
 
 .nav-link:hover {
@@ -29,6 +30,7 @@ button:focus:not(:focus-visible) {
 .nav-link.active {
   position: relative;
 }
+
 .nav-link.active::after {
   content: "";
   position: absolute;
@@ -44,6 +46,7 @@ button:focus:not(:focus-visible) {
 .navbar-collapse {
   position: relative;
 }
+
 .navbar-collapse::after {
   content: "";
   position: absolute;
@@ -61,6 +64,7 @@ button:focus:not(:focus-visible) {
 .navbar-collapse {
   flex-grow: 0;
 }
+
 .navbar-collapse a {
   color: var(--text) !important;
 }
@@ -69,21 +73,24 @@ button:focus:not(:focus-visible) {
   height: 100%;
   background-color: var(--light) !important;
 }
+
 /* Header */
-.prdctDrop{
+.prdctDrop {
   right: -50%;
   z-index: -1;
   opacity: 0;
   width: max-content;
   /* display: none; */
 }
-.drop1{
+
+.drop1 {
   right: -20% !important;
   /* width: 100%; */
   z-index: 1;
   opacity: 1;
   /* display: none; */
 }
+
 .prdctDrop p {
   margin-top: -10px !important;
   text-align: center !important;
@@ -91,43 +98,60 @@ button:focus:not(:focus-visible) {
   transition: all 0.5s ease-in-out;
 }
 
-.prdcts:hover .prdctDrop p{
+.prdcts:hover .prdctDrop p {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
 }
-.prdctDrop p:hover{
+
+.prdctDrop p:hover {
   color: #ca373c;
   font-weight: 500;
 }
-.prdcts:hover .prdctDrop{
-display: block;
-background-color: white;
-border-bottom-left-radius: 20px;
-border-bottom-right-radius: 20px;
-opacity: 1;
-z-index: 1;
+
+.prdcts:hover .prdctDrop {
+  display: block;
+  background-color: white;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  opacity: 1;
+  z-index: 1;
 }
 
-.mobileoptions{
+.mobileoptions {
   display: none;
 }
 
-
-@media (max-width:990px) {
-  .prdctDrop{
+.bottomOptionsOfHeader{
+  display: none ;
+}
+.headphoneJack{
+  display: none;
+}
+@media (max-width:991px) {
+  .headphoneJack{
+    display: block;
+  }
+  .bottomOptionsOfHeader{
+    display: block ;
+  }
+  .prdctDrop {
     display: none !important;
-  } 
-.mobileoptions{
-  display: block;
-  font-size: 15px;
-  /* margin-left: 15px !important; */
-}
-.nav-link.active::after {
-  content: none !important;
- 
-}
-.nav-link.active {
-  color: #ca373c !important;
- font-weight: 800;
-}
+  }
+
+  .mobileoptions {
+    display: block;
+    font-size: 15px;
+    /* margin-left: 15px !important; */
+  }
+
+  .nav-link.active::after {
+    content: none !important;
+
+  }
+
+  .nav-link.active {
+    color: #ca373c !important;
+    font-weight: 800;
+  }
+
 }

@@ -5,7 +5,7 @@ import './Filters.css'
 const ProductCard = ({ frontImage, onHoverImage, title, description }) => {
     return (
         <>
-            <div className="card productCard my-4 mx-0" style={{ width: '100%' }} >
+            <div className="card productCard my-3 mx-0" style={{ width: '100%' }} >
                 <Link href={'/productdetail'}>
                     <div className='frontimage'><img src={frontImage} className="card-img-top " alt="..." /></div>
                     {

@@ -34,8 +34,14 @@
 @media (max-width:600px) {
   .commingSoon{
     left: 60% !important;
-    bottom: 35px;
+    bottom: 40px;
     font-size: 13px !important;
+
+  }
+}
+@media (max-width:426px) {
+  .design {
+    margin-top: 35%;
 
   }
 }

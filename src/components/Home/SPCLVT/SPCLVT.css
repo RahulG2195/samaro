@@ -58,8 +58,9 @@
   height: 20px;
   object-fit: contain;
 }
-.waterDrop img{
-height: 15px !important;
+
+.waterDrop img {
+  height: 15px !important;
 }
 
 .qualities .row span {
@@ -90,15 +91,20 @@ height: 15px !important;
     width: 100% !important;
     text-align: center;
   }
+
   .spc-lvt .container .row>* {
     padding: 0 !important;
-  
+
   }
+
   .qualities {
     background-color: var(--primary);
     border-radius: 0 !important;
     width: 100% !important;
 
+  }
+  .spc-lvt .content p {
+    padding: 0 10px;
   }
 
 }
@@ -116,12 +122,16 @@ height: 15px !important;
 }
 
 @media (max-width:600px) {
-  .waterResistText, .installTxt{
+
+  .waterResistText,
+  .installTxt {
     display: none !important;
   }
-  .spc-lvt .container .row{
+
+  .spc-lvt .container .row {
     gap: 0 !important;
   }
+
   .qualities .d-flex span {
     font-size: 12px !important;
   }
@@ -130,15 +140,28 @@ height: 15px !important;
     width: 25px !important;
   }
 
+
 }
 
 @media (max-width:426px) {
+  .images-wrapper .img-2 {
+    position: absolute;
+    left: 20%;
+    top: 233px;
+    z-index: 0;
+  }
+
+  .images-wrapper {
+    justify-content: center !important;
+  }
+
   .onImgtext {
     top: 50%;
-    left: 10%;
-  
+    left: 35%;
   }
-  .onImgtext .button, .onImgtext2 .button{
+
+  .onImgtext .button,
+  .onImgtext2 .button {
     padding: 0 5px !important;
   }
 

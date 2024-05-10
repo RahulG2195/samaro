@@ -8,19 +8,32 @@ const Banner = () => {
         <section className="hero ">
             <div className="position-relative">
                 <div className="homepageHeroBanner" >
-                  
-                <Image
-                    src="/assets/images/home/banner/Mask Group 320.png"
-                    // src=''
-                    alt="Description of the image"
-                    width={100}
-                    height={100}
-                    layout="responsive"
-                    objectFit="cover"
-                    priority={true}
-                    loading="eager"
-                    
-                />
+
+                    <Image
+                        src="/assets/images/home/banner/Mask Group 320.png"
+                        // src=''
+                        alt="Description of the image"
+                        width={100}
+                        height={100}
+                        layout="responsive"
+                        objectFit="cover"
+                        priority={true}
+                        loading="eager"
+                        className='prdctdeskbanner'
+
+                    />
+                    <Image
+                        src="/assets/images/home/banner/Group 28545.png"
+                        alt="Description of the image"
+                        width={100}
+                        height={100}
+                        layout="responsive"
+                        objectFit="contain"
+                        priority={true}
+                        loading="eager"
+                        className='prdctmobilebanner'
+
+                    />
                 </div>
                 <div className=" HomebannertextCont position-absolute">
 

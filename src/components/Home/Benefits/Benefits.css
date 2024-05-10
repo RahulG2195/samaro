@@ -60,7 +60,12 @@
   display: none;
 }
 
-
+.UpperBenifitsText{
+  display: none;
+}
+.benifitsSwipper{
+  display: none;
+}
 
 
 @media screen and (max-width: 1313px) and (min-width: 990px) {
@@ -87,18 +92,32 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .benifitsSwipper{
+    display: block;
+  }
+  .UpperBenifitsText{
+    display: block;
+  }
+  .lowerBenifitsText{
+    display: none;
+  }
+  .benifitsinDesktop{
+    display: none;
+  }
   .benefits>.row {
     flex-direction: column-reverse !important;
   }
 
-
-  .benefits .rightside-image {
-    display: none !important;
+  .beniInnerCont {
+    order: 2 !important;
   }
 
-  .upperimage {
-    display: block;
+  .benefits .benifitsRightSide {
+    order: 1 !important;
+    padding: 0 ;
   }
+
+
 
   .beniInnerCont {
     padding: 0 !important;

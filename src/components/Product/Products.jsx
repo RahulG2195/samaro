@@ -205,7 +205,7 @@ const Products = () => {
 
     return (
         <div className=" px-5 prdctContainer position-relative">
-            <div className="row">
+            <div className="row justify-content-center">
                 {/* Filters */}
                 <div className="row align-items-center">
                     <div className="col-md-3 md-0 mt-2 lh-1">
@@ -215,9 +215,9 @@ const Products = () => {
                     </div>
                     {/* Search Bar and Options */}
                     <div className="col-md-9 samSearchResp">
-                        <div className="input-group px-3 p-md-0 ">
-                        <input type="text" className="form-control search-bar prdctSearch px-2 py-0 pb-1" placeholder="Search your floor" style={{ lineHeight: 'normal' }} />
-                                <div className="input-group-append">
+                        <div className="input-group  p-md-0 ">
+                        <input type="text" className="form-control search-bar prdctSearch px-2 py-0 pb-1 " placeholder="Search your floor" style={{ lineHeight: 'normal' }} />
+                                <div className="input-group-append ">
                                     <div className="input-group-text bg-transparent border-0">
                                         <i className="bi bi-search "></i>
                                     </div>

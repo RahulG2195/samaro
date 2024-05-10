@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Download = ({ useRed }) => {
     return (
         <>
-            <div className='my-5 row downlodbackground '>
+            <div className='mb-5 row downlodbackground '>
                 <div className=' col-lg-10 col-md-12 position-relative'>
                     {useRed && (
                         <div>

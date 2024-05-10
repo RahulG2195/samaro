@@ -14,7 +14,9 @@
 .HomebannertextCont .txt h2 a {
   color: inherit !important;
 }
-
+.prdctmobilebanner{
+  display: none;
+}
 
 @media (max-width: 768px) {
   .HomebannertextCont .heading {
@@ -22,26 +24,36 @@
   }
 
   .discoverBtn {
-    font-size: 10px;
+    font-size: 12px;
     margin: 0 !important;
   }
 
 }
 
+@media (max-width:600px) {
+  .prdctdeskbanner{
+    display: none !important;
+  }
+  .prdctmobilebanner{
+    display: block !important;
+  }
+  
+}
+
 @media (max-width: 576px) {
   .HomebannertextCont .heading {
-    font-size: 0.7rem;
+    font-size: rem;
   }
 
   .HomebannertextCont {
     left: 10% !important;
-    top: 50%;
+    top: 70%;
   }
 
-  .HomebannertextCont .discoverBtn {
+  /* .HomebannertextCont .discoverBtn {
     font-size: 8px;
     padding: 0 5px !important;
     border: 2px solid #FFFFFF !important;
 
-  }
+  } */
 }

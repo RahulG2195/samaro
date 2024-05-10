@@ -10,7 +10,7 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
 
     return (
         <>
-            <div className={`spcFormCont row container mx-auto ${pb ? 'pb-0' : 'py-5 '} justify-content-evenly align-items-center getintouchformCont`}>
+            <div className={`spcFormCont row container mx-auto ${pb ? 'pb-0' : 'py- '} justify-content-evenly align-items-center getintouchformCont`}>
                 <div className={`col-md-4 ${hideguide ? 'hideguide' : ''}`}>
                     <span className='spcformheading'>
                         <p className='fs-5 guidHeading letsGuideYou'>LET US GUIDE YOU</p>

@@ -12,18 +12,11 @@ const Spclvt = () => {
                                 Build a happy home with a Samaro floor
                             </h2>
                             <p className="mt-4 text-navy">
-                                Be inspired by our floors and create a home filled with
-                                happiness. We are certain that together, we will be able to
-                                bring your unique vision to life, one plank at a time, for a
-                                lifetime. Whether you love vinyl tiles & planks,
-                                <span className="text-primary">SPC</span> or
-                                <span className="text-primary">LVT</span>
-                                flooring, we would love to help you with your renovation
-                                project.
+                            Step into your dream home, where every floorboard tells a story of happiness and inspiration. Let us be your partner in crafting a space that reflects your unique vision, one plank at a time, destined to last a lifetime. Whether your heart beats for the timeless elegance of Vinyl tiles & planks, the durability of SPC, or the luxury of LVT flooring, we're here to turn your renovation dreams into reality.
                             </p>
                         </div>
                         <div className="qualities px-4 mt-4 ">
-                            <div className="d-flex flex-wrap justify-content-evenly  " >
+                            <div className="d-flex flex-wrap justify-content-evenly py-2 " >
                                 <div className="d-flex align-items-center gap-2 text-white installTxt">
                                     <img src="/assets/images/home/spc-lvt/icons/Group 29194.svg" alt="" />
                                     <span className=''>Easy to install</span>
@@ -42,7 +35,7 @@ const Spclvt = () => {
                     </div>
                     <div className="col-lg-5 ps-2">
                         <div className="images-wrapper">
-                            <div className="img position-">
+                            <div className="img">
                                 <img src="/assets/images/home/spc-lvt/1.png" alt="" />
                                 <div className='text-center position-absolute onImgtext text-white'>
                                     <span className=' border-3 border-bottom px-2 fs-2 px-4 fw-semibold'>SPC</span>
