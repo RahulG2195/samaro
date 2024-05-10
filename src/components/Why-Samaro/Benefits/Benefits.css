@@ -127,11 +127,7 @@
     padding-right:0 !important ;
   }
 
-  .benefits-boxes {
-    padding-top: 30px !important;
-    border-radius: 25px;
-  }
-
+ 
   .benefits-boxes h3 {
     margin: 30px 0;
     font-size: 25px;
@@ -157,9 +153,9 @@
     padding-top: 0 !important;
   }
   .benefits-boxes {
-    padding-top: 30px !important;
+    padding-top: 60px !important;
     border-radius: 25px;
-    margin-top: 5%;
+    margin-top: 15%;
 }
 }
 
@@ -173,7 +169,7 @@
   }
   .benefits-boxes {
    
-    margin-top: 20%;
+    margin-top: 20% !important;
 }
 }
 @media (max-width:375px) {
@@ -185,7 +181,9 @@
     font-size: 15px;
   }
   .benefits-boxes {
-   
-    margin-top: 35%;
+    margin-top: 15% ;
+}
+.manfactResp{
+  margin-top: 1% !important;
 }
 }
