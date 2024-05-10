@@ -8,7 +8,7 @@ const Benefits = () => {
                 <h2 className='text-navy text-center mb-5'>Benefits</h2>
                 <div className='position-relative col-12' >
                     <img src="/assets/images/why-samaro/Path 97423.svg" alt="" className='whysamBenifitsDeskbg' />
-                    <img src="/assets/images/why-samaro/Path 98155.svg" alt="" className='whysamBenifitsMblbg' />
+                    <img src="/assets/images/why-samaro/Path 98155.svg" alt="" className='whysamBenifitsMblbg position-relative' />
 
                     <div className="row px-0 whysam-benifits pt-5 w-100 position-absolute top-0">
                         <div className="col-lg-3 col-md-3 col-sm-3 col-md-pt-1 pt-5">
@@ -44,7 +44,7 @@ const Benefits = () => {
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-3 ">
-                            <div className="benefits-boxes h-100 text-darkred">
+                            <div className="benefits-boxes h-100 text-darkred ">
                                 <img src=" /assets/images/why-samaro/Group 28877.svg" alt="" />
                                 <h3 className='my-4  text-center'>
                                     Quality Assurance

@@ -56,7 +56,8 @@
   font-size: 15px;
   font-weight: 200;
 }
-.whysamBenifitsMblbg{
+
+.whysamBenifitsMblbg {
   display: none;
 }
 
@@ -86,7 +87,7 @@
 }
 
 @media (max-width:992px) {
-/* 
+  /* 
   .samcontResp .container,
   .samcontResp .container-md,
   .samcontResp .container-sm {
@@ -100,7 +101,7 @@
 
   .whysam-benifits .col-lg-3 {
     /* padding-top: 0 !important; */
-    margin-top: 10px !important;
+    margin-top: 10px;
   }
 
   .benefits-boxes img {
@@ -121,28 +122,30 @@
 }
 
 @media (max-width:600px) {
-
-  .samcontResp .container {
-    padding-left:0 !important ;
-    padding-right:0 !important ;
+  .samcontResp {
+    height: 350vh;
   }
 
- 
+  .samcontResp .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+  }
+
+
   .benefits-boxes h3 {
     margin: 30px 0;
     font-size: 25px;
   }
 
   .benefits-boxes ol li {
-    line-height: 3;
+    line-height: 2;
   }
 
   .whysamBenifitsDeskbg {
     display: none;
   }
-  .whysamBenifitsMblbg{
-    display: block;
-  }
+
 
   .whysam-benifits ol {
     font-size: 18px !important;
@@ -152,38 +155,63 @@
     margin-top: 0 !important;
     padding-top: 0 !important;
   }
+
   .benefits-boxes {
-    padding-top: 60px !important;
-    border-radius: 25px;
-    margin-top: 15%;
-}
+    /* padding-top: 45px !important; */
+    margin-top: 50px;
+  }
+
+  .whysam-benifits .col-lg-3 {
+    padding-top: 0rem !important;
+  }
 }
 
 @media (max-width:425px) {
+  .samcontResp {
+    height: auto;
+  }
+
+  .benefits-boxes ol li {
+    line-height: 3;
+  }
+
+  .whysamBenifitsMblbg {
+    display: block;
+  }
+
   .whysam-benifits ol {
     font-size: 15px !important;
   }
+
   .benefits-boxes h3 {
     margin: 30px 0;
     font-size: 12px;
   }
+
+
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
   .benefits-boxes {
-   
-    margin-top: 20% !important;
+    margin-top: 45% !important;
+  }
 }
-}
+
 @media (max-width:375px) {
   .whysam-benifits ol {
-    font-size: 12px !important;
+    font-size: 15px !important;
   }
+
   .benefits-boxes h3 {
     margin: 30px 0;
     font-size: 15px;
   }
+
   .benefits-boxes {
-    margin-top: 15% ;
-}
-.manfactResp{
-  margin-top: 1% !important;
-}
+    margin-top: 15% !;
+  }
+
+  .manfactResp {
+    margin-top: 1% !important;
+  }
 }
