@@ -91,6 +91,9 @@
 }
 /* Footer */
 @media (max-width:768px) {
+  .footerSubmitbutton{
+    margin: 0 auto !important;
+  }
   .ordr3{
     order: 3 !important;
     padding-left: 1rem !important;

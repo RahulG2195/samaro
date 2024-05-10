@@ -121,6 +121,12 @@
 }
 
 @media (max-width:600px) {
+
+  .samcontResp .container {
+    padding-left:0 !important ;
+    padding-right:0 !important ;
+  }
+
   .benefits-boxes {
     padding-top: 30px !important;
     border-radius: 25px;
@@ -180,6 +186,6 @@
   }
   .benefits-boxes {
    
-    margin-top: 15%;
+    margin-top: 35%;
 }
 }

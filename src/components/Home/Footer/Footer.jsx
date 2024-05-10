@@ -60,7 +60,7 @@ const Footer = () => {
                             </div>
                             <div className="newsletter flex-wrap justify-content-start gap-2 mt-3">
                                 <input type="text" className="border-white border-2 rounded-pill px-5" placeholder="Enter your email Id for Newsletter" style={{ backgroundColor: 'inherit' }}/>
-                                <button className='btn border-2 border-white rounded-pill'>Submit</button>
+                                <button className='btn border-2 border-white rounded-pill footerSubmitbutton'>Submit</button>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-4 col-sm-6 col-6 ps-5 mt-0  ordr1">

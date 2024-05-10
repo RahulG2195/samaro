@@ -34,7 +34,7 @@ export default function Home() {
             <Certifications></Certifications>
             <Dimensions></Dimensions>
             <Download></Download>
-            <div className="">
+            <div className="pb-5">
                 {/* <CallToAction></CallToAction> */}
                 <SpcForm></SpcForm>
             </div>

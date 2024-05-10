@@ -6,8 +6,8 @@ import React from 'react'
 const SubBanner = () => {
   return (
     <>
-      <section className="career_banner poistion-relative">
-
+      <section className="career_banner ">
+      <div className='position-relative'> 
         <Image
           src="/assets/images/career/Mask Group 218.png"
           alt="career banner"
@@ -15,7 +15,7 @@ const SubBanner = () => {
           height={100}
           layout="responsive"
           objectFit="cover"
-          className="sub-banner contact-deskresp"
+          className="sub-banner contact-deskresp "
         />
           <Image
             src="/assets/images/career/Group 28545.png"
@@ -26,7 +26,7 @@ const SubBanner = () => {
             objectFit="cover"
             priority={true}
             loading="eager"
-            className='contact-mblresp'
+            className='contact-mblresp  position-relative'
 
           />
      
@@ -36,6 +36,7 @@ const SubBanner = () => {
             <a>Home</a> <span>-&gt;</span> <a>Contact</a>
           </div>
         </div>
+       </div>
       </section>
     </>
   )
