@@ -3,11 +3,11 @@ import "./Residential.css";
 
 const Residential = () => {
     return (
-        <section className="commercial-2 mt-5">
+        <section className="commercial-2 my-5">
             <div className="row justify-content-end">
                 <div className="col-lg-11">
-                    <div id="carouselExampleFade2" className="carousel slide carousel-fade h-100" data-bs-ride="carousel">
-                        <div className="carousel-inner mb-5 pb-5">
+                    <div id="carouselExampleFade2" className="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div className="carousel-inner">
                             <div className="carousel-item active">
                                 <img src="/assets/images/home/commercial/Mask Group 12.png" className="d-block w-100" alt="..." />
                             </div>

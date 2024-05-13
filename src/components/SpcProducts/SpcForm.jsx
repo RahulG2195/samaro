@@ -10,11 +10,11 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
 
     return (
         <>
-            <div className={`spcFormCont row container mx-auto ${pb ? 'pb-0' : 'py- '} justify-content-evenly align-items-center getintouchformCont`}>
-                <div className={`col-md-4 ${hideguide ? 'hideguide' : ''}`}>
+            <section className={`spcFormCont row container mx-auto ${pb ? 'pb-0' : ''} my-md-4 justify-content-evenly align-items-center getintouchformCont`}>
+                <div className={`col-md-6 ${hideguide ? 'hideguide' : ''}`}>
                     <span className='spcformheading'>
-                        <p className='fs-5 guidHeading letsGuideYou'>LET US GUIDE YOU</p>
-                        <p className='fs-5 guidHeading subH fw-normal py-2'>TO YOUR PERFECT SPC FLOOR</p>
+                        <p className='fs-5 guidHeading letsGuideYou p-0'>LET US GUIDE YOU</p>
+                        <p className='fs-5 guidHeading subH fw-normal'>TO YOUR PERFECT SPC FLOOR</p>
                         <p className='fw-medium txt guid-para'>Choosing the perfect floor is not easy, but we would love to help you with the challenge. Together we will find a vinyl floor that fits your home perfectly.</p>
                     </span>
                 </div>
@@ -75,7 +75,7 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
 
                 </div>
 
-            </div>
+            </section>
         </>
     )
 }

@@ -44,16 +44,16 @@ const Benefits = () => {
 
             <div className="mt-3">
 
-                <h2 className="text-navy benifitsHeading px-5 UpperBenifitsText pt-5">
+                {/* <h2 className="text-navy benifitsHeading px-5 UpperBenifitsText pt-5">
                     Unlock Many Benefits <br />
                     with Click-N-Lock® Tiles
-                </h2>
+                </h2> */}
                 <div className="row align-items-center justify-content-between ms-5 benifitscont">
                     <div className="col-lg-6 col-md-12 position-relative px-5  beniInnerCont">
-                        <h2 className="text-navy benifitsHeading px-5 lowerBenifitsText">
+                        <h4 className="text-navy benifitsHeading px-5 lowerBenifitsText">
                             Unlock Many Benefits <br />
                             with Click-N-Lock® Tiles
-                        </h2>
+                        </h4>
                         <img src="/assets/images/home/benefits/Mask Group 325.png" alt="" className='upperimage' />
                         <div className="topcorner">
                             <img src="/assets/images/home/benefits/Group 27837.svg" alt="err" />
@@ -63,7 +63,7 @@ const Benefits = () => {
                         </div>
 
                         <div className="column-wrapper px-5 benifitsinDesktop">
-                            <div className="row g-5 mt-1 respBenifitrow ">
+                            <div className="row g-4 mt-1 respBenifitrow ">
                                 <div className="col-lg-2 col-md-2 col-sm-2 col-4 text-center">
                                     <div className="image">
                                         <img src="/assets/images/home/benefits/benefits/weather.png" alt="" />

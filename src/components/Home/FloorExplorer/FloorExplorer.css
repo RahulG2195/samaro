@@ -2,7 +2,7 @@
 .explorer {
   position: relative;
   padding: 0px 0;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 .explorer h2 {
@@ -85,7 +85,7 @@
   } */
   .explorer .content {
     position: relative;
-    top: -100px;
+    top: -50px;
     right: 100px;
   }
 

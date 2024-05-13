@@ -8,7 +8,7 @@ const Design = () => {
         <section className="design">
             <div className="container mb-4">
                 <div className="row mx-auto">
-                    <div className="col-lg-3"></div>
+                    <div className="col-lg-2"></div>
                     <div className="col-lg-6">
                         <h2 className="sub-heading ">DESIGN RANGE IN <span>SPC & LVT</span></h2>
                     </div>
@@ -31,7 +31,7 @@ const Design = () => {
                     <div className="col-lg-4 position-relative">
                         <Link href='/product'>
                             <img className='design-img' src="/assets/images/home/design/Component 20 – 3.png" alt="" />
-                            <span className='text-danger fw-semibold position-absolute py-2 commingSoon' style={{ left: '0' }}>COMING SOON*</span>
+                            <span className='text-danger fw-semibold position-absolute py-2 commingSoon' style={{ left: '0', opacity: '0.5', padding: '0 20px' }}>COMING SOON*</span>
                         </Link>
                     </div>
                 </div>

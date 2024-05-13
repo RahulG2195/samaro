@@ -20,6 +20,7 @@
 .design-img {
   transition: all 0.3s ease-in-out;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .design-img:hover {

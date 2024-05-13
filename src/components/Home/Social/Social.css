@@ -54,6 +54,7 @@
   color: var(--navy);
   font-weight: 400;
   text-transform: uppercase;
+  letter-spacing: 8px;
 }
 
 .social h2 span {

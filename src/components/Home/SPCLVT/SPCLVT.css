@@ -17,7 +17,7 @@
   position: absolute;
   top: -110px;
   left: 0;
-  color: #9da8b541;
+  color: #F3F4F6;
   z-index: -4;
   font-size: 160px;
   font-weight: 800;
@@ -25,6 +25,11 @@
 
 .images-wrapper {
   display: flex;
+  position: relative;
+}
+
+.images-wrapper .img{
+
   position: relative;
 }
 
@@ -36,7 +41,7 @@
 
 .images-wrapper .img-2 {
   position: absolute;
-  left: 45%;
+  left: 42%;
   top: 100px;
   z-index: 0;
 }
@@ -72,13 +77,19 @@
 }
 
 .onImgtext {
-  top: 50%;
-  left: 15%;
+  top: 39%;
+  left: 0;
+  /* position: absolute; */
+  right: 0;
+  bottom: 0;
 }
 
 .onImgtext2 {
-  top: 26%;
-  left: 30%;
+  top: 35%;
+  left: 0;
+  /* position: absolute; */
+  right: 0;
+  bottom: 0;
 }
 
 @media (max-width: 768px) {

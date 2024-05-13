@@ -3,12 +3,12 @@ import "./SPCLVT.css"
 import Link from 'next/link'
 const Spclvt = () => {
     return (
-        <section className="mt-5 spc-lvt">
+        <section className="mt-md-5 mt-3 spc-lvt">
             <div className="container">
-                <div className="row g-4 align-items-end justify-content-start gap-5">
+                <div className="row align-items-end">
                     <div className="col-lg-6 ">
-                        <div className="content px-lg-5 w-75">
-                            <h2 className="sub-heading fw-bold navyBlue ">
+                        <div className="content">
+                            <h2 className="sub-heading fw-bold navyBlue w-75">
                                 Build a happy home with a Samaro floor
                             </h2>
                             <p className="mt-4 text-navy">
@@ -33,7 +33,7 @@ const Spclvt = () => {
                         </div>
 
                     </div>
-                    <div className="col-lg-5 ps-2">
+                    <div className="col-lg-6">
                         <div className="images-wrapper">
                             <div className="img">
                                 <img src="/assets/images/home/spc-lvt/1.png" alt="" />
