@@ -54,7 +54,7 @@ const router = useRouter();
               {/* {currentStep > 0 && <button onClick={prevStep}>Previous</button>} */}
               {currentStep === steps.length - 1 && (
                 <div className='step_next_button'>
-                  <button className='btn border-3 border-danger rounded-pill' onClick={() => handleFormSubmit(/* form data */)}> Submit <i className="fa-solid fa-chevron-right"></i></button>
+                  <button className='btn border-3 submit_btn_match border-danger rounded-pill' onClick={() => handleFormSubmit(/* form data */)}> Submit <i className="fa-solid fa-chevron-right"></i></button>
                 </div>
               )}
 

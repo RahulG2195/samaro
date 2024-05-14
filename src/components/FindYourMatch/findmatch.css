@@ -127,6 +127,11 @@
     font-size: 43px;
     color: #DC3545;
 }
+
+.submit_btn_match{
+  padding: 5px 25px;
+  color: #CA373C;
+}
 @media (max-width: 600px) {
   .discoverBtn{
     margin: 0 auto;

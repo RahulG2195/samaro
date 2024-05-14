@@ -208,20 +208,42 @@ const Products = () => {
             <div className="row justify-content-center">
                 {/* Filters */}
                 <div className="row align-items-center">
-                    <div className="col-md-3 md-0 mt-2 lh-1">
+                    {/* <div className="col-md-3 md-0 mt-2 lh-1">
                         <p className="fw-bold fs-2 samFloor m-0">SAMARO FLOORS</p>
                         <p className='m-0 p-0 small fw-semibold text-navy'>Home -&gt; Products</p>
                         <span className="small shownCount text-navy">11 of 79 floors shown</span>
-                    </div>
+                    </div> */}
                     {/* Search Bar and Options */}
-                    <div className="col-md-9 samSearchResp">
+                    {/* <div className="col-md-9 samSearchResp">
                         <div className="input-group  p-md-0 ">
-                        <input type="text" className="form-control search-bar prdctSearch px-2 py-0 pb-1 " placeholder="Search your floor" style={{ lineHeight: 'normal' }} />
-                                <div className="input-group-append ">
-                                    <div className="input-group-text bg-transparent border-0">
-                                        <i className="bi bi-search "></i>
-                                    </div>
+                            <input type="text" className="form-control search-bar prdctSearch px-2 py-0 pb-1 " placeholder="Search your floor" style={{ lineHeight: 'normal' }} />
+                            <div className="input-group-append ">
+                                <div className="input-group-text bg-transparent border-0">
+                                    <i className="bi bi-search "></i>
                                 </div>
+                            </div>
+                            <div className="input-group-append interiorcheck">
+                                <div className="form-check">
+                                    <input className="mx-1 form-check-input" type="checkbox" defaultChecked />
+                                    <label className="darkBlue">Show interior pictures</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div> */}
+                </div>
+                <div className="col-lg-2 col-md-3">
+                    <Filters />
+                </div>
+
+                <div className="col-lg-10 col-md-9 ">
+                    <div className="samSearchResp mb-md-5">
+                        <div className="input-group  p-md-0 ">
+                            <input type="text" className="form-control search-bar prdctSearch px-2 py-0 pb-1 " placeholder="Search your floor" style={{ lineHeight: 'normal' }} />
+                            <div className="input-group-append ">
+                                <div className="input-group-text bg-transparent border-0">
+                                    <i className="bi bi-search "></i>
+                                </div>
+                            </div>
                             <div className="input-group-append interiorcheck">
                                 <div className="form-check">
                                     <input className="mx-1 form-check-input" type="checkbox" defaultChecked />
@@ -230,14 +252,7 @@ const Products = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="col-lg-2 col-md-3">
-                    <Filters />
-                </div>
-
-                <div className="col-lg-10 col-md-9 ">
-
-                    <div className="row row-cols-md-3 row-cols-sm-3 row-cols-xs-1 row-cols-lg-3 row-cols-xl-5">
+                    <div className="row row-cols-md-3 row-cols-sm-3 row-cols-xs-1 row-cols-lg-3 row-cols-xl-5 mt-md-2">
                         {productsArr.map((product, index) => (
                             <div key={index} className="col-6 ">
                                 <ProductCard
@@ -249,7 +264,7 @@ const Products = () => {
                             </div>
                         ))}
 
-
+                        <a class="discoverBtn load_more button mx-auto" href="/product">Load More</a>
                     </div>
 
                 </div>

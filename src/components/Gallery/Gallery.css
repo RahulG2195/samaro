@@ -63,7 +63,9 @@
   height: 430px;
 } */
 
-
+.gallery{
+  margin-top: 20px;
+}
 .grid{
   width: calc(100% - 40px);
   margin: 20px auto;

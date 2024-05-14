@@ -40,10 +40,22 @@ input[type="checkbox"]:checked {
   background-color: red;
 }
 
+.load_more{
+  border: 2px solid #C5363B;
+  color: #C5363B;
+  text-align: center;
+  margin: 25px auto 35px auto;
+}
 
+.load_more:hover{
+  background: #C5363B;
+  color: #fff;
+  border: none;
+}
 /* Products.css */
 .samFloor{
   color: #0A2647 !important;
+  font-size: 1.5rem;
 }
 
 .prdctSearch {

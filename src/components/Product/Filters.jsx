@@ -41,17 +41,21 @@ const Filters = ({ hide, inSPC }) => {
                     <img src="/assets/images/products/Component 55 – 2.svg" alt="err" />
                 </Button>
             </div>
-
+            <div className='Filter-title'>
+                <p className="fw-bold samFloor m-0">SAMARO FLOORS</p>
+                <p className='m-0 p-0 small fw-semibold text-navy'>Home -&gt; Products</p>
+                <span className="small shownCount text-navy">11 of 79 floors shown</span>
+            </div>
             <Collapse in={isOpen || isMediumOrLarger}>
                 <div className=" py-4 FilterToggle ">
                     <div className='px-1 pb-4  '>
                         <div className={` border-bottom border-danger py-2 chk`}>
                             <p className='pb-2 darkBlue m-0'>Choose Your <strong className='fw-medium'>product</strong></p>
                             <div className={`${hide} chk`}>
-                            <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />SPC</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />SPC</label>
                             </div>
                             <div className={`${hide}`}>
-                            <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />LVT</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />LVT</label>
                             </div>
                         </div>
                         <div className={` border-bottom border-danger py-2 chk`}>
