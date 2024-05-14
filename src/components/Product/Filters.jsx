@@ -48,101 +48,101 @@ const Filters = ({ hide, inSPC }) => {
                         <div className={` border-bottom border-danger py-2 chk`}>
                             <p className='pb-2 darkBlue m-0'>Choose Your <strong className='fw-medium'>product</strong></p>
                             <div className={`${hide} chk`}>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>SPC</label>
+                            <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />SPC</label>
                             </div>
                             <div className={`${hide}`}>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>LVT</label>
+                            <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />LVT</label>
                             </div>
                         </div>
                         <div className={` border-bottom border-danger py-2 chk`}>
                             <p className='pb-2 darkBlue m-0'>Choose Your <strong className='fw-medium'>Catlogue</strong></p>
                             <div className={`${hide} chk`}>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>All</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />All</label>
                             </div>
                             <div className={`${hide}`}>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Sicilian</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Sicilian</label>
                             </div>
                             <div className={`${hide}`}>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Tuscany</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Tuscany</label>
                             </div>
                             <div className={`${hide}`}>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>LVT 1</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />LVT 1</label>
                             </div>
                             <div className={`${hide}`}>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>LVT 2</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />LVT 2</label>
                             </div>
                             <div className={`${hide}`}>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Others</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Others</label>
                             </div>
                         </div>
 
                         <div className='border-bottom border-danger py-2'>
                             <p className='pb-2 darkBlue m-0'>Choose Your <strong className='fw-medium'>Types</strong></p>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Wood</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Wood</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Stone</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Stone</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Marble</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Marble</label>
                             </div>
                         </div>
                         <div className='border-bottom border-danger py-2'> <p className='pb-2 darkBlue'>Choose Your <strong className='fw-medium'>color</strong></p>
                             <div>
-                                <input className='mx-1  form-check-input' type="checkbox" /><label className='darkBlue' >Black</label>
+                                <label className='darkBlue'><input className='mx-1  form-check-input' type="checkbox" />Black</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue' >Beige</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Beige</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue' >Blue</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Blue</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Dark brown</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Dark brown</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue' >Dark grey</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Dark grey</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Green</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Green</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Light grey</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Light grey</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Natural</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Natural</label>
                             </div>
 
                             <div >
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Pink</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Pink</label>
                             </div>
                         </div>
                         <div className='border-bottom border-danger py-2'>
                             <p className='pb-2 darkBlue m-0'>Choose Your <strong className='fw-medium'>place</strong></p>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Bathroom</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Bathroom</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Bedroom</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Bedroom</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Children's room</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Children's room</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Dining room</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Dining room</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Hallway</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Hallway</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Kitchen</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Kitchen</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Living room</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Living room</label>
                             </div>
                             <div>
-                                <input className='mx-1 form-check-input' type="checkbox" /><label className='darkBlue'>Office</label>
+                                <label className='darkBlue'><input className='mx-1 form-check-input' type="checkbox" />Office</label>
                             </div>
                         </div>
                         <div className=' border-bottom border-danger'>

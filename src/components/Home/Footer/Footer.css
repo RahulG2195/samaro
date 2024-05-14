@@ -76,6 +76,7 @@
   background: transparent;
   outline: none;
   padding-left: 10px;
+  color: #ffffff;
 }
 .newsletter input::placeholder {
   font-size: 14px;

@@ -18,13 +18,13 @@ const Benefits = () => {
                                     <h3 className='mb-4 text-center'>
                                         Manufacturing
                                     </h3>
-                                    <ol className='fw-normal '>
-                                        <li>1. Blend materials for durability</li>
-                                        <li>2. Layer vinyl for stability.</li>
-                                        <li>3. Add texture for realism.</li>
-                                        <li>4. Cut for precise fit.</li>
-                                        <li>5. Apply protective finish.</li>
-                                    </ol>
+                                    <ul className='fw-normal'>
+                                        <li>Blend materials for durability</li>
+                                        <li>Layer vinyl for stability.</li>
+                                        <li>Add texture for realism.</li>
+                                        <li>Cut for precise fit.</li>
+                                        <li>Apply protective finish.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -34,13 +34,13 @@ const Benefits = () => {
                                 <h3 className='my-4 text-center'>
                                     Product Performance
                                 </h3>
-                                <ol className='fw-normal mx-au' >
-                                    <li>1. Resilience: Withstands scratches and impacts.</li>
-                                    <li>2. Water Resistance: Ideal for moisture-prone areas.</li>
-                                    <li>3. Stability: Maintains shape in different temperatures. </li>
-                                    <li>4. Easy Care: Requires minimal cleaning effort.</li>
-                                    <li>5. Longevity: Designed for lasting performance.</li>
-                                </ol>
+                                <ul className='fw-normal mx-au' >
+                                    <li>Resilience: Withstands scratches and impacts.</li>
+                                    <li>Water Resistance: Ideal for moisture-prone areas.</li>
+                                    <li>Stability: Maintains shape in different temperatures. </li>
+                                    <li>Easy Care: Requires minimal cleaning effort.</li>
+                                    <li>Longevity: Designed for lasting performance.</li>
+                                </ul>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-3 ">
@@ -49,13 +49,13 @@ const Benefits = () => {
                                 <h3 className='my-4  text-center'>
                                     Quality Assurance
                                 </h3>
-                                <ol className='fw-normal '>
-                                    <li>1. Standards Compliance: Meets quality benchmarks.</li>
-                                    <li>2. Material Inspection: Rigorously checks raw materials.</li>
-                                    <li>3. Production Oversight: Constant monitoring during manufacturing.</li>
-                                    <li>4. Quality Testing: Thorough assessment of finished products.</li>
-                                    <li>5. Feedback Integration: Incorporates customer input for improvement.</li>
-                                </ol>
+                                <ul className='fw-normal '>
+                                    <li>Standards Compliance: Meets quality benchmarks.</li>
+                                    <li>Material Inspection: Rigorously checks raw materials.</li>
+                                    <li>Production Oversight: Constant monitoring during manufacturing.</li>
+                                    <li>Quality Testing: Thorough assessment of finished products.</li>
+                                    <li>Feedback Integration: Incorporates customer input for improvement.</li>
+                                </ul>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-3 pt-5 mt-3 inovativeREsp">
@@ -64,13 +64,13 @@ const Benefits = () => {
                                 <h3 className='my-4 text-center'>
                                     lnnovating
                                 </h3>
-                                <ol className='fw-normal'>
-                                    <li>1.Sustainable Materials: Eco-friendly exploration.</li>
-                                    <li>2.Innovative Designs: Creative patterns.</li>
-                                    <li>3. Smart Integration: Technological functionality.</li>
-                                    <li>4.Custom Solutions: Tailored options.</li>
-                                    <li>5. Enhanced Performance: Focus on durability.</li>
-                                </ol>
+                                <ul className='fw-normal'>
+                                    <li>Sustainable Materials: Eco-friendly exploration.</li>
+                                    <li>Innovative Designs: Creative patterns.</li>
+                                    <li> Smart Integration: Technological functionality.</li>
+                                    <li>Custom Solutions: Tailored options.</li>
+                                    <li> Enhanced Performance: Focus on durability.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>

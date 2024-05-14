@@ -9,7 +9,7 @@ const FloorExplorer = () => {
 
           <div className="col-lg-11 col-md-12 ">
             <div className="row">
-              <h2 className="text-white py-3 my-2 text-center fw-normal respHeading1">
+              <h2 className="text-white pb-3 pt-md-5 my-2 text-center fw-normal respHeading1">
                 How to choose my <strong className='fw-semibold'>perfect floor</strong>?
               </h2>
               <div className="col-lg-4 col-md-4 col-sm-4">

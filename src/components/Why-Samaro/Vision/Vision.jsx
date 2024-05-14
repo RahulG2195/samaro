@@ -19,12 +19,13 @@ const Vision = () => {
                                 </div>
                                 <div className='col-md-10 col-lg-9'>
                                     <h2 className='text-darkred visionH2'>Vision</h2>
-
-                                    <p className='p-0 m-1 text-navy fw-normal'>- Revolutionizing the flooring industry with innovation and sustainability.</p>
-                                    <p className='p-0 m-1 text-navy fw-normal'>-Offering high-quality SPC and LVT flooring solutions. (Luxurt Vinyl Tile) flooring sector.</p>
-                                    <p className='p-0 m-1 text-navy fw-normal'>-Inspiring and enhancing living spaces globally. </p>
-                                    <p className='p-0 m-1 text-navy fw-normal'>-Setting new standards in flooring excellence. </p>
-                                    <p className='p-0 m-1 text-navy fw-normal'>-Making a positive impact on homes and environments worldwide.</p>
+                                    <ul>
+                                        <li className='p-0 m-1 text-navy fw-normal'>Revolutionizing the flooring industry with innovation and sustainability.</li>
+                                        <li className='p-0 m-1 text-navy fw-normal'>Offering high-quality SPC and LVT flooring solutions. (Luxurt Vinyl Tile) flooring sector.</li>
+                                        <li className='p-0 m-1 text-navy fw-normal'>Inspiring and enhancing living spaces globally.</li>
+                                        <li className='p-0 m-1 text-navy fw-normal'>Setting new standards in flooring excellence.</li>
+                                        <li className='p-0 m-1 text-navy fw-normal'>Making a positive impact on homes and environments worldwide.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -39,11 +40,12 @@ const Vision = () => {
                             <div className="mission-text row align-items-center justify-content-end missionSectionResp  py-4 mt-2">
                                 <div className='col-md-11 col-lg-9 col-12'>
                                     <h2 className='text-darkred missionH2'>Mission</h2>
-
-                                    <p className='m-1 text-navy fw-normal'>-Leading the flooring industry with continuous innovation, quality standards, and sustainability at Samaro Global Industries. </p>
-                                    <p className='m-1 text-navy fw-normal'>-Exceeding customer expectations through a diverse range of premium flooring products and unparalleled service and support.(Luxurt Vinyl Tile) flooring sector.</p>
-                                    <p className='m-1 text-navy fw-normal'>-Utilizing expertise and state-of-the-art manufacturing to create beautiful, durable, and environmentally-friendly flooring solutions.</p>
-                                    <p className='m-1 text-navy fw-normal'>-Transforming spaces and enriching lives with our commitment to excellence.</p>
+                                    <ul>
+                                        <li className='m-1 text-navy fw-normal'>Leading the flooring industry with continuous innovation, quality standards, and sustainability at Samaro Global Industries.</li>
+                                        <li className='m-1 text-navy fw-normal'>Exceeding customer expectations through a diverse range of premium flooring products and unparalleled service and support.(Luxurt Vinyl Tile) flooring sector.</li>
+                                        <li className='m-1 text-navy fw-normal'>Utilizing expertise and state-of-the-art manufacturing to create beautiful, durable, and environmentally-friendly flooring solutions.</li>
+                                        <li className='m-1 text-navy fw-normal'>Transforming spaces and enriching lives with our commitment to excellence.</li>
+                                    </ul>
                                 </div>
                                 <div className="col-lg-2 col-md-3 col-2">
                                     <div className="mission-image p-4 me-2">

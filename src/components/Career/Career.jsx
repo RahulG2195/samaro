@@ -28,7 +28,7 @@ const Career = () => {
                 loading="eager"
             /> */}
 
-            <div className='headingCont text-center my-5'>
+            <div className='headingCont text-center mt-5 mb-3'>
                 <h1 className=' careerHeading my-4 fw-bold'><u className='border-3 border-danger border-bottom '>Career</u></h1>
             </div>
             <div className='text-center whyus'>

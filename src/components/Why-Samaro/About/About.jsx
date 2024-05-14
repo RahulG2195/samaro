@@ -6,7 +6,7 @@ const About = () => {
             <div className="container"> <div className="row gap-5 align-items-center py-5 justify-content-center">
                 <div className="col-lg-4 col-md-4 col-sm-12 headline text-end">
                     <p className='text-white tagline '>
-                        The beautiful <span className='fw-bold'>JOURNEY</span> of
+                        The amazing <span className='fw-bold'>JOURNEY</span> of
                     </p>
                     <img className='logo' src="/assets/images/logo/logo.png" alt="" />
                 </div>

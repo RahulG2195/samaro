@@ -191,12 +191,12 @@ const Products = () => {
             title: " Ashford",
             description: "SPC | SICILIAN | 528"
         },
-        {
-            frontImage: "/assets/images/products/Images Web/SPC WEBP/SERIES 2- SICILIAN/532 - Walnut oak WITHOUT INSTALLATION.webp",
-            onHoverImage: "/assets/images/products/Images Web/SPC WEBP/SERIES 2- SICILIAN/532 - Walnut oak INSTALLATION.webp",
-            title: "Walnut oak",
-            description: "SPC | SICILIAN | 532"
-        },
+        // {
+        //     frontImage: "/assets/images/products/Images Web/SPC WEBP/SERIES 2- SICILIAN/532 - Walnut oak WITHOUT INSTALLATION.webp",
+        //     onHoverImage: "/assets/images/products/Images Web/SPC WEBP/SERIES 2- SICILIAN/532 - Walnut oak INSTALLATION.webp",
+        //     title: "Walnut oak",
+        //     description: "SPC | SICILIAN | 532"
+        // },
 
 
 
@@ -248,6 +248,8 @@ const Products = () => {
                                 />
                             </div>
                         ))}
+
+
                     </div>
 
                 </div>

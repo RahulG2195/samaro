@@ -20,7 +20,7 @@ const Dimensions = () => {
                     </div>
                 </div>
             </div>
-            <div className="row justify-content-end mt-5">
+            <div className="row justify-content-end my-5">
                 <div className="col-lg-10 col-md-8 bg-red text-white " >
                     <div className="row align-items-center inner-row-two">
                         <div className="col-lg-7 p-5 text-end odr1 respPlanktxt plnkThick">

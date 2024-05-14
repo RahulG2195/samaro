@@ -20,6 +20,7 @@
 
 .spcformheading p {
     color: var(--text);
+    font-size: 14px;
 }
 
 .popform input, .popform textarea {

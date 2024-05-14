@@ -12,6 +12,12 @@
   /* font-size: 40px; */
   font-weight: 800;
 }
+.missionCont, .vissionmissionCont ul {
+  padding: 0;
+}
+.missionCont, .vissionmissionCont ul li{
+  list-style: disc;
+}
 
 @media (max-width: 1430px) {
   .vissionsectionResp {

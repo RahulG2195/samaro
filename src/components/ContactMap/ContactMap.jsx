@@ -20,7 +20,7 @@ const ContactMap = () => {
                                         <div><span>export@samaro.in</span></div>
                                     </address>
                                     <h3 className='fw-bold'>Head Office</h3>
-                                    <span>5th Floor, Vilco Centre, Subhash Road, Opp. Garware, Vile Parle East, Mumbai-400057, Maharashtra, India</span>
+                                    <address>5th Floor, Vilco Centre, Subhash Road, Opp. Garware, Vile Parle East, Mumbai-400057, Maharashtra, India</address>
 
 
 

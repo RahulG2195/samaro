@@ -68,6 +68,17 @@
 }
 
 
+.respBenifitrow .image {
+  height: 55px;
+  width: 55px;
+  margin: auto;
+}
+
+.respBenifitrow .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
 @media screen and (max-width: 1313px) and (min-width: 990px) {
 
   .beniInnerCont,

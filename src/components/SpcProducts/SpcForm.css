@@ -8,6 +8,7 @@
 
 .spcformheading p {
     color: var(--text);
+    font-size: 14px;
 }
 
 .spcform input {
