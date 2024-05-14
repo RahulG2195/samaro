@@ -8,6 +8,10 @@
   font-weight: 800;
 }
 
+.missionCont{
+  margin-top: 30px !important;
+}
+
 .mission h2 {
   /* font-size: 40px; */
   font-weight: 800;

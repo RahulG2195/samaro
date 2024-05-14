@@ -31,7 +31,7 @@ const Benefits = () => {
                         <div className="col-lg-3 col-md-3 col-sm-3  pt-5 mt-5 performanceResp">
                             <div className="benefits-boxes h-100 text-navy ">
                                 <img src=" /assets/images/why-samaro/Group 28880.svg" alt="" />
-                                <h3 className='my-4 text-center'>
+                                <h3 className='my-4 px-4 text-center'>
                                     Product Performance
                                 </h3>
                                 <ul className='fw-normal mx-au' >
@@ -46,7 +46,7 @@ const Benefits = () => {
                         <div className="col-lg-3 col-md-3 col-sm-3 ">
                             <div className="benefits-boxes h-100 text-darkred ">
                                 <img src=" /assets/images/why-samaro/Group 28877.svg" alt="" />
-                                <h3 className='my-4  text-center'>
+                                <h3 className='my-4  px-4 text-center'>
                                     Quality Assurance
                                 </h3>
                                 <ul className='fw-normal '>
@@ -61,7 +61,7 @@ const Benefits = () => {
                         <div className="col-lg-3 col-md-3 col-sm-3 pt-5 mt-3 inovativeREsp">
                             <div className="benefits-boxes h-100 text-navy">
                                 <img src=" /assets/images/why-samaro/Group 28883.svg" alt="" />
-                                <h3 className='my-4 text-center'>
+                                <h3 className='my-4  px-4 text-center'>
                                     lnnovating
                                 </h3>
                                 <ul className='fw-normal'>

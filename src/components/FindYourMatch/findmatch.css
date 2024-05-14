@@ -132,6 +132,13 @@
   padding: 5px 25px;
   color: #CA373C;
 }
+
+.submit_btn_match:hover{
+  padding: 5px 25px;
+  color: #fff;
+  background-color: #CA373C;
+  border: none;
+}
 @media (max-width: 600px) {
   .discoverBtn{
     margin: 0 auto;
