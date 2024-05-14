@@ -97,12 +97,18 @@
 
 
 @media (max-width:600px) {
+  .social h2{
+    letter-spacing: 6px;
+  }
   .instaid {
     font-size: 12px;
     margin: 0 auto;
     /* padding: 0 40px; */
   }
 
+  .instagramimg .instaLogo img{
+    width: 50% !important;
+  }
   .instabio {
     font-size: 9px;
     text-align: justify;
@@ -112,9 +118,11 @@
   .social {
     padding: 0px !important;
   }
-  .instagramimg .instaLogo{
+  
+  .instagramimg .instaLogo {
     width: 25% !important;
-  }
+    text-align: center;
+}
 }
 
 /* inspiration gallery */
