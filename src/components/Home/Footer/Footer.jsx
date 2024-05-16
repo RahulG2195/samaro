@@ -42,11 +42,11 @@ const Footer = () => {
                         </div>
                         <div className="col-lg-5 ps-5 ordr3">
                             <div className="d-flex gap-3">
-                                <i className="fas fa-map-marker-alt d-block mt-2"></i>
-                                <p>
+                                <address className='d-flex'>
+                                <i className="fas fa-map-marker-alt d-block mt-2 px-2"></i>
                                     213-215, Hubtown Solaris, N. S. Phadke Marg, Andheri (East),
                                     Mumbai-400069, India.
-                                </p>
+                                </address>
                             </div>
                             <div className="contact-details d-flex gap-5 mt-2 mb-3">
                                 <div className="mail">
@@ -63,7 +63,7 @@ const Footer = () => {
                                 <button className='btn border-2 border-white rounded-pill footerSubmitbutton'>Submit</button>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-4 col-sm-6 col-6 ps-5 mt-0  ordr1">
+                        <div className="col-lg-3 col-md-4 col-sm-6 col-6 ps-md-5 mt-0  ordr1">
                             <img src="/assets/images/home/footer/1000_F_435229236_4nOQpFgQ8bzvj60ff4B5eBcGSEdTyG2s.png" alt=""/>
                         </div>
                     </div>

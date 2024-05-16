@@ -3,12 +3,12 @@ import "./SPCLVT.css"
 import Link from 'next/link'
 const Spclvt = () => {
     return (
-        <section className="mt-md-5 mt-3 spc-lvt">
+        <section className="mt-5 spc-lvt">
             <div className="container">
                 <div className="row align-items-end">
                     <div className="col-lg-6 ">
                         <div className="content">
-                            <h2 className="sub-heading fw-bold navyBlue w-75">
+                            <h2 className="sub-heading fw-bold navyBlue w-md-75">
                                 Build a happy home with a Samaro floor
                             </h2>
                             <p className="mt-4 text-navy">

@@ -5,13 +5,13 @@ import './follow.css'
 const FollowMore = () => {
     return (
         <>
-            <div className="align-items-center d-flex justify-content-center flex-wrap gap-2 my-5">
+            <div className="align-items-center d-md-flex justify-content-center flex-wrap gap-2 my-5">
                 <div className="logo text-center">
                     <Link href="#">
                         <span className=' small followtxt'>Follow More</span>
                     </Link>
                 </div>
-                <div className="social-media-inner-home d-flex gap-3" >
+                <div className="social-media-inner-home d-flex justify-content-center gap-3" >
                     <div className="facebook" >
                         <Link href="#">
                             <img className="img p-1" src="/assets/images/social-media/Group 28057.svg" alt="err"  />
