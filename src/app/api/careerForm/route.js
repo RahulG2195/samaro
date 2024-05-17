@@ -2,7 +2,6 @@ import nodemailer from "nodemailer";
 
 export async function POST(request, res) {
   const { name, email, phone, position } = await request.json();
-  console.log("Email: " + email);
 
   try {
     // Create a transporter object using SMTP transport
@@ -27,7 +26,6 @@ export async function POST(request, res) {
         `,
     });
 
-    console.log("Message sent: %s", info.messageId);
     return new Response(
       JSON.stringify({ Success: "Mail sended Suucessfully" }),
       {
@@ -35,7 +33,6 @@ export async function POST(request, res) {
       }
     );
   } catch (error) {
-    console.error("Error occurred while sending email:", error);
     return new Response(JSON.stringify({ error: error }), {
       status: 500,
     });

@@ -36,7 +36,6 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("formData" + JSON.stringify(formData));
     if (!isValidName(formData.name)) {
       notifyError("Please enter a valid Name.");
       return;
@@ -55,9 +54,7 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
     }
     try {
       const response = await axios.post("api/spcForm", formData);
-      console.log(response.data);
       if (response.status === 200) {
-        console.log("Form submitted successfully");
         // Clear form after successful submission
         notify("Form submitted successfully");
         setFormData({
@@ -68,9 +65,12 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
           selectedOption: "",
         });
       } else {
+        notifyError("Form submitted Failed");
         console.error("Form submission failed");
       }
     } catch (error) {
+      notifyError(error.message || "Process Failed");
+
       console.error("Form submission failed:", error);
     }
   };

@@ -49,10 +49,9 @@ const Career = () => {
     }
     try {
       const response = await axios.post("api/careerForm", formData);
-      console.log(response.data);
       if (response.status === 200) {
-        console.log("Form submitted successfully");
         // Clear form after successful submission
+        notify("Mailed Sended Successfully");
         setFormData({
           name: "",
           email: "",
@@ -61,8 +60,10 @@ const Career = () => {
         });
       } else {
         console.error("Form submission failed");
+        notifyError("Failed to send Mail");
       }
     } catch (error) {
+      notifyError(error.message || "Failed to send Mail");
       console.error("Form submission failed:", error);
     }
   };
