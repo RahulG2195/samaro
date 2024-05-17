@@ -102,6 +102,7 @@
     .getinTouch {
         display: block;
         padding-top: 0 !important;
+        margin-bottom: 20px;
     }
     .spcform .react-tel-input .form-control{
        width: 100% ;

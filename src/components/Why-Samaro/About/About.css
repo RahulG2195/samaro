@@ -29,6 +29,10 @@
     letter-spacing: 0 !important;
     padding: 0 !important;
   }
+
+  .about .tagline span{
+    color: #fff;
+  }
   .headline{
     padding: 0 !important;
   }
