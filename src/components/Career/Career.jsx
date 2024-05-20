@@ -4,6 +4,8 @@ import "./Career.css";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import axios from "axios";
+import { toast, Bounce } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   isValidEmail,
   isValidReason,
@@ -11,6 +13,8 @@ import {
   isValidName,
 } from "@/utils/validation";
 import { notify, notifyError } from "@/utils/toaster.js";
+
+// toast.configure();
 
 const Career = () => {
   const [formData, setFormData] = useState({
@@ -47,25 +51,41 @@ const Career = () => {
       notifyError("Not a valid number");
       return;
     }
-    try {
-      const response = await axios.post("api/careerForm", formData);
-      if (response.status === 200) {
-        // Clear form after successful submission
-        notify("Mailed Sended Successfully");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          position: "",
-        });
-      } else {
-        console.error("Form submission failed");
-        notifyError("Failed to send Mail");
+
+    const submitForm = async () => {
+      try {
+        const response = await axios.post("api/careerForm", formData);
+        if (response.status === 200) {
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            position: "",
+          });
+          return "Application sent successfully!";
+          // notify("Mailed Sended Successfully");
+        } else {
+          console.error("Form submission failed");
+          // notifyError("Failed to send Mail");
+          throw new Error(e.message || "Failed to send Mail");
+        }
+      } catch (e) {
+        throw new Error(e.message || "Failed to send Mail");
       }
-    } catch (error) {
-      notifyError(error.message || "Failed to send Mail");
-      console.error("Form submission failed:", error);
-    }
+    };
+
+    toast.promise(
+      submitForm(),
+      {
+        pending: "Sending your application...",
+        success: "Application sent successfully!",
+        error: "Failed to send your application.",
+      },
+      {
+        position: "top-center",
+        transition: Bounce,
+      }
+    );
   };
 
   return (
