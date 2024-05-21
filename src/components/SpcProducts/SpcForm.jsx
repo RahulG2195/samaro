@@ -1,83 +1,212 @@
-
-'use client'
-import React, { useState } from 'react'
-import './SpcForm.css'
-import PhoneInput from 'react-phone-input-2'
-import 'react-phone-input-2/lib/style.css'
+"use client";
+import React, { useState } from "react";
+import "./SpcForm.css";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+import axios from "axios";
+import {
+  isValidEmail,
+  isValidReason,
+  isValidMobile,
+  isValidName,
+} from "@/utils/validation";
+import { notify, notifyError } from "@/utils/toaster.js";
 
 const SpcForm = ({ hideguide, contactformcol, pb }) => {
-    const [phone, setPhone] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    selectedOption: "",
+  });
 
-    return (
-        <>
-            <section className={`spcFormCont row container mx-auto ${pb ? 'pb-0' : ''} my-5 justify-content-evenly align-items-center getintouchformCont`}>
-                <div className={`col-md-6 ${hideguide ? 'hideguide' : ''}`}>
-                    <span className='spcformheading'>
-                        <p className='fs-5 guidHeading letsGuideYou p-0'>LET US GUIDE YOU</p>
-                        <p className='fs-5 guidHeading subH fw-normal'>TO YOUR PERFECT SPC FLOOR</p>
-                        <p className='fw-medium txt guid-para'>Choosing the perfect floor is not easy, but we would love to help you with the challenge. Together we will find a vinyl floor that fits your home perfectly.</p>
-                    </span>
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handlePhoneChange = (value) => {
+    setFormData({ ...formData, phone: value });
+  };
+
+  const handleOptionChange = (e) => {
+    setFormData({ ...formData, selectedOption: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!isValidName(formData.name)) {
+      notifyError("Please enter a valid Name.");
+      return;
+    }
+    if (!isValidEmail(formData.email)) {
+      notifyError("Please enter a valid email.");
+      return;
+    }
+    if (!isValidReason(formData.message)) {
+      notifyError("Not a valid message.");
+      return;
+    }
+    if (!isValidMobile(formData.phone)) {
+      notifyError("Not a valid number");
+      return;
+    }
+    try {
+      const response = await axios.post("api/spcForm", formData);
+      if (response.status === 200) {
+        // Clear form after successful submission
+        notify("Form submitted successfully");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+          selectedOption: "",
+        });
+      } else {
+        notifyError("Form submitted Failed");
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      notifyError(error.message || "Process Failed");
+
+      console.error("Form submission failed:", error);
+    }
+  };
+
+  return (
+    <>
+      <section
+        className={`spcFormCont row container mx-auto ${
+          pb ? "pb-0" : ""
+        } my-md-4 justify-content-evenly align-items-center getintouchformCont`}
+      >
+        <div className={`col-md-6 ${hideguide ? "hideguide" : ""}`}>
+          <span className="spcformheading">
+            <p className="fs-5 guidHeading letsGuideYou p-0">
+              LET US GUIDE YOU
+            </p>
+            <p className="fs-5 guidHeading subH fw-normal">
+              TO YOUR PERFECT SPC FLOOR
+            </p>
+            <p className="fw-medium txt guid-para">
+              Choosing the perfect floor is not easy, but we would love to help
+              you with the challenge. Together we will find a vinyl floor that
+              fits your home perfectly.
+            </p>
+          </span>
+        </div>
+        <span className="getinTouch text-center fs-1 fw-bold ">
+          GET IN TOUCH
+        </span>
+        <div className={`${contactformcol ? "col-md-10" : "col-md-6"}`}>
+          <form className="spcform" onSubmit={handleSubmit}>
+            <div className="mb-3">
+              <input
+                type="text"
+                className="form-control border-0 "
+                placeholder="Name"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+            <div className="row">
+              <div className="mb-3 col-md-6 col-lg-6 col-sm-6">
+                <input
+                  type="email"
+                  className="form-control border-0"
+                  placeholder="Email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className="mb-3 mobileSbmtResp col-md-6 col-lg-6 col-sm-6">
+                <div className="d-flex align-items-end gap-2 ">
+                  <PhoneInput
+                    country={"in"}
+                    value={formData.phone}
+                    onChange={handlePhoneChange}
+                  />
                 </div>
-                <span className='getinTouch text-center fs-1 fw-bold '>GET IN TOUCH</span>
-                <div className={`${contactformcol ? 'col-md-10' : 'col-md-6'}`}>
-                    <form className='spcform'>
-                        <div className="mb-3">
-                            <input type="text" className="form-control border-0 " placeholder="Name" />
-                        </div>
+              </div>
+            </div>
 
-                        <div className='row'>
-                            <div className="mb-3 col-md-6 col-lg-6 col-sm-6">
-                                <input type="email" className="form-control border-0" placeholder="Email" />
-                            </div>
-                            <div className="mb-3 mobileSbmtResp col-md-6 col-lg-6 col-sm-6">
-                                {/* country code drop  */}
-                                <div className="d-flex align-items-end gap-2 ">
-                                    <PhoneInput
-                                        country={'in'}
-                                        value={phone}
-                                        onChange={phone => setPhone(phone)}
+            <div className={`row my-4 ${pb ? "mb-0" : "my-4 "}`}>
+              <p>Select any one</p>
 
-                                    />
-                                </div>
-                            </div>
-                        </div>
+              <div className="col-md-6 slct1 my-2">
+                <input
+                  type="radio"
+                  name="selectedOption"
+                  className="me-2 form-check-input"
+                  value="Wholesaler/Distributors"
+                  onChange={handleOptionChange}
+                />
+                <label htmlFor="radio-red1">Wholesaler/Distributors</label>
+              </div>
+              <div className="col-md-6 slct1 my-2">
+                <input
+                  type="radio"
+                  name="selectedOption"
+                  className="me-2 form-check-input"
+                  value="Commercial Projects"
+                  onChange={handleOptionChange}
+                />
+                <label htmlFor="radio-red2">Commercial Projects</label>
+              </div>
+              <div className="col-md-6 slct1 my-2">
+                <input
+                  type="radio"
+                  name="selectedOption"
+                  className="me-2 form-check-input"
+                  value="For customer/ Project inquiry"
+                  onChange={handleOptionChange}
+                />
+                <label htmlFor="radio-red3">
+                  For customer/ Project inquiry
+                </label>
+              </div>
+              <div className="col-md-6 slct1 my-2">
+                <input
+                  type="radio"
+                  name="selectedOption"
+                  className="me-2 form-check-input"
+                  value="OEM"
+                  onChange={handleOptionChange}
+                />
+                <label htmlFor="radio-red4">OEM</label>
+              </div>
 
-                        <div className={`row my-4 ${pb ? 'mb-0' : 'my-4 '}`}>
-                            <p>Select any one</p>
+              <div className="my-3">
+                <textarea
+                  type="text"
+                  className="form-control border-0 text-danger"
+                  placeholder="Your Message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="d-flex justify-content-center">
+                <button
+                  type="submit"
+                  className="callBTN btn px-5 py-0 rounded-pill fw-semibold"
+                >
+                  Get a free call
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </>
+  );
+};
 
-                            <div className='col-md-6 slct1 my-2'>
-                                <input type="radio" name="example" className='me-2 form-check-input' />
-                                <label for="radio-red1">Wholesaler/Distributors</label>
-                            </div>
-                            <div className='col-md-6 slct1 my-2'>
-                                <input type="radio" name="example" className='me-2 form-check-input' />
-                                <label for="radio-red2">Commercial Projects</label>
-                            </div>
-                            <div className='col-md-6 slct1 my-2'>
-                                <input type="radio" name="example" className='me-2 form-check-input' />
-                                <label for="radio-red3">For customer/ Project inquiry</label>
-                            </div>
-                            <div className='col-md-6 slct1 my-2'>
-                                <input type="radio" name="example" className='me-2 form-check-input' />
-                                <label for="radio-red4">OEM</label>
-                            </div>
-
-                            <div className="my-3">
-                                <textarea type="text" className="form-control border-0 text-danger" placeholder="Your Message" />
-                            </div>
-                            <div className='d-flex justify-content-center'>
-                                <p type="submit" className=" callBTN btn px-5 py-0 rounded-pill fw-semibold">Get a free call</p>
-                            </div>
-                        </div>
-
-
-                    </form>
-
-                </div>
-
-            </section>
-        </>
-    )
-}
-
-export default SpcForm
+export default SpcForm;

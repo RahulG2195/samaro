@@ -14,24 +14,20 @@ import FloorExplorer from "@/components/Home/FloorExplorer/FloorExplorer";
 import FollowMore from "@/components/Home/FollowMore/FollowMore";
 import SpcForm from "@/components/SpcProducts/SpcForm";
 
-
 export default function Home() {
-
-
-    return (
-        <main>
-            <Banner />
-            <Spclvt />
-            <Design />
-            <Benefits />
-            <FloorExplorer />
-            <Commercial />
-            <Residentail />
-            <SpcForm></SpcForm>
-            {/* <CallToAction /> */}
-            <Social />
-            <FollowMore />
-        
-        </main>
-    );
+  return (
+    <main>
+      <Banner />
+      <Spclvt />
+      <Design />
+      <Benefits />
+      <FloorExplorer />
+      <Commercial />
+      <Residentail />
+      <SpcForm></SpcForm>
+      {/* <CallToAction /> */}
+      <Social />
+      <FollowMore />
+    </main>
+  );
 }
