@@ -3,7 +3,7 @@ import "./Benefits.css";
 
 const Benefits = () => {
     return (
-        <section className='benefits samcontResp why-samaro position-relative mt-5 pt-5'>
+        <section className='benefits samcontResp why-samaro position-relative my-5 pt-md-5'>
             <div className="container px-5">
                 <h2 className='text-navy text-center mb-5'>Benefits</h2>
                 <div className='position-relative col-12' >

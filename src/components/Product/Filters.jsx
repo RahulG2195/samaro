@@ -30,10 +30,12 @@ const Filters = ({ hide, inSPC }) => {
 
     // Effect to update isOpen state when hide prop changes
     useEffect(() => {
-        if (hide === 'd-md-non') {
+        if (hide === 'd-md-none') {
             setIsOpen(false);
         }
     }, [hide]);
+
+    
     return (
         <>
             <div className={` ${inSPC} hamburger-menu d-md-non d-block`}>

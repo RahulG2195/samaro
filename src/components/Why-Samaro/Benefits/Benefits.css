@@ -133,6 +133,9 @@
     height: 350vh;
   }
 
+  .vissionmissionCont{
+    position: relative !important;
+  }
   .samcontResp .container {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -151,6 +154,15 @@
 
   .whysamBenifitsDeskbg {
     display: none;
+  }
+
+  .benefits-boxes{
+    border: 1px solid lightgray;
+    box-shadow: 0 0 6px 1px currentColor;
+    border-radius: 15px;
+    padding: 12px 0;
+    margin: 10px 0;
+    height: auto !important;
   }
 
 
@@ -183,9 +195,12 @@
   }
 
   .whysamBenifitsMblbg {
-    display: block;
+    display: none;
   }
-
+.whysam-benifits{
+  position: relative !important;
+  height: auto !important;
+}
   .whysam-benifits ol {
     font-size: 15px !important;
   }

@@ -180,7 +180,7 @@ const Newsletter = () => {
     return (
         <>
 
-            <div className='text-center dwnldcenterHeading mt-md-5'>
+            <div className='text-center dwnldcenterHeading mt-md-5 mt-4'>
                 <h2 className='fw-bold text-navy'>Newsletter</h2>
                 <div className='dwnldcenterFilters my-4 d-flex gap-2 flex-wrap justify-content-center   '>
                     <button onClick={() => setActiveCategory('All')}

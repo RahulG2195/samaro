@@ -28,6 +28,14 @@
     }
 }
 @media (max-width:600px) {
+    .whysamaro_sec{
+        height: 36vh;
+    }
+
+    .whysamaro_sec video{
+        height: 36vh;
+        object-fit: cover;
+    }
     .whyBannerTxt {
         left: 0%;
     }

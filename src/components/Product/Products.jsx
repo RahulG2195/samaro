@@ -266,10 +266,8 @@ const Products = () => {
 
                         <a class="discoverBtn load_more button mx-auto" href="/product">Load More</a>
                     </div>
-
                 </div>
             </div>
-
         </div>
     );
 }

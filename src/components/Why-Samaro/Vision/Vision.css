@@ -141,8 +141,8 @@
   .vision-image {
     position: absolute;
     width: 20%;
-    top: -53%;
-    right: 60px;
+    top: -25%;
+    right: 149px;
 
   }
 
@@ -203,12 +203,30 @@
     top: 5%;
   }
 
+  .samcontResp {
+    height: auto !important;
+  }
   .vision h2,
   .mission h2 {
 
-    font-size: 20px !important;
+    font-size: 38px !important;
   }
-
+  .vision-image {
+    position: absolute;
+    width: 20%;
+    top: -5%;
+    right: 239px;
+}
+.mission-image {
+  position: absolute !important;
+  top: 47%;
+  left: 34%;
+  width: 21%;
+}
+.whysam-benifits{
+  height: auto !important;
+  position: relative !important;
+}
   .vissionsectionResp p,
   .missionSectionResp p {
     font-size: 10px !important;
@@ -223,6 +241,9 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
+  .vision .image2{
+    display: none !important;
+  }
 }
 
 @media (max-width: 424px) {
@@ -232,6 +253,7 @@
 
   .vissionmissionCont {
     top: 10%;
+    position: relative !important;
   }
 
   .vision h2,
@@ -249,13 +271,13 @@
   .visionH2 {
     position: absolute;
     top: -78px;
-    right: 45%;
+    /* right: 45%; */
   }
 
   .missionH2 {
     position: absolute;
-    bottom: 45%;
-    left: 37px;
+    bottom: 54%;
+    /* left: 37px; */
   }
 }
 
@@ -272,29 +294,30 @@
     bottom: 50%;
   }
 
-  .visionH2 {
+  /* .visionH2 {
     top: -40px;
-  }
+  } */
 
   .visionH2 {
     letter-spacing: 5px;
     top: -45px;
     color: #0A2647 !important;
-    opacity: 40%;
+    /* opacity: 40%; */
 
   }
 
   .missionH2 {
     letter-spacing: 5px;
-    bottom: 47%;
+    bottom: 54%;
     color: #0A2647 !important;
-    opacity: 40%;
+    /* opacity: 40%; */
+    margin-top: 20px;
   }
   .mission-image{
     position: absolute;
-  top: 30%;
-  width: 25%;
-  left: 60%;
+    top: 35%;
+    width: 25%;
+    left: 52%;
   }
 }
 
