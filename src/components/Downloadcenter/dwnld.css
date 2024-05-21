@@ -126,4 +126,8 @@
         left: var(--navigation-sides-offset, 9) !important;
         right: 17% !important;
     }
+
+    .dwnldcenterHeading {
+        margin-top: 100px !important; 
+    }
 }

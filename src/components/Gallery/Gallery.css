@@ -94,6 +94,9 @@
   .grid{
   columns: 2;
   }
+  .gallery {
+    margin-top: 100px;
+}
 }
 @media (max-width: 480px){
   .grid{

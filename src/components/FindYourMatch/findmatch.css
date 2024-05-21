@@ -156,6 +156,10 @@
     font-size: 11px;
 }
 
+.finyourMatch_sec, .tepoutput_section{
+  margin-top: 100px !important;
+}
+
 }
 @media (max-width: 480px) {
   .steps_name p{
