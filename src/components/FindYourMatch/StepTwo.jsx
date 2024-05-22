@@ -25,7 +25,7 @@ const StepTwo = () => {
         <div className='row'>
           {
             stepTwo.map(data => (
-              <div className='col-lg col-md-3 col-sm-2 col-6 mx-auto'>
+              <div className='col-lg col-md- col-sm- col-6 mx-auto'>
                 <div className='steps1-main' id={`type${data.id}`}>
                   <div className='inner_step1'>
                     <label htmlFor={data.id} className='stepslabel'>

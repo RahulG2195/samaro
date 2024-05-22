@@ -1,10 +1,9 @@
-
 .download-img {
   position: relative;
 }
 
-.redimg:hover{
-background-color: #0A2647 !important;
+.redimg:hover {
+  background-color: #0A2647 !important;
 }
 
 .download-img .text {
@@ -17,67 +16,96 @@ background-color: #0A2647 !important;
   font-weight: 400;
   transform: translate(-50%, -50%);
 }
-.samply{
+
+.samply {
   top: 10%;
   left: 10%;
 }
-.dwnldTXTAbout h3{
+
+.dwnldTXTAbout h3 {
   letter-spacing: 10px;
   font-weight: 200;
 }
-.dwnldTXTAbout, .dwnldTXTAbout p{
+
+.dwnldTXTAbout,
+.dwnldTXTAbout p {
   color: #FFFFFF;
   text-align: start;
-  
+
 }
-.dwnldTXTAbout{
+
+.dwnldTXTAbout {
   top: 20%;
   right: 10%;
 }
-.mobileDwnldimg{
+
+.mobileDwnldimg {
   display: none;
 }
 
 @media (max-width:1276px) {
-  .dwnldTXTAbout{
+  .dwnldTXTAbout {
     top: 0;
+    text-align: center;
   }
-  .dwnldTXTAbout .respCption{
+
+  .dwnldTXTAbout .respCption {
     margin: 9px !important;
   }
-  .dwnldTXTAbout h3{
+
+  .dwnldTXTAbout h3 {
     font-size: 15px;
   }
-  .dwnldTXTAbout p{
+
+  .dwnldTXTAbout p {
     font-size: 15px;
     padding: 0 !important;
     text-align: center !important;
   }
 }
+
 @media (max-width:600px) {
-  .deskDwnldimg{
-    display: none ;
+  .deskDwnldimg {
+    display: none;
   }
-  .mobileDwnldimg{
+
+  .mobileDwnldimg {
     display: block;
   }
-  .samply{
+
+  .samply {
     top: 50%;
     left: 19%;
   }
+
   .dwnldTXTAbout {
-    top: 5%;
+    top: 15%;
     left: 20%;
     text-align: center;
-}
-.dwnldTXTAbout h3{
-  font-size: 25px !important;
-}
-.dwnldTXTAbout p{
-  font-size: 12px;
-  padding: 0 !important;
-  text-align: center !important;
-  margin-bottom: 20px !important ;
-}
+  }
+
+  .dwnldTXTAbout h3 {
+    font-size: 25px !important;
+  }
+
+  .dwnldTXTAbout p {
+    font-size: 12px;
+    padding: 0 !important;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+  }
 }
 
+@media (max-width:425px) {
+  .dwnldTXTAbout {
+    top: 5% !important;
+   
+  }
+}
+
+@media (max-width: 600px) and (min-width: 425px) {  
+  .redAndBlueBg img{
+    height: 140vh;
+    width: 100%;
+  }
+}

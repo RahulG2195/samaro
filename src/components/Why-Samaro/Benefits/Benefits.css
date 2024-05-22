@@ -3,14 +3,14 @@
   /* background-image: url('/assets/images/why-samaro/Path 97423.svg'); */
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 104vh;
+  /* height: 104vh; */
 }
 
 /* .whysam-benifits ul {
   padding: 0;
 } */
 
-.whysam-benifits ul li{
+.whysam-benifits ul li {
   list-style: disc;
   padding: 5px 0;
   font-size: 13px;
@@ -79,6 +79,10 @@
 
 
 @media (max-width:1200px) {
+  .samcontResp .container {
+    padding: 0 !important;
+  }
+
   .whysam-benifits ol {
     padding-left: 0px !important;
     font-size: 12px !important;
@@ -93,13 +97,21 @@
   }
 }
 
-@media (max-width:992px) {
-  /* 
-  .samcontResp .container,
-  .samcontResp .container-md,
-  .samcontResp .container-sm {
+
+@media (min-width:768px ) and (max-width:992px) {
+  .samcontResp .container
+  {
     max-width: 958px;
-  } */
+  }
+  .benefits-boxes ol, .benefits-boxes ul{
+    padding-left: 1rem !important;
+  }
+}
+
+
+@media (max-width:992px) {
+  
+
 
   .whysam-benifits h3 {
     font-size: 14px;
@@ -114,6 +126,7 @@
   .benefits-boxes img {
     width: 20%;
   }
+
 }
 
 @media (max-width:768px) {
@@ -126,22 +139,13 @@
     padding-top: 0 !important;
     margin-top: 0 !important;
   }
-}
 
-@media (max-width:600px) {
-  .samcontResp {
-    height: 350vh;
-  }
 
-  .vissionmissionCont{
+  /*  */
+
+  .whysam-benifits {
     position: relative !important;
   }
-  .samcontResp .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    padding-top: 0 !important;
-  }
-
 
   .benefits-boxes h3 {
     margin: 30px 0;
@@ -156,7 +160,7 @@
     display: none;
   }
 
-  .benefits-boxes{
+  .benefits-boxes {
     border: 1px solid lightgray;
     box-shadow: 0 0 6px 1px currentColor;
     border-radius: 15px;
@@ -183,6 +187,22 @@
   .whysam-benifits .col-lg-3 {
     padding-top: 0rem !important;
   }
+
+  .samcontResp .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width:600px) {
+
+  .vissionmissionCont {
+    position: relative !important;
+  }
+
+
+
 }
 
 @media (max-width:425px) {
@@ -197,10 +217,12 @@
   .whysamBenifitsMblbg {
     display: none;
   }
-.whysam-benifits{
-  position: relative !important;
-  height: auto !important;
-}
+
+  .whysam-benifits {
+    position: relative !important;
+    height: auto !important;
+  }
+
   .whysam-benifits ol {
     font-size: 15px !important;
   }

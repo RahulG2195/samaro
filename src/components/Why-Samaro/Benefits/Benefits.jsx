@@ -11,7 +11,7 @@ const Benefits = () => {
                     <img src="/assets/images/why-samaro/Path 98155.svg" alt="" className='whysamBenifitsMblbg position-relative' />
 
                     <div className="row px-0 whysam-benifits pt-5 w-100 position-absolute top-0">
-                        <div className="col-lg-3 col-md-3 col-sm-3 col-md-pt-1 pt-5">
+                        <div className="col-lg-3 col-md-3 col-sm-12 col-md-pt-1 pt-5">
                             <div className="benefits-boxes manfactResp">
                                 <img src=" /assets/images/why-samaro/Group 28879.svg" alt="" className='mt-4' />
                                 <div className='d-flex flex-column align-items-center text-darkred'>
@@ -28,22 +28,24 @@ const Benefits = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-3 col-sm-3  pt-5 mt-5 performanceResp">
+                        <div className="col-lg-3 col-md-3 col-sm-12 mt-5 performanceResp">
                             <div className="benefits-boxes h-100 text-navy ">
                                 <img src=" /assets/images/why-samaro/Group 28880.svg" alt="" />
-                                <h3 className='my-4 px-4 text-center'>
-                                    Product Performance
-                                </h3>
-                                <ul className='fw-normal mx-au' >
-                                    <li>Resilience: Withstands scratches and impacts.</li>
-                                    <li>Water Resistance: Ideal for moisture-prone areas.</li>
-                                    <li>Stability: Maintains shape in different temperatures. </li>
-                                    <li>Easy Care: Requires minimal cleaning effort.</li>
-                                    <li>Longevity: Designed for lasting performance.</li>
-                                </ul>
+                                <div className='d-flex flex-column align-items-center'>
+                                    <h3 className='my-4 px-4 text-center'>
+                                        Product Performance
+                                    </h3>
+                                    <ul className='fw-normal mx-au' >
+                                        <li>Resilience: Withstands scratches and impacts.</li>
+                                        <li>Water Resistance: Ideal for moisture-prone areas.</li>
+                                        <li>Stability: Maintains shape in different temperatures. </li>
+                                        <li>Easy Care: Requires minimal cleaning effort.</li>
+                                        <li>Longevity: Designed for lasting performance.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-3 col-sm-3 ">
+                        <div className="col-lg-3 col-md-3 col-sm-12 ">
                             <div className="benefits-boxes h-100 text-darkred ">
                                 <img src=" /assets/images/why-samaro/Group 28877.svg" alt="" />
                                 <h3 className='my-4  px-4 text-center'>
@@ -58,7 +60,7 @@ const Benefits = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-lg-3 col-md-3 col-sm-3 pt-5 mt-3 inovativeREsp">
+                        <div className="col-lg-3 col-md-3 col-sm-12 pt-5 mt-3 inovativeREsp">
                             <div className="benefits-boxes h-100 text-navy">
                                 <img src=" /assets/images/why-samaro/Group 28883.svg" alt="" />
                                 <h3 className='my-4  px-4 text-center'>

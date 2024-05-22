@@ -37,23 +37,9 @@
   .prdctmobilebanner{
     display: block !important;
   }
-  
-}
-
-@media (max-width: 576px) {
-  .HomebannertextCont .heading {
-    font-size: rem;
-  }
-
   .HomebannertextCont {
     left: 10% !important;
     top: 70%;
   }
-
-  /* .HomebannertextCont .discoverBtn {
-    font-size: 8px;
-    padding: 0 5px !important;
-    border: 2px solid #FFFFFF !important;
-
-  } */
+  
 }

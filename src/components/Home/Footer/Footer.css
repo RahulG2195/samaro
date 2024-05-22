@@ -97,11 +97,11 @@
   }
   .ordr3{
     order: 3 !important;
-    padding-left: 1rem !important;
+    /* padding-left: 1rem !important; */
   }
   .ordr2{
     order: 2 !important;
-    padding-left: 0rem !important;
+    /* padding-left: 0rem !important; */
 
   }
   .ordr1{
@@ -123,3 +123,8 @@
   }
 }
 
+@media (max-width:425px) {
+ .newsletter{
+  flex-wrap: wrap ;
+ } 
+}

@@ -105,17 +105,16 @@
   .respCption {
     font-size: 12px !important;
   }
-
-}
-
-@media (max-width:600px) {
+  
   .floorExplrTxtinMbl {
     display: block;
   }
-  .floorExplrDeskText{
+
+  .floorExplrDeskText {
     display: none;
   }
-  .respCption{
+
+  .respCption {
     padding: 0 3rem;
   }
 

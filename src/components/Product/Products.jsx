@@ -252,7 +252,7 @@ const Products = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row row-cols-md-3 row-cols-sm-3 row-cols-xs-1 row-cols-lg-3 row-cols-xl-5 mt-md-2">
+                    <div className="row justify-content-center row-cols-md-3 row-cols-sm-3 row-cols-xs-1 row-cols-lg-3 row-cols-xl-5 mt-md-2">
                         {productsArr.map((product, index) => (
                             <div key={index} className="col-6 ">
                                 <ProductCard

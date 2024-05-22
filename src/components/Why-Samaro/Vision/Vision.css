@@ -8,7 +8,7 @@
   font-weight: 800;
 }
 
-.missionCont{
+.missionCont {
   margin-top: 30px !important;
 }
 
@@ -16,11 +16,23 @@
   /* font-size: 40px; */
   font-weight: 800;
 }
-.missionCont, .vissionmissionCont ul {
-  padding: 0;
+
+.missionCont,
+.vissionmissionCont ul {
+  padding-left: 1rem;
 }
-.missionCont, .vissionmissionCont ul li{
+
+.missionCont,
+.vissionmissionCont ul li {
   list-style: disc;
+}
+
+@media (min-width:768px) {
+
+  .missionCont,
+  .vissionmissionCont ul li {
+    font-size: 1vw !important;
+  }
 }
 
 @media (max-width: 1430px) {
@@ -96,14 +108,8 @@
     font-size: 15px !important;
   }
 
-  .vissionsectionResp p,
-  .missionSectionResp p {
-    font-size: 8px !important;
-  }
-
-  .missionCont {
-    padding: 0 !important;
-
+  .mission-text {
+    padding-top: 0 !important;
   }
 }
 
@@ -113,10 +119,22 @@
 }
 
 @media (max-width:768px) {
+  .vissionmissionCont {
+    position: relative !important;
+  }
+
   .mission-image {
     position: absolute !important;
     top: 50%;
 
+  }
+
+  .vision-image , .mission-image {
+    display: none;
+  }
+
+  .mobilevissionimg {
+    display: block !important;
   }
 
   .vision .image1 {
@@ -138,95 +156,44 @@
     font-size: 15px !important;
   }
 
-  .vision-image {
-    position: absolute;
-    width: 20%;
-    top: -25%;
-    right: 149px;
-
-  }
-
-  .missionCont {
-    margin: 0 !important;
-    padding-top: 35px;
-  }
 
   .vissionsectionResp {
     padding-top: 15px !important;
   }
 }
 
-@media (max-width:718px) {
 
 
-  .vision h2,
-  .mission h2 {
+@media (min-width:600px) and (max-width:768px) {
 
-    font-size: 30px !important;
-  }
-
-  .vissionsectionResp p,
-  .missionSectionResp p {
-    font-size: 14px !important;
-  }
-}
-
-@media (max-width:679px) {
-
-  .vision h2,
-  .mission h2 {
-
-    font-size: 25px !important;
-  }
-
-  .vissionsectionResp p,
-  .missionSectionResp p {
-    font-size: 12px !important;
-  }
-
-  .vissionmissionCont {
-    top: 10%;
+  .missionCont,
+  .vissionmissionCont ul li {
+    font-size: 2vw !important;
   }
 
   .missionCont {
-    padding-top: 30px;
+    margin: 0 !important;
+    padding-top: 3%;
   }
-
-  .vissionsectionResp {
-    padding-top: 0px !important;
-  }
-
 }
 
 @media (max-width:600px) {
-  .vissionmissionCont {
-    top: 5%;
+
+  .vision {
+    margin: 0 !important;
   }
 
-  .samcontResp {
-    height: auto !important;
-  }
   .vision h2,
   .mission h2 {
 
     font-size: 38px !important;
   }
-  .vision-image {
-    position: absolute;
-    width: 20%;
-    top: -5%;
-    right: 239px;
-}
-.mission-image {
-  position: absolute !important;
-  top: 47%;
-  left: 34%;
-  width: 21%;
-}
-.whysam-benifits{
-  height: auto !important;
-  position: relative !important;
-}
+
+  .whysam-benifits {
+    height: auto !important;
+    position: relative !important;
+  }
+
   .vissionsectionResp p,
   .missionSectionResp p {
     font-size: 10px !important;
@@ -241,15 +208,12 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
-  .vision .image2{
-    display: none !important;
-  }
+
+
 }
 
-@media (max-width: 424px) {
-  /* .missionCont {
-    padding-top: 0px !important;
-  } */
+@media (max-width: 425px) {
+
 
   .vissionmissionCont {
     top: 10%;
@@ -268,140 +232,23 @@
     margin: 0 !important;
   }
 
-  .visionH2 {
-    position: absolute;
-    top: -78px;
-    /* right: 45%; */
-  }
-
-  .missionH2 {
-    position: absolute;
-    bottom: 54%;
-    /* left: 37px; */
-  }
 }
 
 @media (max-width:375px) {
-  .missionCont {
-    padding-top: 1px;
-  }
 
-  .vissionmissionCont {
-    top: 0%;
-  }
 
+  .visionH2,
   .missionH2 {
-    bottom: 50%;
-  }
-
-  /* .visionH2 {
-    top: -40px;
-  } */
-
-  .visionH2 {
     letter-spacing: 5px;
-    top: -45px;
     color: #0A2647 !important;
     /* opacity: 40%; */
 
   }
 
-  .missionH2 {
-    letter-spacing: 5px;
-    bottom: 54%;
-    color: #0A2647 !important;
-    /* opacity: 40%; */
-    margin-top: 20px;
-  }
-  .mission-image{
+  .mission-image {
     position: absolute;
-    top: 35%;
+    top: 43%;
     width: 25%;
     left: 52%;
   }
 }
-
-/* @media (max-width:600px) {
-  .mission-text {
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    margin-right: 10px !important;
-  }
-
-  .mission-image img {
-    width: 10% !important;
-    position: absolute;
-    right: 17% !important;
-    top: 5% !important;
-
-  }
-
-  .mission-text h2 {
-    position: absolute;
-    letter-spacing: 10px;
-    top: -30% !important;
-    left: 0%;
-    opacity: 40%;
-    font-size: 40px;
-  }
-
-  .mission-text {
-    padding: 0 !important;
-  }
-
-  .mission-text p {
-    font-size: 10px;
-    line-height: 1.3;
-    padding-right: 5px !important;
-    padding-left: 5px !important;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin: 0 !important;
-    text-align: left;
-  }
-
-
-}
-
-
-@media (max-width:600px) {
-
-  .vision-text {
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    margin-left: 10px !important;
-    padding: 0 !important;
-    margin-bottom: 25px;
-  }
-
-  .vision-image img {
-    width: 10% !important;
-    position: absolute;
-    left: 17%;
-    top: 60px;
-
-  }
-
-  .vision-text h2 {
-    position: absolute;
-    letter-spacing: 12px;
-    top: -30% !important;
-    right: 0%;
-    opacity: 40%;
-    font-size: 40px;
-  }
-
-
-  .vision-text p {
-    font-size: 10px;
-    line-height: 1.3;
-    padding-left: 15px !important;
-    padding-right: 5px !important;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin: 0 !important;
-    text-align: left;
-  }
-
-
-} */

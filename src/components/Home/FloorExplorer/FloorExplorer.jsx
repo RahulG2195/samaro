@@ -12,14 +12,14 @@ const FloorExplorer = () => {
               <h2 className="text-white pb-3 pt-md-5 my-2 text-center fw-normal respHeading1">
                 How to choose my <strong className='fw-semibold'>perfect floor</strong>?
               </h2>
-              <div className="col-lg-4 col-md-4 col-sm-4">
+              <div className="col-lg-4 col-md-4 col-sm6 ">
                 <img className="samaro-ply" src="/assets/images/home/floor-explorer/2.png" alt="" />
               </div>
               <div className='floorExplrTxtinMbl'> <h3 className="respHeading2"><span>FLOOR</span>EXPLORER</h3></div>
-              <div className="col-lg-4 col-md-4 col-sm-4 ">
+              <div className="col-lg-4 col-md-4 col-sm6">
                 <img className="samaro-tab" src="/assets/images/home/floor-explorer/1.png" alt="" />
               </div>
-              <div className="col-lg-4 col-md-4 col-sm-4 ">
+              <div className="col-lg-4 col-md-4 ">
                 <div className="content pb-5">
                   <h3 className="respHeading2 floorExplrDeskText"><span>FLOOR</span>EXPLORER</h3>
                   <p className=" respCption my-3">

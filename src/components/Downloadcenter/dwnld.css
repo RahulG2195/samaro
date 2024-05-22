@@ -121,13 +121,17 @@
 
 @media (max-width:600px) {
 
+  
+
+    .dwnldcenterHeading {
+        margin-top: 100px !important; 
+    }
+}
+
+@media (max-width:375px) {
     .brochureCont .swiper-button-prev,
     .brochureCont .swiper-rtl .swiper-button-next {
         left: var(--navigation-sides-offset, 9) !important;
         right: 17% !important;
-    }
-
-    .dwnldcenterHeading {
-        margin-top: 100px !important; 
     }
 }

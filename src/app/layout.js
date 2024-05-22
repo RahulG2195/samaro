@@ -25,8 +25,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
         <Topbar />
-        <Header />
-        {children}
+        <div className="headerBottomspace"> <Header /></div>
+       
+        <div className="">{children}</div>
         <ToastContainer />
 
         <Footer />

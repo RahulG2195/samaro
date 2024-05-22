@@ -163,7 +163,7 @@ border: none;
     position: absolute;
     /* bottom: 0px; */
     right: 10px;
-    z-index: 1000;
+    /* z-index: 1000; */
   }
   .hamInSPC{
     top: 8px !important;

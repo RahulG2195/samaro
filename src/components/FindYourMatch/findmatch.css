@@ -81,7 +81,7 @@
   position: absolute;
   cursor: pointer;
   left: 14%;
-  top: 3%;
+  top: 2.4%;
   background: #DF878A;
   padding: 14px 18px;
   border-radius: 50%;
@@ -139,6 +139,16 @@
   background-color: #CA373C;
   border: none;
 }
+
+
+@media (min-width:600px) and (max-width:768px) {
+  .prev_step {
+  
+    left: 2%;
+  
+  }
+}
+
 @media (max-width: 600px) {
   .discoverBtn{
     margin: 0 auto;

@@ -18,9 +18,9 @@ const Footer = () => {
                 </div>
                 <div className="container">
                     <div className="row justify-content-center mt-2 g-5">
-                        <div className="col-lg-4 col-md-8 ordr2">
-                            <div className="row">
-                                <div className="col-6 ps-5">
+                        <div className="col-lg-4 col-md-12  ordr2">
+                            <div className="d-flex  justify-content-center gap-5">
+                                <div className=" justify-content-center ">
                                     <h3 className="footer-headings mb-3 text-white ">About Us</h3>
                                     <ul className="ps-0 d-flex flex-column footer-links gap-2">
                                         <li><a href="">Articles</a></li>
@@ -28,7 +28,7 @@ const Footer = () => {
                                         <li><a href="">Contact Us</a></li>
                                     </ul>
                                 </div>
-                                <div className="col-6 ps-5">
+                                <div className="align-items-center" >
                                     <h3 className="footer-headings mb-3 text-white ">Products</h3>
                                     <ul className="ps-0 d-flex flex-column footer-links gap-2 ">
                                         <li><a href="">SPC Flooring</a></li>
@@ -40,10 +40,10 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-5 ps-5 ordr3">
+                        <div className="col-lg-5 ordr3">
                             <div className="d-flex gap-3">
                                 <address className='d-flex'>
-                                <i className="fas fa-map-marker-alt d-block mt-2 px-2"></i>
+                                    <i className="fas fa-map-marker-alt d-block mt-2 px-2"></i>
                                     213-215, Hubtown Solaris, N. S. Phadke Marg, Andheri (East),
                                     Mumbai-400069, India.
                                 </address>
@@ -58,13 +58,13 @@ const Footer = () => {
                                     <a href="tel:">91-8079545115</a>
                                 </div>
                             </div>
-                            <div className="newsletter flex-wrap justify-content-start gap-2 mt-3">
-                                <input type="text" className="border-white border-2 rounded-pill px-5" placeholder="Enter your email Id for Newsletter" style={{ backgroundColor: 'inherit' }}/>
+                            <div className="newsletter  justify-content-start gap-2 mt-3">
+                                <input type="text" className="border-white border-2 rounded-pill px-5" placeholder="Enter your email Id for Newsletter" style={{ backgroundColor: 'inherit' }} />
                                 <button className='btn border-2 border-white rounded-pill footerSubmitbutton'>Submit</button>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-4 col-sm-6 col-6 ps-md-5 mt-0  ordr1">
-                            <img src="/assets/images/home/footer/1000_F_435229236_4nOQpFgQ8bzvj60ff4B5eBcGSEdTyG2s.png" alt=""/>
+                            <img src="/assets/images/home/footer/1000_F_435229236_4nOQpFgQ8bzvj60ff4B5eBcGSEdTyG2s.png" alt="" />
                         </div>
                     </div>
                 </div>
