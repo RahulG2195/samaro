@@ -82,6 +82,7 @@ button:focus:not(:focus-visible) {
 
 /* Header */
 .prdctDrop {
+  padding-top: 15px;
   right: -84%;
   z-index: -1;
   opacity: 0;
@@ -114,7 +115,7 @@ button:focus:not(:focus-visible) {
 
 .prdcts:hover .prdctDrop p {
   margin-top: 0px !important;
-  margin-bottom: 0px !important;
+  margin-bottom: 5px !important;
 }
 
 .prdctDrop p:hover {
@@ -129,6 +130,7 @@ button:focus:not(:focus-visible) {
   border-bottom-right-radius: 20px;
   opacity: 1;
   z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .mobileoptions {
