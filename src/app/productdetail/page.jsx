@@ -86,75 +86,113 @@ const Home = () => {
   ]
 
 
+
+
   // data for product details table 
   // ####################Description table data #########################
   const descriptionData = [
     {
-      description: 'Lorem ipsum ',
-      standardTest: 'Lorem'
+      description: ' Light stability for color fastness	',
+      standardTest: 'ASTM F1515'
     },
     {
-      description: 'Lorem ipsum ',
-      standardTest: 'Lorem'
+      description: 'Dimensional stability  ',
+      standardTest: 'ASTM F2199'
     },
     {
-      description: 'Lorem ipsum',
-      standardTest: 'Lorem'
+      description: ' Curling  ',
+      standardTest: '180 23999'
     },
     {
-      description: 'Lorem ipsum',
-      standardTest: 'Lorem'
+      description: ' Short term indentation	  ',
+      standardTest: ' ASTM F1914'
     },
     {
-      description: 'Lorem ipsum',
-      standardTest: 'Lorem'
+      description: ' Product thickness  ',
+      standardTest: '	ASTM F386'
     },
     {
-      description: 'Lorem ipsum',
-      standardTest: 'Lorem'
+      description: 'Wear layer thickness	  ',
+      standardTest: '  ASTM F410'
     },
     {
-      description: 'Lorem ipsum',
-      standardTest: 'Lorem'
+      description: 'Size and squareness	  ',
+      standardTest: ' ASTM F2055'
     },
     {
-      description: 'Lorem ipsum',
-      standardTest: 'Lorem'
+      description: 'Smoke density flaming  ',
+      standardTest: '	ASTM E662'
     },
     {
-      description: 'Lorem ipsum',
-      standardTest: 'Lorem'
+      description: 'Static of coefficient friction  ',
+      standardTest: ' C1028'
     },
     {
-      description: 'Lorem ipsum',
-      standardTest: 'Lorem'
-    }
+      description: 'Resistance to impact  ',
+      standardTest: 'ASTM F1265'
+    },
+    {
+      description: 'Stain cleanability	  ',
+      standardTest: 'NALFA 34'
+    },
+
+    {
+      description: ' Abrasion resistance	  ',
+      standardTest: 'ASTM D4060'
+    },
+
+    {
+      description: ' Critical radiant flux  ',
+      standardTest: 'ASTM E648'
+    },
+
+
+
+
   ];
   // ############################# Specification tables data ####################
+
+
+
   const specificationData = [
     {
-      specification: 'Lorem ipsum dolor.',
-      Tiles: 'Lorem'
+      specification: 'Wear layer ',
+      Tiles: '	0.3mm			'
     },
+
     {
-      specification: 'Lorem ipsum dolor',
-      Tiles: 'Lorem'
+      specification: 'Finish ',
+      Tiles: '	Classic wood, modern oak and rough hand-craped wood'
     },
+
     {
-      specification: 'Lorem ipsum dolor',
-      Tiles: 'Lorem'
+      specification: 'Size ',
+      Tiles: '	Plank 7.13" x 48.03" inches '
     },
+
     {
-      specification: 'Lorem ipsum dolor',
-      Tiles: 'Lorem'
+      specification: 'Thickness ',
+      Tiles: '4mm'
     },
+
     {
-      specification: 'Lorem ipsum dolor',
-      Tiles: 'Lorem'
+      specification: 'Edge proof ',
+      Tiles: 'Micro bevel edge	'
     },
+
     {
-      specification: 'Lorem ipsum dolor',
-      Tiles: 'Lorem'
+      specification: ' Construction ',
+      Tiles: '	Heterogeneous	'
+    },
+
+    {
+      specification: 'Attached ',
+      Tiles: 'underlayment	Additional underlay to be added'
+    },
+
+    {
+      specification: 'Installation ',
+      Tiles: 'Method	Click and lock'
     },
 
 
@@ -174,23 +212,21 @@ const Home = () => {
               </div>
               {/*####################################### product description table ######################################## */}
               <div className='DescriptionTable'>
-                <div className='d-flex gap-1'>
-                  <div className='w-100'>
-                    <div>
-                      <p className='bg-danger m-0 text-center py-2 text-white fw-semibold'>DESCRIPTION</p>
-                      {descriptionData.map((row, index) => (
-                        <p key={index} className='border-bottom border-dark-subtle m-0'>{row.description}</p>
-                      ))}
+              <div className='mt-4'>
+                  <div className='d-flex gap-1'>
+                    <div className='w-100'>
+                      <p className='bg-danger m-0 text-center py-2 text-white fw-semibold detailSpecificationTbl'>SPECIFICATIONS</p>
+                    </div>
+                    <div className='w-100'>
+                      <p className='bg-danger m-0 text-center text-white fw-semibold longTxtTiles'>SAMARO LAMINATE PERFORMANCE TILES</p>
                     </div>
                   </div>
-                  <div className='w-100'>
-                    <p className='bg-danger m-0 text-center py-2 text-white px-2 fw-semibold'>STANDARD TEST</p>
-                    <div style={{ backgroundColor: '#E0E1E3' }}>
-                      {descriptionData.map((row, index) => (
-                        <p key={index} className='border-bottom border-dark-subtle m-0 px-2'>{row.standardTest}</p>
-                      ))}
+                  {descriptionData.map((row, index) => (
+                    <div className='d-flex border-bottom border-dark-subtle gap-3' key={index}>
+                      <p className='w-100 m-0'>{row.description}</p>
+                      <p className='w-100 m-0 px-2' style={{ backgroundColor: '#E0E1E3' }}>{row.standardTest}</p>
                     </div>
-                  </div>
+                  ))}
                 </div>
 
 
@@ -198,24 +234,23 @@ const Home = () => {
 
                 {/*################################## Products specification table ##########################################*/}
 
-                <div className='d-flex gap-1 mt-4'>
-                  <div className='w-100'> 
-                    <div>
-                      <p className='bg-danger m-0 text-center py-2 text-white fw-semibold'>SPECIFICATIONS</p>
-                      {specificationData.map((row, index) => (
-                        <p key={index} className='border-bottom border-dark-subtle m-0'>{row.specification}</p>
-                      ))}
+                <div className='mt-4'>
+                  <div className='d-flex gap-1'>
+                    <div className='w-100'>
+                      <p className='bg-danger m-0 text-center py-2 text-white fw-semibold detailSpecificationTbl'>SPECIFICATIONS</p>
+                    </div>
+                    <div className='w-100'>
+                      <p className='bg-danger m-0 text-center text-white fw-semibold longTxtTiles'>SAMARO LAMINATE PERFORMANCE TILES</p>
                     </div>
                   </div>
-                  <div className='w-100'>
-                    <p className='bg-danger m-0 text-center  text-white fw-semibold longTxtTiles '>SAMARO LAMINATE PERFORMANCE TILES</p>
-                    <div style={{ backgroundColor: '#E0E1E3' }}>
-                      {specificationData.map((row, index) => (
-                        <p key={index} className='border-bottom border-dark-subtle m-0 px-2'>{row.Tiles}</p>
-                      ))}
+                  {specificationData.map((row, index) => (
+                    <div className='d-flex border-bottom border-dark-subtle gap-3' key={index}>
+                      <p className='w-100 m-0'>{row.specification}</p>
+                      <p className='w-100 m-0 px-2' style={{ backgroundColor: '#E0E1E3' }}>{row.Tiles}</p>
                     </div>
-                  </div>
+                  ))}
                 </div>
+
 
 
 
@@ -267,7 +302,7 @@ const Home = () => {
         <div className='inspection_heading d-md-flex py-md-3 mx-auto text-center justify-content-center align-items-center'>
           <h2 className='text-white propInspec'>Get your Property Inspection</h2>
           {/* <button className='freecallbtn'>Get A Free call</button> */}
-          <p  className="mobilebutton button mt-3 fw-semibold" data-bs-toggle="modal" data-bs-target="#exampleModal">Get A Free Call</p>
+          <p className="mobilebutton button mt-3 fw-semibold" data-bs-toggle="modal" data-bs-target="#exampleModal">Get A Free Call</p>
         </div>
       </section>
       {/* download brochue section  */}

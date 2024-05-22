@@ -1,5 +1,18 @@
 /* Commercial -2 */
 
+
+.commercial-2 .carousel-item {
+  height: 70vh;
+}
+
+.commercial-2 .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px !important;
+
+}
+
 .commercial-2 {
   padding-top: 100px;
   position: relative;
@@ -18,9 +31,7 @@
   font-size: 160px;
 }
 
-.carousel-item img{
-  /* border-radius: 0 20px 20px 0 !important; */
-}
+
 .commercial-2 .col-lg-10 {
   border-top-left-radius: 10px !important;
   border-bottom-left-radius: 10px !important;
@@ -47,6 +58,9 @@
   .carousel-inner{
     margin-bottom: 0 !important;
     padding: 0 !important;
+  }
+    .commercial-2 .carousel-item {
+      height: 50vh;
   }
   
 }

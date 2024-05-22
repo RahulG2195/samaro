@@ -21,16 +21,16 @@ const Social = () => {
                     <a href="https://www.instagram.com/samaroflooring?igsh=amowMmMyeHU1eXVh" target="_blank">
                         <div className=" d-flex flex-wrap justify-content-center gap-4">
                             <div className="image">
-                                <img src="/assets/images/home/social/1.png" alt="" />
+                                <img src="/assets/images/social-media/01.webp" alt="" />
                             </div>
                             <div className="image">
-                                <img src="/assets/images/home/social/1.png" alt="" />
+                                <img src="/assets/images/social-media/02.webp" alt="" />
                             </div>
                             <div className="image">
-                                <img src="/assets/images/home/social/1.png" alt="" />
+                                <img src="/assets/images/social-media/03.webp" alt="" />
                             </div>
                             <div className="image">
-                                <img src="/assets/images/home/social/1.png" alt="" />
+                                <img src="/assets/images/social-media/04.webp" alt="" />
                             </div>
                            
                         </div>
