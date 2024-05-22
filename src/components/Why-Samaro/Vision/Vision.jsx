@@ -40,7 +40,7 @@ const Vision = () => {
                     {/* <section className='mission'> */}
 
                     <div className="row g-2 align-items-center mt-2 missionCont">
-                        <div className="col-lg-12">
+                        <div className="col-lg-12 pt-xl-4">
                             <div className="mission-text row align-items-center justify-content-end missionSectionResp  py-4 mt-2">
                                 <div className='col-md-10 col-lg-9 col-12'>
                                     <div className='d-flex align-items-center gap-4'>

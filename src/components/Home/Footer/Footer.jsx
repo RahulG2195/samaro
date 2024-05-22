@@ -44,8 +44,7 @@ const Footer = () => {
                             <div className="d-flex gap-3">
                                 <address className='d-flex'>
                                     <i className="fas fa-map-marker-alt d-block mt-2 px-2"></i>
-                                    213-215, Hubtown Solaris, N. S. Phadke Marg, Andheri (East),
-                                    Mumbai-400069, India.
+                                    5th Floor, Vilco Centre, Subhash Road, Opp. Garware, Vile Parle East, Mumbai-400057, Maharashtra, India
                                 </address>
                             </div>
                             <div className="contact-details d-flex gap-5 mt-2 mb-3">

@@ -22,8 +22,6 @@ const ContactMap = () => {
                                     <h3 className='fw-bold'>Head Office</h3>
                                     <address>5th Floor, Vilco Centre, Subhash Road, Opp. Garware, Vile Parle East, Mumbai-400057, Maharashtra, India</address>
 
-
-
                                     <div className="social-media pt-5 justify-content-start align-items-center">
                                         <div className="logo text-center">
                                             <Link href="#">
