@@ -1,5 +1,6 @@
 import React from 'react'
 import "./FloorExplorer.css"
+import Link from 'next/link'
 
 const FloorExplorer = () => {
   return (
@@ -25,7 +26,7 @@ const FloorExplorer = () => {
                   <p className=" respCption my-3">
                   Let our Floor Explorer be your compass to the perfect floor. We're here to guide your big decision with expertise and care!
                   </p>
-                  <a href="#" className=" button d-inline-block mt-3 px-3 py-1 respCption">START THE FLOOREXPLORER</a>
+                  <Link href="/FindYourMatch" className=" button d-inline-block mt-3 px-3 py-1 respCption">START THE FLOOREXPLORER</Link>
                 </div>
               </div>
             </div>

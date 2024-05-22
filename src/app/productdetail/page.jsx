@@ -207,8 +207,8 @@ const Home = () => {
             </div>
             <div className='col-md-6 col-12 col-xl-5 prodDetailTXT'>
               <div className='prod_name_lg'>
-                <h2>Pure ok honey</h2>
-                <span>VINYL | CIRO | AVHBU40360</span>
+                <h2>Clay Oak</h2>
+                <span>LVT | WOOD | SAM 0037</span>
               </div>
               {/*####################################### product description table ######################################## */}
               <div className='DescriptionTable'>
