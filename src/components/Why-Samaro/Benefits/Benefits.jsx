@@ -18,7 +18,7 @@ const Benefits = () => {
                                     <h3 className='mb-4 text-center'>
                                         Manufacturing
                                     </h3>
-                                    <ul className='fw-normal ps-xl-2'>
+                                    <ul className='fw-normal ps-xl-5'>
                                         <li>Blend materials for durability</li>
                                         <li>Layer vinyl for stability.</li>
                                         <li>Add texture for realism.</li>
@@ -35,7 +35,7 @@ const Benefits = () => {
                                     <h3 className='my-4 px-4 text-center'>
                                         Product Performance
                                     </h3>
-                                    <ul className='fw-normal  ps-xl-2' >
+                                    <ul className='fw-normal  ps-xl-5' >
                                         <li>Resilience: Withstands scratches and impacts.</li>
                                         <li>Water Resistance: Ideal for moisture-prone areas.</li>
                                         <li>Stability: Maintains shape in different temperatures. </li>
@@ -51,7 +51,7 @@ const Benefits = () => {
                                 <h3 className='my-4  px-4 text-center'>
                                     Quality Assurance
                                 </h3>
-                                <ul className='fw-normal ps-xl-2'>
+                                <ul className='fw-normal ps-xl-5'>
                                     <li>Standards Compliance: Meets quality benchmarks.</li>
                                     <li>Material Inspection: Rigorously checks raw materials.</li>
                                     <li>Production Oversight: Constant monitoring during manufacturing.</li>
@@ -66,7 +66,7 @@ const Benefits = () => {
                                 <h3 className='my-4  px-4 text-center'>
                                     lnnovating
                                 </h3>
-                                <ul className='fw-normal ps-xl-2'>
+                                <ul className='fw-normal ps-xl-5'>
                                     <li>Sustainable Materials: Eco-friendly exploration.</li>
                                     <li>Innovative Designs: Creative patterns.</li>
                                     <li> Smart Integration: Technological functionality.</li>
