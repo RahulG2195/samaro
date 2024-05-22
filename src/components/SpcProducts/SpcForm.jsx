@@ -11,6 +11,7 @@ import {
   isValidName,
 } from "@/utils/validation";
 import { notify, notifyError } from "@/utils/toaster.js";
+import { toast, Bounce } from "react-toastify";
 
 const SpcForm = ({ hideguide, contactformcol, pb }) => {
   const [formData, setFormData] = useState({
@@ -36,6 +37,7 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!isValidName(formData.name)) {
       notifyError("Please enter a valid Name.");
       return;
@@ -49,32 +51,44 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
       return;
     }
     if (!isValidMobile(formData.phone)) {
-      notifyError("Not a valid number");
+      notifyError("Not a valid number.");
       return;
     }
-    try {
-      const response = await axios.post("api/spcForm", formData);
-      if (response.status === 200) {
-        // Clear form after successful submission
-        notify("Form submitted successfully");
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          message: "",
-          selectedOption: "",
-        });
-      } else {
-        notifyError("Form submitted Failed");
-        console.error("Form submission failed");
+
+    const submitForm = async () => {
+      try {
+        const response = await axios.post("/api/spcForm", formData);
+        if (response.status === 200) {
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+            selectedOption: "",
+          });
+
+          return "Application sent successfully!";
+        } else {
+          throw new Error("Failed to send Mail");
+        }
+      } catch (e) {
+        throw new Error(e.message || "Failed to send Mail");
       }
-    } catch (error) {
-      notifyError(error.message || "Process Failed");
+    };
 
-      console.error("Form submission failed:", error);
-    }
+    toast.promise(
+      submitForm(),
+      {
+        pending: "Sending your application...",
+        success: "Application sent successfully!",
+        error: "Failed to send your application.",
+      },
+      {
+        position: "top-center",
+        transition: Bounce,
+      }
+    );
   };
-
   return (
     <>
       <section
