@@ -203,7 +203,7 @@ const Home = () => {
                 <div className="mt-4">
                   <div className="d-flex gap-1">
                     <div className="w-100">
-                      <p className="bg-danger m-0 text-center py-2 text-white fw-semibold detailSpecificationTb">
+                      <p className="bg-danger m-0 text-center py-2 text-white fw-semibold">
                         DESCRIPTION
                       </p>
                     </div>
@@ -213,7 +213,7 @@ const Home = () => {
                       </p>
                     </div>
                   </div>
-                  {descriptionData.map((row, index) => (
+                  {descriptionData.map((row, index) => ( 
                     <div
                       className="d-flex border-bottom border-dark-subtle gap-3"
                       key={index}
