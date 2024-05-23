@@ -40,7 +40,7 @@ const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }
                                 300: { slidesPerView: 2, spaceBetween: 10 },
                                 576: { slidesPerView: 2, spaceBetween: 10 },
                                 768: { slidesPerView: 3, spaceBetween: 10 },
-                                992: { slidesPerView: 6, spaceBetween: 10 },
+                                992: { slidesPerView: 5, spaceBetween: 10 },
                             }}
                             
                         >
@@ -82,7 +82,7 @@ const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }
                             300: { slidesPerView: 2, spaceBetween: 10 },
                             576: { slidesPerView: 2, spaceBetween: 10 },
                             768: { slidesPerView: 3, spaceBetween: 10 },
-                            992: { slidesPerView: 6, spaceBetween: 10 },
+                            992: { slidesPerView: 5, spaceBetween: 10 },
                         }}
                     >
                         {cardData.map((card, index) => (

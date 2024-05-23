@@ -310,7 +310,7 @@ const Home = () => {
       </section>
       <section className="inspectionBanner ">
         <div className="inspection_heading d-md-flex py-md-3 mx-auto text-center justify-content-center align-items-center">
-          <h2 className="text-white propInspec">
+          <h2 className="text-white propInspec m-0">
             Get your Property Inspection
           </h2>
           {/* <button className='freecallbtn'>Get A Free call</button> */}

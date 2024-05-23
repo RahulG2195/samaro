@@ -33,6 +33,21 @@ const Filters = ({ hide, inSPC }) => {
     }
   }, [hide]);
 
+
+  // range filter 
+  const [wearLayer, setWearLayer] = useState(0.1); // Initial value for wear layer
+  const [thickness , setThickness] = useState(1.5)
+
+  // Function to handle changes in the range input
+  const handleWearLayerChange = (event) => {
+      setWearLayer(parseFloat(event.target.value)); // Update the wear layer value
+      
+  }
+  const handleThicknessChange = (event) => {
+    setThickness(parseFloat(event.target.value)); // Update the wear layer value
+    
+  }
+
   return (
     <>
       <div className={` ${inSPC} hamburger-menu d-md-non d-block`}>
@@ -71,7 +86,7 @@ const Filters = ({ hide, inSPC }) => {
             </div>
             <div className={` border-bottom border-danger py-2 chk`}>
               <p className="pb-2 darkBlue m-0">
-                Choose Your <strong className="fw-medium">Catlogue</strong>
+                Choose Your <strong className="fw-medium">Catalogue</strong>
               </p>
               <div className={`${hide} chk`}>
                 <label className="darkBlue">
@@ -247,40 +262,44 @@ const Filters = ({ hide, inSPC }) => {
                 </label>
               </div>
             </div>
-            {/* <div className=" border-bottom border-danger">
+            <div className=" border-bottom border-danger">
               <label className="form-label darkBlue">
                 Choose Your <strong className="fw-medium">Thickness</strong>
               </label>
               <input
                 type="range"
                 className="form-range custom-range-input d-block p-0"
-                min="0"
+                min="1.5"
                 max="5"
-                id="customRange2"
+                step="0.1" // Set step to 0.1 to match increments of 0.1 mm
+                value={thickness}
+                onChange={handleThicknessChange}
               />
 
               <div className="d-flex justify-content-between">
-                <p className="small darkBlue">1.5 mm</p>
+                <p className="small darkBlue">{thickness} mm</p>
                 <p className="small darkBlue">8 mm</p>
               </div>
-            </div> */}
-            {/* <div className=" border-bottom border-danger">
+            </div>
+            <div className=" border-bottom border-danger">
               <label className="form-label darkBlue">
                 Choose Your <strong className="fw-medium">Wear Layer</strong>
               </label>
               <input
                 type="range"
                 className="form-range custom-range-input d-block p-0"
-                min="0"
-                max="5"
-                id="customRange2"
-              />
+                min="0.1"
+                max="0.7"
+                step="0.1" // Set step to 0.1 to match increments of 0.1 mm
+                value={wearLayer} // Controlled component: value is controlled by state
+                onChange={handleWearLayerChange} // Handle range input changes
+            />
 
               <div className="d-flex justify-content-between">
-                <p className="small darkBlue ">0.1 mm</p>
+                <p className="small darkBlue ">{wearLayer} mm</p>
                 <p className="small darkBlue">0.7 mm</p>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </Collapse>

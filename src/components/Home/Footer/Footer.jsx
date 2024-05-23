@@ -43,7 +43,9 @@ const Footer = () => {
                         <div className="col-lg-5 ordr3">
                             <div className="d-flex gap-3">
                                 <address className='d-flex'>
-                                    <i className="fas fa-map-marker-alt d-block mt-2 px-2"></i>
+                                    {/* <i className="fas fa-map-marker-alt d-block mt-2 px-2"></i> */}
+                                    <div className='w-25'>
+                                    <img src="/assets/images/icons/Group 57.svg" alt="" className='w-50'/></div>
                                     5th Floor, Vilco Centre, Subhash Road, Opp. Garware, Vile Parle East, Mumbai-400057, Maharashtra, India
                                 </address>
                             </div>
