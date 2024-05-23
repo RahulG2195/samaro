@@ -37,7 +37,7 @@ const Benefits = () => {
                                     </h3>
                                     <ul className='fw-normal  ps-xl-5' >
                                         <li>Resilience: Withstands scratches and impacts.</li>
-                                        <li>Water Resistance: Ideal for moisture-prone areas.</li>
+                                        <li>100% Water Resistance: Ideal for moisture-prone areas.</li>
                                         <li>Stability: Maintains shape in different temperatures. </li>
                                         <li>Easy Care: Requires minimal cleaning effort.</li>
                                         <li>Longevity: Designed for lasting performance.</li>
@@ -52,7 +52,7 @@ const Benefits = () => {
                                     Quality Assurance
                                 </h3>
                                 <ul className='fw-normal ps-xl-5'>
-                                    <li>Standards Compliance: Meets quality benchmarks.</li>
+                                    <li>International Standards Compliance: Meets quality benchmarks.</li>
                                     <li>Material Inspection: Rigorously checks raw materials.</li>
                                     <li>Production Oversight: Constant monitoring during manufacturing.</li>
                                     <li>Quality Testing: Thorough assessment of finished products.</li>
@@ -68,9 +68,9 @@ const Benefits = () => {
                                 </h3>
                                 <ul className='fw-normal ps-xl-5'>
                                     <li>Sustainable Materials: Eco-friendly exploration.</li>
-                                    <li>Innovative Designs: Creative patterns.</li>
+                                    <li>Innovative Designs: Developing reusable and renewable material with new design and shades.</li>
                                     <li> Smart Integration: Technological functionality.</li>
-                                    <li>Custom Solutions: Tailored options.</li>
+                                    {/* <li>Custom Solutions: Tailored options.</li> */}
                                     <li> Enhanced Performance: Focus on durability.</li>
                                 </ul>
                             </div>

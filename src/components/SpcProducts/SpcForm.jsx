@@ -182,10 +182,10 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
                   type="radio"
                   name="selectedOption"
                   className="me-2 form-check-input"
-                  value="For customer/ Project inquiry"
+                  value="Sales Inquery"
                   onChange={handleOptionChange}
                 />
-                <label htmlFor="customer">For customer/ Project inquiry</label>
+                <label htmlFor="customer">Sales Inquery</label>
               </div>
               <div className="col-md-6 slct1 my-2">
                 <input
