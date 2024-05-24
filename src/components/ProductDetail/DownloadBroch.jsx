@@ -55,7 +55,7 @@ const DownloadBroch = () => {
           <h1 className='section_heading'>Download <strong>Brochure</strong></h1>
         </div>
         <Swiper
-              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              modules={[ Pagination, Scrollbar, A11y]}
           slidesPerView={2}
           spaceBetween={10}
           breakpoints={{
@@ -76,7 +76,7 @@ const DownloadBroch = () => {
               spaceBetween: 20,
             },
           }}
-          navigation={true}
+          // navigation={true}
           pagination={{ clickable: true }}
           className='swiper-container' // Add the swiper-container class
         >

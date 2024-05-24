@@ -1,9 +1,11 @@
 import React from "react";
+import "@/components/ProductDetail/productdetail.css";
+
 
 const DetailsNewSection = () => {
   return (
     <section className="container ">
-      <p className="fw-bold fs-4 text-center">product detail</p>
+      <p className="fw-bold fs-4 text-center py-2">Product Detail</p>
       <div className="row g-5 justify-content-center">
         <div className="col-lg-5">
           <p className="fs-6">
@@ -74,7 +76,7 @@ const DetailsNewSection = () => {
                 Combines the natural beauty of wood with the strength of stone
               </p>
             </span>
-            <span className="d-flex align-items-center gap-2">
+            <span className="d-flex  gap-2">
               <i class="fa fa-check" aria-hidden="true"></i>
               <p className="m-0 ">
                 Reproduces variations of raw wood grain, tonal hues & textures
@@ -99,7 +101,7 @@ const DetailsNewSection = () => {
                 Its anti-fade effect retains flooring look & longevity
               </p>
             </span>
-            <span className="d-flex align-items-center gap-2">
+            <span className="d-flex  gap-2">
               <i class="fa fa-check" aria-hidden="true"></i>
               <p className="m-0 ">
                 It adjusts the unnatural shine of plasticised extrusion to
@@ -110,7 +112,7 @@ const DetailsNewSection = () => {
 
           <div className="pt-4">
             <p className="fw-bold fs-6 m-">Application areas:</p>
-            <div className="row  ">
+            <div className="row PDroomslogo ">
               <div className="col-3 px-4 d-flex flex-column align-items-center">
                 <img src="/assets/images/icons/Group 29203.svg" alt="" />
                 <p>Living room</p>

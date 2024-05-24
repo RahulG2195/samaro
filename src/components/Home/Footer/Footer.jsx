@@ -34,7 +34,7 @@ const Footer = () => {
                                         <li><a href="">SPC Flooring</a></li>
                                         <li><a href="">LVT Flooring</a></li>
                                         <li><a href="">Ceramic</a></li>
-                                        <li><a href="">Marbel</a></li>
+                                        <li><a href="">Marbal</a></li>
                                         <li><a href="">Stone</a></li>
                                     </ul>
                                 </div>
@@ -60,7 +60,8 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="newsletter  justify-content-start gap-2 mt-3">
-                                <input type="text" className="border-white border-2 rounded-pill px-5" placeholder="Enter your email Id for Newsletter" style={{ backgroundColor: 'inherit' }} />
+                                <input type="text" className="border-white border-2 rounded-pill px-5
+                                " placeholder="Enter your email for Newsletter" style={{ backgroundColor: 'inherit' }} />
                                 <button className='btn border-2 border-white rounded-pill footerSubmitbutton'>Submit</button>
                             </div>
                         </div>

@@ -244,3 +244,8 @@ i {
     overflow: hidden;
   }
 }
+@media (max-width:425px){
+  .PDroomslogo p{
+    font-size: 10px !important;
+  }
+}

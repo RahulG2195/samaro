@@ -9,8 +9,9 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-left-top-radius: 20px !important;
-  border-left-bottom-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  overflow:hidden;
 
 }
 

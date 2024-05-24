@@ -10,7 +10,7 @@ const Social = () => {
                     <div className='instaLogo'><img src="/assets/images/home/social/Group 29049.svg" alt="err" className='w-75' /></div>
                     <div>
                     <a href="https://www.instagram.com/samaroflooring?igsh=amowMmMyeHU1eXVh" target="_blank" className='idAndbio'>
-                        <span className='instaid'>@SAMAROFLORRING</span>
+                        <span className='instaid'>@SAMAROFLOORING</span>
                         <p className='instabio'>Where Indian Craftsmanship Meets Global Luxury, <br />Ready to Elevate Your World.</p>
                     </a>
                     </div>
