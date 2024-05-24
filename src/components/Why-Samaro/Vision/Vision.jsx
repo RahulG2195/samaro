@@ -25,10 +25,10 @@ const Vision = () => {
                                     </div>
                                     <ul className='m-0'>
                                         <li className='p-0 m-1 text-navy fw-normal'>Revolutionizing the flooring industry with innovation and sustainability.</li>
-                                        <li className='p-0 m-1 text-navy fw-normal'>Offering high-quality SPC and LVT flooring solutions. (Luxurt Vinyl Tile) flooring sector.</li>
+                                        <li className='p-0 m-1 text-navy fw-normal'>Offering high-quality Stone Polymer Composite (SPC) and Luxurt Vinyl Tile (LVT) flooring solutions.</li>
                                         <li className='p-0 m-1 text-navy fw-normal'>Inspiring and enhancing living spaces globally.</li>
-                                        <li className='p-0 m-1 text-navy fw-normal'>Setting new standards in flooring excellence.</li>
-                                        <li className='p-0 m-1 text-navy fw-normal'>Making a positive impact on homes and environments worldwide.</li>
+                                        <li className='p-0 m-1 text-navy fw-normal'>Setting new standards in flooring excellence and building materials.</li>
+                                        <li className='p-0 m-1 text-navy fw-normal'>Making a progressive impact on homes, office and commercial spaces worldwide.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ const Vision = () => {
                                     </div>
                                     <ul className='p-0'>
                                         <li className='p-0 m-1 text-navy fw-normal'>Leading the flooring industry with continuous innovation, quality standards, and sustainability at Samaro Global Industries.</li>
-                                        <li className='p-0 m-1 text-navy fw-normal'>Exceeding customer expectations through a diverse range of premium flooring products and unparalleled service and support.(Luxurt Vinyl Tile) flooring sector.</li>
+                                        <li className='p-0 m-1 text-navy fw-normal'>Exceeding customer expectations through a diverse range of premium flooring products and unparalleled service and support.</li>
                                         <li className='p-0 m-1 text-navy fw-normal'>Utilizing expertise and state-of-the-art manufacturing to create beautiful, durable, and environmentally-friendly flooring solutions.</li>
                                         <li className='p-0 m-1 text-navy fw-normal'>Transforming spaces and enriching lives with our commitment to excellence.</li>
                                     </ul>

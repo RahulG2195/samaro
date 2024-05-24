@@ -77,7 +77,7 @@ const Form = () => {
                   name="example"
                   className="me-2 form-check-input"
                 />
-                <label for="radio-red3">For customer/ Project inquiry</label>
+                <label for="radio-red3">Sales Inquery</label>
               </div>
               <div className="col-md-6 slct1 my-2">
                 <input
