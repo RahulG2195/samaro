@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Topbar from "@/components/Home/Topbar/Topbar";
@@ -18,14 +18,35 @@ const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const [isFixed, setIsFixed] = useState(false);
+
+
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
+
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsFixed(scrollTop > 2);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
+
   return (
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
         <div className=""><Topbar />
-        <div className="headerBottomspace"> <Header /></div>
+        <div className="headerBottomspace" style={{
+          position: 'fixed',
+          top: isFixed ? 0 : '36px', 
+          width: '100%',
+        }}> 
+          <Header />
+        </div>
         
         </div>
        
