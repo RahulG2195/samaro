@@ -136,6 +136,13 @@ p a:hover {
   color: var(--navy) !important;
 }
 
+.headerBottomspace{
+  z-index: 99;
+  /* position: fixed;
+  width: 100%; */
+  transition: top 0.2s ease-in-out;
+}
+
 /* Section */
 .section {
   width: 100%;
