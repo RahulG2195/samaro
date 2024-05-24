@@ -1,15 +1,26 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import "./Header.css";
 import Link from "next/link";
 import NavLink from "@/components/helpers/NavLink/NavLink";
 import FollowMore from "../FollowMore/FollowMore";
 const Header = () => {
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu open/close
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
-        <header className="header">
+
+        <header className="header  ">
             <nav className="navbar navbar-expand-lg">
 
                 <div className="container">
-                    <Link className="navbar-brand" href="/">
+                    <Link className="navbar-brand" href="/" >
                         <img src="/assets/images/logo/main-logo.png" alt="" />
                     </Link>
                     <div className="d-flex gap-3 align-items-center ">
@@ -19,26 +30,22 @@ const Header = () => {
                         <button
                             className="navbar-toggler"
                             type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
+                            onClick={toggleMenu} // Toggle menu on button click
                         >
 
                             {/* <span className="navbar-toggler-icon"></span> */}
                             <img src="/assets/images/icons/Group 28769.svg" alt="err" />
                         </button>
                     </div>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto gap-2">
-                            <li className="nav-item">
-                                <NavLink href="/">Home</NavLink>
+                            <li className="nav-item" onClick={closeMenu}>
+                                <NavLink href="/"  >Home</NavLink>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item "  onClick={closeMenu}>
                                 <NavLink href="/why-samaro">Why Samaro</NavLink>
                             </li>
-                            <li className="nav-item position-relative prdcts">
+                            <li className="nav-item position-relative prdcts"  onClick={closeMenu}>
                                 <NavLink className="prdctHeading" href="/product">Product</NavLink>
                                 {/* <ul className=" prdctDrop drop1 px-5 position-absolute">
                                     <li><Link href="/spcProducts"><p className="darkBlue">SPC</p></Link></li>
@@ -49,29 +56,29 @@ const Header = () => {
                                     <li><Link href="/lvtProducts">LVT</Link></li>
                                 </ul> */}
                             </li>
-                            <li className="nav-item position-relative prdcts">
-                                <div className="inspi ">
-                                    <NavLink href="/gallery" className="lnk"> Inspiration</NavLink>
+                            <li className="nav-item position-relative prdcts inspiration">
+                                <div className="inspi " >
+                                    <NavLink href="/gallery" className="lnk "> Inspiration</NavLink>
                                 </div>
                                 <ul className=" prdctDrop px-4 position-absolute">
-                                    <li><Link href="/gallery"><p className="darkBlue">Gallery</p></Link></li>
-                                    <li><Link href="/FindYourMatch"><p className="darkBlue">Find your ideal floor</p></Link></li>
-                                    <li><Link href="/downloadCenter"><p className="darkBlue">Download center</p></Link></li>
+                                    <li onClick={closeMenu}><Link href="/gallery"><p className="darkBlue">Gallery</p></Link></li>
+                                    <li onClick={closeMenu}><Link href="/FindYourMatch"><p className="darkBlue">Find your ideal floor</p></Link></li>
+                                    <li onClick={closeMenu}><Link href="/downloadCenter"><p className="darkBlue">Download center</p></Link></li>
                                 </ul>
 
                             </li>
                             <span className="mobileoptions" >
 
-                                <li className="nav-ite"><NavLink className="nav-link" href="/gallery">Gallery</NavLink></li>
-                                <li className="nav-ite"><NavLink className="nav-link" href="/FindYourMatch">Find your ideal floor</NavLink></li>
-                                <li className="nav-ite"><NavLink className="nav-link" href="/downloadCenter">Download center</NavLink></li>
+                                <li className="nav-ite"  onClick={closeMenu}><NavLink className="nav-link" href="/gallery">Gallery</NavLink></li>
+                                <li className="nav-ite"  onClick={closeMenu}><NavLink className="nav-link" href="/FindYourMatch">Find your ideal floor</NavLink></li>
+                                <li className="nav-ite"  onClick={closeMenu}><NavLink className="nav-link" href="/downloadCenter">Download center</NavLink></li>
                             </span>
-                            <li className="nav-item">
+                            <li className="nav-item" onClick={closeMenu}>
                                 <NavLink className="nav-link" href="/newsletter">
                                     Newsletter
                                 </NavLink>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item" onClick={closeMenu}>
                                 <NavLink className="nav-link" href="/contact-us">
                                     Contact Us
                                 </NavLink>

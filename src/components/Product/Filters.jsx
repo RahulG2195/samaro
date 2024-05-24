@@ -33,20 +33,17 @@ const Filters = ({ hide, inSPC }) => {
     }
   }, [hide]);
 
-
-  // range filter 
+  // range filter
   const [wearLayer, setWearLayer] = useState(0.1); // Initial value for wear layer
-  const [thickness , setThickness] = useState(1.5)
+  const [thickness, setThickness] = useState(1.5);
 
   // Function to handle changes in the range input
   const handleWearLayerChange = (event) => {
-      setWearLayer(parseFloat(event.target.value)); // Update the wear layer value
-      
-  }
+    setWearLayer(parseFloat(event.target.value)); // Update the wear layer value
+  };
   const handleThicknessChange = (event) => {
     setThickness(parseFloat(event.target.value)); // Update the wear layer value
-    
-  }
+  };
 
   return (
     <>
@@ -88,41 +85,46 @@ const Filters = ({ hide, inSPC }) => {
               <p className="pb-2 darkBlue m-0">
                 Choose Your <strong className="fw-medium">Catalogue</strong>
               </p>
-              <div className={`${hide} chk`}>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  All
-                </label>
-              </div>
-              <div className={`${hide}`}>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Sicilian
-                </label>
-              </div>
-              <div className={`${hide}`}>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Tuscany
-                </label>
-              </div>
-              <div className={`${hide}`}>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  LVT 1
-                </label>
-              </div>
-              <div className={`${hide}`}>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  LVT 2
-                </label>
-              </div>
-              <div className={`${hide}`}>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Others
-                </label>
+              <div className="row ">
+                <div
+                  className={`${hide} chk col-lg-12 col-md-12 col-sm-2 col-6`}
+                >
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    All
+                  </label>
+                </div>
+                <div className={`${hide} col-lg-12 col-md-12 col-sm-3 col-6`}>
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Sicilian
+                  </label>
+                </div>
+                <div className={`${hide} col-lg-12 col-md-12 col-sm-3 col-6`}>
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Tuscany
+                  </label>
+                </div>
+                <div className={`${hide} col-lg-12 col-md-12 col-sm-3 col-6`}>
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    LVT 1
+                  </label>
+                </div>
+                <div className={`${hide} col-lg-12 col-md-12 col-sm-2 col-6`}>
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    LVT 2
+                  </label>
+                </div>
+
+                <div className={`${hide} col-lg-12 col-md-12 col-sm-2 col-6`}>
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Others
+                  </label>
+                </div>
               </div>
             </div>
 
@@ -130,23 +132,25 @@ const Filters = ({ hide, inSPC }) => {
               <p className="pb-2 darkBlue m-0">
                 Choose Your <strong className="fw-medium">Types</strong>
               </p>
-              <div>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Wood
-                </label>
-              </div>
-              <div>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Stone
-                </label>
-              </div>
-              <div>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Marble
-                </label>
+              <div className="row ">
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Wood
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Stone
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Marble
+                  </label>
+                </div>
               </div>
             </div>
             <div className="border-bottom border-danger py-2">
@@ -154,112 +158,118 @@ const Filters = ({ hide, inSPC }) => {
               <p className="pb-2 darkBlue">
                 Choose Your <strong className="fw-medium">color</strong>
               </p>
-              <div>
-                <label className="darkBlue">
-                  <input className="mx-1  form-check-input" type="checkbox" />
-                  Black
-                </label>
-              </div>
-              <div>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Beige
-                </label>
-              </div>
-              <div>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Blue
-                </label>
-              </div>
-              <div>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Dark brown
-                </label>
-              </div>
-              <div>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Dark grey
-                </label>
-              </div>
-              <div>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Green
-                </label>
-              </div>
-              <div>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Light grey
-                </label>
-              </div>
-              <div>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Natural
-                </label>
-              </div>
-              <div>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Pink
-                </label>
+              <div className="row ">
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1  form-check-input" type="checkbox" />
+                    Black
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Beige
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Blue
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Dark brown
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Dark grey
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Green
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Light grey
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Natural
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Pink
+                  </label>
+                </div>
               </div>
             </div>
             <div className="border-bottom border-danger py-2">
               <p className="pb-2 darkBlue m-0">
                 Choose Your <strong className="fw-medium">place</strong>
               </p>
-              <div>
+              <div className="row ">
+              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
                 <label className="darkBlue">
                   <input className="mx-1 form-check-input" type="checkbox" />
                   Bathroom
                 </label>
               </div>
-              <div>
+              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
                 <label className="darkBlue">
                   <input className="mx-1 form-check-input" type="checkbox" />
                   Bedroom
                 </label>
               </div>
-              <div>
+              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                {" "}
+                
                 <label className="darkBlue">
                   <input className="mx-1 form-check-input" type="checkbox" />
                   Children's room
                 </label>
               </div>
-              <div>
+              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
                 <label className="darkBlue">
                   <input className="mx-1 form-check-input" type="checkbox" />
                   Dining room
                 </label>
               </div>
-              <div>
+              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
                 <label className="darkBlue">
                   <input className="mx-1 form-check-input" type="checkbox" />
                   Hallway
                 </label>
               </div>
-              <div>
+              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
                 <label className="darkBlue">
                   <input className="mx-1 form-check-input" type="checkbox" />
                   Kitchen
                 </label>
               </div>
-              <div>
+              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
                 <label className="darkBlue">
                   <input className="mx-1 form-check-input" type="checkbox" />
                   Living room
                 </label>
               </div>
-              <div>
+              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
                 <label className="darkBlue">
                   <input className="mx-1 form-check-input" type="checkbox" />
                   Office
                 </label>
+              </div>
               </div>
             </div>
             <div className=" border-bottom border-danger">
@@ -293,7 +303,7 @@ const Filters = ({ hide, inSPC }) => {
                 step="0.1" // Set step to 0.1 to match increments of 0.1 mm
                 value={wearLayer} // Controlled component: value is controlled by state
                 onChange={handleWearLayerChange} // Handle range input changes
-            />
+              />
 
               <div className="d-flex justify-content-between">
                 <p className="small darkBlue ">{wearLayer} mm</p>

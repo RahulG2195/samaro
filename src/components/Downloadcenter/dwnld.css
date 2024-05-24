@@ -120,11 +120,15 @@
 }
 
 @media (max-width:600px) {
-
+.brochureCont h1{
+    font-size: 20px !important;
+}
   
-
+.dwnldCentermainCont{
+    padding-top:0px !important;
+}
     .dwnldcenterHeading {
-        margin-top: 100px !important; 
+        margin-top: 50px !important; 
     }
 }
 

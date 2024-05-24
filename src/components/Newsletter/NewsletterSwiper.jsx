@@ -37,10 +37,10 @@ const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }
                             navigation={true}
                             className={`mySwiper`}
                             breakpoints={{
-                                300: { slidesPerView: 2, spaceBetween: 10 },
-                                576: { slidesPerView: 2, spaceBetween: 10 },
-                                768: { slidesPerView: 3, spaceBetween: 10 },
-                                992: { slidesPerView: 5, spaceBetween: 10 },
+                                300: { slidesPerView: 2, spaceBetween: 30 },
+                                576: { slidesPerView: 2, spaceBetween: 30 },
+                                768: { slidesPerView: 3, spaceBetween: 30 },
+                                992: { slidesPerView: 4, spaceBetween: 30 },
                             }}
                             
                         >
@@ -55,7 +55,7 @@ const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }
                                             WatchNowButton={'watch Now'}
                                         />
                                     </div>
-                                    <div>
+                                    {/* <div>
                                         <DownloadCenterCard
                                             imgurl={card.imgurl}
                                             title={card.title}
@@ -63,7 +63,7 @@ const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }
                                             author={card.author}
                                             WatchNowButton={'watch Now'}
                                         />
-                                    </div>
+                                    </div> */}
                                 </SwiperSlide>
                             ))}
                             
@@ -79,10 +79,10 @@ const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }
                         navigation={true}
                         className={`mySwiper`}
                         breakpoints={{
-                            300: { slidesPerView: 2, spaceBetween: 10 },
-                            576: { slidesPerView: 2, spaceBetween: 10 },
-                            768: { slidesPerView: 3, spaceBetween: 10 },
-                            992: { slidesPerView: 5, spaceBetween: 10 },
+                            300: { slidesPerView: 2, spaceBetween: 30 },
+                            576: { slidesPerView: 2, spaceBetween: 30 },
+                            768: { slidesPerView: 3, spaceBetween: 30 },
+                            992: { slidesPerView: 4, spaceBetween: 30 },
                         }}
                     >
                         {cardData.map((card, index) => (

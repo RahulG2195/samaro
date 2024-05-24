@@ -12,6 +12,7 @@ import SimilarProd from "@/components/ProductDetail/SimilarProd";
 import Inspiration from "@/components/Home/Social/Inspiration";
 import ProductSwipper from "@/components/ProductDetail/ProductSwipper";
 import "@/components/ProductDetail/productdetail.css";
+import DetailsNewSection from "@/components/ProductDetail/DetailsNewSection";
 
 const Home = () => {
   const prod_features = [
@@ -213,7 +214,7 @@ const Home = () => {
                       </p>
                     </div>
                   </div>
-                  {descriptionData.map((row, index) => ( 
+                  {descriptionData.map((row, index) => (
                     <div
                       className="d-flex border-bottom border-dark-subtle gap-3"
                       key={index}
@@ -270,7 +271,7 @@ const Home = () => {
 
         {/* ################# product details section ################### */}
       </section>
-      <section className="productDetail_data my-md-5 my-2">
+      {/* <section className="productDetail_data my-md-5 my-2">
         <div className="container">
           <div className="sec_head">
             <h3 className="text-capitalize py-md-4 py-2 text-center">
@@ -307,7 +308,14 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <div className="pt-5">
+     
+        <DetailsNewSection></DetailsNewSection>
+      </div>
+
+      {/* product details new section */}
+
       <section className="inspectionBanner ">
         <div className="inspection_heading d-md-flex py-md-3 mx-auto text-center justify-content-center align-items-center">
           <h2 className="text-white propInspec m-0">

@@ -48,6 +48,8 @@ const Benefits = () => {
                         <div className="col-lg-3 col-md-3 col-sm-12 ">
                             <div className="benefits-boxes h-100 text-darkred ">
                                 <img src=" /assets/images/why-samaro/Group 28877.svg" alt="" />
+                                <div className='d-flex flex-column align-items-center'>
+
                                 <h3 className='my-4  px-4 text-center'>
                                     Quality Assurance
                                 </h3>
@@ -58,11 +60,14 @@ const Benefits = () => {
                                     <li>Quality Testing: Thorough assessment of finished products.</li>
                                     <li>Feedback Integration: Incorporates customer input for improvement.</li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-12 pt-5 mt-3 inovativeREsp">
                             <div className="benefits-boxes h-100 text-navy">
                                 <img src=" /assets/images/why-samaro/Group 28883.svg" alt="" />
+                                <div className='d-flex flex-column align-items-center'>
+
                                 <h3 className='my-4  px-4 text-center'>
                                     lnnovating
                                 </h3>
@@ -73,6 +78,7 @@ const Benefits = () => {
                                     <li>Custom Solutions: Tailored options.</li>
                                     <li> Enhanced Performance: Focus on durability.</li>
                                 </ul>
+                                </div>
                             </div>
                         </div>
                     </div>

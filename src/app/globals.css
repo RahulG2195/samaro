@@ -200,3 +200,9 @@ input[type="checkbox"]:checked {
   background-color: red;
   outline: none !important;
 }
+
+@media (max-width: 600px) {
+  .childrens_topPading{
+    padding-top:50px;
+  }
+}

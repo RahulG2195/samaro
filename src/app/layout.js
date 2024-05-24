@@ -24,10 +24,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
-        <Topbar />
+        <div className=""><Topbar />
         <div className="headerBottomspace"> <Header /></div>
+        
+        </div>
        
-        <div className="">{children}</div>
+        <div className="childrens_topPading">{children}</div>
         <ToastContainer />
 
         <Footer />

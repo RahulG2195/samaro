@@ -71,7 +71,7 @@ const page = () => {
   ]
   return (
 
-    <section className='py-5'>
+    <section className='py-5 dwnldCentermainCont'>
       <div className='text-center dwnldcenterHeading'>
         <h2 className='fw-bold text-navy'>Download center</h2>
         <div className='dwnldcenterFilters my-4 d-flex justify-content-center flex-wrap gap-2'>
