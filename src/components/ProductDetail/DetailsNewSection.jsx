@@ -4,7 +4,7 @@ import "@/components/ProductDetail/productdetail.css";
 
 const DetailsNewSection = () => {
   return (
-    <section className="container ">
+    <section className="container py-5">
       <p className="fw-bold fs-4 text-center py-2">Product Detail</p>
       <div className="row g-5 justify-content-center">
         <div className="col-lg-5">
@@ -112,7 +112,7 @@ const DetailsNewSection = () => {
 
           <div className="pt-4">
             <p className="fw-bold fs-6 m-">Application areas:</p>
-            <div className="row PDroomslogo ">
+            <div className="row PDroomslogo px-lg-5">
               <div className="col-3 px-4 d-flex flex-column align-items-center">
                 <img src="/assets/images/icons/Group 29203.svg" alt="" />
                 <p>Living room</p>
