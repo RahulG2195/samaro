@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
         
         </div>
        
-        <div className="childrens_topPading">{children}</div>
+        <div className="childrens_topPading pt-5 mt-4">{children}</div>
         <ToastContainer />
 
         <Footer />
