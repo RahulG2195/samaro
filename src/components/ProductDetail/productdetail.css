@@ -37,7 +37,7 @@ i {
 }
 
 .notSureLinks ul li p {
-  margin-bottom: .2rem;
+  margin-bottom: 0.2rem;
 }
 
 .pfIcon {
@@ -51,13 +51,12 @@ i {
   font-size: 15px;
 }
 
-
-.Design>tbody>tr {
+.Design > tbody > tr {
   border-bottom: 1px solid #ca373c;
 }
 
 .inspectionBanner {
-  background-color: #0A2647;
+  background-color: #0a2647;
 }
 
 .freecallbtn {
@@ -92,8 +91,6 @@ i {
   height: 100%;
   overflow: hidden;
 }
-
-
 
 .prod_name_lg {
   margin: 0 0 15px 0;
@@ -134,29 +131,29 @@ i {
 .owl-nav .owl-next {
   position: absolute;
   right: -3%;
-  top: 35%
+  top: 35%;
 }
 
 .owl-nav .owl-prev {
   position: absolute;
   left: -3%;
-  top: 35%
+  top: 35%;
 }
-
 
 /* product details table section */
 .DescriptionTable p {
   font-size: 12px;
 }
 
-
-.brochure_imgdiv{
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+.brochure_imgdiv {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 .MainSLdr .swiper-pagination-bullet {
   background-color: #ca373c;
   /* Change to your desired color */
 }
+
 
 /* Owl nav of similar products  */
 .similarprod .owl-nav img {
@@ -164,13 +161,13 @@ i {
   vertical-align: auto;
 }
 
-@media (min-width:768px) {
-.detailSpecificationTbl{
-  padding: 10px 0px !important;
-}
+@media (min-width: 768px) {
+  .detailSpecificationTbl {
+    padding: 10px 0px !important;
+  }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .longTxtTiles {
     /* font-size: 9.8px !important; */
     padding: 2px 0;
@@ -189,8 +186,7 @@ i {
   }
 }
 
-@media (max-width:600px) {
-
+@media (max-width: 600px) {
   .prod_name_lg {
     text-align: center;
     margin-top: 20px;
@@ -244,8 +240,8 @@ i {
     overflow: hidden;
   }
 }
-@media (max-width:425px){
-  .PDroomslogo p{
+@media (max-width: 425px) {
+  .PDroomslogo p {
     font-size: 10px !important;
   }
 }

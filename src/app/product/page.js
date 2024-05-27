@@ -23,7 +23,7 @@ export default function Home() {
       {/* <Header></Header> */}
       {/* <SpcBanner></SpcBanner> */}
       <ProductBanner></ProductBanner>
-      <div className="mt-5 mb-5">
+      <div className="mt-lg-5 mt-md-5 mb-5">
         <Products></Products>
       </div>
       <SpcForm></SpcForm>

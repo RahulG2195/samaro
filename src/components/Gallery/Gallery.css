@@ -91,12 +91,13 @@
   }
 }
 @media (max-width: 768px){
+
   .grid{
   columns: 2;
   }
-  .gallery {
+  /* .gallery {
     margin-top: 100px;
-}
+} */
 }
 @media (max-width: 480px){
   .grid{

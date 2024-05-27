@@ -68,17 +68,23 @@ const Filters = ({ hide, inSPC }) => {
               <p className="pb-2 darkBlue m-0">
                 Choose Your <strong className="fw-medium">product</strong>
               </p>
-              <div className={`${hide} chk`}>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  SPC
-                </label>
-              </div>
-              <div className={`${hide}`}>
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  LVT
-                </label>
+              <div className="row">
+                <div
+                  className={`${hide} chk col-lg-12 col-md-12 col-sm-2 col-6`}
+                >
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    SPC
+                  </label>
+                </div>
+                <div
+                  className={`${hide} chk col-lg-12 col-md-12 col-sm-2 col-6`}
+                >
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    LVT
+                  </label>
+                </div>
               </div>
             </div>
             <div className={` border-bottom border-danger py-2 chk`}>
@@ -220,59 +226,58 @@ const Filters = ({ hide, inSPC }) => {
                 Choose Your <strong className="fw-medium">place</strong>
               </p>
               <div className="row ">
-              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Bathroom
-                </label>
-              </div>
-              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Bedroom
-                </label>
-              </div>
-              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                {" "}
-                
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Children's room
-                </label>
-              </div>
-              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Dining room
-                </label>
-              </div>
-              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Hallway
-                </label>
-              </div>
-              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Kitchen
-                </label>
-              </div>
-              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Living room
-                </label>
-              </div>
-              <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                <label className="darkBlue">
-                  <input className="mx-1 form-check-input" type="checkbox" />
-                  Office
-                </label>
-              </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Bathroom
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Bedroom
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  {" "}
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Children's room
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Dining room
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Hallway
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Kitchen
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Living room
+                  </label>
+                </div>
+                <div className="col-lg-12 col-md-12 col-sm-2 col-6">
+                  <label className="darkBlue">
+                    <input className="mx-1 form-check-input" type="checkbox" />
+                    Office
+                  </label>
+                </div>
               </div>
             </div>
-            <div className=" border-bottom border-danger">
+            {/* <div className=" border-bottom border-danger">
               <label className="form-label darkBlue">
                 Choose Your <strong className="fw-medium">Thickness</strong>
               </label>
@@ -290,8 +295,8 @@ const Filters = ({ hide, inSPC }) => {
                 <p className="small darkBlue">{thickness} mm</p>
                 <p className="small darkBlue">8 mm</p>
               </div>
-            </div>
-            <div className=" border-bottom border-danger">
+            </div> */}
+            {/* <div className=" border-bottom border-danger">
               <label className="form-label darkBlue">
                 Choose Your <strong className="fw-medium">Wear Layer</strong>
               </label>
@@ -309,7 +314,7 @@ const Filters = ({ hide, inSPC }) => {
                 <p className="small darkBlue ">{wearLayer} mm</p>
                 <p className="small darkBlue">0.7 mm</p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </Collapse>

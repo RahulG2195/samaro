@@ -154,7 +154,7 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
             <div className={`row my-4 ${pb ? "mb-0" : "my-4 "}`}>
               <p>Select any one</p>
 
-              <div className="col-md-6 slct1 my-2">
+              <div className="col-md-6 slct1 my-2 rdbuttons">
                 <input
                   id="Wholesaler"
                   type="radio"
@@ -165,7 +165,7 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
                 />
                 <label htmlFor="Wholesaler">Wholesaler/Distributors</label>
               </div>
-              <div className="col-md-6 slct1 my-2">
+              <div className="col-md-6 slct1 my-2  rdbuttons">
                 <input
                   id="Commercial"
                   type="radio"
@@ -176,7 +176,7 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
                 />
                 <label for="Commercial">Commercial Projects</label>
               </div>
-              <div className="col-md-6 slct1 my-2">
+              <div className="col-md-6 slct1 my-2  rdbuttons">
                 <input
                   id="customer"
                   type="radio"
@@ -187,7 +187,7 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
                 />
                 <label htmlFor="customer">Sales Enquiry</label>
               </div>
-              <div className="col-md-6 slct1 my-2">
+              <div className="col-md-6 slct1 my-2 rdbuttons">
                 <input
                   id="OEM"
                   type="radio"

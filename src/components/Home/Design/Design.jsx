@@ -16,21 +16,24 @@ const Design = () => {
             </div>
             <div className="container-fluid px-lg-5">
                 <div className="row g-lg-0 g-3">
-                    <div className="col-lg-4">
+                    <div className="col-lg-4 position-relative">
                         <Link href='/product'>
-                            <img className='design-img' src="/assets/images/home/design/1.png" alt="" />
+                            <img className='design-img' src="/assets/images/home/design/Mask Group 81.png" alt="err" />
+                            <p className='designText'>WOOD</p>
                         </Link>
                     </div>
                     <div className="col-lg-4 position-relative">
                         <Link href='/product'>
-                            <img className='design-img' src="/assets/images/home/design/2.png" alt="" />
+                            <img className='design-img' src="/assets/images/home/design/Mask Group 82.png" alt="" />
+                            <p className='designText'>STONE</p>
                             {/* <span className='text-danger fw-semibold position-absolute ' style={{ left: '0' }}>COMING SOON*</span> */}
                         
                         </Link>
                     </div>
                     <div className="col-lg-4 position-relative">
                         <Link href='/product'>
-                            <img className='design-img' src="/assets/images/home/design/Component 20 – 3.png" alt="" />
+                            <img className='design-img' src="/assets/images/home/design/Mask Group 83.png" alt="" />
+                            <p className='designText'>MARBEL</p>
                             <span className='text-danger fw-semibold position-absolute py-2 commingSoon' style={{ left: '0', opacity: '0.5', padding: '0 20px' }}>COMING SOON*</span>
                         </Link>
                     </div>

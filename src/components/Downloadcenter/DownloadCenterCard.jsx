@@ -5,8 +5,11 @@ import Image from 'next/image'
 const DownloadCenterCard = ({ imgurl, title, date, author, WatchNowButton }) => {
     return (
         <>
-            <div className="card dwnldcard">
+
+            <div className="card dwnldcard position-relative">
                 {/* <img src="..." class="card-img-top" alt="..."/> */}
+                <span className='badge badge-danger text-bg-danger px-5'>SPC Tuscany</span>
+
                 <Image
                     src={imgurl}
                     alt="err"

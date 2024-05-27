@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../../components/Downloadcenter/dwnld.css';
 import DownloadCenterCard from '@/components/Downloadcenter/DownloadCenterCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
@@ -7,6 +6,8 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
+import '../../components/Downloadcenter/dwnld.css';
+
 
 const DownloadSwiper = ({ title, cardData,active }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -20,7 +21,7 @@ const DownloadSwiper = ({ title, cardData,active }) => {
         <Swiper
           onSwiper={setThumbsSwiper}
           spaceBetween={40}
-          slidesPerView={1}
+          slidesPerView={3}
           freeMode={true}
           modules={[FreeMode, Navigation, Thumbs]}
           navigation={true}
