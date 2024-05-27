@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react' 
 import Image from 'next/image';
 import '@/components/FindYourMatch/findmatch.css';
 import Link from 'next/link';
 const StepOutput = () => {
   return (
-    <>
+    <> d         
       <section className='stepoutput_section my-md-5 my-3'>
         <div className='container'>
           <div className='row'>
@@ -43,4 +43,4 @@ const StepOutput = () => {
   )
 }
 
-export default StepOutput
+export default StepOutput 
