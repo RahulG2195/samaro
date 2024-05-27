@@ -37,6 +37,7 @@ const DownloadSwiper = ({ title, cardData,active }) => {
             <SwiperSlide key={index} className='sliderchild '>
               <DownloadCenterCard
                 imgurl={card.imgurl}
+                Badge="SPC Tuscany"
                
               />
             </SwiperSlide>

@@ -2,13 +2,13 @@ import React from 'react'
 import './dwnld.css'
 import Image from 'next/image'
 
-const DownloadCenterCard = ({ imgurl, title, date, author, WatchNowButton }) => {
+const DownloadCenterCard = ({ imgurl, title, date, author, WatchNowButton,Badge }) => {
     return (
         <>
 
             <div className="card dwnldcard position-relative">
                 {/* <img src="..." class="card-img-top" alt="..."/> */}
-                <span className='badge badge-danger text-bg-danger px-5'>SPC Tuscany</span>
+                <span className='badge badge-danger text-bg-danger px-5'>{Badge}</span>
 
                 <Image
                     src={imgurl}
