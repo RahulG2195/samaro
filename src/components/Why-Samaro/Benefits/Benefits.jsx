@@ -53,7 +53,7 @@ const Benefits = () => {
                                 <h3 className='my-4  px-4 text-center'>
                                     Quality Assurance
                                 </h3>
-                                <ul className='fw-normal ps-xl-5'>
+                                <ul className='fw-normal px-5 ps-xl-5'>
                                     <li>International Standards Compliance: Meets quality benchmarks.</li>
                                     <li>Material Inspection: Rigorously checks raw materials.</li>
                                     <li>Production Oversight: Constant monitoring during manufacturing.</li>
