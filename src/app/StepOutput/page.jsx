@@ -16,7 +16,7 @@ const StepOutput = () => {
                 <h6>Laminate flooring</h6>
                 <p>Great looks at a great price: that’s what laminate has to offer. Enjoy an exceptionally natural-looking floor and give your room the warmth and look of real wood at a budget-friendly price.</p>
               </div>
-              <div className='prod_pointer'>
+              <div className='prod_pointer py-2'>
                 <ul>
                   <li><i className="fa-solid fa-check"></i> Budget Friendly</li>
                   <li><i className="fa-solid fa-check"></i> Scratch & Stain resistant</li>
