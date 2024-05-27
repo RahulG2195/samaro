@@ -112,7 +112,7 @@ const DetailsNewSection = () => {
 
           <div className="pt-4">
             <p className="fw-bold fs-6 m-">Application areas:</p>
-            <div className="row PDroomslogo px-lg-5">
+            <div className="row PDroomslogo px-lg-5 px-md-5">
               <div className="col-3 px-4 d-flex flex-column align-items-center">
                 <img src="/assets/images/icons/Group 29203.svg" alt="" />
                 <p>Living room</p>
