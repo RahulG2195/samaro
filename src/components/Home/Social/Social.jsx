@@ -10,7 +10,7 @@ const Social = () => {
                     <div className='instaLogo'><img src="/assets/images/home/social/Group 29049.svg" alt="err" className='w-75' /></div>
                     <div>
                     <a href="https://www.instagram.com/samaroflooring?igsh=amowMmMyeHU1eXVh" target="_blank" className='idAndbio'>
-                        <span className='instaid'>@SAMAROFLORRING</span>
+                        <span className='instaid'>@SAMAROFLOORING</span>
                         <p className='instabio'>Where Indian Craftsmanship Meets Global Luxury, <br />Ready to Elevate Your World.</p>
                     </a>
                     </div>
@@ -20,16 +20,16 @@ const Social = () => {
                     {/* <div className="col-lg-12 col-md-12 col-sm-12 col-12"> */}
                     <a href="https://www.instagram.com/samaroflooring?igsh=amowMmMyeHU1eXVh" target="_blank">
                         <div className=" row justify-content-center gap-2">
-                            <div className="image col-lg-2 col-md-2 col-12">
+                            <div className="image col-lg-2 col-md-4 col-sm-4 col-10">
                                 <img src="/assets/images/social-media/01.webp" alt="" />
                             </div>
-                            <div className="image col-lg-2 col-md-2 col-12">
+                            <div className="image col-lg-2 col-md-4 col-sm-4 col-10">
                                 <img src="/assets/images/social-media/02.webp" alt="" />
                             </div>
-                            <div className="image col-lg-2 col-md-2 col-12">
+                            <div className="image col-lg-2 col-md-4 col-sm-4 col-10">
                                 <img src="/assets/images/social-media/03.webp" alt="" />
                             </div>
-                            <div className="image col-lg-2 col-md-2 col-12">
+                            <div className="image col-lg-2 col-md-4 col-sm-4 col-10">
                                 <img src="/assets/images/social-media/04.webp" alt="" />
                             </div>
                            

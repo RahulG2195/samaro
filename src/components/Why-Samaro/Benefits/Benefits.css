@@ -201,14 +201,9 @@
     position: relative !important;
   }
 
-
-
 }
 
 @media (max-width:425px) {
-  .samcontResp {
-    height: auto;
-  }
 
   .benefits-boxes ol li {
     line-height: 3;
@@ -236,9 +231,9 @@
 }
 
 @media (min-width: 375px) and (max-width: 425px) {
-  .benefits-boxes {
+  /* .benefits-boxes {
     margin-top: 45% !important;
-  }
+  } */
 }
 
 @media (max-width:375px) {

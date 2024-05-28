@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Footer.css";
 import Form from '@/components/InquiryForm/Form';
+import Link from 'next/link';
 const Footer = () => {
     return (
         <>
@@ -31,11 +32,11 @@ const Footer = () => {
                                 <div className="align-items-center" >
                                     <h3 className="footer-headings mb-3 text-white ">Products</h3>
                                     <ul className="ps-0 d-flex flex-column footer-links gap-2 ">
-                                        <li><a href="">SPC Flooring</a></li>
-                                        <li><a href="">LVT Flooring</a></li>
-                                        <li><a href="">Ceramic</a></li>
-                                        <li><a href="">Marbel</a></li>
-                                        <li><a href="">Stone</a></li>
+                                        <li><Link href="/product">SPC Flooring</Link></li>
+                                        <li><Link href="/product">LVT Flooring</Link></li>
+                                        <li><Link href="/product">Ceramic</Link></li>
+                                        <li><Link href="/product">Marbal</Link></li>
+                                        <li><Link href="/product">Stone</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -44,8 +45,8 @@ const Footer = () => {
                             <div className="d-flex gap-3">
                                 <address className='d-flex'>
                                     {/* <i className="fas fa-map-marker-alt d-block mt-2 px-2"></i> */}
-                                    <div className='w-25'>
-                                    <img src="/assets/images/icons/Group 57.svg" alt="" className='w-50'/></div>
+                                    <div className='me-2 '>
+                                    <img src="/assets/images/icons/Group 57.svg" alt="" className='w-100'/></div>
                                     5th Floor, Vilco Centre, Subhash Road, Opp. Garware, Vile Parle East, Mumbai-400057, Maharashtra, India
                                 </address>
                             </div>
@@ -60,7 +61,8 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="newsletter  justify-content-start gap-2 mt-3">
-                                <input type="text" className="border-white border-2 rounded-pill px-5" placeholder="Enter your email Id for Newsletter" style={{ backgroundColor: 'inherit' }} />
+                                <input type="text" className="border-white border-2 rounded-pill px-5
+                                " placeholder="Enter your email for Newsletter" style={{ backgroundColor: 'inherit' }} />
                                 <button className='btn border-2 border-white rounded-pill footerSubmitbutton'>Submit</button>
                             </div>
                         </div>

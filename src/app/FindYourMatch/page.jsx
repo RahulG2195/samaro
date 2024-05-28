@@ -36,7 +36,7 @@ const page = () => {
   };
   return (
     <>
-      <section className="finyourMatch_sec my-md-5 my-3">
+      <section className="finyourMatch_sec my-md-5 mb-5" >
         <div className="container">
           <div className="row">
             <form onSubmit={handleFormSubmit} className="step_form">

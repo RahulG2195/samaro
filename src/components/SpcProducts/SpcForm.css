@@ -54,6 +54,11 @@
 
 }
 
+.spcFormCont .form-check-input, .spcFormCont .rdbuttons label{
+    cursor:pointer !important;
+
+}
+
 /* country code dropdown */
 .react-tel-input .form-control {
     border-bottom: 2px solid #0A2647;
