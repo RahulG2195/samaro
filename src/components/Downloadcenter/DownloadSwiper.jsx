@@ -9,7 +9,7 @@ import 'swiper/css/thumbs';
 import '../../components/Downloadcenter/dwnld.css';
 
 
-const DownloadSwiper = ({ title, cardData,active }) => {
+const DownloadSwiper = ({ Badgetitle ,title, cardData,active }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   if (!active) return null;
   
@@ -37,7 +37,7 @@ const DownloadSwiper = ({ title, cardData,active }) => {
             <SwiperSlide key={index} className='sliderchild '>
               <DownloadCenterCard
                 imgurl={card.imgurl}
-                Badge="SPC Tuscany"
+                Badge={card.Badgetitle}
                
               />
             </SwiperSlide>
