@@ -18,13 +18,16 @@ const page = () => {
       imgurl: '/assets/images/brochure/Brochure.png',
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
-      author: 'By Anand Kashyap'
+      author: 'By Anand Kashyap',
+      Badgetitle:"SPC Tuscany"
     },
     {
       imgurl: '/assets/images/brochure/Brochure.png',
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
-      author: 'By Anand Kashyap'
+      author: 'By Anand Kashyap',
+      Badgetitle:"SPC Sicilian"
+
     },
   ]
   const InstallationcardData = [
@@ -32,7 +35,9 @@ const page = () => {
       imgurl: '/assets/images/brochure/Brochure.png',
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
-      author: 'By Anand Kashyap'
+      author: 'By Anand Kashyap',
+      Badgetitle:"Installation"
+
     },
     
   ]
@@ -41,7 +46,9 @@ const page = () => {
       imgurl: '/assets/images/brochure/Brochure.png',
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
-      author: 'By Anand Kashyap'
+      author: 'By Anand Kashyap',
+      Badgetitle:"Warrenty"
+
     },
     
   ]
