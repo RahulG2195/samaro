@@ -30,7 +30,7 @@ const page = () => {
 
     },
   ]
-  const InstallationcardData = [
+  const InstallationcardData = [  
     {
       imgurl: '/assets/images/brochure/Brochure.png',
       title: 'Seven tips to help you get better flooring design & Concept',
