@@ -102,7 +102,7 @@ const Header = () => {
                                         <img src="/assets/images/icons/Group 28211.svg" alt="" className="w-75" />
                                     </div>
                                     <div>
-                                        <span className="text-danger">91-8079545115</span>
+                                        <span className="text-danger">+918655984340</span>
                                     </div>
                                 </div>
                             </div>

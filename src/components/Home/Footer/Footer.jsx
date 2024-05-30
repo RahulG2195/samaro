@@ -57,7 +57,7 @@ const Footer = () => {
                                 </div>
                                 <div className="phone">
                                     <img src="/assets/images/home/topbar/phone.png" alt="" />
-                                    <a href="tel:">91-8079545115</a>
+                                    <a href="tel:">+918655984340</a>
                                 </div>
                             </div>
                             <div className="newsletter  justify-content-start gap-2 mt-3">

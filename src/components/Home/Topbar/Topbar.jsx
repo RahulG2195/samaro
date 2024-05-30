@@ -17,7 +17,7 @@ const Topbar = () => {
                                     </div>
                                     <div className="phone">
                                         <img src="/assets/images/home/topbar/phone.png" alt="err" />
-                                        <a href="tel:">91-8079545115</a>
+                                        <a href="tel:">+918655984340</a>
                                     </div>
                                 </div>
                                 <div className="social-media align-items-center">
