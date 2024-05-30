@@ -25,10 +25,13 @@ export default function Home() {
       <Commercial />
       <Residentail />
       
-      <div className="pt-lg-0 pt-5"><SpcForm></SpcForm></div>
+      <div className="pt-lg-0 pt-5">
+        <SpcForm></SpcForm>
+      </div>
       {/* <CallToAction /> */}
       <div className="pt-lg-0 pt-md-0 pt-5">
-      <Social /></div>
+        <Social />
+      </div>
       <FollowMore />
     </main>
   );
