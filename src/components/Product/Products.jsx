@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Filters from './Filters';
 import ProductCard from './ProductCard';
 import './Filters.css'
-
+import { useEffect , useRef } from 'react';
+import axios from 'axios';
 const Products = () => {
     const productsArr = [
         // lVT PRODUCTS
@@ -191,17 +192,24 @@ const Products = () => {
             title: " Ashford",
             description: "SPC | SICILIAN | 528"
         },
-        // {
-        //     frontImage: "/assets/images/products/Images Web/SPC WEBP/SERIES 2- SICILIAN/532 - Walnut oak WITHOUT INSTALLATION.webp",
-        //     onHoverImage: "/assets/images/products/Images Web/SPC WEBP/SERIES 2- SICILIAN/532 - Walnut oak INSTALLATION.webp",
-        //     title: "Walnut oak",
-        //     description: "SPC | SICILIAN | 532"
-        // },
-
-
-
-        // Adjust paths as necessary for additional products
     ];
+    const [productsData, setProductsData] = useState(productsArr);
+    
+    const effectRan = useRef(false);
+    useEffect(() => {
+        if (effectRan.current === false) {
+            const getProducts = async () => {
+                const RawData = await axios.get("api/products");
+                const products = RawData.data;
+                setProductsData(products);
+                console.log("products",typeof(products));
+            };
+            getProducts();
+            return () => {
+                effectRan.current = true;
+            };
+        }
+    }, []);
 
     return (
         <div className=" px-5 prdctContainer position-relative">
@@ -253,13 +261,13 @@ const Products = () => {
                         </div>
                     </div>
                     <div className="row justify-content-center row-cols-md-3 row-cols-sm-3 row-cols-xs-1 row-cols-lg-3 row-cols-xl-5 mt-md-2">
-                        {productsArr.map((product, index) => (
+                        {productsData.map((product, index) => (
                             <div key={index} className="col-6 ">
                                 <ProductCard
-                                    frontImage={product.frontImage}
-                                    onHoverImage={product.onHoverImage}
-                                    title={product.title}
-                                    description={product.description}
+                                    frontImage={`/assets/images/products/AllData/${product.prod_images}`}
+                                    onHoverImage={`/assets/images/products/AllData/${product.prod_image2}`}
+                                    title={product.prod_name}
+                                    description={product.prod_spiece}
                                 />
                             </div>
                         ))}
