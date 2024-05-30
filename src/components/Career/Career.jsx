@@ -67,7 +67,7 @@ const Career = () => {
         } else {
           console.error("Form submission failed");
           // notifyError("Failed to send Mail");
-          throw new Error(e.message || "Failed to send Mail");
+          throw new Error("Failed to send Mail");
         }
       } catch (e) {
         throw new Error(e.message || "Failed to send Mail");
