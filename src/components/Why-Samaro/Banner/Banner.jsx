@@ -20,10 +20,10 @@ const Banner = () => {
                 <source src="assets/images/why-samaro/Samaro- Building Lifestyle_Why samaro Banner.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <div className=' whyBannerTxt w-50'>
+            {/* <div className=' whyBannerTxt w-50'>
                 <p className=' m-0 text-center fw-semibold'>ABOUT SAMARO</p>
                 <p className=' m-0 text-end fw-semibold'>STEP INTO NEW DESIGN</p>
-            </div>
+            </div> */}
         </section>
     )
 }
