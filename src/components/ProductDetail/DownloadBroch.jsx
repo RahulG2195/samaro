@@ -75,7 +75,7 @@ const DownloadBroch = () => {
           }}
           // navigation={true}
           pagination={{ clickable: true }}
-          className='swiper-container' // Add the swiper-container class
+          className='swiper-container' // Add the swiper-container className
         >
           {brochureImages.map((image, index) => (
             <SwiperSlide key={index} className='row'>

@@ -72,7 +72,7 @@ const Filters = ({ hide, inSPC }) => {
                 <div
                   className={`${hide} chk col-lg-12 col-md-12 col-sm-2 col-6`}
                 >
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     SPC
                   </label>
@@ -80,7 +80,7 @@ const Filters = ({ hide, inSPC }) => {
                 <div
                   className={`${hide} chk col-lg-12 col-md-12 col-sm-2 col-6`}
                 >
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     LVT
                   </label>
@@ -95,38 +95,38 @@ const Filters = ({ hide, inSPC }) => {
                 <div
                   className={`${hide} chk col-lg-12 col-md-12 col-sm-2 col-6`}
                 >
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     All
                   </label>
                 </div>
                 <div className={`${hide} col-lg-12 col-md-12 col-sm-3 col-6`}>
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Sicilian
                   </label>
                 </div>
                 <div className={`${hide} col-lg-12 col-md-12 col-sm-3 col-6`}>
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Tuscany
                   </label>
                 </div>
                 <div className={`${hide} col-lg-12 col-md-12 col-sm-3 col-6`}>
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     LVT 1
                   </label>
                 </div>
                 <div className={`${hide} col-lg-12 col-md-12 col-sm-2 col-6`}>
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     LVT 2
                   </label>
                 </div>
 
                 <div className={`${hide} col-lg-12 col-md-12 col-sm-2 col-6`}>
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Others
                   </label>
@@ -140,19 +140,19 @@ const Filters = ({ hide, inSPC }) => {
               </p>
               <div className="row ">
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Wood
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Stone
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Marble
                   </label>
@@ -166,55 +166,55 @@ const Filters = ({ hide, inSPC }) => {
               </p>
               <div className="row ">
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1  form-check-input" type="checkbox" />
                     Black
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Beige
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Blue
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Dark brown
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Dark grey
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Green
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Light grey
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Natural
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Pink
                   </label>
@@ -227,50 +227,50 @@ const Filters = ({ hide, inSPC }) => {
               </p>
               <div className="row ">
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Bathroom
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Bedroom
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
                   {" "}
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Children's room
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Dining room
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Hallway
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Kitchen
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Living room
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
-                  <label className="darkBlue">
+                  <label htmlFor="" className="darkBlue">
                     <input className="mx-1 form-check-input" type="checkbox" />
                     Office
                   </label>
@@ -278,7 +278,7 @@ const Filters = ({ hide, inSPC }) => {
               </div>
             </div>
             {/* <div className=" border-bottom border-danger">
-              <label className="form-label darkBlue">
+              <label htmlFor="" className="form-label darkBlue">
                 Choose Your <strong className="fw-medium">Thickness</strong>
               </label>
               <input
@@ -297,7 +297,7 @@ const Filters = ({ hide, inSPC }) => {
               </div>
             </div> */}
             {/* <div className=" border-bottom border-danger">
-              <label className="form-label darkBlue">
+              <label htmlFor="" className="form-label darkBlue">
                 Choose Your <strong className="fw-medium">Wear Layer</strong>
               </label>
               <input

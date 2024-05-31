@@ -39,7 +39,7 @@ const Header = ({ showMobmenu }) => {
       </div>
       <div className="hstack gap-2">
         <Button
-          color="primary"
+          color="danger"
           size="sm"
           className="d-sm-block d-md-none"
           onClick={Handletoggle}
@@ -79,7 +79,7 @@ const Header = ({ showMobmenu }) => {
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle color="primary">
             <div style={{ lineHeight: "0px" }}>
-            <i class="bi bi-person-workspace"></i>
+            <i className="bi bi-person-workspace"></i>
             </div>
           </DropdownToggle>
           <DropdownMenu>

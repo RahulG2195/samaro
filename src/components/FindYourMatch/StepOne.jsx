@@ -64,7 +64,7 @@ const StepOne = () => {
               <div className='col-md-3 col-6 col-xs-12 my-md-3'>
                 <div className='steps1-main text-center'>
                   <div className='inner_step1 text-center'>
-                    <label htmlFor={data.id} className='stepslabel p-'>
+                    <label for={data.id} className='stepslabel p-'>
                     <div className='steps1_img '>
                       <img src={`assets/images/Step/StepTwo/${data.image}`} className='img-fluid' alt='img1' />
                     </div>

@@ -225,7 +225,7 @@ const Products = () => {
                             <div className="input-group-append interiorcheck">
                                 <div className="form-check">
                                     <input className="mx-1 form-check-input" type="checkbox" defaultChecked />
-                                    <label className="darkBlue">Show interior pictures</label>
+                                    <label htmlFor="" htmlFor="" className="darkBlue">Show interior pictures</label>
                                 </div>
                             </div>
                         </div>
@@ -247,7 +247,7 @@ const Products = () => {
                             <div className="input-group-append interiorcheck">
                                 <div className="form-check">
                                     <input className="mx-1 form-check-input" type="checkbox" defaultChecked />
-                                    <label className="darkBlue">Show interior pictures</label>
+                                    <label htmlFor="" className="darkBlue">Show interior pictures</label>
                                 </div>
                             </div>
                         </div>
@@ -264,7 +264,7 @@ const Products = () => {
                             </div>
                         ))}
 
-                        <a class="discoverBtn load_more button mx-auto" href="/product">Load More</a>
+                        <a className="discoverBtn load_more button mx-auto" href="/product">Load More</a>
                     </div>
                 </div>
             </div>

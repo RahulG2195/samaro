@@ -1,5 +1,5 @@
 "use client";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Topbar from "@/components/Home/Topbar/Topbar";
@@ -23,16 +23,20 @@ const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const queryParams =  window.location.pathname;
- const url = queryParams.split(" ")
-  
- const [isAdmin, setIsAdmin] = useState(false)
-  
+  const queryParams = window.location.pathname;
+  console.log(queryParams)
+
+  const [isAdmin, setIsAdmin] = useState(false)
+
+
+
   const [isFixed, setIsFixed] = useState(false);
 
 
   useEffect(() => {
-    ``
+    if (queryParams.includes("admin")) {
+      setIsAdmin(true)
+    }
 
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
 
@@ -52,21 +56,22 @@ export default function RootLayout({ children }) {
 
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
-        <div className=""><Topbar />
-        <div className="headerBottomspace" style={{
-          position: 'fixed',
-          top: isFixed ? 0 : '36px', 
-          width: '100%',
-        }}> 
-          <Header />
+        <div className="">
+        {!isAdmin && <Topbar />}
+          
+          <div className="headerBottomspace" style={{
+            position: 'fixed',
+            top: isFixed ? 0 : '36px',
+            width: '100%',
+          }}>
+            {!isAdmin && <Header />}
+          </div>
+          <div className={`childrens_topPading ${isAdmin?"pt-0 mt-0" :"pt-5 mt-4"} `}>{children}</div>
+          <ToastContainer />
+          {!isAdmin && <Footer />}          
         </div>
-        
-        </div>
-       
-        <div className="childrens_topPading pt-5 mt-4">{children}</div>
-        <ToastContainer />
 
-        <Footer />
+
       </body>
     </html>
   );

@@ -40,20 +40,20 @@ const DetailsNewSection = () => {
             <span className=" px-2 ">
               <p className="p-0 m-0 fw-bold fs-6">HIGHLY VERSATILE</p>
               <span className="d-flex align-items-center gap-2">
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i className="fa fa-check" aria-hidden="true"></i>
                 <p className="m-0 ">
                   Specially engineered for fast & mess-free Installation
                 </p>
               </span>
               <span className="d-flex align-items-base gap-2">
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i className="fa fa-check" aria-hidden="true"></i>
                 <p className="m-0 ">
                   Splendid flooring solution for high-traffic, commercial spaces
                   like schools, hospitals and offices
                 </p>
               </span>
               <span className="d-flex align-items-center gap-2">
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i className="fa fa-check" aria-hidden="true"></i>
                 <p className="m-0 ">Easily adapts to bespoke design plans</p>
               </span>
             </span>
@@ -65,19 +65,19 @@ const DetailsNewSection = () => {
               BRILLIANT DESIGN ELEVATES SPACES
             </p>{" "}
             <span className="d-flex align-items-center gap-2">
-              <i class="fa fa-check" aria-hidden="true"></i>
+              <i className="fa fa-check" aria-hidden="true"></i>
               <p className="m-0 ">
                 Displays superior design,stability & durability
               </p>
             </span>
             <span className="d-flex align-items-center gap-2">
-              <i class="fa fa-check" aria-hidden="true"></i>
+              <i className="fa fa-check" aria-hidden="true"></i>
               <p className="m-0 ">
                 Combines the natural beauty of wood with the strength of stone
               </p>
             </span>
             <span className="d-flex  gap-2">
-              <i class="fa fa-check" aria-hidden="true"></i>
+              <i className="fa fa-check" aria-hidden="true"></i>
               <p className="m-0 ">
                 Reproduces variations of raw wood grain, tonal hues & textures
                 on a rock-solid surface
@@ -90,19 +90,19 @@ const DetailsNewSection = () => {
               UV TOP COAT IS MULTI-FUNCTIONAL
             </p>
             <span className="d-flex align-items-center gap-2">
-              <i class="fa fa-check" aria-hidden="true"></i>
+              <i className="fa fa-check" aria-hidden="true"></i>
               <p className="m-0 ">
                 The UV coating layer offers surface protection & wear-resistance
               </p>
             </span>
             <span className="d-flex align-items-center gap-2">
-              <i class="fa fa-check" aria-hidden="true"></i>
+              <i className="fa fa-check" aria-hidden="true"></i>
               <p className="m-0 ">
                 Its anti-fade effect retains flooring look & longevity
               </p>
             </span>
             <span className="d-flex  gap-2">
-              <i class="fa fa-check" aria-hidden="true"></i>
+              <i className="fa fa-check" aria-hidden="true"></i>
               <p className="m-0 ">
                 It adjusts the unnatural shine of plasticised extrusion to
                 amplify flooring elegance

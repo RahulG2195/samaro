@@ -54,7 +54,7 @@ import {
             </CardTitle>
             <CardBody>
               <Form className="row justify-content-center">
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="productname">Product Name</Label>
                   <Input
                     id="productname"
@@ -63,7 +63,7 @@ import {
                     type="text"
                   />
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="category">Category</Label>
                   <Input
                     id="type"
@@ -72,7 +72,7 @@ import {
                     type="text"
                   />
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="catalogue">Catalogue</Label>
                   <Input
                     id="catalogue"
@@ -82,7 +82,7 @@ import {
                   />
                 </FormGroup>
                 {/* variation */}
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="productType">Product Type</Label> 
                   <Input
                     id="catalogue"
@@ -91,7 +91,7 @@ import {
                     type="text"
                   />
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="color">Color</Label>
                   <Input
                     id="color"
@@ -100,7 +100,7 @@ import {
                     type="text"
                   />
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="code">Code</Label>
                   <Input
                     id="code"
@@ -110,7 +110,7 @@ import {
                   />
                 </FormGroup>
   
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="exampleSelectMulti">Select Places</Label>
                   <Input id="exampleSelectMulti" name="selectMulti" type="select">
                     <option>Bedroom</option>
@@ -132,7 +132,7 @@ import {
                     type="text"
                   />
                 </FormGroup> */}
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="thikness">thikness</Label>
                   <Input
                     id="thikness"
@@ -141,7 +141,7 @@ import {
                     type="text"
                   />
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="layer">layer</Label>
                   <Input
                     id="layer"
@@ -150,7 +150,7 @@ import {
                     type="text"
                   />
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="prod_finish">prod_finish</Label>
                   <Input
                     id="prod_finish"
@@ -159,7 +159,7 @@ import {
                     type="text"
                   />
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="size">prod_size</Label>
                   <Input
                     id="size"
@@ -168,7 +168,7 @@ import {
                     type="text"
                   />
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="spiece">prod_spiece</Label>
                   <Input
                     id="spiece"
@@ -177,7 +177,7 @@ import {
                     type="text"
                   />
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="grove">no_of_grove</Label>
                   <Input
                     id="grove"
@@ -186,7 +186,7 @@ import {
                     type="text"
                   />
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="m2pack">m2pack</Label>
                   <Input
                     id="m2pack"
@@ -195,7 +195,7 @@ import {
                     type="text"
                   />
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="plank">plank</Label>
                   <Input
                     id="plank"
@@ -204,7 +204,7 @@ import {
                     type="text"
                   />
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="Status">Status</Label>
                   <Input
                     id="Status"
@@ -228,14 +228,14 @@ import {
                   </Input>
                 </FormGroup> */}
   
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="exampleFile">Front image</Label>
                   <Input id="exampleFile" name="file" type="file" />
                   <FormText>
                    Upload front image here.
                   </FormText>
                 </FormGroup>
-                <FormGroup className="col-12 col-lg-6 col-md-6 col-sm-6">
+                <FormGroup className="col-6">
                   <Label for="exampleFile">Other images</Label>
                   <Input id="exampleFile" name="file" type="file" />
                   <FormText>
@@ -244,7 +244,7 @@ import {
                 </FormGroup>
   
               </Form>
-               <center><Button >Submit</Button></center> 
+               <center><Button className="col-2">Submit</Button></center> 
             </CardBody>
           </Card>
         </Col>

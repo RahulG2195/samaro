@@ -7,7 +7,7 @@ const DownloadCenterCard = ({ imgurl, title, date, author, WatchNowButton,Badge 
         <>
 
             <div className="card dwnldcard position-relative">
-                {/* <img src="..." class="card-img-top" alt="..."/> */}
+                {/* <img src="..." className="card-img-top" alt="..."/> */}
                 <span className='badge badge-danger text-bg-danger px-5'>{Badge}</span>
 
                 <Image

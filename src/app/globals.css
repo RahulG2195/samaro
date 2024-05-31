@@ -192,7 +192,7 @@ p a:hover {
   margin: 85px 0 0 0;
 }
 
-.owl-theme .owl-nav [class*='owl-']:hover{
+.owl-theme .owl-nav [className*='owl-']:hover{
   background: none !important;
 }
 

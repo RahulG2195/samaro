@@ -5,16 +5,17 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const navigation = [
+
+  {
+    title: "Dashboard",
+    href: "/admin",
+    icon: "bi bi-speedometer2",
+  },
   {
     title: "Products",
     href: "/admin/addProduct",
     icon: "bi bi-card-text",
 
-  },
-  {
-    title: "Dashboard",
-    href: "/",
-    icon: "bi bi-speedometer2",
   },
   {
     title: "Alert",
@@ -70,6 +71,7 @@ const Sidebar = ({ showMobilemenu }) => {
 
   return (
     <div className="p-3">
+
       <div className="d-flex align-items-center justify-content-between">
         {/* <Logo /> */}
         <img src="/assets/images/logo/logo_alt.png" alt="" className="w-25" />
@@ -82,7 +84,36 @@ const Sidebar = ({ showMobilemenu }) => {
           ></Button></div>
       </div>
       <div className="pt-4 mt-2">
+        
+
+
         <Nav vertical className="sidebarNav">
+
+        <div className="accordion accordion-flush" id="accordionFlushExample">
+          <div className="accordion-item">
+            <button
+              className="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              Products
+            </button>
+            <ul
+              id="flush-collapseOne"
+              className="accordion-collapse collapse"
+              aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <li>add</li>
+              <li>edit</li>
+              <li>delete</li>
+            </ul>
+          </div>
+        </div>
+          
           {navigation.map((navi, index) => (
             <NavItem key={index} className="sidenav-bg">
               <Link href={navi.href} className={
@@ -95,24 +126,7 @@ const Sidebar = ({ showMobilemenu }) => {
               </Link>
             </NavItem>
           ))}
-          {/* <Button
-            color="secondary"
-            tag="a"
-            target="_blank"
-            className="mt-3"
-            href="https://www.wrappixel.com/templates/xtreme-next-js-free-admin-template/"
-          >
-            Download Free
-          </Button> */}
-          {/* <Button
-            color="danger"
-            tag="a"
-            target="_blank"
-            className="mt-3"
-            href="https://www.wrappixel.com/templates/xtreme-react-redux-admin/?ref=33"
-          >
-            Upgrade To Pro
-          </Button> */}
+          
         </Nav>
       </div>
     </div>
