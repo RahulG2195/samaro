@@ -1,11 +1,16 @@
 "use client"
-import React, { useState } from "react";
+
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import Link from "next/link";
 import NavLink from "@/components/helpers/NavLink/NavLink";
 import FollowMore from "../FollowMore/FollowMore";
+
 const Header = () => {
 
+
+
+  
     const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu open/close
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);

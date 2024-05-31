@@ -10,7 +10,12 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
+
+
 const inter = Inter({ subsets: ["latin"] });
+
+
 
 const metadata = {
   title: "Samaro",
@@ -18,10 +23,17 @@ const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const queryParams =  window.location.pathname;
+ const url = queryParams.split(" ")
+  
+ const [isAdmin, setIsAdmin] = useState(false)
+  
   const [isFixed, setIsFixed] = useState(false);
 
 
   useEffect(() => {
+    ``
+
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
 
     const handleScroll = () => {
@@ -37,6 +49,7 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
+
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
         <div className=""><Topbar />
