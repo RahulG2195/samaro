@@ -24,7 +24,6 @@ const metadata = {
 
 export default function RootLayout({ children }) {
   const queryParams = window.location.pathname;
-  console.log(queryParams)
 
   const [isAdmin, setIsAdmin] = useState(false)
 

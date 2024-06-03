@@ -13,7 +13,7 @@ const navigation = [
   },
   {
     title: "Products",
-    href: "/admin/addProduct",
+    href: "/admin/product",
     icon: "bi bi-card-text",
 
   },
@@ -89,9 +89,9 @@ const Sidebar = ({ showMobilemenu }) => {
 
         <Nav vertical className="sidebarNav">
 
-        <div className="accordion accordion-flush" id="accordionFlushExample">
+        {/* <div className="accordion accordion-flush" id="accordionFlushExample">
           <div className="accordion-item">
-            <button
+            <NavItem
               className="accordion-button collapsed"
               type="button"
               data-bs-toggle="collapse"
@@ -100,7 +100,7 @@ const Sidebar = ({ showMobilemenu }) => {
               aria-controls="flush-collapseOne"
             >
               Products
-            </button>
+            </NavItem>
             <ul
               id="flush-collapseOne"
               className="accordion-collapse collapse"
@@ -112,7 +112,7 @@ const Sidebar = ({ showMobilemenu }) => {
               <li>delete</li>
             </ul>
           </div>
-        </div>
+        </div> */}
           
           {navigation.map((navi, index) => (
             <NavItem key={index} className="sidenav-bg">
