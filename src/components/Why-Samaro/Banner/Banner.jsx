@@ -17,7 +17,7 @@ const Banner = () => {
                 loading="eager"
             /> */}
             <video autoPlay muted loop className='w-100 '>
-                <source src="assets/images/why-samaro/Samaro- Building Lifestyle_Why samaro Banner.mp4" type="video/mp4" />
+                <source src="assets/images/why-samaro/Samaro- About us Page.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             {/* <div className=' whyBannerTxt w-50'>

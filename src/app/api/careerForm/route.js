@@ -15,8 +15,8 @@ export async function POST(request, res) {
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-      from: "webDevs2024@gmail.com",
-      to: email,
+      from: email,
+      to: "webDevs2024@gmail.com",
       cc:"info@samaro.in",
       subject: "New Career Form Submission",
       html: `

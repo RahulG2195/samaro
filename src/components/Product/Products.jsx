@@ -35,7 +35,7 @@ const Products = () => {
                 const RawData = await axios.get("api/products");
                 const products = RawData.data;
                 setProductsData(products);
-                console.log("products", typeof(products));
+                console.log("products", typeof (products));
             };
             getProducts();
             return () => {
@@ -72,7 +72,7 @@ const Products = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row justify-content-center row-cols-md-3 row-cols-sm-3 row-cols-xs-1 row-cols-lg-3 row-cols-xl-5 mt-md-2">
+                    <div className="row row-cols-md-3 row-cols-sm-3 row-cols-xs-1 row-cols-lg-3 row-cols-xl-5 mt-md-2">
                         {productsData.map((product, index) => (
                             <div key={index} className="col-6">
                                 <ProductCard
@@ -83,8 +83,12 @@ const Products = () => {
                                 />
                             </div>
                         ))}
-                        <a className="discoverBtn load_more button mx-auto" href="/product">Load More</a>
+                        
                     </div>
+                    <div className='d-flex justify-content-center'>
+                            <a className="discoverBtn load_more button mx-auto text-center" href="/product">Load More</a>
+
+                        </div>
                 </div>
             </div>
         </div>
