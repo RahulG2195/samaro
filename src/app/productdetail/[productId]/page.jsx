@@ -13,8 +13,45 @@ import Inspiration from "@/components/Home/Social/Inspiration";
 import ProductSwipper from "@/components/ProductDetail/ProductSwipper";
 import "@/components/ProductDetail/productdetail.css";
 import DetailsNewSection from "@/components/ProductDetail/DetailsNewSection";
+import { useParams } from "next/navigation";
+import axios from "axios";
+
 
 const Home = () => {
+  const router = useParams();
+  const id  = router.productId
+  // console.log("id in prod detail", id)
+
+  const [prodDetail, setProdDetail] = useState([]);
+  console.log("product of detail is ", prodDetail)
+
+
+
+
+  useEffect(() => {
+    console.log("useEffect is running");
+
+    const getProduct = async () => {
+      try {
+        const response = await axios.post('/api/products', {id});
+        const rawData = response.data[0];
+        // console.log("dataa", rawData);
+
+        // const filteredData = rawData.filter(product => product.seo_url === id);
+        // console.log("Filtered data:", filteredData[0]);
+
+        setProdDetail(rawData);
+      } catch (error) {
+        console.error('Error fetching product:', error);
+      }
+    };
+
+    getProduct();
+  }, []);
+
+
+
+
   const prod_features = [
     {
       key: "1",
@@ -186,6 +223,8 @@ const Home = () => {
       Tiles: "Method	Click and lock",
     },
   ];
+
+
   return (
     <>
       <section className="product-data_sec mt-md-5 mt-2">
@@ -196,7 +235,7 @@ const Home = () => {
             </div>
             <div className="col-md-6 col-12 col-xl-5 prodDetailTXT">
               <div className="prod_name_lg">
-                <h2>Clay Oak</h2>
+                <h2>{prodDetail.prod_name}</h2>
                 <span>LVT | WOOD | SAM 0037</span>
               </div>
               {/*####################################### product description table ######################################## */}
@@ -310,7 +349,7 @@ const Home = () => {
         </div>
       </section> */}
       <div className="pt-5">
-     
+
         <DetailsNewSection></DetailsNewSection>
       </div>
 

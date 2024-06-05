@@ -46,7 +46,7 @@ const Header = () => {
                                 <NavLink href="/why-samaro">Why Samaro</NavLink>
                             </li>
                             <li className="nav-item position-relative prdcts"  onClick={closeMenu}>
-                                <NavLink className="prdctHeading" href="/product">Product</NavLink>
+                                <NavLink className="prdctHeading" href="/product/All">Product</NavLink>
                                 {/* <ul className=" prdctDrop drop1 px-5 position-absolute">
                                     <li><Link href="/spcProducts"><p className="darkBlue">SPC</p></Link></li>
                                     <li><Link href="/lvtProducts"><p className="darkBlue">LVT</p></Link></li>

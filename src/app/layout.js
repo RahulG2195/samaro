@@ -38,6 +38,8 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+    
+      <head><link rel="icon" href="/favicon.ico" sizes="any" /></head>
       <body suppressHydrationWarning={true} className={inter.className}>
         <div className=""><Topbar />
         <div className="headerBottomspace" style={{
