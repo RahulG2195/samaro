@@ -17,6 +17,7 @@ export async function POST(request, res) {
     let info = await transporter.sendMail({
       from: "webDevs2024@gmail.com",
       to: email,
+      cc:"info@samaro.in",
       subject: "New Career Form Submission",
       html: `
           <p>Name: ${name}</p>
