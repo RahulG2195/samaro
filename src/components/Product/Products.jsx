@@ -2,14 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 import Filters from './Filters';
 import ProductCard from './ProductCard';
 import './Filters.css';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import axios, { all } from 'axios';
 
 const Products = () => {
-    const router = useParams();
-    const variation = router.slug;
+    const router = useRouter();
 
-    // console.log("slug", variation);
+    const params = useParams();
+    const variation = params.slug;
+
 
     const productsArr = [
         {
@@ -32,25 +33,30 @@ const Products = () => {
         },
     ];
     const [productsData, setProductsData] = useState(productsArr);
-    // console.log("here is data ", productsData)
     const [showInteriorPictures, setShowInteriorPictures] = useState(true);
+    const [filteredProducts, setFilteredProducts] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState('');
+    const [selectedCatalogues, setSelectedCatalogues] = useState([]);
+    const [selectedTypes, setSelectedTypes] = useState([]);
+    const [selectedColors, setSelectedColors] = useState([]);
+    const [selectedPlaces, setSelectedPlaces] = useState([]);
 
     const effectRan = useRef(false);
+
+
     useEffect(() => {
         if (effectRan.current === false) {
             const getProducts = async () => {
-                const RawData = await axios.get("/api/products",variation);
+                const RawData = await axios.get("/api/products", {
+                    params: {
+                        varation: variation,
+                    }
+                })
                 const products = RawData.data;
-                let filteredProducts;
-                if (variation === 'All') {
-                    setProductsData(products);
 
-                } else {
-                    filteredProducts = products.filter(product => product.variation.toLowerCase() === variation.toLowerCase());
-                    // console.log("Filtered products:", filteredProducts);
-                    setProductsData(filteredProducts);
+                setProductsData(products);
+                setFilteredProducts(products);
 
-                }
             };
             getProducts();
             return () => {
@@ -59,16 +65,92 @@ const Products = () => {
         }
     }, []);
 
+
     const handleCheckboxChange = () => {
         setShowInteriorPictures(!showInteriorPictures);
     };
+
+    const handleProductChange = (event) => {
+        setSelectedProduct(event.target.value);
+
+    };
+
+    const handleCatalogueChange = (event) => {
+        const value = event.target.value;
+        setSelectedCatalogues(prev =>
+            prev.includes(value) ? prev.filter(c => c !== value) : [...prev, value]
+        );
+
+    };
+
+    const handleTypeChange = (event) => {
+        const { value } = event.target;
+
+        setSelectedTypes((prev) =>
+            prev.includes(value) ? prev.filter((t) => t !== value) : [...prev, value]
+        );
+
+        if (variation.toLowerCase() === value) {
+            router.push('/product/All');
+        } else {
+            //   router.push(`/product/${value}`);
+        }
+    };
+
+    const handleColorChange = (event) => {
+        const value = event.target.value;
+        setSelectedColors(prev =>
+            prev.includes(value) ? prev.filter(c => c !== value) : [...prev, value]
+        );
+
+    };
+
+    const handlePlaceChange = (event) => {
+        const value = event.target.value;
+        setSelectedPlaces(prev =>
+            prev.includes(value) ? prev.filter(p => p !== value) : [...prev, value]
+        );
+    };
+
+
+    useEffect(() => {
+        const applyFilters = () => {
+            const filtered = productsData.filter(product => {
+                const matchesProduct = selectedProduct ? product.cat_name.toLowerCase() === selectedProduct : true;
+                const matchesCatalogues = selectedCatalogues.length > 0 ? selectedCatalogues.includes(product.prod_catalogue.toLowerCase()) : true;
+                const matchesTypes = selectedTypes.length > 0 ? selectedTypes.includes(product.variation.toLowerCase()) : true;
+                const matchesColors = selectedColors.length > 0 ? selectedColors.includes(product.color.toLowerCase()) : true;
+                const matchesPlaces = selectedPlaces.length > 0 ? selectedPlaces.includes(product.place.toLowerCase()) : true;
+
+
+                return matchesProduct && matchesCatalogues && matchesTypes && matchesColors && matchesPlaces;
+            });
+
+            setFilteredProducts(filtered);
+        };
+
+        applyFilters();
+    }, [selectedProduct, selectedCatalogues, selectedTypes, selectedColors, selectedPlaces, productsData]);
 
     return (
         <div className="px-5 prdctContainer position-relative">
             <div className="row justify-content-center">
                 <div className="row align-items-center"></div>
                 <div className="col-lg-2 col-md-3">
-                    <Filters />
+                    <Filters
+                        totalCount={productsData.length}
+                        resultCount={filteredProducts.length}
+                        selectedProduct={selectedProduct}
+                        handleProductChange={handleProductChange}
+                        selectedCatalogues={selectedCatalogues}
+                        handleCatalogueChange={handleCatalogueChange}
+                        selectedTypes={selectedTypes}
+                        handleTypeChange={handleTypeChange}
+                        selectedColors={selectedColors}
+                        handleColorChange={handleColorChange}
+                        selectedPlaces={selectedPlaces}
+                        handlePlaceChange={handlePlaceChange}
+                    />
                 </div>
                 <div className="col-lg-10 col-md-9">
                     <div className="samSearchResp mb-md-5">
@@ -87,24 +169,33 @@ const Products = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="row row-cols-md-3 row-cols-sm-3 row-cols-xs-1 row-cols-lg-3 row-cols-xl-5 mt-md-2">
-                        {productsData.map((product, index) => (
-                            <div key={index} className="col-6">
-                                <ProductCard
-                                    frontImage={`/assets/images/products/AllData/${product.prod_images}`}
-                                    onHoverImage={showInteriorPictures ? `/assets/images/products/AllData/${product.prod_image2}` : null}
-                                    title={product.prod_name}
-                                    description={product.prod_spiece}
-                                    seo={product.seo_url}
-                                />
-                            </div>
-                        ))}
+                    {filteredProducts.length === 0 ? (
+                        <div className='text-center '>No more products available</div>
+                    ) : (
+                        <div className="row row-cols-md-3 row-cols-sm-3 row-cols-xs-1 row-cols-lg-3 row-cols-xl-5 mt-md-2">
 
-                    </div>
-                    <div className='d-flex justify-content-center'>
+                            {filteredProducts.map((product, index) => (
+                                <div key={index} className="col-6">
+                                    <ProductCard
+                                        frontImage={`${product.prod_images}`}
+                                        onHoverImage={showInteriorPictures ? `${product.prod_image2}` : null}
+                                        title={product.prod_name}
+                                        description={product.prod_spiece}
+                                        seo={product.seo_url}
+                                        prod_code={product.prod_code}
+                                        variation={product.variation}
+                                        cat_name={product.cat_name}
+                                    />
+                                </div>
+                            ))}
+
+
+                        </div>
+                    )}
+                    {filteredProducts.length <= 1 ? '' : <div className='d-flex justify-content-center'>
                         <a className="discoverBtn load_more button mx-auto text-center" href="/product">Load More</a>
 
-                    </div>
+                    </div>}
                 </div>
             </div>
         </div>

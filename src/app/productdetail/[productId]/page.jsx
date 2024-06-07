@@ -23,10 +23,7 @@ const Home = () => {
   // console.log("id in prod detail", id)
 
   const [prodDetail, setProdDetail] = useState([]);
-  console.log("product of detail is ", prodDetail)
-
-
-
+// console.log("details are ",prodDetail)
 
   useEffect(() => {
     console.log("useEffect is running");
@@ -89,38 +86,38 @@ const Home = () => {
     ssr: false,
   });
 
-  const images = [
-    {
-      id: 1,
-      url: "assets/images/products/lg1.png",
-      alt: "large image",
-    },
-    {
-      id: 2,
-      url: "assets/images/products/sm1.png",
-      alt: "large image",
-    },
-    {
-      id: 3,
-      url: "assets/images/products/sm2.png",
-      alt: "large image",
-    },
-    {
-      id: 4,
-      url: "assets/images/products/sm3.png",
-      alt: "large image",
-    },
-    {
-      id: 5,
-      url: "assets/images/products/sm4.png",
-      alt: "large image",
-    },
-    {
-      id: 6,
-      url: "assets/images/products/sm5.png",
-      alt: "large image",
-    },
-  ];
+  // const images = [
+  //   {
+  //     id: 1,
+  //     url: "assets/images/products/lg1.png",
+  //     alt: "large image",
+  //   },
+  //   {
+  //     id: 2,
+  //     url: "assets/images/products/sm1.png",
+  //     alt: "large image",
+  //   },
+  //   {
+  //     id: 3,
+  //     url: "assets/images/products/sm2.png",
+  //     alt: "large image",
+  //   },
+  //   {
+  //     id: 4,
+  //     url: "assets/images/products/sm3.png",
+  //     alt: "large image",
+  //   },
+  //   {
+  //     id: 5,
+  //     url: "assets/images/products/sm4.png",
+  //     alt: "large image",
+  //   },
+  //   {
+  //     id: 6,
+  //     url: "assets/images/products/sm5.png",
+  //     alt: "large image",
+  //   },
+  // ];
 
   // data for product details table
   // ####################Description table data #########################
@@ -231,12 +228,12 @@ const Home = () => {
         <div className="container">
           <div className="row justify-content-end ">
             <div className="col-md-6 col-12 col-xl-5 position-relative ">
-              <ProductSwipper images={images} />
+              <ProductSwipper images={[prodDetail.prod_images, prodDetail.prod_image2]}  />
             </div>
             <div className="col-md-6 col-12 col-xl-5 prodDetailTXT">
               <div className="prod_name_lg">
                 <h2>{prodDetail.prod_name}</h2>
-                <span>LVT | WOOD | SAM 0037</span>
+                <span>{prodDetail.cat_name} | {prodDetail.variation} | {prodDetail.prod_code}</span>
               </div>
               {/*####################################### product description table ######################################## */}
               <div className="DescriptionTable">
@@ -350,7 +347,7 @@ const Home = () => {
       </section> */}
       <div className="pt-5">
 
-        <DetailsNewSection></DetailsNewSection>
+      {prodDetail.cat_name == 'SPC' ? <DetailsNewSection /> : null}
       </div>
 
       {/* product details new section */}
@@ -375,11 +372,11 @@ const Home = () => {
       {/* download brochue section  end */}
 
       {/* Similar product Start */}
-      <SimilarProd Title1="Similar" Title2="Floors" />
+      <SimilarProd Title1="Similar" Title2="Floors" id={prodDetail.cat_id} />
       {/* Similar product end */}
 
       {/* More Flooring Start */}
-      <SimilarProd Title1="More" Title2="Flooring" />
+      <SimilarProd Title1="More" Title2="Flooring" variation={'All'}/>
       {/* More Flooring end */}
       <Inspiration />
     </>

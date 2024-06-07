@@ -16,13 +16,13 @@ const Design = () => {
             </div>
             <div className="container-fluid px-lg-5">
                 <div className="row g-lg-0 g-3">
-                    <div className="col-lg-4 position-relative">
+                    <div className="col-lg-4 col-md-4 position-relative">
                         <Link href={`product/wood`}>
                             <img className='design-img' src="/assets/images/home/design/Mask Group 81.png" alt="err" />
                             <p className='designText'>WOOD</p>
                         </Link>
                     </div>
-                    <div className="col-lg-4 position-relative">
+                    <div className="col-lg-4 col-md-4 position-relative">
                         <Link href='product/Stone'>
                             <img className='design-img' src="/assets/images/home/design/Mask Group 82.png" alt="" />
                             <p className='designText'>STONE</p>
@@ -30,7 +30,7 @@ const Design = () => {
                         
                         </Link>
                     </div>
-                    <div className="col-lg-4 position-relative">
+                    <div className="col-lg-4 col-md-4 position-relative">
                         <Link href='product/Marble'>
                             <img className='design-img' src="/assets/images/home/design/Mask Group 83.png" alt="" />
                             <p className='designText'>MARBLE</p>
