@@ -29,6 +29,9 @@ const Inspiration = () => {
             <div className="image">
               <img src="/assets/images/gallery/px-conversions/1 (5).webp" alt="" />
             </div>
+            <div className="image">
+              <img src="/assets/images/gallery/px-conversions/2 (10).webp" alt="" />
+            </div>
           </div>
         </div>
       </div>

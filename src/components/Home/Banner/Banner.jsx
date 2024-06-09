@@ -41,7 +41,7 @@ const Banner = () => {
                         <h2 className="heading w-75 fw-normal">
                             Premium Quality <strong className="fw-bold"><Link href={'/#'}>SPC</Link> & <Link href={'/#'}>LVT</Link></strong> flooring .
                         </h2>
-                        <Link href="/product" className="discoverBtn button d-inline-block mt-3 px-3 py-1">
+                        <Link href="/product" className="discoverBtn button d-inline-block px-3 py-1">
                             Discover all our floors
                         </Link>
                     </div>

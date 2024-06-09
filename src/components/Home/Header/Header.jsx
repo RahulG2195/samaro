@@ -1,9 +1,15 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import "./Header.css";
 import Link from "next/link";
 import NavLink from "@/components/helpers/NavLink/NavLink";
 import FollowMore from "../FollowMore/FollowMore";
 const Header = () => {
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const handleToggle = () => {
+        setIsExpanded(!isExpanded);
+    };
     return (
         <header className="header">
             <nav className="navbar navbar-expand-lg">
@@ -17,23 +23,24 @@ const Header = () => {
                             <img src="/assets/images/icons/Group 28600.svg" alt="err" />
                         </div>
                         <button
-                            className="navbar-toggler"
+                            className={`navbar-toggler ${!isExpanded ? 'collapsed' : ''}`}
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent"
-                            aria-expanded="false"
+                            aria-expanded={isExpanded}
                             aria-label="Toggle navigation"
+
                         >
 
                             {/* <span className="navbar-toggler-icon"></span> */}
                             <img src="/assets/images/icons/Group 28769.svg" alt="err" />
                         </button>
                     </div>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div className={`collapse navbar-collapse ${isExpanded ? 'hide' : ''}`} id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto gap-2">
                             <li className="nav-item">
-                                <NavLink href="/">Home</NavLink>
+                                <NavLink href="/"  onClick={handleToggle}>Home</NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink href="/why-samaro">Why Samaro</NavLink>
@@ -104,7 +111,7 @@ const Header = () => {
                             <div className="align-items-center d-flex flex-column justify-content-center flex-wrap gap-2 mt-4">
                                 <div className="logo text-center">
                                     <Link href="#">
-                                        <span className='text-danger' style={{fontSize:'12px'}}>SAMARO ON</span>
+                                        <span className='text-danger' style={{ fontSize: '12px' }}>SAMARO ON</span>
                                     </Link>
                                 </div>
                                 <div className="social-media-inner-home d-flex gap-3" >
@@ -134,7 +141,7 @@ const Header = () => {
                                             <img className="img" src="/assets/images/social-media/Group 28615.svg" alt="" />
                                         </Link>
                                     </div>
-                                  
+
                                 </div>
                             </div>
 
