@@ -10,7 +10,7 @@ export async function query({ query, values = [] }) {
       port: process.env.MYSQL_PORT,
     });
     const [results] = await dbconnection.execute(query, values);
-    console.log("results: " + JSON.stringify(results));
+    // console.log("results: " + JSON.stringify(results));
     
     dbconnection.end();
     return results;

@@ -14,15 +14,32 @@ import {
 } from "reactstrap";
 import { Dropdown } from "react-bootstrap";
 import { useState } from "react";
-import { image } from "@nextui-org/react";
 import axios from "axios";
+import "react-toastify/dist/ReactToastify.css";
+import { Bounce, toast } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 const Addproducts = () => {
+  const router = useRouter();
   const [selectedPlaces, setSelectedPlaces] = useState([]);
   const [frontImage, setFrontImage] = useState("");
   const [otherImages, setOtherImages] = useState([]);
+  
 
 
+  const notify = () => {
+    toast.success(' Product added successfully', {
+      position: "top-right",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+    });
+  };
 
   const places = [
     "Bathroom",
@@ -53,13 +70,16 @@ const Addproducts = () => {
     formData.append("otherImages", otherImages.join(","));
 
     const Fdata = Object.fromEntries(formData.entries());
-    // console.log(data);
-    // console.log("selected plces", selectedPlaces)
+
     try {
       const response = await axios.post("/api/admin/products", Fdata);
-      console.log("formdata",Fdata)
+      console.log("formdata", Fdata)
       if (response.status === 200) {
+        notify();
+        router.push('/admin/product');
+
         console.log("Product added successfully");
+
       } else {
         console.error("Failed to add product");
       }
@@ -77,21 +97,8 @@ const Addproducts = () => {
       setOtherImages((prevImages) => [...prevImages, ...newImageNames]);
     }
   };
-  // const roomTemplate = (option) => {
-  //   // return <div>{option.name}</div>;
-
-  //   // const panelFooterTemplate = () => {
-  //   //   const length = selectedRooms ? selectedRooms.length : 0;
-
-  //   //   return (
-  //   //     <div className="py-2 px-3">
-  //   //       <b>{length}</b> item{length > 1 ? "s" : ""} selected.
-  //   //     </div>
-  //   //   );
-  //   // };
 
 
-  // };
   return (
     <Row>
       <Col>
@@ -155,8 +162,9 @@ const Addproducts = () => {
                 />
               </FormGroup>
               <FormGroup className="col-6">
-                <Label for="code">Code</Label>
+                <Label for="code">Code*</Label>
                 <Input
+                  required
                   id="code"
                   name="code"
                   placeholder="Enter Product Code"
@@ -165,7 +173,7 @@ const Addproducts = () => {
               </FormGroup>
 
               <FormGroup className="col-6">
-                <Label for="places">Select Places</Label>
+                <Label for="places">Select Places*</Label>
                 <Dropdown>
                   <Dropdown.Toggle variant="" id="dropdown-basic" className="border">
                     Select Options
@@ -185,7 +193,13 @@ const Addproducts = () => {
                 <div>
                   <strong>Selected Places:</strong> {selectedPlaces.join(", ")}
                 </div>
+                {!selectedPlaces.length && (
+                <FormText color="danger">
+                  select atleast one place
+                </FormText>
+              )}
               </FormGroup>
+             
               <FormGroup className="col-6">
                 <Label for="thikness">Thikness</Label>
                 <Input
@@ -283,17 +297,18 @@ const Addproducts = () => {
                 </FormGroup> */}
 
               <FormGroup className="col-6">
-                <Label for="frontImage">Front image</Label>
-                <Input id="frontImage" name="frontImage" type="file" onChange={handleImageChange}
+                <Label for="frontImage">Front image*</Label>
+                <Input required id="frontImage" name="frontImage" type="file" onChange={handleImageChange}
                 />
                 <FormText>
                   Upload front image here.
                 </FormText>
               </FormGroup>
               <FormGroup className="col-6">
-                <Label for="otherImages">Other images</Label>
+                <Label for="otherImages">Other images*</Label>
                 <Input
                   multiple
+                  required
                   id="otherImages"
                   name="otherImages"
                   type="file"

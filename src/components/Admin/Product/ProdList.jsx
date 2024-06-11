@@ -7,34 +7,28 @@ import Link from 'next/link';
 
 const ProdList = () => {
     const [products, setProducts] = useState([]);
+    const [filteredProductArray, setFilteredProductArray] = useState([]);
     const [filterText, setFilterText] = useState('');
     const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const getProducts = async () => {
-            try {
-                const rawData = await axios.get("/api/admin/products");
-                const products = rawData.data;
-                setProducts(products);
-            } catch (error) {
-                console.log(error);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        getProducts();
-    }, [products]);
+    let updatedProducts;
 
     const handleOnClick = async (action, id) => {
         if (action == 'Edit') {
             // Edit logic here
         } else if (action == 'Delete') {
             try {
-                const response = await axios.put("/api/admin/products", id);
+                const response = await axios.delete("/api/admin/products", {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    data: JSON.stringify({ id: id })
+                });
                 console.log("id", id)
                 if (response.status === 200) {
                     console.log("Product deleted successfully");
+                    updatedProducts = products.filter(product => product.product_id !== id);
+                    setProducts(updatedProducts)
+                    setFilteredProductArray(updatedProducts)
                 } else {
                     console.error("Failed to delete product");
                 }
@@ -44,6 +38,24 @@ const ProdList = () => {
             }
         }
     };
+
+    useEffect(() => {
+        const getProducts = async () => {
+            try {
+                const rawData = await axios.get("/api/admin/products");
+                const products = rawData.data;
+                setProducts(products);
+                // setFilteredProductArray(products);
+            } catch (error) {
+                console.log(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        getProducts();
+    }, [filteredProductArray]);
+
 
     const filteredItems = products.filter(item =>
         item.prod_name && item.prod_name.toLowerCase().includes(filterText.toLowerCase())

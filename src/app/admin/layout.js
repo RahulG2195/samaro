@@ -7,10 +7,11 @@ import "../../../styles/style.scss"
 import "../../../styles/_variables.css"
 import "../../../styles/layout/_sidebar.css";
 import "../../../styles/layout/_container.css";
+import { ToastContainer } from "react-toastify";
 // import Header from "./header/Header";
 // import Sidebar from "./sidebars/vertical/Sidebar";
 
-const Admin = ({ children}) => {
+const Admin = ({ children }) => {
   const [open, setOpen] = React.useState(false);
   const showMobilemenu = () => {
     setOpen(!open);
@@ -21,9 +22,8 @@ const Admin = ({ children}) => {
       <div className="pageWrapper d-md-block d-lg-flex">
         {/******** Sidebar **********/}
         <aside
-          className={`sidebarArea shadow bg-white ${
-            !open ? "" : "showSidebar"
-          }`}
+          className={`sidebarArea shadow bg-white ${!open ? "" : "showSidebar"
+            }`}
         >
           <Sidebar showMobilemenu={() => showMobilemenu()} />
         </aside>
@@ -32,7 +32,7 @@ const Admin = ({ children}) => {
         <div className="contentArea">
           {/********header**********/}
           <Header showMobmenu={() => showMobilemenu()} />
-
+          <ToastContainer />
           {/********Middle Content**********/}
           <Container className="p-4 wrapper" fluid>
             <div>{children}</div>

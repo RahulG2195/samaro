@@ -44,7 +44,7 @@ export async function POST(request) {
             layer,
             color,
         } = requestData;
-        console.log("this data want to post", requestData)
+        // console.log("this data want to post", requestData)
 
         const sqlQuery = `
       INSERT INTO products (
@@ -68,26 +68,30 @@ export async function POST(request) {
       )
       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     `;
+        const replaceSpacesWithUnderscores = (str) => {
+            return str ? str.replace(/\s+/g, '_') : null;
+        };
+        const seo = replaceSpacesWithUnderscores(productname || '');
 
-    const values = [
-        productname || null,
-        code || null,
-        productname || null,
-        catalogue || null,
-        variation || null,
-        color || null,
-        places || null,
-        thikness || null,
-        layer || null,
-        frontImage || null, // Assuming 'frontImage' contains the URL
-        otherImages || null,  // Convert array to JSON string
-        prod_finish || null,
-        size || null,
-        spiece || null,
-        grove || null,
-        m2pack || null,
-        plank || null,
-    ];
+        const values = [
+            productname || null,
+            code || null,
+            seo || null,
+            catalogue || null,
+            variation || null,
+            color || null,
+            places || null,
+            thikness || null,
+            layer || null,
+            frontImage || null, // Assuming 'frontImage' contains the URL
+            otherImages || null,  // Convert array to JSON string
+            prod_finish || null,
+            size || null,
+            spiece || null,
+            grove || null,
+            m2pack || null,
+            plank || null,
+        ];
 
         const category = await query({
             query: sqlQuery,
@@ -109,13 +113,17 @@ export async function POST(request) {
 }
 
 
-export async function PUT(request) {
+export async function DELETE(request) {
 
 
     try {
-        const id = await request.json();
-        console.log("reqs",id);
+        // const id = await request.json();
         
+        const requestBody = await request.json();
+        console.log("Request body:", requestBody); 
+        const { id } = requestBody;
+
+
         const category = await query({
             query: "DELETE FROM products WHERE prod_id = ?",
             values: [id],
