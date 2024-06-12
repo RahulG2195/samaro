@@ -1,3 +1,4 @@
+
 "use client"
 import React, { useState } from "react";
 import "./Header.css";
@@ -5,17 +6,22 @@ import Link from "next/link";
 import NavLink from "@/components/helpers/NavLink/NavLink";
 import FollowMore from "../FollowMore/FollowMore";
 const Header = () => {
-    const [isExpanded, setIsExpanded] = useState(false);
 
-    const handleToggle = () => {
-        setIsExpanded(!isExpanded);
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // State to manage menu open/close
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
     };
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
     return (
-        <header className="header">
+
+        <header className="header  ">
             <nav className="navbar navbar-expand-lg">
 
                 <div className="container">
-                    <Link className="navbar-brand" href="/">
+                    <Link className="navbar-brand" href="/" >
                         <img src="/assets/images/logo/main-logo.png" alt="" />
                     </Link>
                     <div className="d-flex gap-3 align-items-center ">
@@ -23,30 +29,25 @@ const Header = () => {
                             <img src="/assets/images/icons/Group 28600.svg" alt="err" />
                         </div>
                         <button
-                            className={`navbar-toggler ${!isExpanded ? 'collapsed' : ''}`}
+                            className="navbar-toggler"
                             type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
-                            aria-expanded={isExpanded}
-                            aria-label="Toggle navigation"
-
+                            onClick={toggleMenu} // Toggle menu on button click
                         >
 
                             {/* <span className="navbar-toggler-icon"></span> */}
                             <img src="/assets/images/icons/Group 28769.svg" alt="err" />
                         </button>
                     </div>
-                    <div className={`collapse navbar-collapse ${isExpanded ? 'hide' : ''}`} id="navbarSupportedContent">
+                    <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto gap-2">
-                            <li className="nav-item">
-                                <NavLink href="/"  onClick={handleToggle}>Home</NavLink>
+                            <li className="nav-item" onClick={closeMenu}>
+                                <NavLink href="/"  >Home</NavLink>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item "  onClick={closeMenu}>
                                 <NavLink href="/why-samaro">Why Samaro</NavLink>
                             </li>
-                            <li className="nav-item position-relative prdcts">
-                                <NavLink className="prdctHeading" href="/product">Product</NavLink>
+                            <li className="nav-item position-relative prdcts"  onClick={closeMenu}>
+                                <NavLink className="prdctHeading" href="/product/All">Product</NavLink>
                                 {/* <ul className=" prdctDrop drop1 px-5 position-absolute">
                                     <li><Link href="/spcProducts"><p className="darkBlue">SPC</p></Link></li>
                                     <li><Link href="/lvtProducts"><p className="darkBlue">LVT</p></Link></li>
@@ -56,29 +57,29 @@ const Header = () => {
                                     <li><Link href="/lvtProducts">LVT</Link></li>
                                 </ul> */}
                             </li>
-                            <li className="nav-item position-relative prdcts">
-                                <div className="inspi ">
-                                    <NavLink href="/gallery" className="lnk"> Inspiration</NavLink>
+                            <li className="nav-item position-relative prdcts inspiration">
+                                <div className="inspi " >
+                                    <NavLink href="/gallery" className="lnk "> Inspiration</NavLink>
                                 </div>
                                 <ul className=" prdctDrop px-4 position-absolute">
-                                    <li><Link href="/gallery"><p className="darkBlue">Gallery</p></Link></li>
-                                    <li><Link href="/FindYourMatch"><p className="darkBlue">Find your ideal floor</p></Link></li>
-                                    <li><Link href="/downloadCenter"><p className="darkBlue">Download center</p></Link></li>
+                                    <li onClick={closeMenu}><Link href="/gallery"><p className="darkBlue">Gallery</p></Link></li>
+                                    <li onClick={closeMenu}><Link href="/FindYourMatch"><p className="darkBlue">Find your ideal floor</p></Link></li>
+                                    <li onClick={closeMenu}><Link href="/downloadCenter"><p className="darkBlue">Download center</p></Link></li>
                                 </ul>
 
                             </li>
                             <span className="mobileoptions" >
 
-                                <li className="nav-ite"><NavLink className="nav-link" href="/gallery">Gallery</NavLink></li>
-                                <li className="nav-ite"><NavLink className="nav-link" href="/FindYourMatch">Find your ideal floor</NavLink></li>
-                                <li className="nav-ite"><NavLink className="nav-link" href="/downloadCenter">Download center</NavLink></li>
+                                <li className="nav-ite"  onClick={closeMenu}><NavLink className="nav-link" href="/gallery">Gallery</NavLink></li>
+                                <li className="nav-ite"  onClick={closeMenu}><NavLink className="nav-link" href="/FindYourMatch">Find your ideal floor</NavLink></li>
+                                <li className="nav-ite"  onClick={closeMenu}><NavLink className="nav-link" href="/downloadCenter">Download center</NavLink></li>
                             </span>
-                            <li className="nav-item">
+                            <li className="nav-item" onClick={closeMenu}>
                                 <NavLink className="nav-link" href="/newsletter">
                                     Newsletter
                                 </NavLink>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item" onClick={closeMenu}>
                                 <NavLink className="nav-link" href="/contact-us">
                                     Contact Us
                                 </NavLink>
@@ -102,7 +103,7 @@ const Header = () => {
                                         <img src="/assets/images/icons/Group 28211.svg" alt="" className="w-75" />
                                     </div>
                                     <div>
-                                        <span className="text-danger">91-8079545115</span>
+                                        <span className="text-danger">+918655984340</span>
                                     </div>
                                 </div>
                             </div>
@@ -111,7 +112,7 @@ const Header = () => {
                             <div className="align-items-center d-flex flex-column justify-content-center flex-wrap gap-2 mt-4">
                                 <div className="logo text-center">
                                     <Link href="#">
-                                        <span className='text-danger' style={{ fontSize: '12px' }}>SAMARO ON</span>
+                                        <span className='text-danger' style={{fontSize:'12px'}}>SAMARO ON</span>
                                     </Link>
                                 </div>
                                 <div className="social-media-inner-home d-flex gap-3" >
@@ -141,11 +142,9 @@ const Header = () => {
                                             <img className="img" src="/assets/images/social-media/Group 28615.svg" alt="" />
                                         </Link>
                                     </div>
-
+                                  
                                 </div>
                             </div>
-
-
 
                         </div>
                     </div>

@@ -19,17 +19,17 @@ const Social = () => {
                 {/* <div className="row justify-content-center"> */}
                     {/* <div className="col-lg-12 col-md-12 col-sm-12 col-12"> */}
                     <a href="https://www.instagram.com/samaroflooring?igsh=amowMmMyeHU1eXVh" target="_blank">
-                        <div className=" d-flex flex-wrap justify-content-center gap-4">
-                            <div className="image">
+                        <div className=" row justify-content-center gap-2">
+                            <div className="image col-lg-2 col-md-4 col-sm-4 col-10">
                                 <img src="/assets/images/social-media/01.webp" alt="" />
                             </div>
-                            <div className="image">
+                            <div className="image col-lg-2 col-md-4 col-sm-4 col-10">
                                 <img src="/assets/images/social-media/02.webp" alt="" />
                             </div>
-                            <div className="image">
+                            <div className="image col-lg-2 col-md-4 col-sm-4 col-10">
                                 <img src="/assets/images/social-media/03.webp" alt="" />
                             </div>
-                            <div className="image">
+                            <div className="image col-lg-2 col-md-4 col-sm-4 col-10">
                                 <img src="/assets/images/social-media/04.webp" alt="" />
                             </div>
                            

@@ -2,7 +2,7 @@ import React from 'react'
 const stepFour = [
   {
     key: 1,
-    'name': 'Authentic wood',
+    'name': 'Authentic Texture',
     'image': '1.png',
     'id': 'Authentic',
   },

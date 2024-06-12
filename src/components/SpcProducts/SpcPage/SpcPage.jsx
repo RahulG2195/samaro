@@ -45,7 +45,9 @@ const SpcPage = () => {
                                         frontImage={product.frontImage}
                                         onHoverImage={product.onHoverImage}
                                         title={product.title}
-                                        description={product.description}
+                                        prod_code={product.prod_code}
+                                        variation={product.variation}
+                                        cat_name={product.cat_name}
                                     />
                                 </div>
                             ))}

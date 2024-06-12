@@ -24,9 +24,11 @@ export default function Home() {
       <FloorExplorer />
       <Commercial />
       <Residentail />
-      <SpcForm></SpcForm>
+      
+      <div className="pt-lg-0 pt-5"><SpcForm></SpcForm></div>
       {/* <CallToAction /> */}
-      <Social />
+      <div className="pt-lg-0 pt-md-0 pt-5">
+      <Social /></div>
       <FollowMore />
     </main>
   );

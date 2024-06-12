@@ -154,47 +154,49 @@ const SpcForm = ({ hideguide, contactformcol, pb }) => {
             <div className={`row my-4 ${pb ? "mb-0" : "my-4 "}`}>
               <p>Select any one</p>
 
-              <div className="col-md-6 slct1 my-2">
+              <div className="col-md-6 slct1 my-2 rdbuttons">
                 <input
+                  id="Wholesaler"
                   type="radio"
                   name="selectedOption"
                   className="me-2 form-check-input"
                   value="Wholesaler/Distributors"
                   onChange={handleOptionChange}
                 />
-                <label htmlFor="radio-red1">Wholesaler/Distributors</label>
+                <label htmlFor="Wholesaler">Wholesaler/Distributors</label>
               </div>
-              <div className="col-md-6 slct1 my-2">
+              <div className="col-md-6 slct1 my-2  rdbuttons">
                 <input
+                  id="Commercial"
                   type="radio"
                   name="selectedOption"
                   className="me-2 form-check-input"
                   value="Commercial Projects"
                   onChange={handleOptionChange}
                 />
-                <label htmlFor="radio-red2">Commercial Projects</label>
+                <label for="Commercial">Commercial Projects</label>
               </div>
-              <div className="col-md-6 slct1 my-2">
+              <div className="col-md-6 slct1 my-2  rdbuttons">
                 <input
+                  id="customer"
                   type="radio"
                   name="selectedOption"
                   className="me-2 form-check-input"
-                  value="For customer/ Project inquiry"
+                  value="Sales Inquery"
                   onChange={handleOptionChange}
                 />
-                <label htmlFor="radio-red3">
-                  For customer/ Project inquiry
-                </label>
+                <label htmlFor="customer">Sales Enquiry</label>
               </div>
-              <div className="col-md-6 slct1 my-2">
+              <div className="col-md-6 slct1 my-2 rdbuttons">
                 <input
+                  id="OEM"
                   type="radio"
                   name="selectedOption"
                   className="me-2 form-check-input"
                   value="OEM"
                   onChange={handleOptionChange}
                 />
-                <label htmlFor="radio-red4">OEM</label>
+                <label htmlFor="OEM">OEM</label>
               </div>
 
               <div className="my-3">

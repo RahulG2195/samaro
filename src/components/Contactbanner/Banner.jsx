@@ -9,7 +9,7 @@ const SubBanner = () => {
       <section className="career_banner ">
       <div className='position-relative'> 
         <Image
-          src="/assets/images/career/Mask Group 218.png"
+          src="/assets/images/career/Mask Group 218@2x.png"
           alt="career banner"
           width={100}
           height={100}

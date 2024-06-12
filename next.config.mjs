@@ -11,6 +11,18 @@
 //   return config;
 // }
 
-const nextConfig = {};
+const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
+  env: {
+    MYSQL_HOST: "localhost",
+    MYSQL_DATABASE: "samaro_db",
+    MYSQL_USER: "root",
+    MYSQL_PASSWORD: "",
+    MYSQL_PORT: "3306",
+  },
+};
 
 export default nextConfig;

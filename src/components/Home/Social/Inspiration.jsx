@@ -22,7 +22,7 @@ const Inspiration = () => {
             <img src="/assets/images/gallery/px-conversions/1 (4).webp" alt="" />
 
             </div>
-            <div className="image col-span-2">
+            <div className="image ">
             <img src="/assets/images/gallery/px-conversions/1 (3).webp" alt="" />
 
             </div>
@@ -30,7 +30,7 @@ const Inspiration = () => {
               <img src="/assets/images/gallery/px-conversions/1 (5).webp" alt="" />
             </div>
             <div className="image">
-              <img src="/assets/images/gallery/px-conversions/2 (10).webp" alt="" />
+              <img src="/assets/images/gallery/px-conversions/2 (4).webp" alt="" />
             </div>
           </div>
         </div>

@@ -10,11 +10,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+
+
 
 // Initialize Swiper modules
 
@@ -55,7 +52,7 @@ const DownloadBroch = () => {
           <h1 className='section_heading'>Download <strong>Brochure</strong></h1>
         </div>
         <Swiper
-              modules={[Navigation, Pagination, Scrollbar, A11y]}
+              modules={[ Pagination, Scrollbar, A11y]}
           slidesPerView={2}
           spaceBetween={10}
           breakpoints={{
@@ -76,7 +73,7 @@ const DownloadBroch = () => {
               spaceBetween: 20,
             },
           }}
-          navigation={true}
+          // navigation={true}
           pagination={{ clickable: true }}
           className='swiper-container' // Add the swiper-container class
         >
@@ -84,6 +81,7 @@ const DownloadBroch = () => {
             <SwiperSlide key={index} className='row'>
               <div className='col-md-12 col-12 px-3'>
                 <div className='brochure_imgdiv'>
+
                   <Link href={image.link}>
                     <Image
                       src={image.src}
