@@ -12,10 +12,48 @@ const navigation = [
     icon: "bi bi-speedometer2",
   },
   {
-    title: "Products",
-    href: "/admin/product",
-    icon: "bi bi-card-text",
+    type: "accordion",
+    title: "Home Page",
+    items: [
+      { title: "Hero banner", href: "/admin/home/banner" },
+      { title: "Spc Lvt section", href: "/admin/home/spcLvt" },
+      { title: "Design Range", href: "/admin/action/three" },
+      { title: "Benifits", href: "/admin/action/three" },
+      { title: "Floor Explorer", href: "/admin/action/three" },
+      { title: "Spaces", href: "/admin/action/three" },
+    ],
+    icon: "bi bi-speedometer2",
 
+  },
+ 
+  {
+    type: "accordion", title: "Product", items: [
+      { title: "Hero Banner", href: "/admin/product/banner" },
+      { title: "Add Product", href: "/admin/product" },
+      // { title: "Delete Product", href: "/admin/product/delete" },
+    ],
+      icon: "bi bi-speedometer2",
+
+  },
+  {
+    type: "accordion",
+    title: "Contact us",
+    items: [
+      { title: "Hero banner", href: "/admin/contactUs/banner" },
+      // { title: "Spc Lvt section", href: "/admin/home/spcLvt" },
+      // { title: "Design Range", href: "/admin/action/three" },
+      // { title: "Benifits", href: "/admin/action/three" },
+      // { title: "Floor Explorer", href: "/admin/action/three" },
+      // { title: "Spaces", href: "/admin/action/three" },
+    ],
+    icon: "bi bi-speedometer2",
+
+  },
+
+  {
+    title: "Basic Information",
+    href: "/admin/basicInfo",
+    icon: "bi bi-bell",
   },
   {
     title: "Alert",
@@ -27,42 +65,13 @@ const navigation = [
     href: "/ui/badges",
     icon: "bi bi-patch-check",
   },
+
   {
     title: "Buttons",
     href: "/ui/buttons",
     icon: "bi bi-hdd-stack",
   },
-  {
-    title: "Cards",
-    href: "/ui/cards",
-    icon: "bi bi-card-text",
-  },
-  {
-    title: "Grid",
-    href: "/ui/grid",
-    icon: "bi bi-columns",
-  },
-  {
-    title: "Table",
-    href: "/ui/tables",
-    icon: "bi bi-layout-split",
-  },
-  {
-    title: "Forms",
-    href: "/ui/forms",
-    icon: "bi bi-textarea-resize",
-  },
-  {
-    title: "Breadcrumbs",
-    href: "/ui/breadcrumbs",
-    icon: "bi bi-link",
-  },
-  {
-    title: "About",
-    href: "/about",
-    icon: "bi bi-people",
-  },
-
+  // other navigation items...
 ];
 
 const Sidebar = ({ showMobilemenu }) => {
@@ -71,9 +80,7 @@ const Sidebar = ({ showMobilemenu }) => {
 
   return (
     <div className="p-3">
-
       <div className="d-flex align-items-center justify-content-between">
-        {/* <Logo /> */}
         <img src="/assets/images/logo/logo_alt.png" alt="" className="w-25" />
         <div className="ms-auto d-lg-none">
           <Button
@@ -81,52 +88,59 @@ const Sidebar = ({ showMobilemenu }) => {
             size="sm"
             className="ms-auto d-lg-none"
             onClick={showMobilemenu}
-          ></Button></div>
+          ></Button>
+        </div>
       </div>
       <div className="pt-4 mt-2">
-        
-
-
         <Nav vertical className="sidebarNav">
+          {navigation.map((navi, index) => {
+            if (navi.type === "accordion") {
+              return (
+                <div className="accordion accordion-flush " id={`accordionFlushExample${index}`} key={index}>
+                  <div className="accordion-item  ">
+                    <div
+                      className="accordion-button collapsed p-3"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target={`#flush-collapse${index}`}
+                      aria-expanded="false"
+                      aria-controls={`flush-collapse${index}`}
+                    >
+                      <i className={navi.icon}></i>
+                      <span className="ms-3 d-inline-block">{navi.title}</span>
 
-        {/* <div className="accordion accordion-flush" id="accordionFlushExample">
-          <div className="accordion-item">
-            <NavItem
-              className="accordion-button collapsed"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#flush-collapseOne"
-              aria-expanded="false"
-              aria-controls="flush-collapseOne"
-            >
-              Products
-            </NavItem>
-            <ul
-              id="flush-collapseOne"
-              className="accordion-collapse collapse"
-              aria-labelledby="flush-headingOne"
-              data-bs-parent="#accordionFlushExample"
-            >
-              <li>add</li>
-              <li>edit</li>
-              <li>delete</li>
-            </ul>
-          </div>
-        </div> */}
-          
-          {navigation.map((navi, index) => (
-            <NavItem key={index} className="sidenav-bg">
-              <Link href={navi.href} className={
-                location === navi.href
-                  ? "text-primary nav-link py-3"
-                  : "nav-link text-secondary py-3"
-              }>
-                <i className={navi.icon}></i>
-                <span className="ms-3 d-inline-block">{navi.title}</span>
-              </Link>
-            </NavItem>
-          ))}
-          
+                    </div>
+                    <ul
+                      id={`flush-collapse${index}`}
+                      className="accordion-collapse collapse"
+                      aria-labelledby={`flush-heading${index}`}
+                      data-bs-parent={`#accordionFlushExample${index}`}
+                    >
+                      {navi.items.map((item, subIndex) => (
+                        <li className="nav-item" key={subIndex}>
+                          <Link href={item.href} className="nav-link">
+                            {item.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <NavItem key={index} className="sidenav-bg">
+                <Link href={navi.href} className={
+                  location === navi.href
+                    ? "text-primary nav-link py-3"
+                    : "nav-link text-secondary py-3"
+                }>
+                  <i className={navi.icon}></i>
+                  <span className="ms-3 d-inline-block">{navi.title}</span>
+                </Link>
+              </NavItem>
+            );
+          })}
         </Nav>
       </div>
     </div>
