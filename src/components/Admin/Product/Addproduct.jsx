@@ -13,22 +13,103 @@ import {
   FormText,
 } from "reactstrap";
 import { Dropdown } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import { Bounce, toast } from "react-toastify";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const Addproducts = () => {
   const router = useRouter();
+  // let curl = useRouter();
+
+  // const {pathname} = usePathname()
+  // const location = curl.pathname
+  // const id = router.query.id;
+
+  // const id = localStorage.getItem('Id')
+
+  // console.log("id in form is ",id)
+
+  // console.log("id in form router ",id)
+
+  const id = location.search ? location.search.split('=')[1] : '';
+  console.log("thiss new ", id)
+
   const [selectedPlaces, setSelectedPlaces] = useState([]);
   const [frontImage, setFrontImage] = useState("");
   const [otherImages, setOtherImages] = useState([]);
-  
+  const [productDetail, setProductDetail] = useState([]);
+  const [isEditMode, setIsEditMode] = useState(true);
+  const [formValues, setFormValues] = useState({
+    productId: id,
+    productname: "",
+    category: "",
+    catalogue: "",
+    variation: "",
+    color: "",
+    code: "",
+    plank: "",
+    thikness: "",
+    layer: "",
+    m2pack: "",
+    groove: "",
+    finish: "",
+    spiece: "",
+    size: "",
+    status: "",
+  });
+  console.log("formvalues", formValues)
+
+  useEffect(() => {
+    if (id) {
+      setIsEditMode(true);
+
+      console.log("this is editing mode ", isEditMode);
+
+      const fetchData = async () => {
+        try {
+          const response = await axios.get('http://localhost:3000/api/admin/products');
+          const data = response.data;
+          const filteredProduct = data.filter(item => item.prod_id == id);
+          setProductDetail(filteredProduct[0]);
+          setFormValues({
+            productId:id,
+            productname: filteredProduct[0].prod_name || "",
+            category: filteredProduct[0].cat_name || "",
+            catalogue: filteredProduct[0].prod_catalogue || "",
+            variation: filteredProduct[0].variation || "",
+            color: filteredProduct[0].color || "",
+            code: filteredProduct[0].prod_code || "",
+            plank: filteredProduct[0].plank || "",
+            thikness: filteredProduct[0].thikness || "",
+            layer: filteredProduct[0].layer || "",
+            m2pack: filteredProduct[0].m2pack || "",
+            groove: filteredProduct[0].grooves || "",
+            finish: filteredProduct[0].prod_finish || "",
+            spiece: filteredProduct[0].prod_spiece || "",
+            size: filteredProduct[0].prod_size || "",
+            status: filteredProduct[0].prod_status || "",
+          });
+        } catch (error) {
+          console.log(error);
+        }
+      };
+
+      fetchData();
+    }
+    else if (productDetail && productDetail.place) {
+      setSelectedPlaces(productDetail.place);
+    }
+    else {
+      setIsEditMode(false)
+    }
+  }, [id]);
 
 
-  const notify = () => {
-    toast.success(' Product added successfully', {
+
+  const notify = (message) => {
+    toast.success(message, {
       position: "top-right",
       autoClose: 1000,
       hideProgressBar: false,
@@ -52,6 +133,8 @@ const Addproducts = () => {
     "Office",
   ];
 
+
+
   const togglePlace = (option) => {
     if (selectedPlaces.includes(option)) {
       setSelectedPlaces(selectedPlaces.filter((item) => item !== option));
@@ -71,22 +154,37 @@ const Addproducts = () => {
 
     const Fdata = Object.fromEntries(formData.entries());
 
+
     try {
-      const response = await axios.post("/api/admin/products", Fdata);
-      console.log("formdata", Fdata)
-      if (response.status === 200) {
-        notify();
-        router.push('/admin/product');
-
-        console.log("Product added successfully");
-
+      if (isEditMode) {
+        const response = await axios.put(`/api/admin/products`, formValues);
+        console.log("valuessss",formValues)
+        if (response.status === 200) {
+          notify("Product updated successfully");
+          router.push("/admin/product");
+        } else {
+          console.error("Failed to update product");
+        }
       } else {
-        console.error("Failed to add product");
+        const response = await axios.post("/api/admin/products", Fdata);
+        console.log("formdata", Fdata)
+        if (response.status === 200) {
+          notify("added sucsessfuly");
+          router.push('/admin/product');
+
+          console.log("Product added successfully");
+
+        } else {
+          console.error("Failed to add product");
+        }
       }
+
     } catch (error) {
       console.error("Error:", error);
 
+
     }
+
   };
   const handleImageChange = (e) => {
     const { name, files } = e.target;
@@ -96,6 +194,14 @@ const Addproducts = () => {
       const newImageNames = Array.from(files).map((file) => file.name);
       setOtherImages((prevImages) => [...prevImages, ...newImageNames]);
     }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({
+      ...formValues,
+      [name]: value,
+    });
   };
 
 
@@ -115,7 +221,9 @@ const Addproducts = () => {
                 <Input
                   id="productname"
                   name="productname"
-                  placeholder="Enter Product Name*"
+                  value={formValues.productname}
+                  onChange={handleInputChange}
+                  placeholder={"Enter Product Name*"}
                   type="text"
                   required
                   className="form-control"
@@ -126,7 +234,9 @@ const Addproducts = () => {
                 <Input
                   id="type"
                   name="category"
-                  placeholder="Enter category SPC/LVT*"
+                  value={formValues.category}
+                  onChange={handleInputChange}
+                  placeholder={'Enter category SPC/LVT*'}
                   type="text"
                   required
                 />
@@ -136,7 +246,9 @@ const Addproducts = () => {
                 <Input
                   id="catalogue"
                   name="catalogue"
-                  placeholder="Enter catalogue Sicilian/Tuscany/LVT 1/LVT 2*"
+                  value={formValues.catalogue}
+                  onChange={handleInputChange}
+                  placeholder={"Enter catalogue Sicilian/Tuscany/LVT 1/LVT 2*"}
                   type="text"
                   required
                 />
@@ -147,7 +259,9 @@ const Addproducts = () => {
                 <Input
                   id="catalogue"
                   name="variation"
-                  placeholder="Enter Product Type wood/stone/marbel*"
+                  value={formValues.variation}
+                  onChange={handleInputChange}
+                  placeholder={"Enter Product Type wood/stone/marbel*"}
                   type="text"
                   required
                 />
@@ -157,7 +271,9 @@ const Addproducts = () => {
                 <Input
                   id="color"
                   name="color"
-                  placeholder="Enter Product color"
+                  value={formValues.color}
+                  onChange={handleInputChange}
+                  placeholder={"Enter Product color"}
                   type="text"
                 />
               </FormGroup>
@@ -167,7 +283,9 @@ const Addproducts = () => {
                   required
                   id="code"
                   name="code"
-                  placeholder="Enter Product Code"
+                  value={formValues.code}
+                  onChange={handleInputChange}
+                  placeholder={"Enter Product Code"}
                   type="text"
                 />
               </FormGroup>
@@ -194,18 +312,20 @@ const Addproducts = () => {
                   <strong>Selected Places:</strong> {selectedPlaces.join(", ")}
                 </div>
                 {!selectedPlaces.length && (
-                <FormText color="danger">
-                  select atleast one place
-                </FormText>
-              )}
+                  <FormText color="danger">
+                    select atleast one place
+                  </FormText>
+                )}
               </FormGroup>
-             
+
               <FormGroup className="col-6">
                 <Label for="thikness">Thikness</Label>
                 <Input
                   id="thikness"
                   name="thikness"
-                  placeholder="Enter Product thikness"
+                  value={formValues.thikness}
+                  onChange={handleInputChange}
+                  placeholder={"Enter Product thikness"}
                   type="text"
                 />
               </FormGroup>
@@ -214,7 +334,9 @@ const Addproducts = () => {
                 <Input
                   id="layer"
                   name="layer"
-                  placeholder="Enter Product layer"
+                  value={formValues.layer}
+                  onChange={handleInputChange}
+                  placeholder={"Enter Product layer"}
                   type="text"
                 />
               </FormGroup>
@@ -223,7 +345,9 @@ const Addproducts = () => {
                 <Input
                   id="prod_finish"
                   name="prod_finish"
-                  placeholder="Enter product finishing"
+                  value={formValues.finish}
+                  onChange={handleInputChange}
+                  placeholder={"Enter product finishing"}
                   type="text"
                 />
               </FormGroup>
@@ -232,7 +356,9 @@ const Addproducts = () => {
                 <Input
                   id="size"
                   name="size"
-                  placeholder="Enter Product size"
+                  value={formValues.size}
+                  onChange={handleInputChange}
+                  placeholder={"Enter Product size"}
                   type="text"
                 />
               </FormGroup>
@@ -241,7 +367,9 @@ const Addproducts = () => {
                 <Input
                   id="spiece"
                   name="spiece"
-                  placeholder="Enter Product spiece"
+                  value={formValues.spiece}
+                  onChange={handleInputChange}
+                  placeholder={"Enter Product spiece"}
                   type="text"
                 />
               </FormGroup>
@@ -250,7 +378,9 @@ const Addproducts = () => {
                 <Input
                   id="grove"
                   name="grove"
-                  placeholder="Enter Product's grove number"
+                  value={formValues.groove}
+                  onChange={handleInputChange}
+                  placeholder={"Enter Product's grove number"}
                   type="text"
                 />
               </FormGroup>
@@ -259,7 +389,9 @@ const Addproducts = () => {
                 <Input
                   id="m2pack"
                   name="m2pack"
-                  placeholder="Enter Product m2pack"
+                  value={formValues.m2pack}
+                  onChange={handleInputChange}
+                  placeholder={"Enter Product m2pack"}
                   type="text"
                 />
               </FormGroup>
@@ -268,7 +400,9 @@ const Addproducts = () => {
                 <Input
                   id="plank"
                   name="plank"
-                  placeholder="Enter Product plank"
+                  value={formValues.plank}
+                  onChange={handleInputChange}
+                  placeholder={"Enter Product plank"}
                   type="text"
                 />
               </FormGroup>
@@ -277,27 +411,24 @@ const Addproducts = () => {
                 <Input
                   id="Status"
                   name="Status"
-                  placeholder="Enter Product Status 1/0"
+                  value={formValues.status}
+                  onChange={handleInputChange}
+                  placeholder={"Enter Product Status 1/0"}
                   type="text"
                 />
               </FormGroup>
 
-              {/* <FormGroup className="col-6">
-                  <Label for="exampleSelectMulti">Select Places</Label>
-                  <Input id="exampleSelectMulti" multiple name="selectMulti" type="select">
-                    <option>Bathroom</option>
-                    <option>Bedroom</option>
-                    <option>Childrensroom</option>
-                    <option>Dining room</option>
-                    <option>Hallway</option>
-                    <option>Kitchen</option>
-                    <option>Living room</option>
-                    <option>Office</option>
-                  </Input>
-                </FormGroup> */}
-
               <FormGroup className="col-6">
                 <Label for="frontImage">Front image*</Label>
+                {isEditMode && productDetail.prod_images && (
+                  <div className="mb-2">
+                    <img
+                      src={`/assets/images/products/AllData/${productDetail.prod_images}`}
+                      alt="Current Front Image"
+                      style={{ width: '100px', height: '100px', objectFit: 'cover' }}
+                    />
+                  </div>
+                )}
                 <Input required id="frontImage" name="frontImage" type="file" onChange={handleImageChange}
                 />
                 <FormText>
@@ -306,6 +437,18 @@ const Addproducts = () => {
               </FormGroup>
               <FormGroup className="col-6">
                 <Label for="otherImages">Other images*</Label>
+                {isEditMode && productDetail.prod_image2 && (
+                  <div className="mb-2">
+                    {productDetail.prod_image2.split(',').map((imagePath, index) => (
+                      <img
+                        key={index}
+                        src={`/assets/images/products/AllData/${imagePath.trim()}`}
+                        alt={`Current Image ${index + 1}`}
+                        style={{ width: '100px', height: '100px', objectFit: 'cover', marginRight: '10px' }}
+                      />
+                    ))}
+                  </div>
+                )}
                 <Input
                   multiple
                   required
@@ -329,7 +472,8 @@ const Addproducts = () => {
                   )}
                 </div>
               </FormGroup>
-              <center><Button className="col-2" type="submit">Submit</Button></center>
+              <center><Button className="col-2" type="submit">{isEditMode ? "Update" : "Submit"}</Button></center>
+              {/* <center><Button className="col-2" type="submit">Submit</Button></center> */}
 
             </Form>
           </CardBody>

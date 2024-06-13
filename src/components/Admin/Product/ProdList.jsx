@@ -4,17 +4,25 @@ import React, { useEffect, useState } from 'react';
 import { Container, Button } from 'reactstrap';
 import DataTable from 'react-data-table-component';
 import Link from 'next/link';
+import { useRouter,usePathname  } from 'next/navigation';
 
 const ProdList = () => {
     const [products, setProducts] = useState([]);
     const [filteredProductArray, setFilteredProductArray] = useState([]);
     const [filterText, setFilterText] = useState('');
     const [loading, setLoading] = useState(true);
+    const router = useRouter();
+
+
     let updatedProducts;
 
     const handleOnClick = async (action, id) => {
         if (action == 'Edit') {
-            // Edit logic here
+            console.log("editing id is ",id)
+            router.push(`./addProductForm?query=${id}`)
+            // router.push(`./addProductForm`)
+            // localStorage.setItem('Id', id);
+                
         } else if (action == 'Delete') {
             try {
                 const response = await axios.delete("/api/admin/products", {
@@ -83,7 +91,7 @@ const ProdList = () => {
             name: 'Action',
             cell: row => (
                 <div className='gap-2 d-flex'>
-                    <Button onClick={() => handleOnClick('Edit', row.id)} color="secondary" className="mr-2">Edit</Button>
+                    <Button onClick={() => handleOnClick('Edit', row.prod_id)} color="secondary" className="mr-2">Edit</Button>
                     <Button onClick={() => handleOnClick('Delete', row.prod_id)} color="danger">Delete</Button>
                 </div>
             ),
