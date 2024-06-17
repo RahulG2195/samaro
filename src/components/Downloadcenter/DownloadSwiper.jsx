@@ -9,10 +9,10 @@ import 'swiper/css/thumbs';
 import '../../components/Downloadcenter/dwnld.css';
 
 
-const DownloadSwiper = ({ Badgetitle ,title, cardData,active }) => {
+const DownloadSwiper = ({ Badgetitle, title, cardData, active }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   if (!active) return null;
-  
+
 
   return (
     <div className='container brochureCont position-relative mb-5'>
@@ -26,19 +26,19 @@ const DownloadSwiper = ({ Badgetitle ,title, cardData,active }) => {
           modules={[FreeMode, Navigation, Thumbs]}
           navigation={true}
           className={`mySwiper px-lg-5 mx-lg-5`}
-        breakpoints={{
-                                300: { slidesPerView: 2, spaceBetween: 10 },
-                                576: { slidesPerView: 2, spaceBetween: 10 },
-                                768: { slidesPerView: 3, spaceBetween: 40 },
-                                992: { slidesPerView: 3, spaceBetween: 40 },
-                            }}
+          breakpoints={{
+            300: { slidesPerView: 2, spaceBetween: 10 },
+            576: { slidesPerView: 2, spaceBetween: 10 },
+            768: { slidesPerView: 3, spaceBetween: 40 },
+            992: { slidesPerView: 3, spaceBetween: 40 },
+          }}
         >
           {cardData.map((card, index) => (
             <SwiperSlide key={index} className='sliderchild '>
               <DownloadCenterCard
                 imgurl={card.imgurl}
                 Badge={card.Badgetitle}
-               
+                pdf={card.pdf}
               />
             </SwiperSlide>
           ))}

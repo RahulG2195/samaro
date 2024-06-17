@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import NewLaunchCard from '../Newsletter/NewLaunchCard';
 import Newsletter from '../Newsletter/Newsletter';
-import'./Newsletter.css'
+import './Newsletter.css'
 
 const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }) => {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -42,16 +42,18 @@ const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }
                                 768: { slidesPerView: 3, spaceBetween: 30 },
                                 992: { slidesPerView: 4, spaceBetween: 30 },
                             }}
-                            
+
                         >
                             {cardData.map((card, index) => (
                                 <SwiperSlide key={index} className='sliderchild'>
                                     <div className='mb-5'>
                                         <DownloadCenterCard
+                                            pdf={card.pdf}
                                             imgurl={card.imgurl}
                                             title={card.title}
                                             date={card.date}
                                             author={card.author}
+                                            video={card.video}
                                             WatchNowButton={'watch Now'}
                                         />
                                     </div>
@@ -66,7 +68,7 @@ const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }
                                     </div> */}
                                 </SwiperSlide>
                             ))}
-                            
+
                         </Swiper>
                     </div>
                 ) :
@@ -93,6 +95,7 @@ const NewsletterSwiper = ({ title, cardData, active, newlaunchCard, Newsletter }
                                     date={card.date}
                                     author={card.author}
                                     WatchNowButton={'watch Now'}
+                                    video={card.video}
 
                                 />
                             </SwiperSlide>

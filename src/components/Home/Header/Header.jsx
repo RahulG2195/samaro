@@ -1,3 +1,4 @@
+
 "use client"
 import React, { useState } from "react";
 import "./Header.css";
@@ -144,8 +145,6 @@ const Header = () => {
                                   
                                 </div>
                             </div>
-
-
 
                         </div>
                     </div>

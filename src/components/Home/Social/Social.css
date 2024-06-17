@@ -17,9 +17,7 @@
   width: 100%;
 }  */
 
-.col-span-2 {
-  grid-column: span 2;
-}
+
 
 .gallerytext {
   font-size: 60px !important;

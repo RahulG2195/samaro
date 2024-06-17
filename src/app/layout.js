@@ -9,6 +9,9 @@ import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +24,11 @@ export default function RootLayout({ children }) {
   const [isFixed, setIsFixed] = useState(false);
 
 
+
   useEffect(() => {
+    Fancybox.bind("[data-fancybox]", {
+      // Custom options
+    });      
     import("bootstrap/dist/js/bootstrap.bundle.min.js");
 
     const handleScroll = () => {
@@ -33,6 +40,8 @@ export default function RootLayout({ children }) {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      Fancybox.destroy();
+
     };
   }, []);
 
