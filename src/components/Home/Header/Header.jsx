@@ -40,7 +40,7 @@ const Header = () => {
                     <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto gap-2">
                             <li className="nav-item" onClick={closeMenu}>
-                                <NavLink href="/"  >Home</NavLink>
+                                <NavLink href="/">Home</NavLink>
                             </li>
                             <li className="nav-item "  onClick={closeMenu}>
                                 <NavLink href="/why-samaro">Why Samaro</NavLink>
