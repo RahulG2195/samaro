@@ -93,12 +93,33 @@ const Products = () => {
     };
 
     const handleCatalogueChange = (event) => {
-        const value = event.target.value;
-        setSelectedCatalogues(prev =>
-            prev.includes(value) ? prev.filter(c => c !== value) : [...prev, value]
-        );
-    };
-
+        const { value, checked } = event.target;
+      
+        if (value === 'all') {
+          if (checked) {
+            // Include all options
+            handleCatalogueChange({ target: { value: 'sicilian', checked: true } });
+            handleCatalogueChange({ target: { value: 'tuscany', checked: true } });
+            handleCatalogueChange({ target: { value: 'lvt 1', checked: true } });
+            handleCatalogueChange({ target: { value: 'lvt 2', checked: true } });
+            handleCatalogueChange({ target: { value: 'others', checked: true } });
+            setSelectedCatalogues(['all', 'sicilian', 'tuscany', 'lvt 1', 'lvt 2', 'others']);
+          } else {
+            // Exclude all options
+            setSelectedCatalogues([]);
+          }
+        } else {
+          // For individual options
+          if (checked) {
+            setSelectedCatalogues((prevSelected) => [...prevSelected, value]);
+          } else {
+            setSelectedCatalogues((prevSelected) =>
+              prevSelected.filter((item) => item !== value && item !== 'all')
+            );
+          }
+        }
+      };
+      
     const handleTypeChange = (event) => {
         const { value } = event.target;
 
