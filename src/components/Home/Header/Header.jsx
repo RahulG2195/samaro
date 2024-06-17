@@ -19,7 +19,6 @@ const Header = () => {
 
         <header className="header  ">
             <nav className="navbar navbar-expand-lg">
-
                 <div className="container">
                     <Link className="navbar-brand" href="/" >
                         <img src="/assets/images/logo/main-logo.png" alt="" />
@@ -142,10 +141,8 @@ const Header = () => {
                                             <img className="img" src="/assets/images/social-media/Group 28615.svg" alt="" />
                                         </Link>
                                     </div>
-                                  
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
