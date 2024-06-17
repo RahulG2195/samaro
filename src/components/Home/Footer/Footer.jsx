@@ -32,11 +32,11 @@ const Footer = () => {
                                 <div className="align-items-center" >
                                     <h3 className="footer-headings mb-3 text-white ">Products</h3>
                                     <ul className="ps-0 d-flex flex-column footer-links gap-2 ">
-                                        <li><Link href="/product">SPC Flooring</Link></li>
-                                        <li><Link href="/product">LVT Flooring</Link></li>
-                                        <li><Link href="/product">Ceramic</Link></li>
-                                        <li><Link href="/product">Marbal</Link></li>
-                                        <li><Link href="/product">Stone</Link></li>
+                                        <li><Link href="/product/All">SPC Flooring</Link></li>
+                                        <li><Link href="/product/All">LVT Flooring</Link></li>
+                                        <li><Link href="/product/All">Ceramic</Link></li>
+                                        <li><Link href="/product/All">Marbal</Link></li>
+                                        <li><Link href="/product/All">Stone</Link></li>
                                     </ul>
                                 </div>
                             </div>

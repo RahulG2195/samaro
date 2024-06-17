@@ -40,7 +40,7 @@ const Spclvt = () => {
                                 <div className='text-center position-absolute onImgtext text-white'>
                                     <span className=' border-3 border-bottom px-2 fs-2 px-4 fw-semibold'>SPC</span>
                                     <p className='m-0 text-white small'>Click & Lock</p>
-                                    <Link href="/product" className='discoverBtn button d-inline-block mt-3 px-3 py-1'>Know more </Link>
+                                    <Link href="/product/All" className='discoverBtn button d-inline-block mt-3 px-3 py-1'>Know more </Link>
                                 </div>
                             </div>
                             <div className="img-2">
