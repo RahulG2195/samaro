@@ -18,7 +18,7 @@ const navigation = [
       { title: "Hero banner", href: "/admin/home/banner" },
       { title: "Spc Lvt section", href: "/admin/home/spcLvt" },
       { title: "Design Range", href: "/admin/action/three" },
-      { title: "Benifits", href: "/admin/action/three" },
+      { title: "Benifits", href: "/admin/home/benifits" },
       { title: "Floor Explorer", href: "/admin/action/three" },
       { title: "Spaces", href: "/admin/action/three" },
     ],

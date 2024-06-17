@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Container, Button, Form, FormGroup, Label, Input } from "reactstrap";
@@ -7,11 +7,11 @@ const EditBuildHomePage = () => {
   const [buildHomeData, setBuildHomeData] = useState({
     heading: "",
     description: "",
-    feature1_icon: "",
+    feature1_icon: null,
     feature1_title: "",
-    feature2_icon: "",
+    feature2_icon: null,
     feature2_title: "",
-    feature3_icon: "",
+    feature3_icon: null,
     feature3_title: "",
   });
 
@@ -23,7 +23,12 @@ const EditBuildHomePage = () => {
       try {
         const response = await axios.get("/api/buildHome"); // Using API route for fetching data
         const data = response.data;
-        setBuildHomeData(data);
+        setBuildHomeData({
+          ...data,
+          feature1_icon: null,
+          feature2_icon: null,
+          feature3_icon: null,
+        });
       } catch (error) {
         console.error("Error fetching build home data:", error);
       }
@@ -37,16 +42,37 @@ const EditBuildHomePage = () => {
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setBuildHomeData((prevData) => ({
-      ...prevData,
-      [name]: value
-    }));
+    const { name, value, type, files } = e.target;
+    if (type === "file") {
+      setBuildHomeData((prevData) => ({
+        ...prevData,
+        [name]: files[0]
+      }));
+    } else {
+      setBuildHomeData((prevData) => ({
+        ...prevData,
+        [name]: value
+      }));
+    }
   };
 
   const handleSave = async () => {
+    const formData = new FormData();
+    formData.append("heading", buildHomeData.heading);
+    formData.append("description", buildHomeData.description);
+    formData.append("feature1_icon", buildHomeData.feature1_icon);
+    formData.append("feature1_title", buildHomeData.feature1_title);
+    formData.append("feature2_icon", buildHomeData.feature2_icon);
+    formData.append("feature2_title", buildHomeData.feature2_title);
+    formData.append("feature3_icon", buildHomeData.feature3_icon);
+    formData.append("feature3_title", buildHomeData.feature3_title);
+
     try {
-      const response = await axios.put("/api/buildHome", buildHomeData); // Using API route for updating data
+      const response = await axios.put("/api/buildHome", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }
+      });
       console.log("Build home data updated:", response.data);
       setEditMode(false);
     } catch (error) {
@@ -91,13 +117,13 @@ const EditBuildHomePage = () => {
 
         <FormGroup>
           <Label for="feature1_icon">Feature 1 Icon</Label>
+          <img src={buildHomeData.feature1_icon} alt="err" />
           <Input
-            type="text"
+            type="file"
             name="feature1_icon"
             id="feature1_icon"
-            value={buildHomeData.feature1_icon}
             onChange={handleChange}
-            readOnly={!editMode}
+            disabled={!editMode}
           />
         </FormGroup>
         <FormGroup>
@@ -114,13 +140,13 @@ const EditBuildHomePage = () => {
 
         <FormGroup>
           <Label for="feature2_icon">Feature 2 Icon</Label>
+          <img src={buildHomeData.feature2_icon} alt="err" />
           <Input
-            type="text"
+            type="file"
             name="feature2_icon"
             id="feature2_icon"
-            value={buildHomeData.feature2_icon}
             onChange={handleChange}
-            readOnly={!editMode}
+            disabled={!editMode}
           />
         </FormGroup>
         <FormGroup>
@@ -136,14 +162,14 @@ const EditBuildHomePage = () => {
         </FormGroup>
 
         <FormGroup>
-          <Label for="feature3_icon">Feature 3 Icon</Label>
+          <Label for="feature3_icon">Feature 3 Icon </Label>
+          <img src={buildHomeData.feature3_icon} alt="err" />
           <Input
-            type="text"
+            type="file"
             name="feature3_icon"
             id="feature3_icon"
-            value={buildHomeData.feature3_icon}
             onChange={handleChange}
-            readOnly={!editMode}
+            disabled={!editMode}
           />
         </FormGroup>
         <FormGroup>
