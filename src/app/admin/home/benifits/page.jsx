@@ -16,7 +16,7 @@ const EditBenefitsPage = () => {
   useEffect(() => {
     const fetchBenefitsData = async () => {
       try {
-        const response = await axios.get("/api/admin/benefits");
+        const response = await axios.get("/api/admin/benifits");
         const data = response.data[0]; // Assuming the API response is an array with a single object
         setBenefitsData({
           id: data.id, // Assuming you fetch the ID from the server
@@ -110,7 +110,7 @@ const EditBenefitsPage = () => {
     });
 
     try {
-      const response = await axios.put("/api/admin/benefits", formData, {
+      const response = await axios.put("/api/admin/benifits", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
