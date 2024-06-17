@@ -1,10 +1,11 @@
-"use client"
+"use client";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Container, Button, Form, FormGroup, Label, Input, Table } from "reactstrap";
 
 const EditBenefitsPage = () => {
   const [benefitsData, setBenefitsData] = useState({
+    id: "", // Assuming you have the ID of the benefits record
     heading: "",
     benefits: [],
     sliderImages: [],
@@ -15,9 +16,10 @@ const EditBenefitsPage = () => {
   useEffect(() => {
     const fetchBenefitsData = async () => {
       try {
-        const response = await axios.get("/api/admin/benifits");
+        const response = await axios.get("/api/admin/benefits");
         const data = response.data[0]; // Assuming the API response is an array with a single object
         setBenefitsData({
+          id: data.id, // Assuming you fetch the ID from the server
           heading: data.heading,
           benefits: JSON.parse(data.icons).map((icon, index) => ({
             icon: icon,
@@ -91,21 +93,22 @@ const EditBenefitsPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     const formData = new FormData();
+    formData.append("id", benefitsData.id); // Append ID of the record
     formData.append("heading", benefitsData.heading);
-    
-    // Append benefits icons and titles
+
+    // Append benefits icons and titles as JSON strings
     formData.append("icons", JSON.stringify(benefitsData.benefits.map((benefit) => benefit.icon)));
     formData.append("titles", JSON.stringify(benefitsData.benefits.map((benefit) => benefit.title)));
-  
+
     // Append slider images files
     benefitsData.sliderImages.forEach((image, index) => {
       if (image.file) {
         formData.append(`sliderImages[${index}]`, image.file);
       }
     });
-  
+
     try {
       const response = await axios.put("/api/admin/benefits", formData, {
         headers: {
@@ -119,7 +122,6 @@ const EditBenefitsPage = () => {
       console.log("Error response:", error.response); // Log the Axios error response for more details
     }
   };
-  
 
   return (
     <Container>
