@@ -19,7 +19,6 @@ const Header = () => {
 
         <header className="header  ">
             <nav className="navbar navbar-expand-lg">
-
                 <div className="container">
                     <Link className="navbar-brand" href="/" >
                         <img src="/assets/images/logo/main-logo.png" alt="" />
@@ -41,7 +40,7 @@ const Header = () => {
                     <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto gap-2">
                             <li className="nav-item" onClick={closeMenu}>
-                                <NavLink href="/"  >Home</NavLink>
+                                <NavLink href="/">Home</NavLink>
                             </li>
                             <li className="nav-item "  onClick={closeMenu}>
                                 <NavLink href="/why-samaro">Why Samaro</NavLink>
@@ -142,10 +141,8 @@ const Header = () => {
                                             <img className="img" src="/assets/images/social-media/Group 28615.svg" alt="" />
                                         </Link>
                                     </div>
-                                  
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

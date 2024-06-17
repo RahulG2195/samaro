@@ -20,7 +20,7 @@ const nextConfig = {
     MYSQL_HOST: "localhost",
     MYSQL_DATABASE: "samaro_db",
     MYSQL_USER: "root",
-    MYSQL_PASSWORD: "",
+    MYSQL_PASSWORD: "Samaro2024",
     MYSQL_PORT: "3306",
   },
 };
