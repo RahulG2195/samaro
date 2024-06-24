@@ -34,6 +34,7 @@ export async function PUT(request) {
             banner_title,
             banner_content,
             banner_url,
+            button_text,
             banner_img,
             mobileBanner_img,
         } = requestData;
@@ -51,6 +52,7 @@ export async function PUT(request) {
                 banner_title = ?,
                 banner_content = ?,
                 banner_url = ?,
+                button_text = ?,
                 banner_img = ?,
                 mobileBanner_img = ?
             WHERE
@@ -61,6 +63,7 @@ export async function PUT(request) {
             banner_title !== undefined ? banner_title : null,
             banner_content !== undefined ? banner_content : null,
             banner_url !== undefined ? banner_url : null,
+            button_text !== undefined ? button_text : null,
             banner_img !== undefined ? banner_img : null,
             mobileBanner_img !== undefined ? mobileBanner_img : null,
             banner_id
