@@ -8,6 +8,7 @@ import "../../../styles/_variables.css"
 import "../../../styles/layout/_sidebar.css";
 import "../../../styles/layout/_container.css";
 import { ToastContainer } from "react-toastify";
+import "../../app/admin/global.css"
 // import Header from "./header/Header";
 // import Sidebar from "./sidebars/vertical/Sidebar";
 

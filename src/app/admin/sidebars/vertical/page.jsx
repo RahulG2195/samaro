@@ -17,23 +17,53 @@ const navigation = [
     items: [
       { title: "Hero banner", href: "/admin/home/banner" },
       { title: "Spc Lvt section", href: "/admin/home/spcLvt" },
-      { title: "Design Range", href: "/admin/action/three" },
+      // { title: "Design Range", href: "/admin/action/three" },
       { title: "Benifits", href: "/admin/home/benifits" },
-      { title: "Floor Explorer", href: "/admin/action/three" },
-      { title: "Spaces", href: "/admin/action/three" },
+      { title: "Floor Explorer", href: "/admin/home/floorExplorer" },
+      { title: "Spaces", href: "/admin/home/spaces" },
     ],
-    icon: "bi bi-speedometer2",
+    icon: "bi bi-hdd-stack",
+
+  },
+  {
+    type: "accordion",
+    title: "Why samaro page",
+    items: [
+      { title: "video and description", href: "/admin/whySamaro/video" },
+      { title: "Vision , mission section", href: "/admin/whySamaro/vision_mission" },
+      // { title: "Design Range", href: "/admin/action/three" },
+      { title: "Benifits", href: "/admin/whySamaro/benifits" },
+      { title: "Certifications", href: "/admin/whySamaro/certifications" },
+      { title: "Dimension & Spaces", href: "/admin/whySamaro/dimensions" },
+      { title: "Download center", href: "/admin/whySamaro/downloadcenter" },
+    ],
+    icon: "bi bi-hdd-stack",
 
   },
  
   {
     type: "accordion", title: "Product", items: [
       { title: "Hero Banner", href: "/admin/product/banner" },
-      { title: "Add Product", href: "/admin/product" },
+      { title: "Products", href: "/admin/product" },
       // { title: "Delete Product", href: "/admin/product/delete" },
     ],
-      icon: "bi bi-speedometer2",
+      icon: "bi bi-hdd-stack",
 
+  },
+  {
+    title: "Gallery",
+    href: "/admin/gallery",
+    icon: "bi bi-hdd-stack",
+  },
+  {
+    title: "Download Center",
+    href: "/admin/downloadCenterPage",
+    icon: "bi bi-hdd-stack",
+  },
+  {
+    title: "Newsletter Page",
+    href: "/admin/newsletter",
+    icon: "bi bi-hdd-stack",
   },
   {
     type: "accordion",
@@ -46,7 +76,7 @@ const navigation = [
       // { title: "Floor Explorer", href: "/admin/action/three" },
       // { title: "Spaces", href: "/admin/action/three" },
     ],
-    icon: "bi bi-speedometer2",
+    icon: "bi bi-hdd-stack",
 
   },
 

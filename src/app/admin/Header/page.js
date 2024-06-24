@@ -53,7 +53,7 @@ const Header = ({ showMobmenu }) => {
       </div>
 
       <Collapse navbar isOpen={isOpen}>
-        <Nav className="me-auto" navbar>
+        <Nav className="me-auto Admin" navbar>
           <NavItem>
             <Link href="/" className="nav-link">
               Starter

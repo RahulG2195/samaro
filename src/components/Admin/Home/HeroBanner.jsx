@@ -120,7 +120,7 @@ const Page = ({ pageName, initialData, isEditing }) => {
   return (
     <Container>
       <div className='d-flex justify-content-between align-items-center'>
-        <h1 className="my-4">{pageName}</h1>
+        <h3 className="my-4">{pageName}</h3>
       </div>
 
       <DataTable

@@ -112,7 +112,7 @@ const ProdList = () => {
     return (
         <Container>
             <div className='d-flex justify-content-between align-items-center'>
-                <h1 className="my-4">Product List</h1>
+                <h3 className="my-4">Product List</h3>
                 <Link href="/admin/addProductForm" className='btn btn-secondary'>Add New</Link>
             </div>
 

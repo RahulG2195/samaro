@@ -1,41 +1,47 @@
 "use client";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Container, Button, Form, FormGroup, Label, Input, Table } from "reactstrap";
+import { Container, Button, Input, Form, FormGroup, Label } from "reactstrap";
 
-const EditBenefitsPage = () => {
-  const [benefitsData, setBenefitsData] = useState({
-    id: "", // Assuming you have the ID of the benefits record
+const BenefitsSection = () => {
+  const [benefit, setBenefit] = useState({
     heading: "",
-    benefits: [],
-    sliderImages: [],
+    icons: [],
+    titles: [],
+    slider_images: []
   });
-
   const [editMode, setEditMode] = useState(false);
+  const [editedBenefit, setEditedBenefit] = useState({
+    heading: "",
+    icons: [],
+    titles: [],
+    slider_images: []
+  });
+  const [iconPreviews, setIconPreviews] = useState([]);
+  const [sliderImagePreviews, setSliderImagePreviews] = useState([]);
 
+  // Function to fetch initial data
   useEffect(() => {
-    const fetchBenefitsData = async () => {
+    const fetchBenefit = async () => {
       try {
         const response = await axios.get("/api/admin/benifits");
-        const data = response.data[0]; // Assuming the API response is an array with a single object
-        setBenefitsData({
-          id: data.id, // Assuming you fetch the ID from the server
-          heading: data.heading,
-          benefits: JSON.parse(data.icons).map((icon, index) => ({
-            icon: icon,
-            title: JSON.parse(data.titles)[index],
-          })),
-          sliderImages: JSON.parse(data.slider_images).map((image) => ({
-            url: image,
-            file: null, // Placeholder for file upload
-          })),
-        });
+        const benefitData = response.data[0]; // Assuming the API returns an array with one object
+        
+        // Convert comma-separated strings to arrays
+        benefitData.icons = benefitData.icons.split(",");
+        benefitData.titles = benefitData.titles.split(",");
+        benefitData.slider_images = benefitData.slider_images.split(",");
+        
+        setBenefit(benefitData);
+        setEditedBenefit(benefitData);
+        setIconPreviews(benefitData.icons.map(icon => `/path/to/icons/${icon}`));
+        setSliderImagePreviews(benefitData.slider_images.map(img => `/path/to/images/${img}`));
       } catch (error) {
-        console.error("Error fetching benefits data:", error);
+        console.error("Error fetching benefit:", error);
       }
     };
 
-    fetchBenefitsData();
+    fetchBenefit();
   }, []);
 
   const handleEdit = () => {
@@ -43,90 +49,99 @@ const EditBenefitsPage = () => {
   };
 
   const handleChange = (e) => {
-    const { name, value, type, files } = e.target;
-    if (type === "file") {
-      const file = files[0];
-      setBenefitsData((prevData) => ({
-        ...prevData,
-        sliderImages: [...prevData.sliderImages, { url: URL.createObjectURL(file), file }],
-      }));
-    } else {
-      setBenefitsData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
+    const { name, value } = e.target;
+    setEditedBenefit((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const handleAddIcon = () => {
+    setEditedBenefit((prevData) => ({
+      ...prevData,
+      icons: [...prevData.icons, ""],
+      titles: [...prevData.titles, ""]
+    }));
+    setIconPreviews([...iconPreviews, ""]);
+  };
+
+  const handleIconChange = (index, e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const newIcons = [...editedBenefit.icons];
+      newIcons[index] = file.name;
+      setEditedBenefit((prevData) => ({ ...prevData, icons: newIcons }));
+
+      const newPreviews = [...iconPreviews];
+      newPreviews[index] = URL.createObjectURL(file);
+      setIconPreviews(newPreviews);
     }
   };
 
-  const handleBenefitChange = (index, field, value) => {
-    const updatedBenefits = benefitsData.benefits.map((benefit, i) =>
-      i === index ? { ...benefit, [field]: value } : benefit
-    );
-    setBenefitsData((prevData) => ({
-      ...prevData,
-      benefits: updatedBenefits,
-    }));
+  const handleTitleChange = (index, e) => {
+    const { value } = e.target;
+    const newTitles = [...editedBenefit.titles];
+    newTitles[index] = value;
+    setEditedBenefit((prevData) => ({ ...prevData, titles: newTitles }));
   };
 
-  const handleAddBenefit = () => {
-    setBenefitsData((prevData) => ({
-      ...prevData,
-      benefits: [...prevData.benefits, { icon: "", title: "" }],
-    }));
+  const handleRemoveIcon = (index) => {
+    const newIcons = [...editedBenefit.icons];
+    const newTitles = [...editedBenefit.titles];
+    const newPreviews = [...iconPreviews];
+    newIcons.splice(index, 1);
+    newTitles.splice(index, 1);
+    newPreviews.splice(index, 1);
+    setEditedBenefit((prevData) => ({ ...prevData, icons: newIcons, titles: newTitles }));
+    setIconPreviews(newPreviews);
   };
 
-  const handleRemoveBenefit = (index) => {
-    const updatedBenefits = benefitsData.benefits.filter((_, i) => i !== index);
-    setBenefitsData((prevData) => ({
-      ...prevData,
-      benefits: updatedBenefits,
-    }));
+  const handleFileChange = (index, e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const newSliderImages = [...editedBenefit.slider_images];
+      newSliderImages[index] = file.name;
+      setEditedBenefit((prevData) => ({ ...prevData, slider_images: newSliderImages }));
+      const newPreviews = [...sliderImagePreviews];
+      newPreviews[index] = URL.createObjectURL(file);
+      setSliderImagePreviews(newPreviews);
+    }
   };
 
-  const handleSliderImagesChange = (e) => {
-    const files = Array.from(e.target.files);
-    setBenefitsData((prevData) => ({
+  const handleAddSliderImage = () => {
+    setEditedBenefit((prevData) => ({
       ...prevData,
-      sliderImages: [...prevData.sliderImages, ...files.map((file) => ({ url: URL.createObjectURL(file), file }))],
+      slider_images: [...prevData.slider_images, ""]
     }));
+    setSliderImagePreviews([...sliderImagePreviews, ""]);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleRemoveSliderImage = (index) => {
+    const newSliderImages = [...editedBenefit.slider_images];
+    const newPreviews = [...sliderImagePreviews];
+    newSliderImages.splice(index, 1);
+    newPreviews.splice(index, 1);
+    setEditedBenefit((prevData) => ({ ...prevData, slider_images: newSliderImages }));
+    setSliderImagePreviews(newPreviews);
+  };
 
-    const formData = new FormData();
-    formData.append("id", benefitsData.id); // Append ID of the record
-    formData.append("heading", benefitsData.heading);
-
-    // Append benefits icons and titles as JSON strings
-    formData.append("icons", JSON.stringify(benefitsData.benefits.map((benefit) => benefit.icon)));
-    formData.append("titles", JSON.stringify(benefitsData.benefits.map((benefit) => benefit.title)));
-
-    // Append slider images files
-    benefitsData.sliderImages.forEach((image, index) => {
-      if (image.file) {
-        formData.append(`sliderImages[${index}]`, image.file);
-      }
-    });
-
+  const handleSave = async () => {
     try {
-      const response = await axios.put("/api/admin/benifits", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
+      const response = await axios.put("/api/admin/benifits", {
+        ...editedBenefit,
+        icons: editedBenefit.icons.join(","),
+        titles: editedBenefit.titles.join(","),
+        slider_images: editedBenefit.slider_images.join(",")
       });
-      console.log("Benefits data updated:", response.data);
+      setBenefit(editedBenefit);
       setEditMode(false);
+      console.log("Benefit updated:", response.data);
     } catch (error) {
-      console.error("Error updating benefits data:", error);
-      console.log("Error response:", error.response); // Log the Axios error response for more details
+      console.error("Error updating benefit:", error);
     }
   };
 
   return (
     <Container>
       <div className="d-flex justify-content-between align-items-center">
-        <h1 className="my-4">Edit Benefits Data</h1>
+        <h3 className="my-4">Benefits Section</h3>
         {!editMode && (
           <Button color="secondary" onClick={handleEdit}>
             Edit
@@ -134,98 +149,85 @@ const EditBenefitsPage = () => {
         )}
       </div>
 
-      <Form onSubmit={handleSubmit}>
+      <Form>
         <FormGroup>
           <Label for="heading">Heading</Label>
           <Input
             type="text"
             name="heading"
-            id="heading"
-            value={benefitsData.heading}
+            value={editedBenefit.heading}
             onChange={handleChange}
             readOnly={!editMode}
           />
         </FormGroup>
 
-        <h3>Benefits</h3>
-        <Table>
-          <thead>
-            <tr>
-              <th>Icon</th>
-              <th>Title</th>
-              {editMode && <th>Actions</th>}
-            </tr>
-          </thead>
-          <tbody>
-            {benefitsData.benefits.map((benefit, index) => (
-              <tr key={index}>
-                <td>
-                  {benefit.icon && (
-                    <img
-                      src={benefit.icon}
-                      alt="Benefit Icon"
-                      style={{ width: "50px", height: "50px", marginRight: "10px" }}
-                    />
-                  )}
-                  <Input
-                    type="file"
-                    name="icon"
-                    onChange={(e) => handleBenefitChange(index, "icon", e.target.files[0])}
-                    disabled={!editMode}
-                  />
-                </td>
-                <td>
-                  <Input
-                    type="text"
-                    value={benefit.title}
-                    onChange={(e) => handleBenefitChange(index, "title", e.target.value)}
-                    readOnly={!editMode}
-                  />
-                </td>
-                {editMode && (
-                  <td>
-                    <Button color="danger" onClick={() => handleRemoveBenefit(index)}>
-                      Remove
-                    </Button>
-                  </td>
-                )}
-              </tr>
-            ))}
-          </tbody>
-        </Table>
-        {editMode && (
-          <Button color="primary" onClick={handleAddBenefit}>
-            Add Benefit
-          </Button>
-        )}
-
-        <h3>Slider Images</h3>
         <FormGroup>
-          <Label for="sliderImages">Slider Images</Label>
-          <Input
-            type="file"
-            name="sliderImages"
-            id="sliderImages"
-            multiple
-            onChange={handleSliderImagesChange}
-            disabled={!editMode}
-          />
-          {benefitsData.sliderImages.length > 0 && (
-            <div className="slider-preview">
-              {benefitsData.sliderImages.map((image, index) => (
-                <img
-                  key={index}
-                  src={image.url}
-                  alt={`Slider ${index + 1}`}
-                  style={{ width: "100px", height: "100px", marginRight: "10px" }}
-                />
-              ))}
+          <Label>Icons and Titles</Label>
+          {editedBenefit.icons.map((icon, index) => (
+            <div key={index} className="d-flex align-items-center mb-2">
+              {iconPreviews[index] && (
+                <img src={iconPreviews[index]} alt={`Icon ${index + 1}`} style={{ width: "50px", marginRight: "10px" }} />
+              )}
+              <Input
+                type="file"
+                name="icon"
+                onChange={(e) => handleIconChange(index, e)}
+                disabled={!editMode}
+                className="mr-2"
+              />
+              <Input
+                type="text"
+                name="title"
+                value={editedBenefit.titles[index]}
+                onChange={(e) => handleTitleChange(index, e)}
+                readOnly={!editMode}
+                placeholder={`Title ${index + 1}`}
+                className="mr-2"
+              />
+              {editMode && (
+                <Button color="danger" onClick={() => handleRemoveIcon(index)}>
+                  Remove
+                </Button>
+              )}
             </div>
+          ))}
+          {editMode && (
+            <Button color="primary" onClick={handleAddIcon}>
+              Add Icon
+            </Button>
+          )}
+        </FormGroup>
+
+        <FormGroup>
+          <Label>Slider Images</Label>
+          {editedBenefit.slider_images.map((image, index) => (
+            <div key={index} className="mb-2 d-flex align-items-center">
+              {sliderImagePreviews[index] && (
+                <img src={sliderImagePreviews[index]} alt="Slider" style={{ width: "100px", marginRight: "10px" }} />
+              )}
+              <Input
+                type="file"
+                name="slider_image"
+                onChange={(e) => handleFileChange(index, e)}
+                disabled={!editMode}
+                className="mr-2"
+              />
+              {editMode && (
+                <Button color="danger" onClick={() => handleRemoveSliderImage(index)}>
+                  Remove
+                </Button>
+              )}
+            </div>
+          ))}
+          {editMode && (
+            <Button color="primary" onClick={handleAddSliderImage}>
+              Add Slider Image
+            </Button>
           )}
         </FormGroup>
 
         {editMode && (
-          <Button color="success" type="submit">
+          <Button color="success" onClick={handleSave}>
             Save
           </Button>
         )}
@@ -234,4 +236,4 @@ const EditBenefitsPage = () => {
   );
 };
 
-export default EditBenefitsPage;
+export default BenefitsSection;

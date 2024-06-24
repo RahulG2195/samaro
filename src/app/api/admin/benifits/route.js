@@ -14,36 +14,46 @@ export async function GET(request) {
 
 // PUT endpoint to update benefits
 export async function PUT(request) {
-    console.log("the requested data from siddhu ", request.json())
-    try {
-        const requestData = await request.json();
-        const { id, heading, icons, titles, slider_images } = requestData;
+  try {
+      const requestData = await request.json();
+      const { id, heading, icons, titles, slider_images } = requestData;
 
-        const sqlQuery = `
-            UPDATE benefits
-            SET
-                heading = COALESCE(?, heading),
-                icons = COALESCE(?, icons),
-                titles = COALESCE(?, titles),
-                slider_images = COALESCE(?, slider_images)
-            WHERE id = ?
-        `;
+      // Log the received request data for debugging
+      console.log("Received request data:", requestData);
 
-        const values = [
-            heading ?? null,
-            JSON.stringify(icons) ?? null,
-            JSON.stringify(titles) ?? null,
-            JSON.stringify(slider_images) ?? null,
-            id
-        ];
+      // Prepare the SQL query
+      const sqlQuery = `
+          UPDATE benefits
+          SET
+              heading = COALESCE(?, heading),
+              icons = COALESCE(?, icons),
+              titles = COALESCE(?, titles),
+              slider_images = COALESCE(?, slider_images)
+          WHERE id = ?
+      `;
 
-        const result = await query({
-            query: sqlQuery,
-            values,
-        });
+      // Prepare the values for the SQL query
+      const values = [
+          heading || null,
+          icons || null,
+          titles || null,
+          slider_images || null,
+          id
+      ];
 
-        return new Response(JSON.stringify({ status: 200, message: "Benefits data updated successfully", result }), { status: 200 });
-    } catch (error) {
-        return new Response(JSON.stringify({ status: 500, message: error.message }), { status: 500 });
-    }
+      // Execute the SQL query
+      const result = await query({
+          query: sqlQuery,
+          values,
+      });
+
+      // Respond with success message and result
+      return new Response(JSON.stringify({ status: 200, message: "Benefits data updated successfully", result }), { status: 200 });
+  } catch (error) {
+      // Log the error for debugging
+      console.error("Error updating benefits data:", error);
+
+      // Respond with error message
+      return new Response(JSON.stringify({ status: 500, message: error.message }), { status: 500 });
+  }
 }

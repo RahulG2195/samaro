@@ -1,0 +1,17 @@
+label{
+    font-weight: 700 !important;
+}
+
+textarea:focus{
+    color: black !important;
+}
+
+.Admin .nav-item a:hover{
+    color: #fafafa !important;
+}
+.kzZBXj {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 800;
+}

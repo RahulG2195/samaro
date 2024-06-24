@@ -83,7 +83,7 @@ const EditBuildHomePage = () => {
   return (
     <Container>
       <div className="d-flex justify-content-between align-items-center">
-        <h1 className="my-4">Edit Build Home Data</h1>
+        <h3 className="my-4">Edit Build Home Data</h3>
         {!editMode && (
           <Button color="secondary" onClick={handleEdit}>
             Edit
@@ -93,7 +93,7 @@ const EditBuildHomePage = () => {
 
       <Form>
         <FormGroup>
-          <Label for="heading">Heading</Label>
+          <Label for="heading" className="fw-bold">Heading</Label>
           <Input
             type="text"
             name="heading"

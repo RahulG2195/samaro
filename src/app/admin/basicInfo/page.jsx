@@ -69,7 +69,7 @@ const BasicInfoPage = () => {
   return (
     <Container>
       <div className="d-flex justify-content-between align-items-center">
-        <h1 className="my-4">Basic Info</h1>
+        <h3 className="my-4">Basic Information</h3>
         {!editMode && (
           <Button color="secondary" onClick={handleEdit}>
             Edit
