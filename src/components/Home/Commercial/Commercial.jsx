@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Commercial.css"
+import axios from 'axios';
 
 const Commercial = () => {
+    const [spacesData, setSpacesData] = useState({
+        commercial_images: "",
+    });
+    // const images = spacesData.commercial_images.split(',');
+
+
     const images = [
         "/assets/images/home/commercial/1.jpg",
         "/assets/images/home/commercial/Mask Group 127.png",
@@ -9,6 +16,22 @@ const Commercial = () => {
         "/assets/images/gallery/px-conversions/2 (20).webp",
         "/assets/images/gallery/px-conversions/1 (2).webp"
     ];
+
+
+    useEffect(() => {
+        const fetchSpacesData = async () => {
+            try {
+                const response = await axios.get("/api/admin/spaces");
+                const data = response.data;
+                setSpacesData(data);
+            } catch (error) {
+                console.error("Error fetching spaces data:", error);
+            }
+        };
+
+        fetchSpacesData();
+    }, []);
+
     return (
         <>
             <section className="commericial-heading">

@@ -1,6 +1,14 @@
 import { query } from "@/utils/Dbconnect"; // Assuming 'your-database-module' is the correct path to your database module
 
 export async function GET(request) {
+    // console.log("request is ",request)
+    // const  id  = request.search;   
+    //  console.log("idididid",id)
+
+    //  const params = new URLSearchParams(request.searchParams); 
+
+    //  const id = params.get('id'); 
+    //  console.log("id:123", id); 
 
 
     try {

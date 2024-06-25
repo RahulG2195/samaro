@@ -1,3 +1,4 @@
+
 "use client"
 
 import React, { useEffect, useState } from "react";
@@ -23,7 +24,6 @@ const Header = () => {
 
         <header className="header  ">
             <nav className="navbar navbar-expand-lg">
-
                 <div className="container">
                     <Link className="navbar-brand" href="/" >
                         <img src="/assets/images/logo/main-logo.png" alt="" />
@@ -45,13 +45,13 @@ const Header = () => {
                     <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`} id="navbarSupportedContent">
                         <ul className="navbar-nav ms-auto gap-2">
                             <li className="nav-item" onClick={closeMenu}>
-                                <NavLink href="/"  >Home</NavLink>
+                                <NavLink href="/">Home</NavLink>
                             </li>
                             <li className="nav-item "  onClick={closeMenu}>
                                 <NavLink href="/why-samaro">Why Samaro</NavLink>
                             </li>
                             <li className="nav-item position-relative prdcts"  onClick={closeMenu}>
-                                <NavLink className="prdctHeading" href="/product">Product</NavLink>
+                                <NavLink className="prdctHeading" href="/product/All">Product</NavLink>
                                 {/* <ul className=" prdctDrop drop1 px-5 position-absolute">
                                     <li><Link href="/spcProducts"><p className="darkBlue">SPC</p></Link></li>
                                     <li><Link href="/lvtProducts"><p className="darkBlue">LVT</p></Link></li>
@@ -146,12 +146,8 @@ const Header = () => {
                                             <img className="img" src="/assets/images/social-media/Group 28615.svg" alt="" />
                                         </Link>
                                     </div>
-                                  
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>

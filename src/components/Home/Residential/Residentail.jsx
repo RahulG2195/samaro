@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Residential.css";
+import axios from 'axios';
 
 const Residential = () => {
+    const [spacesData, setSpacesData] = useState({
+        residential_images: ""
+    });
+    // const images = spacesData.commercial_images.split(',');
+
+    useEffect(() => {
+        const fetchSpacesData = async () => {
+            try {
+                const response = await axios.get("/api/admin/spaces");
+                const data = response.data;
+                setSpacesData(data);
+            } catch (error) {
+                console.error("Error fetching spaces data:", error);
+            }
+        };
+
+        fetchSpacesData();
+    }, []);
+
     const images = [
         {
             src: "/assets/images/home/commercial/Mask Group 12.png",

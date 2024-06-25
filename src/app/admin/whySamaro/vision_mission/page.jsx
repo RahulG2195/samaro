@@ -9,14 +9,13 @@ const VisionMissionEditor = () => {
     logo: '',
     subpoints: []
   });
-  console.log("this is vision",visionData)
 
   const [missionData, setMissionData] = useState({
     title: '',
     logo: '',
     subpoints: []
   });
-  console.log("this is mission",missionData)
+  
 
 
   const [editMode, setEditMode] = useState(false);

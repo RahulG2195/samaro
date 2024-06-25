@@ -7,11 +7,11 @@ const EditBuildHomePage = () => {
   const [buildHomeData, setBuildHomeData] = useState({
     heading: "",
     description: "",
-    feature1_icon: null,
+    feature1_icon: "",
     feature1_title: "",
-    feature2_icon: null,
+    feature2_icon: "",
     feature2_title: "",
-    feature3_icon: null,
+    feature3_icon: "",
     feature3_title: "",
   });
 
@@ -21,13 +21,13 @@ const EditBuildHomePage = () => {
   useEffect(() => {
     const fetchBuildHomeData = async () => {
       try {
-        const response = await axios.get("/api/buildHome"); // Using API route for fetching data
+        const response = await axios.get("/api/admin/buildHome"); // Using API route for fetching data
         const data = response.data;
         setBuildHomeData({
           ...data,
-          feature1_icon: null,
-          feature2_icon: null,
-          feature3_icon: null,
+          feature1_icon: data.feature1_icon || "",
+          feature2_icon: data.feature2_icon || "",
+          feature3_icon: data.feature3_icon || "",
         });
       } catch (error) {
         console.error("Error fetching build home data:", error);
@@ -44,35 +44,22 @@ const EditBuildHomePage = () => {
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
     if (type === "file") {
+      const fileName = files[0]?.name || "";
       setBuildHomeData((prevData) => ({
         ...prevData,
-        [name]: files[0]
+        [name]: fileName,
       }));
     } else {
       setBuildHomeData((prevData) => ({
         ...prevData,
-        [name]: value
+        [name]: value,
       }));
     }
   };
 
   const handleSave = async () => {
-    const formData = new FormData();
-    formData.append("heading", buildHomeData.heading);
-    formData.append("description", buildHomeData.description);
-    formData.append("feature1_icon", buildHomeData.feature1_icon);
-    formData.append("feature1_title", buildHomeData.feature1_title);
-    formData.append("feature2_icon", buildHomeData.feature2_icon);
-    formData.append("feature2_title", buildHomeData.feature2_title);
-    formData.append("feature3_icon", buildHomeData.feature3_icon);
-    formData.append("feature3_title", buildHomeData.feature3_title);
-
     try {
-      const response = await axios.put("/api/buildHome", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data"
-        }
-      });
+      const response = await axios.put("/api/admin/buildHome", buildHomeData);
       console.log("Build home data updated:", response.data);
       setEditMode(false);
     } catch (error) {
@@ -117,7 +104,7 @@ const EditBuildHomePage = () => {
 
         <FormGroup>
           <Label for="feature1_icon">Feature 1 Icon</Label>
-          <img src={buildHomeData.feature1_icon} alt="err" />
+          <img src={`/uploads/${buildHomeData.feature1_icon}`} alt="Feature 1 Icon" />
           <Input
             type="file"
             name="feature1_icon"
@@ -140,7 +127,7 @@ const EditBuildHomePage = () => {
 
         <FormGroup>
           <Label for="feature2_icon">Feature 2 Icon</Label>
-          <img src={buildHomeData.feature2_icon} alt="err" />
+          <img src={`/uploads/${buildHomeData.feature2_icon}`} alt="Feature 2 Icon" />
           <Input
             type="file"
             name="feature2_icon"
@@ -162,8 +149,8 @@ const EditBuildHomePage = () => {
         </FormGroup>
 
         <FormGroup>
-          <Label for="feature3_icon">Feature 3 Icon </Label>
-          <img src={buildHomeData.feature3_icon} alt="err" />
+          <Label for="feature3_icon">Feature 3 Icon</Label>
+          <img src={`/uploads/${buildHomeData.feature3_icon}`} alt="Feature 3 Icon" />
           <Input
             type="file"
             name="feature3_icon"

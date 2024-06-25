@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Form, FormGroup, Label, Input, Button } from 'reactstrap'; // Adjust imports as per your project setup
@@ -7,7 +7,7 @@ const DimensionsEditor = () => {
   const [dimensionsData, setDimensionsData] = useState({
     plank_sizes_heading: '',
     plank_sizes_description: '',
-    plank_sizes_image_url: '',
+    plank_sizes_image: null,
     plank_thickness_heading: '',
     plank_thickness_description: '',
     plank_thickness_main_image_url: '',
@@ -37,27 +37,39 @@ const DimensionsEditor = () => {
   }, []);
 
   const handleChange = (e) => {
-    const { name, value, type, files } = e.target;
+    const { name, value } = e.target;
+    setDimensionsData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
 
-    // For file inputs, set the actual file object in state
-    if (type === 'file') {
+  const handleFileChange = (name, file) => {
+    if (file) {
+      // If a file is provided, set the file name
       setDimensionsData(prevData => ({
         ...prevData,
-        [name]: files[0] // Assuming single file upload
+        [name]: file.name
       }));
     } else {
+      // If no file is provided, retain the previous data
       setDimensionsData(prevData => ({
         ...prevData,
-        [name]: value
+        [name]: prevData[name]
       }));
     }
   };
 
   const handleSave = async () => {
     try {
-   
+      // Prepare data to be sent to the backend
+      const { plank_thickness_main_image_url, ...dataToSave } = dimensionsData;
 
-      await axios.put('/api/admin/dimensions', dimensionsData)
+      await axios.put('/api/admin/dimensions', {
+        ...dataToSave,
+        plank_thickness_main_image_url: plank_thickness_main_image_url.split('/').pop() // Save only the filename
+      });
+
       setEditMode(false); // Exit edit mode after saving
     } catch (error) {
       console.error('Error saving dimensions data:', error);
@@ -96,13 +108,22 @@ const DimensionsEditor = () => {
           />
         </FormGroup>
         <FormGroup>
-          <Label for="plankSizesImage">Plank Sizes Image URL</Label>
+          <Label for="plankSizesImage">Plank Sizes Image</Label>
+          {dimensionsData.plank_sizes_image && (
+            <div>
+              <img
+                src={`${dimensionsData.plank_sizes_image}`}
+                alt="Plank Sizes"
+                className="img-thumbnail"
+                style={{ width: '100px', height: 'auto' }}
+              />
+              <p>{dimensionsData.plank_sizes_image}</p>
+            </div>
+          )}
           <Input
-            type="text"
-            name="plank_sizes_image_url"
+            type="file"
             id="plankSizesImage"
-            value={dimensionsData.plank_sizes_image_url}
-            onChange={handleChange}
+            onChange={(e) => handleFileChange('plank_sizes_image', e.target.files[0])}
             disabled={!editMode} // Disable input in view mode
           />
         </FormGroup>
@@ -131,21 +152,30 @@ const DimensionsEditor = () => {
         <FormGroup>
           <Label for="plankThicknessMainImage">Plank Thickness Main Image URL</Label>
           <Input
-            type="text"
+            type="file"
             name="plank_thickness_main_image_url"
             id="plankThicknessMainImage"
-            value={dimensionsData.plank_thickness_main_image_url}
-            onChange={handleChange}
+            onChange={(e) => handleFileChange('plank_thickness_main_image_url', e.target.files[0])}
             disabled={!editMode} // Disable input in view mode
           />
         </FormGroup>
         <FormGroup>
           <Label for="plankThicknessImage1">Plank Thickness Image 1</Label>
+          {dimensionsData.plank_thickness_image_1 && (
+            <div>
+              <img
+                src={`/uploads/${dimensionsData.plank_thickness_image_1}`}
+                alt="Plank Thickness 1"
+                className="img-thumbnail"
+                style={{ width: '100px', height: 'auto' }}
+              />
+              <p>{dimensionsData.plank_thickness_image_1}</p>
+            </div>
+          )}
           <Input
             type="file"
-            name="plank_thickness_image_1"
             id="plankThicknessImage1"
-            onChange={handleChange}
+            onChange={(e) => handleFileChange('plank_thickness_image_1', e.target.files[0])}
             disabled={!editMode} // Disable input in view mode
           />
           <Label for="plankThicknessSizeRange1">Size Range 1</Label>
@@ -160,11 +190,21 @@ const DimensionsEditor = () => {
         </FormGroup>
         <FormGroup>
           <Label for="plankThicknessImage2">Plank Thickness Image 2</Label>
+          {dimensionsData.plank_thickness_image_2 && (
+            <div>
+              <img
+                src={`/uploads/${dimensionsData.plank_thickness_image_2}`}
+                alt="Plank Thickness 2"
+                className="img-thumbnail"
+                style={{ width: '100px', height: 'auto' }}
+              />
+              <p>{dimensionsData.plank_thickness_image_2}</p>
+            </div>
+          )}
           <Input
             type="file"
-            name="plank_thickness_image_2"
             id="plankThicknessImage2"
-            onChange={handleChange}
+            onChange={(e) => handleFileChange('plank_thickness_image_2', e.target.files[0])}
             disabled={!editMode} // Disable input in view mode
           />
           <Label for="plankThicknessSizeRange2">Size Range 2</Label>
@@ -179,11 +219,21 @@ const DimensionsEditor = () => {
         </FormGroup>
         <FormGroup>
           <Label for="plankThicknessImage3">Plank Thickness Image 3</Label>
+          {dimensionsData.plank_thickness_image_3 && (
+            <div>
+              <img
+                src={`/uploads/${dimensionsData.plank_thickness_image_3}`}
+                alt="Plank Thickness 3"
+                className="img-thumbnail"
+                style={{ width: '100px', height: 'auto' }}
+              />
+              <p>{dimensionsData.plank_thickness_image_3}</p>
+            </div>
+          )}
           <Input
             type="file"
-            name="plank_thickness_image_3"
             id="plankThicknessImage3"
-            onChange={handleChange}
+            onChange={(e) => handleFileChange('plank_thickness_image_3', e.target.files[0])}
             disabled={!editMode} // Disable input in view mode
           />
           <Label for="plankThicknessSizeRange3">Size Range 3</Label>
@@ -196,7 +246,7 @@ const DimensionsEditor = () => {
             disabled={!editMode} // Disable input in view mode
           />
         </FormGroup>
-        
+
         {editMode && (
           <Button color="primary" onClick={handleSave}>Save</Button>
         )}

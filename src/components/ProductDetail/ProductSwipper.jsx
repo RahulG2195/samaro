@@ -27,21 +27,19 @@ const ProductSwipper = ({ images }) => {
             spaceBetween={10}
             slidesPerView={1}
             freeMode={true}
-            
+
             watchSlidesProgress={true}
             modules={[FreeMode, Navigation, Thumbs, Pagination]}
             className={`mySwiper `}
           >
-            {
-              images.map(image => (
-                <SwiperSlide className='sliderchild'>
-                  <img src={image.url} alt={image.alt} />
-                </SwiperSlide>
-              ))
-            }
+            {images.map((image, index) => (
+              <SwiperSlide key={index} className='sliderchild'>
+                <img src={`/assets/images/products/AllData/${image}`} alt={image} />
+              </SwiperSlide>
+            ))}
           </Swiper>
-   
-   {/* Main slider  */}
+
+          {/* Main slider  */}
         </div>
         <div className='col-sm-12 col-md-12 col-lg-12 position-relative MainSLdr'>
           <div className="navigation-arrows d-flex flex-row">
@@ -62,19 +60,16 @@ const ProductSwipper = ({ images }) => {
             thumbs={{ swiper: thumbsSwiper }}
             modules={[FreeMode, Navigation, Thumbs, Pagination]}
             pagination={{ clickable: true }}
-           
+
             className="mySwiper2 topSliderRes"
-            >
+          >
 
 
-            {
-              images.map(image => (
-                <SwiperSlide className='sliderMain'>
-
-                  <img src={image.url} alt={image.alt} />
-                </SwiperSlide>
-              ))
-            }
+            {images.map((image, index) => (
+              <SwiperSlide key={index} className='sliderchild'>
+                <img src={`/assets/images/products/AllData/${image}`} alt={image} />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

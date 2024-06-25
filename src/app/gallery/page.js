@@ -13,7 +13,7 @@ export default function Home() {
     }, []);
 
     return (
-        <main>
+        <main className="mb-5">
             <Gallery></Gallery>
         </main>
     );

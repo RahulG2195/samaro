@@ -19,14 +19,18 @@ const page = () => {
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
       author: 'By Anand Kashyap',
-      Badgetitle:"SPC Tuscany"
+      Badgetitle:"SPC Tuscany",
+      pdf: 'Samara flooring product installation guide.docx'
+
     },
     {
       imgurl: '/assets/images/brochure/Brochure.png',
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
       author: 'By Anand Kashyap',
-      Badgetitle:"SPC Sicilian"
+      Badgetitle:"SPC Sicilian",
+      pdf: 'Samara flooring product installation guide.docx'
+
 
     },
   ]
@@ -36,7 +40,9 @@ const page = () => {
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
       author: 'By Anand Kashyap',
-      Badgetitle:"Installation"
+      Badgetitle:"Installation",
+      pdf: 'Samara flooring product installation guide.docx'
+
 
     },
     
@@ -47,7 +53,9 @@ const page = () => {
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
       author: 'By Anand Kashyap',
-      Badgetitle:"Warrenty"
+      Badgetitle:"Warrenty",
+      pdf: 'Samara flooring product installation guide.docx'
+
 
     },
     

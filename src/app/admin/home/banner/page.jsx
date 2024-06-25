@@ -5,15 +5,17 @@ import axios from 'axios';
 
 const page = () => {
     const [initialData, setInitialData] = useState([]);
-    console.log("intial data ",initialData  )
+    const id = 1;
 
     useEffect(() => {
-        const fetchBanner = async() =>{
-            const response = await axios.get("/api/admin/heroBanners")
+        const fetchBanner = async () => {
+            const response = await axios.get("/api/admin/heroBanners", {
+                params: { id }
+            });
             const banner = response.data
             const homepageBanner = banner.filter(banner => banner.banner_id === 1);
             setInitialData(homepageBanner)
-           
+
         }
 
         fetchBanner();

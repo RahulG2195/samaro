@@ -1,22 +1,100 @@
-import { query } from "@/utils/Dbconnect"; // Assuming 'your-database-module' is the correct path to your database module
+import { query } from "@/utils/Dbconnect";
 
-export async function GET(request) {
-    try {
+export async function GET(req, res) {
+
+  try {
+    // const variation = req.url;
+    let paramString = req.url.split('?')[1];
+    let paramString2 = paramString.split('=')[1];
+
+    if (paramString2 == 'All') {
       const category = await query({
-        query: "SELECT * FROM products",
+        query: "SELECT products.*,category.cat_name FROM products JOIN category ON products.cat_id = category.cat_id ",
         values: [],
       });
-  
+
       let data = JSON.stringify(category);
       return new Response(data, {
         status: 200,
       });
-    } catch (error) {
-      return new Response(
-        JSON.stringify({
-          status: 500,
-          message: error.message,
-        })
-      );
     }
+    else {
+
+      const category = await query({
+        query: "SELECT products.*,category.cat_name FROM products JOIN category ON products.cat_id = category.cat_id WHERE variation = ? ",
+        values: [paramString2.toLowerCase()],
+      });
+
+      let data = JSON.stringify(category);
+      return new Response(data, {
+        status: 200,
+      });
+    }
+
+    // let data = JSON.stringify(category);
+    // return new Response(data, {
+    //   status: 200,
+    // });
+
+  } catch (error) {
+    return new Response(
+      JSON.stringify({
+        status: 500,
+        message: error.message,
+      })
+    );
   }
+}
+
+
+export async function POST(request) {
+  try {
+    const { id } = await request.json();
+    //  console.log("here is id bro",id) 
+
+    const category = await query({
+      query: "SELECT products.*,category.cat_name FROM products JOIN category ON products.cat_id = category.cat_id WHERE seo_url = ?",
+      values: [id],
+    });
+
+    let data = JSON.stringify(category);
+    return new Response(data, {
+      status: 200,
+    });
+
+  
+  } catch (error) {
+    return new Response(
+      JSON.stringify({
+        status: 500,
+        message: error.message,
+      })
+    );
+  }
+  
+}
+
+
+export async function PUT(request) {
+
+  try {
+      
+      
+      const category = await query({
+          query: "SELECT products.*,category.cat_name FROM products JOIN category ON products.cat_id = category.cat_id",
+          values: [],
+      });
+
+      let data = JSON.stringify(category);
+      return new Response(data, {
+          status: 200,
+      });
+  } catch (error) {
+      return new Response(
+          JSON.stringify({
+              status: 500,
+              message: error.message,
+          })
+      );
+  }
+}
