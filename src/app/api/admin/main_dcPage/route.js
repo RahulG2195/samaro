@@ -15,47 +15,55 @@ export async function GET(request) {
 
 export async function POST(request) {
   try {
-    const requestData = await request.json();
-    const { dc_category, dc_type, imageName, pdfName } = requestData;
-    const status = 1; // Default status
-    console.log("here is dc data",requestData)
+    const requestData = await request.formData();
+    const { dc_category, dc_type, imgurl, pdf, Badgetitle } = Object.fromEntries(
+      requestData.entries()
+    );
+    const status = 1; 
 
     const sqlQuery = `
-      INSERT INTO download_center (dc_category, dc_type, image, pdf, status)
-      VALUES (?, ?, ?, ?, ?)
+      INSERT INTO download_center (dc_category, dc_type, imgurl, pdf, Badgetitle, status)
+      VALUES (?, ?, ?, ?, ?, ?)
     `;
-    const values = [dc_category, dc_type, imageName, pdfName, status];
+    // Ensure imgurl and pdfName are replaced with null if they are empty
+    const values = [
+      dc_category || null,
+      dc_type || null,
+      imgurl || null,
+      pdf || null,
+      Badgetitle || null,
+      status || null,
+    ];
 
     const result = await query({
       query: sqlQuery,
       values,
     });
 
-    return new Response(JSON.stringify({ status: 200, message: "posted data successfully", result }), { status: 200 });
+    return new Response(JSON.stringify({ status: 200, message: "Posted data successfully", result }), { status: 200 });
   } catch (error) {
     return new Response(JSON.stringify({ status: 500, message: error.message }), { status: 500 });
   }
 }
 
-
 export async function PUT(request) {
   try {
     const requestData = await request.json();
-    const { dc_id, dc_category, dc_type, image, pdf } = requestData;
+    const { dc_id, dc_category, dc_type, imgurl, pdf, Badgetitle } = requestData; // Updated to imgurl
 
     const sqlQuery = `
       UPDATE download_center
-      SET dc_category = ?, dc_type = ?, image = ?, pdf = ?
+      SET dc_category = ?, dc_type = ?, imgurl = ?, pdf = ?, Badgetitle = ?
       WHERE dc_id = ?
     `;
-    const values = [dc_category, dc_type, image, pdf, dc_id];
+    const values = [dc_category, dc_type, imgurl, pdf, Badgetitle, dc_id]; // Updated to imgurl
 
     const result = await query({
       query: sqlQuery,
       values,
     });
 
-    return new Response(JSON.stringify({ status: 200, message: "dc updated successfully", result }), { status: 200 });
+    return new Response(JSON.stringify({ status: 200, message: "DC updated successfully", result }), { status: 200 });
   } catch (error) {
     return new Response(JSON.stringify({ status: 500, message: error.message }), { status: 500 });
   }
@@ -76,9 +84,8 @@ export async function DELETE(request) {
       values,
     });
 
-    return new Response(JSON.stringify({ status: 200, message: "dc deleted successfully", result }), { status: 200 });
+    return new Response(JSON.stringify({ status: 200, message: "DC deleted successfully", result }), { status: 200 });
   } catch (error) {
     return new Response(JSON.stringify({ status: 500, message: error.message }), { status: 500 });
   }
 }
-

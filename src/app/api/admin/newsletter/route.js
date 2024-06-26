@@ -13,14 +13,25 @@ export async function GET(request) {
 
 export async function POST(request) {
   try {
-    const requestData = await request.json();
-    const { news_category, news_img, title, date, author, video, status } = requestData;
+    const requestData = await await request.formData();
+    const { news_category, imgurl, title, author, video} = Object.fromEntries(
+      requestData.entries()
+    );
+    const status = 1; 
+
 
     const sqlQuery = `
-      INSERT INTO newsletter (news_category, news_img, title, date, author, video, status)
-      VALUES (?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO newsletter (news_category, imgurl, title, author, video, status)
+      VALUES (?, ?, ?, ?, ?, ?)
     `;
-    const values = [news_category, news_img, title, new Date(date), author, video, status];
+    const values = [
+      news_category || null,
+      imgurl || null,
+      title || null,
+      author || null,
+      video || null,
+      status || null
+    ];
 
     const result = await query({
       query: sqlQuery,
@@ -36,14 +47,24 @@ export async function POST(request) {
 export async function PUT(request) {
   try {
     const requestData = await request.json();
-    const { news_id, news_category, news_img, title, date, author, video, status } = requestData;
+    const { news_id, news_category, imgurl, title, author, video, status } = requestData;
+    console.log("in put ", requestData)
+
 
     const sqlQuery = `
       UPDATE newsletter
-      SET news_category = ?, news_img = ?, title = ?, date = ?, author = ?, video = ?, status = ?
+      SET news_category = ?, imgurl = ?, title = ?,  author = ?, video = ?, status = ?
       WHERE news_id = ?
     `;
-    const values = [news_category, news_img, title, new Date(date), author, video, status, news_id];
+    const values = [
+      news_category,
+      imgurl || null,
+      title || null,
+      author || null,
+      video || null,
+      status || null,
+      news_id
+    ];
 
     const result = await query({
       query: sqlQuery,
@@ -55,6 +76,7 @@ export async function PUT(request) {
     return new Response(JSON.stringify({ status: 500, message: error.message }), { status: 500 });
   }
 }
+
 
 export async function DELETE(request) {
   try {

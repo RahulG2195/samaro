@@ -1,8 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Footer.css";
 import Form from '@/components/InquiryForm/Form';
 import Link from 'next/link';
+import axios from 'axios';
 const Footer = () => {
+    const [basicInfo, setBasicInfo] = useState({
+        email1: "",
+        email2: "",
+        mobile_no_1: "",
+        mobile_no_2: "",
+        address: "",
+        facebook_url: "",
+        insta_url: "",
+        linkedin_url: "",
+        youtube_url: "",
+        map_url: "",
+    });
+    console.log(basicInfo.map_url)
+
+    useEffect(() => {
+        const fetchBasicInfo = async () => {
+            try {
+                const response = await axios.get("/api/admin/basicInfo");
+                const info = response.data;
+                setBasicInfo(info);
+                setEditedData(info);
+                setLogoPreview(info.comp_logo); // Set the initial logo preview
+            } catch (error) {
+                console.error("Error fetching basic info:", error);
+            }
+        };
+
+        fetchBasicInfo();
+    }, []);
+
+
+
     return (
         <>
             <footer className="custom-footer bg-navy text-light pb-3">
@@ -47,17 +80,17 @@ const Footer = () => {
                                     {/* <i className="fas fa-map-marker-alt d-block mt-2 px-2"></i> */}
                                     <div className='me-2 '>
                                     <img src="/assets/images/icons/Group 57.svg" alt="" className='w-100'/></div>
-                                    5th Floor, Vilco Centre, Subhash Road, Opp. Garware, Vile Parle East, Mumbai-400057, Maharashtra, India
+                                    {basicInfo.address}
                                 </address>
                             </div>
                             <div className="contact-details d-flex gap-5 mt-2 mb-3">
                                 <div className="mail">
                                     <img src="/assets/images/home/topbar/mail.png" alt="" />
-                                    <a href="mailto:">info@samaro.in</a>
+                                    <a href="mailto:">{basicInfo.email1}</a>
                                 </div>
                                 <div className="phone">
                                     <img src="/assets/images/home/topbar/phone.png" alt="" />
-                                    <a href="tel:">+918655984340</a>
+                                    <a href="tel:">{basicInfo.mobile_no_1}</a>
                                 </div>
                             </div>
                             <div className="newsletter  justify-content-start gap-2 mt-3">

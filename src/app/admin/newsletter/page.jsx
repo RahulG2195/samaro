@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Input, Button, Table } from 'reactstrap';
@@ -8,7 +8,7 @@ const NewslettersEditor = () => {
   const [editMode, setEditMode] = useState(false);
   const [newNewsletter, setNewNewsletter] = useState({
     news_category: '',
-    news_img: null,
+    imgurl: '',
     title: '',
     author: '',
     video: null,
@@ -40,20 +40,24 @@ const NewslettersEditor = () => {
       }));
 
       // Save new newsletter if any
-      if (newNewsletter.news_category && newNewsletter.title && newNewsletter.author && newNewsletter.video) {
+      if (newNewsletter.news_category && newNewsletter.title && newNewsletter.author && newNewsletter.video && newNewsletter.imgurl) {
         const formData = new FormData();
         formData.append('news_category', newNewsletter.news_category);
-        formData.append('news_img', newNewsletter.news_img);
+        formData.append('imgurl', newNewsletter.imgurl);
         formData.append('title', newNewsletter.title);
         formData.append('author', newNewsletter.author);
         formData.append('video', newNewsletter.video);
         formData.append('status', newNewsletter.status);
 
-        await axios.post('/api/admin/newsletter', newNewsletter);
+        await axios.post('/api/admin/newsletter', formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+        });
 
         setNewNewsletter({
           news_category: '',
-          news_img: null,
+          imgurl: '',
           title: '',
           author: '',
           video: null,
@@ -70,10 +74,17 @@ const NewslettersEditor = () => {
   };
 
   const handleInputChange = (field, value, index) => {
-    if (index !== undefined) {
+    if (index !== 'new') {
       // Update existing newsletter
-      const updatedNewsletters = [...newsletters];
-      updatedNewsletters[index][field] = value;
+      const updatedNewsletters = newsletters.map((newsletter, idx) => {
+        if (idx === index) {
+          return {
+            ...newsletter,
+            [field]: value,
+          };
+        }
+        return newsletter;
+      });
       setNewsletters(updatedNewsletters);
     } else {
       // Update new newsletter
@@ -86,22 +97,37 @@ const NewslettersEditor = () => {
 
   const handleFileChange = (event, fileType, index) => {
     const file = event.target.files[0];
-    const fileName = file ? file.name : ''; // Get the file name, if file exists
 
-    // Update new newsletter with file name
-    setNewNewsletter({
-      ...newNewsletter,
-      [fileType]: fileName,
-    });
+    if (index !== 'new') {
+      // Update existing newsletter
+      const updatedNewsletters = newsletters.map((newsletter, idx) => {
+        if (idx === index) {
+          return {
+            ...newsletter,
+            [fileType]: file,
+            [`${fileType}`]: file.name, // Store file name in state
+          };
+        }
+        return newsletter;
+      });
+      setNewsletters(updatedNewsletters);
+    } else {
+      // Update new newsletter
+      setNewNewsletter({
+        ...newNewsletter,
+        [fileType]: file,
+        [`${fileType}`]: file.name, // Store file name in state
+      });
+    }
   };
 
   const handleAddNewNewsletter = () => {
     // Add new newsletter to newsletters array
-    if (newNewsletter.news_category && newNewsletter.title && newNewsletter.author && newNewsletter.video) {
+    if (newNewsletter.news_category && newNewsletter.title && newNewsletter.author && newNewsletter.video && newNewsletter.imgurl) {
       setNewsletters([...newsletters, { ...newNewsletter }]);
       setNewNewsletter({
         news_category: '',
-        news_img: null,
+        imgurl: '',
         title: '',
         author: '',
         video: null,
@@ -113,7 +139,7 @@ const NewslettersEditor = () => {
   const handleRemove = async (news_id) => {
     if (window.confirm('Are you sure you want to delete this item?')) {
       try {
-        await axios.delete(`/api/admin/newsletter`,{data:{news_id}});
+        await axios.delete(`/api/admin/newsletter`, { data: { news_id } });
         setNewsletters(newsletters.filter(item => item.news_id !== news_id));
       } catch (error) {
         console.error('Error deleting newsletter:', error);
@@ -161,10 +187,10 @@ const NewslettersEditor = () => {
                 {editMode ? (
                   <Input
                     type="file"
-                    onChange={(e) => handleFileChange(e, 'news_img', index)}
+                    onChange={(e) => handleFileChange(e, 'imgurl', index)}
                   />
                 ) : (
-                  <span>{newsletter.news_img}</span>
+                  <img src={newsletter.imgurl} alt="Newsletter" style={{ maxWidth: '100px' }} />
                 )}
               </td>
               <td>
@@ -212,33 +238,33 @@ const NewslettersEditor = () => {
                 <Input
                   type="text"
                   value={newNewsletter.news_category}
-                  onChange={(e) => handleInputChange('news_category', e.target.value)}
+                  onChange={(e) => handleInputChange('news_category', e.target.value, 'new')}
                 />
               </td>
               <td>
                 <Input
                   type="file"
-                  onChange={(e) => handleFileChange(e, 'news_img')}
+                  onChange={(e) => handleFileChange(e, 'imgurl', 'new')}
                 />
               </td>
               <td>
                 <Input
                   type="text"
                   value={newNewsletter.title}
-                  onChange={(e) => handleInputChange('title', e.target.value)}
+                  onChange={(e) => handleInputChange('title', e.target.value, 'new')}
                 />
               </td>
               <td>
                 <Input
                   type="text"
                   value={newNewsletter.author}
-                  onChange={(e) => handleInputChange('author', e.target.value)}
+                  onChange={(e) => handleInputChange('author', e.target.value, 'new')}
                 />
               </td>
               <td>
                 <Input
                   type="file"
-                  onChange={(e) => handleFileChange(e, 'video')}
+                  onChange={(e) => handleFileChange(e, 'video', 'new')}
                 />
               </td>
               <td>

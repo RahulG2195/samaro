@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../components/Downloadcenter/dwnld.css'
 import DownloadCenterCard from '@/components/Downloadcenter/DownloadCenterCard'
 // import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,34 +9,39 @@ import DownloadCenterCard from '@/components/Downloadcenter/DownloadCenterCard'
 // import 'swiper/css/navigation';
 // import 'swiper/css/thumbs';
 import DownloadSwiper from '@/components/Downloadcenter/DownloadSwiper';
+import axios from 'axios';
 
 const page = () => {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [downloads, setDownloads] = useState([]);
+  const [brocardData, setBrochureData] = useState([]);
+  // const [installationData, setInstallationData] = useState([]);
+  // const [warrantyData, setWarrantyData] = useState([]);
+ 
+  // const brocardData = [
+  //   {
+  //     imgurl: '/assets/images/brochure/Brochure.png',
+  //     title: 'Seven tips to help you get better flooring design & Concept',
+  //     date: 'November 11,2023 |',
+  //     author: 'By Anand Kashyap',
+  //     Badgetitle:"SPC Tuscany",
+  //     pdf: 'Samara flooring product installation guide.docx'
 
-  const BrocardData = [
+  //   },
+  //   {
+  //     imgurl: '/assets/images/brochure/Brochure.png',
+  //     title: 'Seven tips to help you get better flooring design & Concept',
+  //     date: 'November 11,2023 |',
+  //     author: 'By Anand Kashyap',
+  //     Badgetitle:"SPC Sicilian",
+  //     pdf: 'Samara flooring product installation guide.docx'
+
+
+  //   },
+  // ]
+  const installationData = [  
     {
-      imgurl: '/assets/images/brochure/Brochure.png',
-      title: 'Seven tips to help you get better flooring design & Concept',
-      date: 'November 11,2023 |',
-      author: 'By Anand Kashyap',
-      Badgetitle:"SPC Tuscany",
-      pdf: 'Samara flooring product installation guide.docx'
-
-    },
-    {
-      imgurl: '/assets/images/brochure/Brochure.png',
-      title: 'Seven tips to help you get better flooring design & Concept',
-      date: 'November 11,2023 |',
-      author: 'By Anand Kashyap',
-      Badgetitle:"SPC Sicilian",
-      pdf: 'Samara flooring product installation guide.docx'
-
-
-    },
-  ]
-  const InstallationcardData = [  
-    {
-      imgurl: '/assets/images/brochure/Brochure.png',
+      imgurl: 'assets/images/brochure/Brochure.png',
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
       author: 'By Anand Kashyap',
@@ -47,9 +52,9 @@ const page = () => {
     },
     
   ]
-  const WarrentycardData = [
+  const warrantyData = [
     {
-      imgurl: '/assets/images/brochure/Brochure.png',
+      imgurl: 'assets/images/brochure/Brochure.png',
       title: 'Seven tips to help you get better flooring design & Concept',
       date: 'November 11,2023 |',
       author: 'By Anand Kashyap',
@@ -60,6 +65,28 @@ const page = () => {
     },
     
   ]
+
+   useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await axios.get('/api/admin/main_dcPage');
+            const data = response.data;
+            console.log("Fetched data: ", data);
+
+            const brochures = data.filter(item => item.dc_category === 'Brochure');
+            const installationGuides = data.filter(item => item.dc_category === 'Installation Guide');
+            const warranties = data.filter(item => item.dc_category === 'Warranty');
+
+            setBrochureData(brochures);
+            setInstallationData(installationGuides);
+            setWarrantyData(warranties);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
+
+    fetchData();
+}, []);
   return (
 
     <section className='py-5 dwnldCentermainCont'>
@@ -83,10 +110,10 @@ const page = () => {
         </div>
       </div>
 
-      <DownloadSwiper title="Brochure" cardData={BrocardData} active={activeCategory === 'All' || activeCategory === 'Brochure'} />
-      <DownloadSwiper title="Installation Guide" cardData={InstallationcardData} active={activeCategory === 'All' || activeCategory === 'Installation Guide'} />
+      <DownloadSwiper title="Brochure" cardData={brocardData} active={activeCategory === 'All' || activeCategory === 'Brochure'} />
+      <DownloadSwiper title="Installation Guide" cardData={installationData} active={activeCategory === 'All' || activeCategory === 'Installation Guide'} />
       {/* <DownloadSwiper title="Care Tips" cardData={cardData} active={activeCategory === 'All' || activeCategory === 'Care Tips'} /> */}
-      <DownloadSwiper title="Warranty" cardData={WarrentycardData} active={activeCategory === 'All' || activeCategory === 'Warranty'} />
+      <DownloadSwiper title="Warranty" cardData={warrantyData} active={activeCategory === 'All' || activeCategory === 'Warranty'} />
 
 
 
