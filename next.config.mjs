@@ -18,7 +18,7 @@ const nextConfig = {
 
   env: {
     MYSQL_HOST: "localhost",
-    MYSQL_DATABASE: "samaro_db",
+    MYSQL_DATABASE: "samaro",
     MYSQL_USER: "root",
     MYSQL_PASSWORD: "",
     MYSQL_PORT: "3306",
