@@ -38,6 +38,9 @@ const Addproducts = () => {
 
   const [selectedPlaces, setSelectedPlaces] = useState([]);
   const [frontImage, setFrontImage] = useState("");
+  const [OtherImagesFile,setOtherImagesFile] = useState("");
+  const [FrontImageFile,setFrontImageFile] = useState("");
+
   const [otherImages, setOtherImages] = useState([]);
   const [productDetail, setProductDetail] = useState([]);
   const [isEditMode, setIsEditMode] = useState(true);
@@ -106,8 +109,6 @@ const Addproducts = () => {
     }
   }, [id]);
 
-
-
   const notify = (message) => {
     toast.success(message, {
       position: "top-right",
@@ -133,8 +134,6 @@ const Addproducts = () => {
     "Office",
   ];
 
-
-
   const togglePlace = (option) => {
     if (selectedPlaces.includes(option)) {
       setSelectedPlaces(selectedPlaces.filter((item) => item !== option));
@@ -142,58 +141,57 @@ const Addproducts = () => {
       setSelectedPlaces([...selectedPlaces, option]);
     }
   };
-
-
+  const handleFileChange = (e) => {
+    const files = Array.from(e.target.files);
+    setOtherImagesFile(files);
+  }
 
   const handleAllinputs = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    formData.append("places", (selectedPlaces));
+  
+    // Append additional data
+    formData.append("places", JSON.stringify(selectedPlaces));
     formData.append("frontImage", frontImage);
-    formData.append("otherImages", otherImages.join(","));
-
-    const Fdata = Object.fromEntries(formData.entries());
-
-
+    
+    // Handle otherImages
+    OtherImagesFile.forEach((file, index) => {
+      formData.append(`image`, file);
+    });
+  
+    // Append frontImageFile if it exists
+    if (FrontImageFile) {
+      formData.append("frontImageFile", FrontImageFile);
+    }
+  
     try {
-      if (isEditMode) {
-        const response = await axios.put(`/api/admin/products`, formValues);
-        console.log("valuessss",formValues)
-        if (response.status === 200) {
-          notify("Product updated successfully");
-          router.push("/admin/product");
-        } else {
-          console.error("Failed to update product");
+      let response;
+      const url = isEditMode ? `/api/admin/products/${formValues.id}` : "/api/admin/products";
+      const method = isEditMode ? axios.put : axios.post;
+  
+      response = await method(url, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
         }
+      });
+  
+      if (response.status === 200) {
+        notify(isEditMode ? "Product updated successfully" : "Product added successfully");
+        router.push("/admin/product");
       } else {
-        const response = await axios.post("/api/admin/products", Fdata);
-        console.log("formdata", Fdata)
-        if (response.status === 200) {
-          notify("added sucsessfuly");
-          router.push('/admin/product');
-
-          console.log("Product added successfully");
-
-        } else {
-          console.error("Failed to add product");
-        }
+        console.error(isEditMode ? "Failed to update product" : "Failed to add product");
       }
-
     } catch (error) {
       console.error("Error:", error);
-
-
     }
-
   };
   const handleImageChange = (e) => {
     const { name, files } = e.target;
-    if (name === "frontImage") {
+    
+    if (name === "frontImage" && files.length > 0) {
       setFrontImage(files[0].name);
-    } else if (name === "otherImages") {
-      const newImageNames = Array.from(files).map((file) => file.name);
-      setOtherImages((prevImages) => [...prevImages, ...newImageNames]);
-    }
+      setFrontImageFile(files[0]);
+    } 
   };
 
   const handleInputChange = (e) => {
@@ -204,11 +202,9 @@ const Addproducts = () => {
     });
   };
 
-
   return (
     <Row>
       <Col>
-
         <Card>
           <CardTitle tag="h6" className="border-bottom p-3 mb-0">
             <i className="bi bi-bell me-2"> </i>
@@ -289,7 +285,6 @@ const Addproducts = () => {
                   type="text"
                 />
               </FormGroup>
-
               <FormGroup className="col-6">
                 <Label for="places">Select Places*</Label>
                 <Dropdown>
@@ -317,7 +312,6 @@ const Addproducts = () => {
                   </FormText>
                 )}
               </FormGroup>
-
               <FormGroup className="col-6">
                 <Label for="thikness">Thikness</Label>
                 <Input
@@ -455,7 +449,7 @@ const Addproducts = () => {
                   id="otherImages"
                   name="otherImages"
                   type="file"
-                  onChange={handleImageChange}
+                  onChange={handleFileChange}
                 />
                 <FormText>
                   Upload interior or more images of product.
