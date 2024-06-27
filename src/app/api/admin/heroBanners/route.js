@@ -32,48 +32,42 @@ export async function GET(request) {
 }
 
 export async function PUT(request) {
-    console.log("in put request");
     try {
-        const requestData = await request.json();
-        console.log("the request data: ", requestData);
-        
-        const {
-            banner_id, // Assuming you have banner_id in your request to identify the banner to be updated
-            banner_title,
-            banner_content,
-            banner_url,
-            button_text,
-            banner_img,
-            mobileBanner_img,
-        } = requestData;
+        const formData = await request.formData();
 
-        console.log("here is the editing data: ", requestData);
+        const banner_id = formData.get('banner_id'); // Assuming you have banner_id in your request to identify the banner to be updated
+        const banner_title = formData.get('banner_title');
+        const banner_content = formData.get('banner_content');
+        const banner_url = formData.get('banner_url');
+        const button_text = formData.get('button_text');
+        const banner_img = formData.get('banner_img');
+        const mobileBanner_img = formData.get('mobileBanner_img');
 
         // Ensure banner_id is defined
-        if (banner_id === undefined) {
+        if (banner_id === null || banner_id === undefined) {
             throw new Error("Banner ID is required");
         }
 
         const sqlQuery = `
             UPDATE herobanner
             SET
-                banner_title = ?,
-                banner_content = ?,
-                banner_url = ?,
-                button_text = ?,
-                banner_img = ?,
-                mobileBanner_img = ?
+                banner_title = COALESCE(?, banner_title),
+                banner_content = COALESCE(?, banner_content),
+                banner_url = COALESCE(?, banner_url),
+                button_text = COALESCE(?, button_text),
+                banner_img = COALESCE(?, banner_img),
+                mobileBanner_img = COALESCE(?, mobileBanner_img)
             WHERE
                 banner_id = ?
         `;
 
         const values = [
-            banner_title !== undefined ? banner_title : null,
-            banner_content !== undefined ? banner_content : null,
-            banner_url !== undefined ? banner_url : null,
-            button_text !== undefined ? button_text : null,
-            banner_img !== undefined ? banner_img : null,
-            mobileBanner_img !== undefined ? mobileBanner_img : null,
+            banner_title ?? null,
+            banner_content ?? null,
+            banner_url ?? null,
+            button_text ?? null,
+            banner_img ?? null,
+            mobileBanner_img ?? null,
             banner_id
         ];
 

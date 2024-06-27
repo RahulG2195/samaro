@@ -429,7 +429,7 @@ const Addproducts = () => {
                     />
                   </div>
                 )}
-                <Input required id="frontImage" name="frontImage" type="file" onChange={handleImageChange}
+                <Input required={!isEditMode ? true : false} id="frontImage" name="frontImage" type="file" onChange={handleImageChange}
                 />
                 <FormText>
                   Upload front image here.
@@ -451,7 +451,7 @@ const Addproducts = () => {
                 )}
                 <Input
                   multiple
-                  required
+                  required={!isEditMode ? true : false}
                   id="otherImages"
                   name="otherImages"
                   type="file"

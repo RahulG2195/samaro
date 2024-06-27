@@ -57,7 +57,17 @@ const BasicInfoPage = () => {
 
   const handleSave = async () => {
     try {
-      const response = await axios.put("/api/admin/basicInfo", editedData);
+      const formData = new FormData();
+      Object.entries(editedData).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+
+      const response = await axios.put("/api/admin/basicInfo", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
       setBasicInfo(editedData);
       setEditMode(false);
       console.log("Basic info updated:", response.data);
@@ -82,7 +92,11 @@ const BasicInfoPage = () => {
           <Label for="comp_logo">Company Logo</Label>
           {logoPreview && (
             <div>
-              <img src={logoPreview} alt="Company Logo" style={{ width: "100px", marginBottom: "10px" }} />
+              <img
+                src={logoPreview}
+                alt="Company Logo"
+                style={{ width: "100px", marginBottom: "10px" }}
+              />
             </div>
           )}
           <Input

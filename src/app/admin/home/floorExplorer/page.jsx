@@ -68,21 +68,30 @@ const FloorExplorer = () => {
 
     const handleSave = async () => {
         try {
+            // console.log("edited data of floor ex,",editedData)
             const formData = new FormData();
             formData.append('heading', editedData.heading);
             formData.append('sub_heading', editedData.sub_heading);
             formData.append('description', editedData.description);
             formData.append('button', editedData.button);
             formData.append('url', editedData.url);
-            if (editedData.ply_image instanceof File) {
-                formData.append('ply_image', editedData.ply_image);
-            }
-            if (editedData.tab_image instanceof File) {
-                formData.append('tab_image', editedData.tab_image);
-            }
+            formData.append('ply_image', editedData.ply_image);
+            formData.append('tab_image', editedData.tab_image);
 
-            const response = await axios.put('/api/admin/floorExplorer', editedData);
-            
+
+            // if (editedData.ply_image instanceof File) {
+            //     formData.append('ply_image', editedData.ply_image);
+            // }
+            // if (editedData.tab_image instanceof File) {
+            //     formData.append('tab_image', editedData.tab_image);
+            // }
+
+            const response = await axios.put('/api/admin/floorExplorer', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
+
             setExplorerData(editedData);
             setEditMode(false);
             console.log('Floor explorer data updated:', response.data);

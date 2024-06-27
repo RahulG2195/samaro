@@ -18,8 +18,7 @@ export async function PUT(request) {
       const requestData = await request.json();
       const { id, heading, icons, titles, slider_images } = requestData;
 
-      // Log the received request data for debugging
-      console.log("Received request data:", requestData);
+      // console.log("Received request data:", requestData);
 
       // Prepare the SQL query
       const sqlQuery = `

@@ -17,7 +17,6 @@ export async function PUT(request) {
     const requestData = await request.json();
     const { title, logo, subpoints } = requestData;
 
-    console.log("Requested data for mission update: ", requestData);
 
     const sqlQuery = `
       UPDATE vision_mission

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Container, Button, Input, Form, FormGroup, Label, Row, Col, Card, CardBody, CardTitle } from 'reactstrap';
@@ -7,6 +7,7 @@ const Page = ({ pageName, initialData, isEditing }) => {
   const [products, setProducts] = useState(initialData);
   const [editedData, setEditedData] = useState({});
   const [editId, setEditId] = useState(null);
+  const [files, setFiles] = useState({});
 
   useEffect(() => {
     setProducts(initialData);
@@ -27,14 +28,31 @@ const Page = ({ pageName, initialData, isEditing }) => {
   const handleImageChange = (e, imageType) => {
     const file = e.target.files[0];
     if (file) {
-      const fileName = file.name;
-      setEditedData({ ...editedData, [imageType]: fileName });
+      setFiles((prevFiles) => ({
+        ...prevFiles,
+        [imageType]: file
+      }));
+      setEditedData({ ...editedData, [imageType]: file.name });
     }
   };
 
   const saveChanges = async (row) => {
     try {
-      const response = await axios.put('/api/admin/heroBanners', editedData);
+      const formData = new FormData();
+      Object.entries(editedData).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+
+      Object.entries(files).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+
+      const response = await axios.put('/api/admin/heroBanners', formData, {
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }
+      });
+
       const updatedProducts = products.map(p => {
         if (p.banner_id === editedData.banner_id) {
           return { 
@@ -50,6 +68,7 @@ const Page = ({ pageName, initialData, isEditing }) => {
       setProducts(updatedProducts);
       setEditId(null);
       setEditedData({});
+      setFiles({});
     } catch (error) {
       console.error("Error updating the banner:", error);
     }

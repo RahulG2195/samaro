@@ -9,7 +9,6 @@ const SubBanner = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  console.log("initial data", initialData[0]);
 
   useEffect(() => {
     const fetchBanner = async () => {

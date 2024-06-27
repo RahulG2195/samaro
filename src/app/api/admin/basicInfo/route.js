@@ -11,10 +11,11 @@ export async function GET(request) {
   }
 }
 
-
 export async function PUT(request) {
   try {
-    const requestData = await request.json();
+    const formData = await request.formData();
+    const formDataEntries = Object.fromEntries(formData.entries());
+
     const {
       comp_logo,
       email1,
@@ -27,7 +28,7 @@ export async function PUT(request) {
       youtube_url,
       address,
       map_url,
-    } = requestData;
+    } = formDataEntries;
 
     const sqlQuery = `
       UPDATE basic_info
@@ -65,9 +66,11 @@ export async function PUT(request) {
       values,
     });
 
-    return new Response(JSON.stringify({ status: 200, message: "Basic info updated successfully", result }), { status: 200 });
+    return new Response(
+      JSON.stringify({ status: 200, message: "Basic info updated successfully", result }),
+      { status: 200 }
+    );
   } catch (error) {
     return new Response(JSON.stringify({ status: 500, message: error.message }), { status: 500 });
   }
 }
-

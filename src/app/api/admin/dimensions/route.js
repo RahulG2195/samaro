@@ -33,7 +33,7 @@ export async function PUT(request) {
         plank_thickness_size_range_3,
       } = requestData;
 
-      console.log("dimensionsss",requestData)
+      // console.log("dimensionsss",requestData)
   
       const sqlQuery = `
         UPDATE dimensions

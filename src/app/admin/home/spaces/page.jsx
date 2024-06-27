@@ -11,6 +11,8 @@ const SpacesPage = () => {
   });
   const [editMode, setEditMode] = useState(false);
   const [editedData, setEditedData] = useState({});
+  const [commercialImageFiles, setCommercialImageFiles] = useState([]);
+  const [residentialImageFiles, setResidentialImageFiles] = useState([]);
   const [commercialImagePreviews, setCommercialImagePreviews] = useState([]);
   const [residentialImagePreviews, setResidentialImagePreviews] = useState([]);
 
@@ -46,12 +48,14 @@ const SpacesPage = () => {
     const fileNames = files.map(file => file.name).join(",");
 
     if (section === "commercial") {
+      setCommercialImageFiles((prevFiles) => [...prevFiles, ...files]);
       setCommercialImagePreviews((prevPreviews) => [...prevPreviews, ...files.map(file => URL.createObjectURL(file))]);
       setEditedData((prevData) => ({
         ...prevData,
         commercial_images: prevData.commercial_images ? prevData.commercial_images + "," + fileNames : fileNames
       }));
     } else if (section === "residential") {
+      setResidentialImageFiles((prevFiles) => [...prevFiles, ...files]);
       setResidentialImagePreviews((prevPreviews) => [...prevPreviews, ...files.map(file => URL.createObjectURL(file))]);
       setEditedData((prevData) => ({
         ...prevData,
@@ -66,8 +70,24 @@ const SpacesPage = () => {
   };
 
   const handleSave = async () => {
+    const formData = new FormData();
+    formData.append("commercial_images", editedData.commercial_images);
+    formData.append("residential_images", editedData.residential_images);
+
+    commercialImageFiles.forEach((file, index) => {
+      formData.append(`commercial_image_${index}`, file);
+    });
+
+    residentialImageFiles.forEach((file, index) => {
+      formData.append(`residential_image_${index}`, file);
+    });
+
     try {
-      const response = await axios.put("/api/admin/spaces", editedData);
+      const response = await axios.put("/api/admin/spaces", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data"
+        }
+      });
       setSpacesData(editedData);
       setEditMode(false);
       console.log("Spaces data updated:", response.data);
@@ -82,6 +102,10 @@ const SpacesPage = () => {
       updatedPreviews.splice(index, 1);
       setCommercialImagePreviews(updatedPreviews);
 
+      const updatedFiles = [...commercialImageFiles];
+      updatedFiles.splice(index, 1);
+      setCommercialImageFiles(updatedFiles);
+
       const updatedImages = editedData.commercial_images.split(",");
       updatedImages.splice(index, 1);
       setEditedData((prevData) => ({
@@ -92,6 +116,10 @@ const SpacesPage = () => {
       const updatedPreviews = [...residentialImagePreviews];
       updatedPreviews.splice(index, 1);
       setResidentialImagePreviews(updatedPreviews);
+
+      const updatedFiles = [...residentialImageFiles];
+      updatedFiles.splice(index, 1);
+      setResidentialImageFiles(updatedFiles);
 
       const updatedImages = editedData.residential_images.split(",");
       updatedImages.splice(index, 1);

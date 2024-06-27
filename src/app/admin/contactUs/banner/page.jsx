@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const page = () => {
     const [initialData, setInitialData] = useState([]);
-    console.log("intial data ",initialData  )
+    // console.log("intial data ",initialData  )
 
     useEffect(() => {
         const fetchBanner = async() =>{

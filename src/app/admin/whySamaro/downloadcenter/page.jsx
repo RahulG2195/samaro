@@ -47,7 +47,7 @@ const DownloadCenterEditor = () => {
 
   // Function to save changes to the backend
   const handleSave = async () => {
-    console.log("this is download data ",downloadData)
+    // console.log("this is download data ",downloadData)
     try {
       await axios.put('/api/admin/downloadCenter', downloadData[0]); // Send updated downloadData to backend
       setEditMode(false); // Exit edit mode after saving

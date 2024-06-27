@@ -23,7 +23,7 @@ const Header = () => {
     return (
 
         <header className="header  ">
-            <nav className="navbar navbar-expand-lg">
+            <nav className="navbar navbar-expand-lg ">
                 <div className="container">
                     <Link className="navbar-brand" href="/" >
                         <img src="/assets/images/logo/main-logo.png" alt="" />

@@ -48,7 +48,6 @@ export async function PUT(request) {
   try {
     const requestData = await request.json();
     const { news_id, news_category, imgurl, title, author, video, status } = requestData;
-    console.log("in put ", requestData)
 
 
     const sqlQuery = `

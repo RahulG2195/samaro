@@ -28,12 +28,12 @@ const Header = ({ showMobmenu }) => {
   };
 
   return (
-    <Navbar color="primary" dark expand="md">
+    <Navbar color="danger" dark expand="md">
       <div className="d-flex align-items-center">
         <NavbarBrand href="/" className="d-lg-none ">
-          {/* <img src="/assets/images/logo/main-logo.png" alt="logo" /> */}
+          {/* <img src="/assets/images/logo/main-logo.png" alt="logo" className="w-50"/> */}
         </NavbarBrand>
-        <Button color="primary" className="d-lg-none" onClick={showMobmenu}>
+        <Button color="danger" className="d-lg-none" onClick={showMobmenu}>
           <i className="bi bi-list"></i>
         </Button>
       </div>
@@ -54,7 +54,7 @@ const Header = ({ showMobmenu }) => {
 
       <Collapse navbar isOpen={isOpen}>
         <Nav className="me-auto Admin" navbar>
-          <NavItem>
+          {/* <NavItem>
             <Link href="/" className="nav-link">
               Starter
             </Link>
@@ -74,10 +74,10 @@ const Header = ({ showMobmenu }) => {
               <DropdownItem divider />
               <DropdownItem>Reset</DropdownItem>
             </DropdownMenu>
-          </UncontrolledDropdown>
+          </UncontrolledDropdown> */}
         </Nav>
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-          <DropdownToggle color="primary">
+          <DropdownToggle color="danger">
             <div style={{ lineHeight: "0px" }}>
             <i className="bi bi-person-workspace"></i>
             </div>
@@ -87,8 +87,8 @@ const Header = ({ showMobmenu }) => {
             <DropdownItem>My Account</DropdownItem>
             <DropdownItem>Edit Profile</DropdownItem>
             <DropdownItem divider />
-            <DropdownItem>My Balance</DropdownItem>
-            <DropdownItem>Inbox</DropdownItem>
+            {/* <DropdownItem>My Balance</DropdownItem> */}
+            {/* <DropdownItem>Inbox</DropdownItem> */}
             <DropdownItem>Logout</DropdownItem>
           </DropdownMenu>
         </Dropdown>

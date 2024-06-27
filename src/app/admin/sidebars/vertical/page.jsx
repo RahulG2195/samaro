@@ -1,5 +1,5 @@
 'use client';
-import { Button, Nav, NavItem } from "reactstrap";
+import { Button, Nav, NavItem, NavLink } from "reactstrap";
 // import Logo from "../../../../../public/assets/images/logo/logo_alt.png";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -15,12 +15,12 @@ const navigation = [
     type: "accordion",
     title: "Home Page",
     items: [
-      { title: "Hero banner", href: "/admin/home/banner" },
-      { title: "Spc Lvt section", href: "/admin/home/spcLvt" },
-      // { title: "Design Range", href: "/admin/action/three" },
-      { title: "Benifits", href: "/admin/home/benifits" },
-      { title: "Floor Explorer", href: "/admin/home/floorExplorer" },
-      { title: "Spaces", href: "/admin/home/spaces" },
+      { title: "Hero banner", href: "/admin/home/banner" ,icon: "bi bi-hdd-stack"},
+      { title: "Spc Lvt section", href: "/admin/home/spcLvt" ,icon: "bi bi-hdd-stack"},
+      // { title: "Design Range", href: "/admin/action/three" ,icon: "bi bi-hdd-stack"},
+      { title: "Benifits", href: "/admin/home/benifits" ,icon: "bi bi-hdd-stack"},
+      { title: "Floor Explorer", href: "/admin/home/floorExplorer" ,icon: "bi bi-hdd-stack",icon: "bi bi-hdd-stack" },
+      { title: "Spaces", href: "/admin/home/spaces" ,icon: "bi bi-hdd-stack"},
     ],
     icon: "bi bi-hdd-stack",
 
@@ -29,13 +29,13 @@ const navigation = [
     type: "accordion",
     title: "Why samaro page",
     items: [
-      { title: "video and description", href: "/admin/whySamaro/video" },
-      { title: "Vision , mission section", href: "/admin/whySamaro/vision_mission" },
-      // { title: "Design Range", href: "/admin/action/three" },
-      { title: "Benifits", href: "/admin/whySamaro/benifits" },
-      { title: "Certifications", href: "/admin/whySamaro/certifications" },
-      { title: "Dimension & Spaces", href: "/admin/whySamaro/dimensions" },
-      { title: "Download center", href: "/admin/whySamaro/downloadcenter" },
+      { title: "video and description", href: "/admin/whySamaro/video" ,icon: "bi bi-hdd-stack"},
+      { title: "Vision , mission section", href: "/admin/whySamaro/vision_mission" ,icon: "bi bi-hdd-stack"},
+      // { title: "Design Range", href: "/admin/action/three" ,icon: "bi bi-hdd-stack"},
+      { title: "Benifits", href: "/admin/whySamaro/benifits" ,icon: "bi bi-hdd-stack"},
+      { title: "Certifications", href: "/admin/whySamaro/certifications" ,icon: "bi bi-hdd-stack"},
+      { title: "Dimension & Spaces", href: "/admin/whySamaro/dimensions" ,icon: "bi bi-hdd-stack"},
+      { title: "Download center", href: "/admin/whySamaro/downloadcenter" ,icon: "bi bi-hdd-stack"},
     ],
     icon: "bi bi-hdd-stack",
 
@@ -61,20 +61,21 @@ const navigation = [
     icon: "bi bi-hdd-stack",
   },
   {
-    title: "Newsletter Page",
-    href: "/admin/newsletter",
-    icon: "bi bi-hdd-stack",
+    type: "accordion", title: "Newsletter Page", items: [
+      { title: "Hero Banner", href: "/admin/newsletter/banner" },
+      { title: "Products", href: "/admin/newsletter" },
+      // { title: "Delete Product", href: "/admin/product/delete" },
+    ],
+      icon: "bi bi-hdd-stack",
+
   },
+
+
   {
     type: "accordion",
     title: "Contact us",
     items: [
       { title: "Hero banner", href: "/admin/contactUs/banner" },
-      // { title: "Spc Lvt section", href: "/admin/home/spcLvt" },
-      // { title: "Design Range", href: "/admin/action/three" },
-      // { title: "Benifits", href: "/admin/action/three" },
-      // { title: "Floor Explorer", href: "/admin/action/three" },
-      // { title: "Spaces", href: "/admin/action/three" },
     ],
     icon: "bi bi-hdd-stack",
 
@@ -85,23 +86,7 @@ const navigation = [
     href: "/admin/basicInfo",
     icon: "bi bi-bell",
   },
-  {
-    title: "Alert",
-    href: "/ui/alerts",
-    icon: "bi bi-bell",
-  },
-  {
-    title: "Badges",
-    href: "/ui/badges",
-    icon: "bi bi-patch-check",
-  },
-
-  {
-    title: "Buttons",
-    href: "/ui/buttons",
-    icon: "bi bi-hdd-stack",
-  },
-  // other navigation items...
+  
 ];
 
 const Sidebar = ({ showMobilemenu }) => {
@@ -109,9 +94,9 @@ const Sidebar = ({ showMobilemenu }) => {
   const location = curl.pathname;
 
   return (
-    <div className="p-3">
-      <div className="d-flex align-items-center justify-content-between">
-        <img src="/assets/images/logo/logo_alt.png" alt="" className="w-25" />
+    <div className="p-3 sidebarBgColor h-100">
+      <div className="d-flex align-items-center justify-content-between ">
+        <img src="/assets/images/logo/logo_alt.png" alt="" className="w-50" />
         <div className="ms-auto d-lg-none">
           <Button
             close
@@ -122,14 +107,14 @@ const Sidebar = ({ showMobilemenu }) => {
         </div>
       </div>
       <div className="pt-4 mt-2">
-        <Nav vertical className="sidebarNav">
+        <Nav vertical className="sidebarNav sidebarBgColor">
           {navigation.map((navi, index) => {
             if (navi.type === "accordion") {
               return (
-                <div className="accordion accordion-flush " id={`accordionFlushExample${index}`} key={index}>
-                  <div className="accordion-item  ">
+                <div className="accordion accordion-flush adminHeader sidebarBgColor" id={`accordionFlushExample${index}`} key={index}>
+                  <div className="accordion-item sidebarBgColor">
                     <div
-                      className="accordion-button collapsed p-3"
+                      className="accordion-button collapsed p-3 text-secondary sidebarBgColor"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target={`#flush-collapse${index}`}
@@ -138,7 +123,6 @@ const Sidebar = ({ showMobilemenu }) => {
                     >
                       <i className={navi.icon}></i>
                       <span className="ms-3 d-inline-block">{navi.title}</span>
-
                     </div>
                     <ul
                       id={`flush-collapse${index}`}
@@ -147,12 +131,13 @@ const Sidebar = ({ showMobilemenu }) => {
                       data-bs-parent={`#accordionFlushExample${index}`}
                     >
                       {navi.items.map((item, subIndex) => (
-                        <li className="nav-item" key={subIndex}>
-                          <Link href={item.href} className="nav-link">
+                        <li className="nav-item  d-inline-block" key={subIndex}>
+                          <NavLink href={item.href} className="nav-link">
                             {item.title}
-                          </Link>
+                          </NavLink>
                         </li>
                       ))}
+
                     </ul>
                   </div>
                 </div>

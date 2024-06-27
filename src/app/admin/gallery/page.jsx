@@ -27,14 +27,26 @@ const GalleryEditor = () => {
 
   const handleSave = async () => {
     try {
+      const headers = {
+        'Content-Type': 'multipart/form-data', // Specify content type for FormData
+      };
+
       for (let image of images) {
+        const formData = new FormData();
+        formData.append('id', image.id);
+        formData.append('imageName', image.imageName);
+        if (image.file) {
+          formData.append('file', image.file);
+        }
+
         if (image.id) {
-          await axios.put('/api/admin/gallery', image);
+          await axios.put('/api/admin/gallery', formData, { headers });
         } else {
-          await axios.post('/api/admin/gallery', image);
+          await axios.post('/api/admin/gallery', formData, { headers });
         }
       }
       setEditMode(false);
+      fetchImages(); // Fetch updated images after saving
     } catch (error) {
       console.error('Error updating gallery data:', error);
     }
@@ -42,14 +54,14 @@ const GalleryEditor = () => {
 
   const handleFileChange = (index, file) => {
     const updatedImages = [...images];
-    updatedImages[index].imageName = file.name;
+    updatedImages[index] = { ...updatedImages[index], imageName: file.name, file: file };
     setImages(updatedImages);
   };
 
   const handleAddImage = () => {
     setImages(prevImages => [
       ...prevImages,
-      { id: null, imageName: '' }
+      { id: null, imageName: '', file: null }
     ]);
   };
 
@@ -74,7 +86,7 @@ const GalleryEditor = () => {
         {images.map((image, index) => (
           <Col key={image.id || index} xs="12" sm="6" md="4" lg="3" className="mb-4">
             <Card className="h-100">
-              <CardImg top src={image.imageName} alt={`Image ${index + 1}`} className="img-fluid" />
+              <CardImg top src={`/uploads/${image.imageName}`} alt={`Image ${index + 1}`} className="img-fluid" />
               <CardBody className="d-flex flex-column">
                 {editMode && (
                   <Form className="mb-3">

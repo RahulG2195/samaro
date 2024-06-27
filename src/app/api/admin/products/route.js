@@ -115,10 +115,8 @@ export async function POST(request) {
 }
 
 export async function PUT(request) {
-    console.log("in put request")
     try {
         const requestData = await request.json();
-        console.log("the the the ",requestData)
         const {
             productId, // Assuming you have productId in your request to identify the product to be updated
             productname,
@@ -139,7 +137,6 @@ export async function PUT(request) {
             layer,
             color,
         } = requestData;
-        console.log("here is the editing hdhdhdhdh",requestData)
 
         const sqlQuery = `
             UPDATE products
@@ -222,7 +219,6 @@ export async function DELETE(request) {
         // const id = await request.json();
         
         const requestBody = await request.json();
-        console.log("Request body:", requestBody); 
         const { id } = requestBody;
 
 

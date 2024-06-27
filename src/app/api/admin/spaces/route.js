@@ -14,36 +14,39 @@ export async function GET(request) {
 }
 
 export async function PUT(request) {
-    try {
-      const requestData = await request.json();
-      const {
-        commercial_images,
-        residential_images,
-        id // Assuming 'id' is passed to identify the record to update
-      } = requestData;
-      console.log("here is all the data",requestData)
-  
-      const sqlQuery = `
+  try {
+    const formData = await request.formData();
+    const requestData = Object.fromEntries(formData.entries());
+
+    const commercial_images = requestData.commercial_images || null;
+    const residential_images = requestData.residential_images || null;
+    const id = 1;
+
+    if (!id) {
+      return new Response(JSON.stringify({ status: 400, message: "ID is required" }), { status: 400 });
+    }
+
+    const sqlQuery = `
         UPDATE spaces
         SET
           commercial_images = COALESCE(?, commercial_images),
           residential_images = COALESCE(?, residential_images)
         WHERE id = ?
       `;
-  
-      const values = [
-        commercial_images ?? null,
-        residential_images ?? null,
-        id 
-      ];
-  
-      const result = await query({
-        query: sqlQuery,
-        values,
-      });
-  
-      return new Response(JSON.stringify({ status: 200, message: "Spaces updated successfully", result }), { status: 200 });
-    } catch (error) {
-      return new Response(JSON.stringify({ status: 500, message: error.message }), { status: 500 });
-    }
+
+    const values = [
+      commercial_images,
+      residential_images,
+      id
+    ];
+
+    const result = await query({
+      query: sqlQuery,
+      values,
+    });
+
+    return new Response(JSON.stringify({ status: 200, message: "Spaces updated successfully", result }), { status: 200 });
+  } catch (error) {
+    return new Response(JSON.stringify({ status: 500, message: error.message }), { status: 500 });
   }
+}

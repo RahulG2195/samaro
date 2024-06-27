@@ -13,11 +13,10 @@ export async function GET(request) {
 }
 
 
-
 export async function PUT(request) {
-  console.log("build home build home put request come")
+  // console.log("build home build home put request come");
   try {
-    const requestData = await request.json();
+    const requestData = await request.formData();
     const {
       heading,
       description,
@@ -27,9 +26,9 @@ export async function PUT(request) {
       feature2_title,
       feature3_icon,
       feature3_title,
-    } = requestData;
+    } = Object.fromEntries(requestData.entries());
 
-    console.log("build home build home",requestData)
+    // console.log("build home build home", requestData);
 
     const sqlQuery = `
       UPDATE build_home

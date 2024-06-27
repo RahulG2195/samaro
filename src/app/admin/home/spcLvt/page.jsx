@@ -59,7 +59,17 @@ const EditBuildHomePage = () => {
 
   const handleSave = async () => {
     try {
-      const response = await axios.put("/api/admin/buildHome", buildHomeData);
+      const formData = new FormData();
+      Object.entries(buildHomeData).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+
+      const response = await axios.put("/api/admin/buildHome", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
       console.log("Build home data updated:", response.data);
       setEditMode(false);
     } catch (error) {

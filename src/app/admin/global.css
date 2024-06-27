@@ -15,3 +15,9 @@ textarea:focus{
     text-overflow: ellipsis;
     font-weight: 800;
 }
+.adminHeader .nav-link{
+    color: black !important;
+}
+.sidebarBgColor{
+    background-color: #EEF5F9
+}

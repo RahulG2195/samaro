@@ -14,7 +14,6 @@ const Spclvt = () => {
         feature3_icon: "",
         feature3_title: "",
       });
-      console.log("data build home",buildHomeData)
     
 
     useEffect(() => {
