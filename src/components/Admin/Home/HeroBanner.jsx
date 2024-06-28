@@ -32,7 +32,7 @@ const Page = ({ pageName, initialData, isEditing }) => {
         ...prevFiles,
         [imageType]: file
       }));
-      setEditedData({ ...editedData, [imageType]: file.name });
+      // setEditedData({ ...editedData, [imageType]: file.name });
     }
   };
 

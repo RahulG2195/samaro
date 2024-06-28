@@ -1,16 +1,30 @@
-import { query } from "@/utils/Dbconnect"; // Assuming 'your-database-module' is the correct path to your database module
+// src/controllers/heroBannerController.js
+import { query } from "@/utils/Dbconnect";
+import upload from "@/utils/multer.middleware";
+import { writeFile } from 'fs/promises';
 
+// Function to handle file upload
+const uploadImage = async (file) => {
+    try {
+        const result = await new Promise((resolve, reject) => {
+            upload.single('banner_img')(file, {}, (err) => {
+                if (err) reject(err);
+                resolve();
+            });
+        });
+
+        const bytes = await file.arrayBuffer();
+        const buffer = Buffer.from(bytes);
+        const path = `./uploads/${file.originalname}`;
+        await writeFile(path, buffer);
+        return path;
+    } catch (error) {
+        throw new Error(`Error uploading image: ${error.message}`);
+    }
+};
+
+// GET endpoint to fetch data
 export async function GET(request) {
-    // console.log("request is ",request)
-    // const  id  = request.search;   
-    //  console.log("idididid",id)
-
-    //  const params = new URLSearchParams(request.searchParams); 
-
-    //  const id = params.get('id'); 
-    //  console.log("id:123", id); 
-
-
     try {
         const category = await query({
             query: "SELECT * FROM herobanner",
@@ -18,34 +32,37 @@ export async function GET(request) {
         });
 
         let data = JSON.stringify(category);
-        return new Response(data, {
-            status: 200,
-        });
+        return new Response(data, { status: 200 });
     } catch (error) {
         return new Response(
-            JSON.stringify({
-                status: 500,
-                message: error.message,
-            })
+            JSON.stringify({ status: 500, message: error.message }),
+            { status: 500 }
         );
     }
 }
 
+// PUT endpoint to update data, including file upload
 export async function PUT(request) {
     try {
         const formData = await request.formData();
 
-        const banner_id = formData.get('banner_id'); // Assuming you have banner_id in your request to identify the banner to be updated
-        const banner_title = formData.get('banner_title');
-        const banner_content = formData.get('banner_content');
-        const banner_url = formData.get('banner_url');
-        const button_text = formData.get('button_text');
-        const banner_img = formData.get('banner_img');
-        const mobileBanner_img = formData.get('mobileBanner_img');
+        const fields = [
+            'banner_id', 'banner_title', 'banner_content', 'banner_url', 'button_text', 'banner_img', 'mobileBanner_img'
+        ];
 
-        // Ensure banner_id is defined
-        if (banner_id === null || banner_id === undefined) {
+        const data = Object.fromEntries(
+            fields.map(field => [field, formData.get(field) || null])
+        );
+
+        const banner_id = formData.get('banner_id');
+        if (!banner_id) {
             throw new Error("Banner ID is required");
+        }
+
+        const banner_img_file = formData.get('banner_img');
+        if (banner_img_file) {
+            const imagePath = await uploadImage(banner_img_file);
+            data.banner_img = imagePath;
         }
 
         const sqlQuery = `
@@ -62,12 +79,12 @@ export async function PUT(request) {
         `;
 
         const values = [
-            banner_title ?? null,
-            banner_content ?? null,
-            banner_url ?? null,
-            button_text ?? null,
-            banner_img ?? null,
-            mobileBanner_img ?? null,
+            data.banner_title ?? null,
+            data.banner_content ?? null,
+            data.banner_url ?? null,
+            data.button_text ?? null,
+            data.banner_img ?? null,
+            data.mobileBanner_img ?? null,
             banner_id
         ];
 
@@ -76,16 +93,12 @@ export async function PUT(request) {
             values,
         });
 
-        const data = JSON.stringify(result);
-        return new Response(data, {
-            status: 200,
-        });
+        const responseData = JSON.stringify(result);
+        return new Response(responseData, { status: 200 });
     } catch (error) {
+        console.error('Error handling PUT request:', error.message);
         return new Response(
-            JSON.stringify({
-                status: 500,
-                message: error.message,
-            }),
+            JSON.stringify({ status: 500, message: error.message }),
             { status: 500 }
         );
     }

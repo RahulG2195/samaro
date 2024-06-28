@@ -48,7 +48,7 @@ const Products = () => {
         if (effectRan.current === false) {
             const getProducts = async () => {
                 try {
-                    const response = await axios.get("/api/products", {
+                    const response = await axios.get("/api/admin/products", {
                         params: {
                             variation: variation,
                         }

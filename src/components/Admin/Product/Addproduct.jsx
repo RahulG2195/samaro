@@ -21,23 +21,15 @@ import { useRouter, usePathname } from "next/navigation";
 
 const Addproducts = () => {
   const router = useRouter();
-  // let curl = useRouter();
-
-  // const {pathname} = usePathname()
-  // const location = curl.pathname
-  // const id = router.query.id;
-
-  // const id = localStorage.getItem('Id')
-
-  // console.log("id in form is ",id)
-
-  // console.log("id in form router ",id)
-
   const id = location.search ? location.search.split('=')[1] : '';
   console.log("thiss new ", id)
 
   const [selectedPlaces, setSelectedPlaces] = useState([]);
   const [frontImage, setFrontImage] = useState("");
+  const [OtherImagesFile, setOtherImagesFile] = useState("");
+  const [FrontImageFile, setFrontImageFile] = useState("");
+  console.log("front image", frontImage)
+
   const [otherImages, setOtherImages] = useState([]);
   const [productDetail, setProductDetail] = useState([]);
   const [isEditMode, setIsEditMode] = useState(true);
@@ -53,19 +45,18 @@ const Addproducts = () => {
     thikness: "",
     layer: "",
     m2pack: "",
-    groove: "",
-    finish: "",
+    no_of_groves: "",
+    prod_finish: "",
     spiece: "",
     size: "",
     status: "",
   });
-  console.log("formvalues", formValues)
+  // console.log("formvalues", productDetail)
 
   useEffect(() => {
     if (id) {
       setIsEditMode(true);
 
-      console.log("this is editing mode ", isEditMode);
 
       const fetchData = async () => {
         try {
@@ -74,7 +65,7 @@ const Addproducts = () => {
           const filteredProduct = data.filter(item => item.prod_id == id);
           setProductDetail(filteredProduct[0]);
           setFormValues({
-            productId:id,
+            productId: id,
             productname: filteredProduct[0].prod_name || "",
             category: filteredProduct[0].cat_name || "",
             catalogue: filteredProduct[0].prod_catalogue || "",
@@ -85,28 +76,26 @@ const Addproducts = () => {
             thikness: filteredProduct[0].thikness || "",
             layer: filteredProduct[0].layer || "",
             m2pack: filteredProduct[0].m2pack || "",
-            groove: filteredProduct[0].grooves || "",
-            finish: filteredProduct[0].prod_finish || "",
+            no_of_groves: filteredProduct[0].no_of_groves || "",
+            prod_finish: filteredProduct[0].prod_finish || "",
             spiece: filteredProduct[0].prod_spiece || "",
             size: filteredProduct[0].prod_size || "",
             status: filteredProduct[0].prod_status || "",
           });
+          setSelectedPlaces(filteredProduct[0].place ? JSON.parse(filteredProduct[0].place) : []);
+          // setOtherImages(filteredProduct[0].prod_image2 ? JSON.parse(filteredProduct[0].prod_image2) : []);
+          setFrontImage(filteredProduct[0].prod_images ? filteredProduct[0].prod_images : '');
+          console.log("dataa uploades ", filteredProduct[0])
         } catch (error) {
           console.log(error);
         }
       };
 
       fetchData();
-    }
-    else if (productDetail && productDetail.place) {
-      setSelectedPlaces(productDetail.place);
-    }
-    else {
+    } else {
       setIsEditMode(false)
     }
   }, [id]);
-
-
 
   const notify = (message) => {
     toast.success(message, {
@@ -133,8 +122,6 @@ const Addproducts = () => {
     "Office",
   ];
 
-
-
   const togglePlace = (option) => {
     if (selectedPlaces.includes(option)) {
       setSelectedPlaces(selectedPlaces.filter((item) => item !== option));
@@ -143,56 +130,77 @@ const Addproducts = () => {
     }
   };
 
-
+  const handleFileChange = (e) => {
+    const files = Array.from(e.target.files);
+    setOtherImagesFile(files);
+  }
 
   const handleAllinputs = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    formData.append("places", (selectedPlaces));
-    formData.append("frontImage", frontImage);
-    formData.append("otherImages", otherImages.join(","));
 
-    const Fdata = Object.fromEntries(formData.entries());
+    // Append additional data
+    formData.append("places", JSON.stringify(selectedPlaces));
+    formData.append("productId", formValues.productId);
+
+    // Append other images if they exist
+    if (OtherImagesFile.length > 0) {
+      OtherImagesFile.forEach((file, index) => {
+        formData.append(`image`, file);
+      });
+    } else {
+      setOtherImages([productDetail.prod_image2])
+      console.log('No files to append');
+    }
+
+    // if (FrontImageFile) {
+    //   formData.append("frontImageFile", FrontImageFile);
+    //   setFrontImage(formValues.prod_images)
+
+    // } else {
+    //   setFrontImage(formValues.prod_images)
+    //   console.log('No files to append');
+    // }
+
+    // Append frontImageFile only if changed
+    if (FrontImageFile) {
+      formData.append("frontImageFile", FrontImageFile);
+      formData.append("frontImage", frontImage);
+    } else if (isEditMode && frontImage) {
+      // formData.append("frontImage", frontImage);
+      setFrontImage(frontImage)
+    }
+    console.log("setfrontimage", frontImage)
 
 
     try {
-      if (isEditMode) {
-        const response = await axios.put(`/api/admin/products`, formValues);
-        console.log("valuessss",formValues)
-        if (response.status === 200) {
-          notify("Product updated successfully");
-          router.push("/admin/product");
-        } else {
-          console.error("Failed to update product");
-        }
+      const url = isEditMode ? `/api/admin/products` : "/api/admin/products";
+      const method = isEditMode ? axios.put : axios.post;
+
+      const response = await method(url, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      if (response.status === 200) {
+        notify(isEditMode ? "Product updated successfully" : "Product added successfully");
+        router.push("/admin/product");
       } else {
-        const response = await axios.post("/api/admin/products", Fdata);
-        console.log("formdata", Fdata)
-        if (response.status === 200) {
-          notify("added sucsessfuly");
-          router.push('/admin/product');
-
-          console.log("Product added successfully");
-
-        } else {
-          console.error("Failed to add product");
-        }
+        console.error(isEditMode ? "Failed to update product" : "Failed to add product");
       }
-
     } catch (error) {
       console.error("Error:", error);
-
-
     }
-
   };
+
+
   const handleImageChange = (e) => {
     const { name, files } = e.target;
-    if (name === "frontImage") {
+
+    if (name === "frontImage" && files.length > 0) {
       setFrontImage(files[0].name);
-    } else if (name === "otherImages") {
-      const newImageNames = Array.from(files).map((file) => file.name);
-      setOtherImages((prevImages) => [...prevImages, ...newImageNames]);
+      setFrontImageFile(files[0]);
     }
   };
 
@@ -204,11 +212,9 @@ const Addproducts = () => {
     });
   };
 
-
   return (
     <Row>
       <Col>
-
         <Card>
           <CardTitle tag="h6" className="border-bottom p-3 mb-0">
             <i className="bi bi-bell me-2"> </i>
@@ -289,7 +295,6 @@ const Addproducts = () => {
                   type="text"
                 />
               </FormGroup>
-
               <FormGroup className="col-6">
                 <Label for="places">Select Places*</Label>
                 <Dropdown>
@@ -317,7 +322,6 @@ const Addproducts = () => {
                   </FormText>
                 )}
               </FormGroup>
-
               <FormGroup className="col-6">
                 <Label for="thikness">Thikness</Label>
                 <Input
@@ -345,7 +349,7 @@ const Addproducts = () => {
                 <Input
                   id="prod_finish"
                   name="prod_finish"
-                  value={formValues.finish}
+                  value={formValues.prod_finish}
                   onChange={handleInputChange}
                   placeholder={"Enter product finishing"}
                   type="text"
@@ -378,7 +382,7 @@ const Addproducts = () => {
                 <Input
                   id="grove"
                   name="grove"
-                  value={formValues.groove}
+                  value={formValues.no_of_groves}
                   onChange={handleInputChange}
                   placeholder={"Enter Product's grove number"}
                   type="text"
@@ -407,10 +411,10 @@ const Addproducts = () => {
                 />
               </FormGroup>
               <FormGroup className="col-6">
-                <Label for="Status">Status</Label>
+                <Label for="status">Status</Label>
                 <Input
-                  id="Status"
-                  name="Status"
+                  id="status"
+                  name="status"
                   value={formValues.status}
                   onChange={handleInputChange}
                   placeholder={"Enter Product Status 1/0"}
@@ -429,7 +433,8 @@ const Addproducts = () => {
                     />
                   </div>
                 )}
-                <Input required={!isEditMode ? true : false} id="frontImage" name="frontImage" type="file" onChange={handleImageChange}
+                <Input
+                  required={!isEditMode ? true : false} id="frontImage" name="frontImage" type="file" onChange={handleImageChange}
                 />
                 <FormText>
                   Upload front image here.
@@ -455,7 +460,7 @@ const Addproducts = () => {
                   id="otherImages"
                   name="otherImages"
                   type="file"
-                  onChange={handleImageChange}
+                  onChange={handleFileChange}
                 />
                 <FormText>
                   Upload interior or more images of product.
