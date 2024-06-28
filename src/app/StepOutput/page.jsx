@@ -1,10 +1,83 @@
-import React from 'react' 
+import React from 'react'
 import Image from 'next/image';
 import '@/components/FindYourMatch/findmatch.css';
 import Link from 'next/link';
-const StepOutput = () => {
+const StepOutput = ({ selections }) => {
+
+  const dummyFloors = [
+    {
+      id: 1,
+      name: 'Budget Friendly Laminate',
+      type: 'Laminate',
+      place: ['Bedroom', 'Living room'],
+      colors: ['red', 'blue'],
+      features: ['Budget', 'Scratch & Stain resistant'],
+      image: '/assets/images/floor1.png'
+    },
+    {
+      id: 2,
+      name: 'Supreme Scratch Resistant SPC',
+      type: 'SPC',
+      place: ['Living room', 'Kitchen'],
+      colors: ['green', 'yellow'],
+      features: ['Supreme', 'Renovation friendly'],
+      image: '/assets/images/floor2.png'
+    },
+    {
+      id: 3,
+      name: 'Soft & Silent LVT',
+      type: 'LVT',
+      place: ['Bedroom', 'Home Office'],
+      colors: ['blue', 'purple'],
+      features: ['Soft', 'Authentic Texture'],
+      image: '/assets/images/floor3.png'
+    },
+    {
+      id: 4,
+      name: 'Renovation Friendly Laminate',
+      type: 'Laminate',
+      place: ['Kitchen', 'Dining room'],
+      colors: ['red', 'green'],
+      features: ['Renovation', 'Budget'],
+      image: '/assets/images/floor4.png'
+    },
+  ];
+  // Function to filter floors based on selections
+  const filterFloors = (selections) => {
+    let filteredFloors = dummyFloors;
+
+    // Filter by place
+    if (selections.stepOne.length > 0) {
+      filteredFloors = filteredFloors.filter(floor => {
+        return selections.stepOne.some(place => floor.place.includes(place));
+      });
+    }
+
+    // Filter by type
+    if (selections.stepTwo) {
+      filteredFloors = filteredFloors.filter(floor => floor.type === selections.stepTwo);
+    }
+
+    // Filter by color
+    if (selections.stepThree) {
+      filteredFloors = filteredFloors.filter(floor => floor.colors.includes(selections.stepThree));
+    }
+
+
+    return filteredFloors;
+  };
+
+  const filteredFloors = filterFloors(selections);
+
+  const handleDiscoverAllFloors = () => {
+    console.log('Navigate to product detail page');
+  };
+
+  const selectedFloor = filteredFloors[0];
+
+
   return (
-    <> d         
+    <> 
       <section className='stepoutput_section my-md-5 my-3'>
         <div className='container'>
           <div className='row'>
@@ -32,9 +105,9 @@ const StepOutput = () => {
               </div>
             </div>
             <div className='col-md-5 order-md-1 order-0'>
-                <div className='outputImg'>
-                  <Image src="/assets/images/Step/stepoutput.png" height={100} width={100} layout='responsive' objectFit='contain' alt='output img' />
-                </div>
+              <div className='outputImg'>
+                <Image src="/assets/images/Step/stepoutput.png" height={100} width={100} layout='responsive' objectFit='contain' alt='output img' />
+              </div>
             </div>
           </div>
         </div>

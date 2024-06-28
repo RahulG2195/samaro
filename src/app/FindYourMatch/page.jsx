@@ -30,9 +30,18 @@ const page = () => {
     setCurrentStep(currentStep - 1);
   };
 
-  const handleFormSubmit = (data) => {
-    data.preventDefault();
-    router.push("/StepOutput");
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    const selectedData = {
+      stepOne: selections.stepOne,
+      stepTwo: selections.stepTwo,
+      stepThree: selections.stepThree,
+      stepFour: selections.stepFour
+    };
+    router.push({
+      pathname: "/StepOutput",
+      query: selectedData  // Pass selectedData as query params
+    });
   };
   return (
     <>
