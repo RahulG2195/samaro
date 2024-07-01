@@ -87,6 +87,12 @@ const navigation = [
     icon: "bi bi-bell",
   },
   
+  {
+    title: "Colors",
+    href: "/admin/color",
+    icon: "bi bi-bell",
+  },
+  
 ];
 
 const Sidebar = ({ showMobilemenu }) => {

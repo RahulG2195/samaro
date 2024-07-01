@@ -17,8 +17,8 @@ const uploadImage = async (file) => {
 export async function GET(request) {
     try {
         const category = await query({
-            // query: "SELECT products.*,category.cat_name FROM products JOIN category ON products.cat_id = category.cat_id",
-            query: "SELECT * FROM products",
+            query: "SELECT products.*,category.cat_name FROM products JOIN category ON products.cat_id = category.cat_id",
+            // query: "SELECT * FROM products",
             values: [],
         });
 

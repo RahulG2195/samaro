@@ -1,67 +1,67 @@
-import React from 'react';
+import React from 'react'
 
-const StepOne = ({ selections, setSelections }) => {
+const StepOne = ({ formData, handleInputChange }) => {
   const stepone = [
     {
       key: 1,
-      name: 'Bathroom',
-      image: '1.png',
-      id: 'Bathroom',
+      'name': 'Bathroom',
+      'image': '1.png',
+      'id': 'Bathroom',
     },
     {
       key: 2,
-      name: 'Home Office',
-      image: '2.png',
-      id: 'Home Office',
+      'name': 'Bedroom',
+      'image': '2.png',
+      'id': 'Bedroom',
     },
     {
       key: 3,
-      name: 'Bedroom',
-      image: '3.png',
-      id: 'Bedroom',
+      'name': 'Dining room',
+      'image': '3.png',
+      'id': 'Dining',
     },
     {
       key: 4,
-      name: 'Kitchen',
-      image: '4.png',
-      id: 'Kitchen',
+      'name': 'Entrance hall',
+      'image': '4.png',
+      'id': 'Entrance',
     },
     {
       key: 5,
-      name: 'Dining room',
-      image: '5.png',
-      id: 'Dining room',
+      'name': 'Home office',
+      'image': '5.png',
+      'id': 'Home',
     },
     {
       key: 6,
-      name: 'Living room',
-      image: '6.png',
-      id: 'Living room',
+      'name': 'Kitchen',
+      'image': '6.png',
+      'id': 'Kitchen',
     },
     {
       key: 7,
-      name: 'Entrance hall',
-      image: '7.png',
-      id: 'Entrance hall',
+      'name': 'Living room',
+      'image': '7.png',
+      'id': 'Living',
     },
     {
       key: 8,
-      name: 'Nursery',
-      image: '8.png',
-      id: 'Nursery',
+      'name': 'Nursery',
+      'image': '8.png',
+      'id': 'Nursery',
     },
-  ];
-
-  const handleChange = (e) => {
-    const { id, checked } = e.target;
-    setSelections((prev) => ({
-      ...prev,
-      stepOne: checked
-        ? [...prev.stepOne, id]
-        : prev.stepOne.filter((item) => item !== id),
-    }));
+  ]
+  const handleCheckboxChange = (event) => {
+    const { id, checked } = event.target;
+    handleInputChange({
+      target: {
+        name: 'preferences',
+        value: checked
+          ? [...formData.preferences, id]
+          : formData.preferences.filter((pref) => pref !== id),
+      },
+    });
   };
-
   return (
     <>
       <div className='col-md-9 mx-auto'>
@@ -70,40 +70,36 @@ const StepOne = ({ selections, setSelections }) => {
           <p>Select one or more rooms below.</p>
         </div>
         <div className='row'>
-          {stepone.map((data) => (
-            <div className='col-md-3 col-6 col-xs-12 my-md-3' key={data.key}>
-              <div className='steps1-main text-center'>
-                <div className='inner_step1 text-center'>
-                  <label htmlFor={data.id} className='stepslabel'>
-                    <div className='steps1_img'>
-                      <img
-                        src={`assets/images/Step/StepTwo/${data.image}`}
-                        className='img-fluid'
-                        alt='img1'
-                      />
-                    </div>
-                    <div className='steps1_name d-flex justify-content-between pt-md-2 px-2'>
-                      <p>
-                        <strong>{data.name}</strong>
-                      </p>
-                      <input
-                        type='checkbox'
-                        name='floortype'
-                        className='form-check-input'
-                        id={data.id}
-                        checked={selections.stepOne.includes(data.id)}
-                        onChange={handleChange}
-                      />
-                    </div>
-                  </label>
+          {
+            stepone.map(data => (
+              <div className='col-md-3 col-6 col-xs-12 my-md-3'>
+                <div className='steps1-main text-center'>
+                  <div className='inner_step1 text-center'>
+                    <label htmlFor={data.id} className='stepslabel p-'>
+                      <div className='steps1_img '>
+                        <img src={`assets/images/Step/StepTwo/${data.image}`} className='img-fluid' alt='img1' />
+                      </div>
+                      <div className='steps1_name d-flex justify-content-between pt-md-2 px-2'>
+                        <p><strong>{data.name}</strong></p>
+                        <input
+                          type='checkbox'
+                          name='floortype'
+                          className='form-check-input'
+                          id={data.id}
+                          checked={formData.preferences.includes(data.id)}
+                          onChange={handleCheckboxChange}
+                        />
+                      </div>
+                    </label>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          }
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default StepOne;
+export default StepOne

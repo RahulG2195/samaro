@@ -282,11 +282,11 @@ const Filters = ({ hide, inSPC, resultCount, totalCount, selectedProduct, handle
                     <input
                       className="mx-1 form-check-input"
                       type="checkbox"
-                      name="blue"
-                      value='blue'
-                      checked={selectedColors.includes('blue')}
+                      name="brown"
+                      value='brown'
+                      checked={selectedColors.includes('brown')}
                       onChange={handleColorChange} />
-                    Blue
+                    Brown
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
@@ -320,12 +320,12 @@ const Filters = ({ hide, inSPC, resultCount, totalCount, selectedProduct, handle
                     <input
                       className="mx-1 form-check-input"
                       type="checkbox"
-                      name="green"
-                      value='green'
-                      checked={selectedColors.includes('green')}
+                      name="dark brown"
+                      value='dark brown'
+                      checked={selectedColors.includes('dark brown')}
                       onChange={handleColorChange}
                     />
-                    Green
+                    Dark brown
                   </label>
                 </div>
                 <div className="col-lg-12 col-md-12 col-sm-2 col-6">
